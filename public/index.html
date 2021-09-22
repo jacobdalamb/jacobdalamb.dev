@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Jacob Lamb" />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#60a5fa" />
+    <meta name="theme-color" content="" />
     <link href="./images/wow.ico" rel="icon" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -65,8 +65,8 @@
         <h1>ABOUT</h1>
         <p>
           My passion for web development and design started sometime in 2017 after I had learned that my uncle was a programmer. Soon after, I quickly downloaded my first code editor, <a href="http://brackets.io" aria-label="bracket-link" rel="noreferrer" class="bubble">Bracket</a>, and self-thought
-          by experimenting with HTML and CSS. Since then, I have increased my knowledge and gained experience from various web programming and UX/UI design courses. Today I am working on leveling up my skills, my confidence in
-          networking, and building a portfolio in part with some <a href="https://blog.jakelamb.me" aria-label="blog-link" rel="noreferrer" class="bubble">blogging</a> on the side. When I'm not working on the web, I love to read books and play games.
+          by experimenting with HTML and CSS. Since then, I have increased my knowledge and gained experience from various web programming and UX/UI design courses. Today I am working on leveling up my skills, my confidence in networking, and building a portfolio in part with some
+          <a href="https://blog.jakelamb.me" aria-label="blog-link" rel="noreferrer" class="bubble">blogging</a> on the side. When I'm not working on the web, I love to read books and play games.
         </p>
       </div>
     </section>
@@ -105,6 +105,13 @@ const Apps = ['VSCode', '<i class="fab fa-npm fa-lg"></i>', '<i aria-label="gith
     <script>
       const year = new Date().getFullYear();
       document.querySelector('.year').innerText = year;
+      function updateMetaThemeColor() {
+        const root = document.querySelector(':root');
+        const themeColor = getComputedStyle(root).getPropertyValue('--theme-color');
+        document.querySelector('[name="theme-color"]').setAttribute('content', `${themeColor}`);
+      }
+      updateMetaThemeColor();
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateMetaThemeColor);
     </script>
     <script>
       const firebaseConfig = {

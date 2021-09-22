@@ -5,6 +5,14 @@
 ::selection {
   @apply bg-gray-900 text-white dark:bg-gray-200 dark:text-gray-900;
 }
+:root {
+  --theme-color: #60a5fa;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme-color: #1e3a8a;
+  }
+}
 header,
 section,
 footer {
