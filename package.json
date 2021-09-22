@@ -2,7 +2,7 @@
   "name": "jakelamb.me",
   "version": "4.0.0",
   "description": "Jacob Lamb's Personal Website",
-  "author": "Jacob Lamb <jacobtlamb462@gmail.com>",
+  "author": "Jacob Lamb <jacoblambthomas@gmail.com>",
   "license": "ISC",
   "scripts": {
     "dev": "NODE_ENV=development npx tailwindcss -i ./public/main.css -o ./public/tailwind.css -w",
