@@ -2,12 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
 module.exports = {
   mode: 'jit',
-  purge: {
-    enabled: true,
-    mode: 'all',
-    content: ['./public/index.html'],
-    preserveHtmlElements: false,
-  },
+  content: ['./public/index.html'],
   darkMode: 'media',
   theme: {
     screens: {
@@ -17,9 +12,6 @@ module.exports = {
       xl: '2560px',
     },
     extend: {
-      colors: {
-        yellow: colors.yellow,
-      },
       typography: {
         DEFAULT: {
           css: {

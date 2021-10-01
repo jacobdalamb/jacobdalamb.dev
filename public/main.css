@@ -16,8 +16,7 @@
 header,
 section,
 footer {
-  @apply flex flex-col justify-center h-screen;
-  scroll-snap-align: start;
+  @apply flex flex-col justify-center h-screen snap-start;
 }
 a {
   @apply transition-all duration-200 ease-out hover:ease-in rounded;
