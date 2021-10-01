@@ -15,13 +15,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" />
     <link rel="stylesheet" href="./tailwind.css" type="text/css" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jakelamb.me" />
+    <meta property="og:url" content="https://jacoblamb.me" />
     <meta property="og:title" content="Jacob Lamb | Full-Stack Developer & Web Designer" />
     <meta property="og:description" content="An aspiring Full-Stack Developer & Web Designer with a passion for creating, designing, blogging high-performance responsive web apps." />
     <meta property="og:image" content="./images/wow.ico" />
     <meta property="og:image:alt" content="profile image" />
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://jakelamb.me" />
+    <meta property="twitter:url" content="https://jacoblamb.me" />
     <meta property="twitter:creator" content="@jacob_thesheep" />
     <meta property="twitter:title" content="Jacob Lamb | Full-Stack Developer & Web Designer" />
     <meta property="twitter:description" content="An aspiring Full-Stack Developer & Web Designer with a passion for creating, designing, blogging high-performance responsive web apps." />
@@ -66,7 +66,7 @@
         <p>
           My passion for web development and design started sometime in 2017 after I had learned that my uncle was a programmer. Soon after, I quickly downloaded my first code editor, <a href="http://brackets.io" aria-label="bracket-link" rel="noreferrer" class="bubble">Bracket</a>, and self-thought
           by experimenting with HTML and CSS. Since then, I have increased my knowledge and gained experience from various web programming and UX/UI design courses. Today I am working on leveling up my skills, my confidence in networking, and building a portfolio in part with some
-          <a href="https://blog.jakelamb.me" aria-label="blog-link" rel="noreferrer" class="bubble">blogging</a> on the side. When I'm not working on the web, I love to read books and play games.
+          <a href="https://blog.jacoblamb.me" aria-label="blog-link" rel="noreferrer" class="bubble">blogging</a> on the side. When I'm not working on the web, I love to read books and play games.
         </p>
       </div>
     </section>
@@ -113,16 +113,27 @@ const Apps = ['VSCode', '<i aria-label="npm-icon" class="fa-brands fa-npm fa-lg"
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateMetaThemeColor);
     </script>
     <script>
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from 'firebase/app';
+      import { getAnalytics } from 'firebase/analytics';
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
       const firebaseConfig = {
-        apiKey: 'AIzaSyAb6TNOGSKdtk79xukn4isk4qN1LQIFA28',
-        authDomain: 'awesome-project-694c5.firebaseapp.com',
-        databaseURL: 'https://awesome-project-694c5.firebaseio.com',
-        projectId: 'awesome-project-694c5',
-        storageBucket: 'awesome-project-694c5.appspot.com',
-        messagingSenderId: '564024862385',
-        appId: '1:564024862385:web:e85fed13196f2a5947a490',
-        measurementId: 'G-WX7V75HPE4',
+        apiKey: 'AIzaSyD9SRX0aCz7G4SjHV6M0dzT8IFu3d5UM9E',
+        authDomain: 'portfolio-website-8e32d.firebaseapp.com',
+        projectId: 'portfolio-website-8e32d',
+        storageBucket: 'portfolio-website-8e32d.appspot.com',
+        messagingSenderId: '160296992965',
+        appId: '1:160296992965:web:d1b0c209ee94f833f5f0ac',
+        measurementId: 'G-TXMP23B54B',
       };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
     </script>
   </body>
 </html>
