@@ -1,5 +1,4 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
-const colors = require('tailwindcss/colors');
 module.exports = {
   mode: 'jit',
   content: ['./public/index.html'],
@@ -23,7 +22,7 @@ module.exports = {
                 color: '#e5e7eb',
               },
               a: {
-                color: '#FEF08A', // #FEF08A yellow-200 8.35, #D9F99D lime-200 8.33
+                color: '#FEF08A',
               },
               color: '#e5e7eb',
               'p.lead': {
