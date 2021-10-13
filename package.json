@@ -1,7 +1,7 @@
 {
-  "name": "personal-website",
+  "name": "jacoblamb.me",
   "version": "1.0.0",
-  "description": "",
+  "description": "My personal website.",
   "main": "postcss.config.js",
   "scripts": {
     "test": "NODE_ENV=production npx tailwindcss -i ./public/main.css -o ./public/tailwind.css --minify",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jacobthesheep/personal-website.git"
+    "url": "git+https://github.com/jacobthesheep/jacoblamb.me.git"
   },
-  "author": "Jacob Lamb",
+  "author": "Jacob Lamb <jacoblambthomas@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jacobthesheep/personal-website/issues"
+    "url": "https://github.com/jacobthesheep/jacoblamb.me/issues"
   },
-  "homepage": "https://github.com/jacobthesheep/personal-website#readme",
+  "homepage": "https://github.com/jacobthesheep/jacoblamb.me#readme",
   "dependencies": {
     "@tailwindcss/typography": "^0.5.0-alpha.2",
     "autoprefixer": "^10.3.7",
