@@ -4,8 +4,8 @@
   "description": "My personal website.",
   "main": "postcss.config.js",
   "scripts": {
-    "test": "NODE_ENV=production npx tailwindcss -i ./public/main.css -o ./public/tailwind.css --minify",
-    "dev": "NODE_ENV=development npx tailwindcss -i ./public/main.css -o ./public/tailwind.css -w"
+    "start": "snowpack dev",
+    "build": "snowpack build"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,11 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.0-alpha.2",
     "autoprefixer": "^10.3.7",
-    "postcss": "^8.3.9",
+    "postcss": "^8.3.10",
     "tailwindcss": "^3.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "@snowpack/plugin-postcss": "^1.4.3",
+    "snowpack": "^3.8.8"
   }
 }
