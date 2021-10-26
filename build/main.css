@@ -421,6 +421,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   :root {
     --theme-color: #1e3a8a;
   }
+  .prose {
+    color: #e5e7eb;
+  }
+  .prose p {
+    color: #e5e7eb;
+  }
+  .prose h1 {
+    color: #e5e7eb;
+  }
+  .prose h2 {
+    color: #e5e7eb;
+  }
+  .prose a {
+    color: #fef08a;
+  }
+  .prose p.lead {
+    color: #e5e7eb;
+  }
 }
 header, section, footer {
   display: flex;
@@ -1584,6 +1602,24 @@ p {
 
   .sm\:prose :where([class~=lead]):not(:where([class~="not-prose"] *)) {
     color: #111827;
+  }
+  .sm\:prose {
+    color: #e5e7eb;
+  }
+  .sm\:prose p {
+    color: #e5e7eb;
+  }
+  .sm\:prose h1 {
+    color: #e5e7eb;
+  }
+  .sm\:prose h2 {
+    color: #e5e7eb;
+  }
+  .sm\:prose a {
+    color: #fef08a;
+  }
+  .prose p.sm\:lead {
+    color: #e5e7eb;
   }
 }
 @media (min-width: 1024px) {

@@ -13,6 +13,24 @@
   :root {
     --theme-color: #1e3a8a;
   }
+  .prose {
+    color: #e5e7eb;
+  }
+  .prose p {
+    color: #e5e7eb;
+  }
+  .prose h1 {
+    color: #e5e7eb;
+  }
+  .prose h2 {
+    color: #e5e7eb;
+  }
+  .prose a {
+    color: #fef08a;
+  }
+  .prose p.lead {
+    color: #e5e7eb;
+  }
 }
 header,
 section,
