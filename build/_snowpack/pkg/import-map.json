@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "blobity": "./blobity.js",
+    "motion": "./motion.js"
+  }
+}
