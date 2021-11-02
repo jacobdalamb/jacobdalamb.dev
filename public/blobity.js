@@ -10,3 +10,7 @@ const blobity = new Blobity({
   fontColor: '#ffffff',
   size: 40,
 });
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  blobity.updateOptions({ color: '#60a5fa' });
+}
