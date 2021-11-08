@@ -30,9 +30,9 @@ module.exports = {
               },
             },
             color: '#111827',
-            '[class~=lead]': {
-              color: '#111827',
-            },
+            // '.lead': {
+            //   color: '#111827',
+            // },
             maxWidth: 'none',
             a: {
               textDecoration: 'none',

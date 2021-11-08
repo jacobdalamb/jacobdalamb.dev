@@ -31,6 +31,10 @@ p {
   }
 }
 
+p.lead {
+  @apply text-gray-900;
+}
+
 /* [class*='smol']:not([data-component]) > *:not([data-unstyled]) {
   padding: 1rem;
   background-color: #e0d4f6;

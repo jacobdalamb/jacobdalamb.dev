@@ -2,21 +2,21 @@ lockfileVersion: 5.3
 
 specifiers:
   '@snowpack/plugin-postcss': ^1.4.3
-  '@tailwindcss/typography': ^0.5.0-alpha.2
+  '@tailwindcss/typography': ^0.5.0-alpha.3
   autoprefixer: ^10.4.0
   blobity: ^0.1.7
   motion: ^10.4.0
   postcss: ^8.3.11
   snowpack: ^3.8.8
-  tailwindcss: ^3.0.0-alpha.1
+  tailwindcss: ^3.0.0-alpha.2
 
 dependencies:
-  '@tailwindcss/typography': 0.5.0-alpha.2_tailwindcss@3.0.0-alpha.1
+  '@tailwindcss/typography': 0.5.0-alpha.3_tailwindcss@3.0.0-alpha.2
   autoprefixer: 10.4.0_postcss@8.3.11
   blobity: 0.1.7
   motion: 10.4.0
   postcss: 8.3.11
-  tailwindcss: 3.0.0-alpha.1_0c54bdadaf9d9c9c6c134cb2c6c061a3
+  tailwindcss: 3.0.0-alpha.2_0c54bdadaf9d9c9c6c134cb2c6c061a3
 
 devDependencies:
   '@snowpack/plugin-postcss': 1.4.3_postcss@8.3.11
@@ -310,16 +310,16 @@ packages:
       defer-to-connect: 2.0.1
     dev: true
 
-  /@tailwindcss/typography/0.5.0-alpha.2_tailwindcss@3.0.0-alpha.1:
-    resolution: {integrity: sha512-xeTOHK2ki2ZfmmL0ThdPShM6iPtVtsw9Lt/9X6ZpZ0eaueluQESGIaE7r/3ZqqrN5ljpWkg6/5n04jyIOwiChA==}
+  /@tailwindcss/typography/0.5.0-alpha.3_tailwindcss@3.0.0-alpha.2:
+    resolution: {integrity: sha512-ySYrwcf7SaLVL7XBH61euPX4xoAytD4HVvfE4XsdExQmxxiNhWNVkvxhtP+RAbk6n3A0m0a+p3W25E19YiGj2A==}
     peerDependencies:
-      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 3.0.0-alpha.1_0c54bdadaf9d9c9c6c134cb2c6c061a3
+      tailwindcss: 3.0.0-alpha.2_0c54bdadaf9d9c9c6c134cb2c6c061a3
     dev: false
 
   /@tootallnate/once/1.1.2:
@@ -2905,8 +2905,8 @@ packages:
       has-flag: 4.0.0
     dev: false
 
-  /tailwindcss/3.0.0-alpha.1_0c54bdadaf9d9c9c6c134cb2c6c061a3:
-    resolution: {integrity: sha512-VweVLyu1tpo/i2MnoyDIunToZHYhHRZLGuKDt9I+nnjFoW07NhDwwHWsUyRHKowP5MZaHduhV+AVlM6Auy7m3A==}
+  /tailwindcss/3.0.0-alpha.2_0c54bdadaf9d9c9c6c134cb2c6c061a3:
+    resolution: {integrity: sha512-DLPLL927a05mhwTAPMPgSk1EFLAsWc0qmZeB1yHDSRAj/Bfn0nvdFTqj2u/8FnM5EiS20nsqCZ/HFfXzzaFOZg==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
