@@ -387,6 +387,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: 0px;
   box-sizing: content-box;
   padding: 0px;
+  overflow-wrap: break-word;
 }
 ::-moz-selection {
   --tw-bg-opacity: 1;
@@ -429,6 +430,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   :root {
     --theme-color: #1e3a8a;
   }
+}
+html,
+body {
+  height: 100%;
 }
 header, section, footer {
   display: flex;
@@ -1152,6 +1157,10 @@ p.lead {
 .bg-pink-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(244 114 182 / var(--tw-bg-opacity));
+}
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .hover\:z-10:hover {
   z-index: 10;

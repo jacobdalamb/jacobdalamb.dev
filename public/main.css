@@ -1,6 +1,7 @@
 @tailwind base;
 * {
   @apply m-0 p-0 relative box-content;
+  overflow-wrap: break-word;
 }
 ::selection {
   @apply bg-gray-900 text-white dark:bg-gray-200 dark:text-gray-900;
@@ -12,6 +13,10 @@
   :root {
     --theme-color: #1e3a8a;
   }
+}
+html,
+body {
+  height: 100%;
 }
 header,
 section,
