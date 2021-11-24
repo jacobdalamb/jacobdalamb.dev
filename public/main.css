@@ -36,7 +36,7 @@ p {
   }
 }
 
-p.lead {
+.lead {
   @apply text-gray-900;
 }
 
