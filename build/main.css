@@ -455,7 +455,7 @@ p {
   max-width: 65ch;
 }
 .prose {
-  color: #111827;
+  color: #000;
   max-width: none;
 }
 .prose :where([class~="lead"]):not(:where([class~="not-prose"] *)) {
@@ -1216,7 +1216,7 @@ p.lead {
 @media (min-width: 667px) {
 
   .sm\:prose {
-    color: #111827;
+    color: #000;
     max-width: none;
   }
 
