@@ -34,9 +34,12 @@ p {
   .highlighted {
     @apply text-yellow-200;
   }
+  p.lead.lead-dark {
+      @apply text-gray-200;
+  }
 }
 
-.lead {
+p.lead {
   @apply text-gray-900;
 }
 
