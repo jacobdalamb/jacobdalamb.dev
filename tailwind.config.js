@@ -25,14 +25,8 @@ module.exports = {
                 color: '#FEF08A',
               },
               color: '#e5e7eb',
-            //   'p.lead': {
-            //     color: '#e5e7eb',
-            //   },
             },
             color: '#000',
-            // '.lead': {
-            //   color: '#000',
-            // },
             maxWidth: 'none',
             a: {
               textDecoration: 'none',
