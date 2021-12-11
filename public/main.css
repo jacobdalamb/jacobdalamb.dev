@@ -30,17 +30,9 @@ p {
   @apply max-w-prose;
 }
 @tailwind components;
-@media (prefers-color-scheme: dark) {
-  .highlighted {
-    @apply text-yellow-200;
-  }
-  p.lead.lead-dark {
-      @apply text-gray-200;
-  }
-}
 
-p.lead {
-  @apply text-gray-900;
+.highlight {
+    @apply dark:text-yellow-200;
 }
 
 .ch-all {

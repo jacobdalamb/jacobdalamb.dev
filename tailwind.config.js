@@ -22,8 +22,14 @@ module.exports = {
               a: {
                 color: '#FEF08A',
               },
+              '.lead': {
+                color: '#e5e7eb',
+              },
               color: '#e5e7eb',
             },
+            '.lead.intro': {
+                color: '#000',
+              },
             color: '#000',
             maxWidth: 'none',
             a: {
@@ -34,7 +40,7 @@ module.exports = {
       },
       boxShadow: {
         light: 'inset 0 -0.125em #FFFFFF',
-        lightHover: 'inset 0 -1.8em 0 #111827',
+        lightHover: 'inset 0 -1.8em 0 #000',
         dark: 'inset 0 -0.125em #FEF08A',
         darkHover: 'inset 0 -1.8em 0 #FEF08A',
       },
