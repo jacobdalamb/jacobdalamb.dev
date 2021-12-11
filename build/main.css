@@ -999,7 +999,6 @@ p {
   margin: 0 auto;
 }
 .bubble::after {
-  content: '';
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -1015,6 +1014,8 @@ p {
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+  --tw-content: none;
+  content: var(--tw-content);
 }
 .bubble:hover::after {
   opacity: 0;

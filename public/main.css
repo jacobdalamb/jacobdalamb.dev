@@ -39,8 +39,7 @@ p {
   margin: 0 auto;
 }
 .bubble::after {
-  content: '';
-  @apply rounded-full h-1 z-[1] absolute block bottom-0 bg-white transition left-0 right-0;
+  @apply content-none rounded-full h-1 z-[1] absolute block bottom-0 bg-white transition left-0 right-0;
 }
 .bubble:hover::after {
   @apply opacity-0;
