@@ -809,6 +809,13 @@ p {
   .prose :where(a):not(:where([class~="not-prose"] *)) {
     color: #FEF08A;
   }
+
+  .prose :where(.lead):not(:where([class~="not-prose"] *)) {
+    color: #e5e7eb;
+  }
+}
+.prose :where(.lead.intro):not(:where([class~="not-prose"] *)) {
+  color: #000;
 }
 .prose-sm {
   font-size: 0.875rem;
@@ -978,20 +985,13 @@ p {
 .prose-sm > :where(:last-child):not(:where([class~="not-prose"] *)) {
   margin-bottom: 0;
 }
+
 @media (prefers-color-scheme: dark) {
-  .highlighted {
+
+  .highlight {
     --tw-text-opacity: 1;
     color: rgb(254 240 138 / var(--tw-text-opacity));
   }
-  p.lead.lead-dark {
-    --tw-text-opacity: 1;
-    color: rgb(229 231 235 / var(--tw-text-opacity));
-  }
-}
-
-p.lead {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
 .ch-all {
@@ -1631,43 +1631,9 @@ p.lead {
     .sm\:prose :where(a):not(:where([class~="not-prose"] *)) {
       color: #FEF08A;
     }
-  }
 
-  @media (prefers-color-scheme: dark) {
-
-    .sm\:prose {
+    .sm\:prose :where(.lead):not(:where([class~="not-prose"] *)) {
       color: #e5e7eb;
-    }
-
-    .sm\:prose :where(h1):not(:where([class~="not-prose"] *)) {
-      color: #e5e7eb;
-    }
-
-    .sm\:prose :where(h2):not(:where([class~="not-prose"] *)) {
-      color: #e5e7eb;
-    }
-
-    .sm\:prose :where(a):not(:where([class~="not-prose"] *)) {
-      color: #FEF08A;
-    }
-  }
-
-  @media (prefers-color-scheme: dark) {
-
-    .sm\:prose {
-      color: #e5e7eb;
-    }
-
-    .sm\:prose :where(h1):not(:where([class~="not-prose"] *)) {
-      color: #e5e7eb;
-    }
-
-    .sm\:prose :where(h2):not(:where([class~="not-prose"] *)) {
-      color: #e5e7eb;
-    }
-
-    .sm\:prose :where(a):not(:where([class~="not-prose"] *)) {
-      color: #FEF08A;
     }
   }
 
@@ -1688,6 +1654,83 @@ p.lead {
     .sm\:prose :where(a):not(:where([class~="not-prose"] *)) {
       color: #FEF08A;
     }
+
+    .sm\:prose :where(.lead):not(:where([class~="not-prose"] *)) {
+      color: #e5e7eb;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+
+    .sm\:prose {
+      color: #e5e7eb;
+    }
+
+    .sm\:prose :where(h1):not(:where([class~="not-prose"] *)) {
+      color: #e5e7eb;
+    }
+
+    .sm\:prose :where(h2):not(:where([class~="not-prose"] *)) {
+      color: #e5e7eb;
+    }
+
+    .sm\:prose :where(a):not(:where([class~="not-prose"] *)) {
+      color: #FEF08A;
+    }
+
+    .sm\:prose :where(.lead):not(:where([class~="not-prose"] *)) {
+      color: #e5e7eb;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+
+    .sm\:prose {
+      color: #e5e7eb;
+    }
+
+    .sm\:prose :where(h1):not(:where([class~="not-prose"] *)) {
+      color: #e5e7eb;
+    }
+
+    .sm\:prose :where(h2):not(:where([class~="not-prose"] *)) {
+      color: #e5e7eb;
+    }
+
+    .sm\:prose :where(a):not(:where([class~="not-prose"] *)) {
+      color: #FEF08A;
+    }
+
+    .sm\:prose :where(.lead):not(:where([class~="not-prose"] *)) {
+      color: #e5e7eb;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+
+    .sm\:prose {
+      color: #e5e7eb;
+    }
+
+    .sm\:prose :where(h1):not(:where([class~="not-prose"] *)) {
+      color: #e5e7eb;
+    }
+
+    .sm\:prose :where(h2):not(:where([class~="not-prose"] *)) {
+      color: #e5e7eb;
+    }
+
+    .sm\:prose :where(a):not(:where([class~="not-prose"] *)) {
+      color: #FEF08A;
+    }
+
+    .sm\:prose :where(.lead):not(:where([class~="not-prose"] *)) {
+      color: #e5e7eb;
+    }
+  }
+
+  .sm\:prose :where(.lead.intro):not(:where([class~="not-prose"] *)) {
+    color: #000;
   }
 }
 @media (min-width: 1024px) {
