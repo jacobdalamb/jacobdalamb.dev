@@ -1,7 +1,6 @@
 @tailwind base;
 * {
-  @apply m-0 p-0 relative box-content;
-  overflow-wrap: break-word;
+  @apply m-0 p-0 relative box-content break-words;
 }
 ::selection {
   @apply bg-gray-900 text-white dark:bg-gray-200 dark:text-gray-900;

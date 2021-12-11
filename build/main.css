@@ -387,8 +387,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
   margin: 0px;
   box-sizing: content-box;
-  padding: 0px;
   overflow-wrap: break-word;
+  padding: 0px;
 }
 ::-moz-selection {
   --tw-bg-opacity: 1;
