@@ -1,6 +1,7 @@
 {
   "imports": {
     "blobity": "./blobity.js",
+    "date-holidays": "./date-holidays.js",
     "motion": "./motion.js"
   }
 }

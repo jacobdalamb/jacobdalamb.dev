@@ -17,16 +17,15 @@
     "url": "https://github.com/jacobthesheep/jacoblamb.me/issues"
   },
   "homepage": "https://github.com/jacobthesheep/jacoblamb.me#readme",
-  "dependencies": {
+  "devDependencies": {
+    "@snowpack/plugin-postcss": "^1.4.3",
     "@tailwindcss/typography": "^0.5.0",
     "autoprefixer": "^10.4.0",
     "blobity": "^0.1.7",
+    "date-holidays": "^3.12.2",
     "motion": "^10.4.0",
-    "postcss": "^8.4.4",
-    "tailwindcss": "^3.0.1"
-  },
-  "devDependencies": {
-    "@snowpack/plugin-postcss": "^1.4.3",
-    "snowpack": "^3.8.8"
+    "postcss": "^8.4.5",
+    "snowpack": "^3.8.8",
+    "tailwindcss": "^3.0.6"
   }
 }

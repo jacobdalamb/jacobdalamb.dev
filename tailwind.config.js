@@ -1,6 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
-  content: ['./public/index.html'],
+  content: ['./*/*.{html,js}'],
   theme: {
     screens: {
       sm: '667px',
@@ -27,9 +27,9 @@ module.exports = {
               },
               color: '#e5e7eb',
             },
-            '.lead.intro': {
-                color: '#000',
-              },
+            '.lead': {
+              color: '#000',
+            },
             color: '#000',
             maxWidth: 'none',
             a: {
