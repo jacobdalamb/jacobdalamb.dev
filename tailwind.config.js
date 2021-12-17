@@ -9,41 +9,35 @@ module.exports = {
       xl: '2560px',
     },
     extend: {
-      typography: {
+      typography: (theme) => ({
         DEFAULT: {
           css: {
             '@media (prefers-color-scheme: dark)': {
               h1: {
-                color: '#e5e7eb',
+                color: theme('colors.gray.200'),
               },
               h2: {
-                color: '#e5e7eb',
+                color: theme('colors.gray.200'),
               },
               a: {
-                color: '#FEF08A',
+                color: theme('colors.yellow.200'),
               },
-              '.lead': {
-                color: '#e5e7eb',
+              '[class~="lead"]': {
+                color: theme('colors.gray.200'),
               },
-              color: '#e5e7eb',
+              color: theme('colors.gray.200'),
             },
-            '.lead': {
-              color: '#000',
+            color: theme('colors.black'),
+            '[class~="lead"]': {
+              color: theme('colors.black'),
             },
-            color: '#000',
             maxWidth: 'none',
             a: {
               textDecoration: 'none',
             },
           },
         },
-      },
-      boxShadow: {
-        light: 'inset 0 -0.125em #FFFFFF',
-        lightHover: 'inset 0 -1.8em 0 #000',
-        dark: 'inset 0 -0.125em #FEF08A',
-        darkHover: 'inset 0 -1.8em 0 #FEF08A',
-      },
+      }),
       fontFamily: {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans],
       },
