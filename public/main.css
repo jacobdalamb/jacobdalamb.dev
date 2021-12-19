@@ -15,7 +15,7 @@
 }
 html,
 body {
-  height: 100%;
+  @apply h-full;
 }
 header,
 section,
