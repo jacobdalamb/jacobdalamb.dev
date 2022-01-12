@@ -39,7 +39,7 @@ module.exports = {
         },
       }),
       fontFamily: {
-        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+          sans: ['Lexend Deca', ...defaultTheme.fontFamily.sans],
       },
     },
   },
