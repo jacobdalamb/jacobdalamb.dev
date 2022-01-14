@@ -17488,7 +17488,7 @@ function getArgs (country, state, region, opts) {
 }
 
 const data = {
-  version: '2022-01-11',
+  version: '2022-01-12',
   license: 'CC-BY-SA-3',
   holidays: {
     AD: {
@@ -29242,7 +29242,7 @@ const data = {
         },
         '15 Nisan': {
           name: {
-            en: 'Passover',
+            en: 'Passover (Pesach)',
             he: 'פסח'
           }
         },
@@ -29256,17 +29256,9 @@ const data = {
         },
         '21 Nisan': {
           name: {
-            en: 'Seventh day of Passover',
-            he: 'שביעי של פסח'
+            en: 'Mimouna, Seventh day of Passover',
+            he: 'מימונה, שביעי של פסח'
           }
-        },
-        '22 Nisan': {
-          name: {
-            en: 'Mimouna',
-            he: 'מימונה'
-          },
-          type: 'observance',
-          note: 'Unpaid leave upon request'
         },
         '27 Nisan if Friday then previous Thursday if Sunday then next Monday': {
           name: {
@@ -29314,7 +29306,7 @@ const data = {
         },
         '28 Iyyar': {
           name: {
-            en: 'Jerusalem Day',
+            en: 'Jerusalem Day (Yom Yerushalayim)',
             he: 'יום ירושלים'
           },
           type: 'observance',
@@ -29322,7 +29314,7 @@ const data = {
         },
         '6 Sivan': {
           name: {
-            en: 'Shavuot',
+            en: 'Shavuot (Feast of Weeks)',
             he: 'שבועות'
           }
         },

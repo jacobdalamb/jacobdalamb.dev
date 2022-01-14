@@ -5,20 +5,20 @@ specifiers:
   '@tailwindcss/typography': ^0.5.0
   autoprefixer: ^10.4.2
   blobity: ^0.1.7
-  date-holidays: ^3.14.1
+  date-holidays: ^3.14.2
   postcss: ^8.4.5
   snowpack: ^3.8.8
-  tailwindcss: ^3.0.13
+  tailwindcss: ^3.0.14
 
 devDependencies:
   '@snowpack/plugin-postcss': 1.4.3_postcss@8.4.5
-  '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.13
+  '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.14
   autoprefixer: 10.4.2_postcss@8.4.5
   blobity: 0.1.7
-  date-holidays: 3.14.1
+  date-holidays: 3.14.2
   postcss: 8.4.5
   snowpack: 3.8.8
-  tailwindcss: 3.0.13_ef48b3b8837f8a23677bffe8f9cd866d
+  tailwindcss: 3.0.14_ef48b3b8837f8a23677bffe8f9cd866d
 
 packages:
 
@@ -299,7 +299,7 @@ packages:
       defer-to-connect: 2.0.1
     dev: true
 
-  /@tailwindcss/typography/0.5.0_tailwindcss@3.0.13:
+  /@tailwindcss/typography/0.5.0_tailwindcss@3.0.14:
     resolution: {integrity: sha512-1p/3C6C+JJziS/ghtG8ACYalbA2SyLJY27Pm33cVTlAoY6VQ7zfm2H64cPxUMBkVIlWXTtWHhZcZJPobMRmQAA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
@@ -308,7 +308,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 3.0.13_ef48b3b8837f8a23677bffe8f9cd866d
+      tailwindcss: 3.0.14_ef48b3b8837f8a23677bffe8f9cd866d
     dev: true
 
   /@tootallnate/once/1.1.2:
@@ -518,7 +518,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.19.1
-      caniuse-lite: 1.0.30001298
+      caniuse-lite: 1.0.30001299
       fraction.js: 4.1.2
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -570,6 +570,9 @@ packages:
     resolution: {integrity: sha512-4pIUWS99ldLtCSKDAwaz3SqGH4ExfaUo8Bq8BXNKPyvR3z6gyr8G4uHvV/exwu2OOyBser+vIXMMeC1l1kNWiQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
     dependencies:
       kinet: 2.2.1
       lodash: 4.17.21
@@ -604,8 +607,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001298
-      electron-to-chromium: 1.4.41
+      caniuse-lite: 1.0.30001299
+      electron-to-chromium: 1.4.44
       escalade: 3.1.1
       node-releases: 2.0.1
       picocolors: 1.0.0
@@ -692,8 +695,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /caniuse-lite/1.0.30001298:
-    resolution: {integrity: sha512-AcKqikjMLlvghZL/vfTHorlQsLDhGRalYf1+GmWCf5SCMziSGjRYQW/JEksj14NaYHIR6KIhrFAy0HV5C25UzQ==}
+  /caniuse-lite/1.0.30001299:
+    resolution: {integrity: sha512-iujN4+x7QzqA2NCSrS5VUy+4gLmRd4xv6vbBBsmfVqTx8bLAD8097euLqQgKxSVLvxjSDcvF1T/i9ocgnUFexw==}
     dev: true
 
   /caseless/0.12.0:
@@ -929,8 +932,8 @@ packages:
       moment-timezone: 0.5.34
     dev: true
 
-  /date-holidays/3.14.1:
-    resolution: {integrity: sha512-lo89Sr9E1QGJEdl7eiwL1BKZl52dfpsZR79dLoZixaeGU9G+kOAUHFw6O/QZ0SG8WvpBEok21TWoeDXDdeR0Lg==}
+  /date-holidays/3.14.2:
+    resolution: {integrity: sha512-h+76j8RpLCvida/wj1tqVT6Kkmz9+rHupvu7Oyfi2z/pl1J3prB1GDFO56DC17bsNLR8kaXIoWIrOzMbJaiimg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
@@ -1080,8 +1083,8 @@ packages:
       safer-buffer: 2.1.2
     dev: true
 
-  /electron-to-chromium/1.4.41:
-    resolution: {integrity: sha512-VQEXEJc+8rJIva85H8EPtB5Ux9g8TzkNGBanqphM9ZWMZ34elueKJ+5g+BPhz3Lk8gkujfQRcIZ+fpA0btUIuw==}
+  /electron-to-chromium/1.4.44:
+    resolution: {integrity: sha512-tHGWiUUmY7GABK8+DNcr474cnZDTzD8x1736SlDosVH8+/vRJeqfaIBAEHFtMjddz/0T4rKKYsxEc8BwQRdBpw==}
     dev: true
 
   /encoding/0.1.13:
@@ -2029,8 +2032,8 @@ packages:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
     dev: true
 
-  /nanoid/3.1.31:
-    resolution: {integrity: sha512-ZivnJm0o9bb13p2Ot5CpgC2rQdzB9Uxm/mFZweqm5eMViqOJe3PV6LU2E30SiLgheesmcPrjquqraoolONSA0A==}
+  /nanoid/3.1.32:
+    resolution: {integrity: sha512-F8mf7R3iT9bvThBoW4tGXhXFHCctyCiUUPrWF8WaTqa3h96d9QybkSeba43XVOOE3oiLfkVDe4bT8MeGmkrTxw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
     dev: true
@@ -2507,7 +2510,7 @@ packages:
     resolution: {integrity: sha512-jBDboWM8qpaqwkMwItqTQTiFikhs/67OYVvblFFTM7MrZjt6yMKd6r2kgXizEbTTljacm4NldIlZnhbjr84QYg==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
-      nanoid: 3.1.31
+      nanoid: 3.1.32
       picocolors: 1.0.0
       source-map-js: 1.0.1
     dev: true
@@ -2963,8 +2966,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /tailwindcss/3.0.13_ef48b3b8837f8a23677bffe8f9cd866d:
-    resolution: {integrity: sha512-raRPGFwQSGXn/3h0ttHND9jyPYfqk/ur2NXtlQuK25+ZnrCjlH1s1j4/oPswHGMoZzGNykUVycZ/LcROanUE0A==}
+  /tailwindcss/3.0.14_ef48b3b8837f8a23677bffe8f9cd866d:
+    resolution: {integrity: sha512-7VTZJVMY9iTZhGsiTC9d3gWk+tSJz8iKZoxd5mvO0w4n0lulzVPYEOiwKcz5h8M/rNhlpymU7Ix5519Tl5wrfA==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
