@@ -28,7 +28,6 @@
     "@snowpack/plugin-postcss": "^1.4.3",
     "@tailwindcss/typography": "^0.5.1",
     "autoprefixer": "^10.4.2",
-    "blobity": "^0.1.7",
     "date-holidays": "^3.14.2",
     "postcss": "^8.4.6",
     "prettier": "^2.5.1",

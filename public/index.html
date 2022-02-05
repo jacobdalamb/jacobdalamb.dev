@@ -83,17 +83,8 @@
         <p class="animate-pulse motion-reduce:animate-none">Not here yet...</p>
         <!--
           * showcase all projects *
-          TODO: Add a live demo for the projects (if possible) not only images
+          TODO: Add a live demo for the projects (at least photos)
         -->
-        <a
-          href="https://codepen.io/jacobthesheep"
-          role="link"
-          aria-label="codepen-link"
-          rel="noreferrer"
-          class="bubble hover:text-white dark:hover:text-black hover:z-10"
-          ><i class="fa-brands fa-codepen"></i> my codepens</a
-        >
-      </div>
     </section>
     <section class="bg-green-400 dark:bg-green-900">
       <div class="ch-all">
@@ -120,11 +111,12 @@
         >
       </div>
     </section>
-    <footer class="bg-pink-400 dark:bg-pink-900 prose">
+    <footer class="bg-pink-400 dark:bg-pink-900">
       <div class="ch-all">
         <!-- change into a footer -->
         <h1>CONNECT</h1>
-        <p>
+        <div class="prose">
+            <p>
           I have started accepting freelance jobs in web development on
           <a
             href="https://fiverr.com/jacobthesheep"
@@ -178,6 +170,7 @@
           ></a>
         </div>
         <p class="prose-sm">Jacob Lamb | 2020 - <span class="year"></span></p>
+        </div>
       </div>
     </footer>
     <script
@@ -185,7 +178,6 @@
       src="https://kit.fontawesome.com/062ee3baff.js"
       crossorigin="anonymous"
     ></script>
-    <script defer type="module" src="./blobity.js"></script>
     <script defer type="module" src="./holidays.js"></script>
     <script>
       document.querySelector(".year").textContent = new Date().getFullYear();

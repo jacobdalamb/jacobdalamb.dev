@@ -4,7 +4,6 @@ specifiers:
   '@snowpack/plugin-postcss': ^1.4.3
   '@tailwindcss/typography': ^0.5.1
   autoprefixer: ^10.4.2
-  blobity: ^0.1.7
   date-holidays: ^3.14.2
   postcss: ^8.4.6
   prettier: ^2.5.1
@@ -16,7 +15,6 @@ devDependencies:
   '@snowpack/plugin-postcss': 1.4.3_postcss@8.4.6
   '@tailwindcss/typography': 0.5.1_tailwindcss@3.0.18
   autoprefixer: 10.4.2_postcss@8.4.6
-  blobity: 0.1.7
   date-holidays: 3.14.2
   postcss: 8.4.6
   prettier: 2.5.1
@@ -567,15 +565,6 @@ packages:
   /binary-extensions/2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
-    dev: true
-
-  /blobity/0.1.7:
-    resolution: {integrity: sha512-4pIUWS99ldLtCSKDAwaz3SqGH4ExfaUo8Bq8BXNKPyvR3z6gyr8G4uHvV/exwu2OOyBser+vIXMMeC1l1kNWiQ==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      kinet: 2.2.1
-      lodash: 4.17.21
     dev: true
 
   /boolbase/1.0.0:
@@ -1754,10 +1743,6 @@ packages:
       json-buffer: 3.0.1
     dev: true
 
-  /kinet/2.2.1:
-    resolution: {integrity: sha512-UmnTPmnEokjxBeB3gPkOnTwRlIUaAeB+t21E+HJGzRKCGdJTUF3CTztK5yzzEuBQ1BZ0I0ovrY73+ctpPWFIOg==}
-    dev: true
-
   /kleur/4.1.4:
     resolution: {integrity: sha512-8QADVssbrFjivHWQU7KkMgptGTl6WAcSdlbBPY4uNF+mWr6DGcKrvY2w4FQJoXch7+fKMjj0dRrL75vk3k23OA==}
     engines: {node: '>=6'}
@@ -1813,10 +1798,6 @@ packages:
 
   /lodash.pick/4.4.0:
     resolution: {integrity: sha1-UvBWEP/53tQiYRRB7R/BI6AwAbM=}
-    dev: true
-
-  /lodash/4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
     dev: true
 
   /lowercase-keys/2.0.0:
