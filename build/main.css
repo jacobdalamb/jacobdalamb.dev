@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.0.18 | MIT License | https://tailwindcss.com
+! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
 *//*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -476,7 +476,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 html, body {
   height: 100%;
 }
-header, section, footer {
+header, section {
   display: flex;
   height: 100vh;
   scroll-snap-align: start;
@@ -484,7 +484,6 @@ header, section, footer {
   justify-content: center;
 }
 a {
-  border-radius: 0.25rem;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;
@@ -848,7 +847,7 @@ p {
   }
 
   .prose :where(a):not(:where([class~="not-prose"] *)) {
-    color: #fef08a;
+    color: #e5e7eb;
   }
 
   .prose :where([class~="lead"]):not(:where([class~="not-prose"] *)) {
@@ -1036,6 +1035,28 @@ p {
   width: min(80%, 90%);
   margin: 0 auto;
 }
+.stack {
+  display: inline-grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+}
+.stack-text {
+  border-radius: 0.25rem;
+  padding: 1rem;
+  text-align: center;
+}
+@media (prefers-color-scheme: dark) {
+
+  .stack-text {
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  }
+}
+.tab {
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
+}
 .bubble::after {
   position: absolute;
   bottom: 0px;
@@ -1076,6 +1097,7 @@ p {
 .icon {
   height: 2rem;
   width: 2rem;
+  border-radius: 0.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   text-align: center;
@@ -1101,6 +1123,13 @@ p {
 .bottom-2 {
   bottom: 0.5rem;
 }
+.bottom-0 {
+  bottom: 0px;
+}
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
 .flex {
   display: flex;
 }
@@ -1109,6 +1138,9 @@ p {
 }
 .h-screen {
   height: 100vh;
+}
+.h-auto {
+  height: auto;
 }
 .max-w-xs {
   max-width: 20rem;
@@ -1168,11 +1200,36 @@ p {
 .snap-mandatory {
   --tw-scroll-snap-strictness: mandatory;
 }
+.flex-row {
+  flex-direction: row;
+}
 .place-items-center {
   place-items: center;
 }
+.items-center {
+  align-items: center;
+}
 .justify-between {
   justify-content: space-between;
+}
+.gap-4 {
+  gap: 1rem;
+}
+.overflow-y-auto {
+  overflow-y: auto;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.border-r-2 {
+  border-right-width: 2px;
+}
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+.border-b-sky-300 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(125 211 252 / var(--tw-border-opacity));
 }
 .bg-blue-400 {
   --tw-bg-opacity: 1;
@@ -1186,16 +1243,32 @@ p {
   --tw-bg-opacity: 1;
   background-color: rgb(74 222 128 / var(--tw-bg-opacity));
 }
-.bg-pink-400 {
+.bg-gray-800 {
   --tw-bg-opacity: 1;
-  background-color: rgb(244 114 182 / var(--tw-bg-opacity));
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
-.hover\:z-10:hover {
-  z-index: 10;
+.bg-slate-700\/50 {
+  background-color: rgb(51 65 85 / 0.5);
 }
-.hover\:text-white:hover {
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.text-sky-300 {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(125 211 252 / var(--tw-text-opacity));
+}
+.text-slate-50 {
+  --tw-text-opacity: 1;
+  color: rgb(248 250 252 / var(--tw-text-opacity));
 }
 @media (prefers-reduced-motion: reduce) {
 
@@ -1224,16 +1297,6 @@ p {
   .dark\:bg-green-900 {
     --tw-bg-opacity: 1;
     background-color: rgb(20 83 45 / var(--tw-bg-opacity));
-  }
-
-  .dark\:bg-pink-900 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(131 24 67 / var(--tw-bg-opacity));
-  }
-
-  .dark\:hover\:text-black:hover {
-    --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity));
   }
 }
 @media (min-width: 667px) {

@@ -18,12 +18,11 @@ body {
   @apply h-full;
 }
 header,
-section,
-footer {
+section {
   @apply flex flex-col justify-center h-screen snap-start;
 }
 a {
-  @apply transition-all duration-200 ease-out hover:ease-in rounded;
+  @apply transition-all duration-200 ease-out hover:ease-in;
 }
 p {
   @apply max-w-prose;
@@ -38,6 +37,15 @@ p {
   width: min(80%, 90%);
   margin: 0 auto;
 }
+.stack {
+  @apply inline-grid grid-flow-col gap-4;
+}
+.stack-text {
+  @apply dark:bg-gray-900 rounded p-4 text-center;
+}
+.tab {
+  @apply bg-blue-800 rounded;
+}
 .bubble::after {
   @apply content-[""] rounded-full h-1 z-[1] absolute block bottom-0 bg-white transition left-0 right-0;
 }
@@ -48,6 +56,6 @@ p {
   @apply group-hover:text-white dark:group-hover:text-yellow-200 text-gray-900;
 }
 .icon {
-  @apply text-center h-8 w-8 bg-white dark:bg-gray-300 hover:bg-gray-900;
+  @apply rounded text-center h-8 w-8 bg-white dark:bg-gray-300 hover:bg-gray-900;
 }
 @tailwind utilities;

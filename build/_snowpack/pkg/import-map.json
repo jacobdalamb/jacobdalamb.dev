@@ -1,5 +1,6 @@
 {
   "imports": {
+    "alpinejs": "./alpinejs.js",
     "date-holidays": "./date-holidays.js"
   }
 }
