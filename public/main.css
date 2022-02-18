@@ -19,7 +19,7 @@ body {
 }
 header,
 section {
-  @apply flex flex-col justify-center h-screen snap-start;
+  @apply flex flex-col justify-center h-screen;
 }
 a {
   @apply transition-all duration-200 ease-out hover:ease-in;

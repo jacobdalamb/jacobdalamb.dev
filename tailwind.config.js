@@ -34,6 +34,7 @@ module.exports = {
             maxWidth: "none",
             a: {
               textDecoration: "none",
+              color: theme("colors.gray.200"),
             },
           },
         },

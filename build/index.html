@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en" class="snap-y snap-mandatory">
+<html dir="ltr" lang="en">
 
     <head>
         <title>Jacob Lamb | Full-Stack Developer & Web Designer</title>
@@ -10,7 +10,8 @@
         <meta name="author" content="Jacob Lamb" />
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="" />
-        <link href="./images/wow.ico" rel="icon" type="image/x-icon" />
+        <link href="./images/favicon.ico" rel="icon" sizes="any" />
+        <link href="./images/favicon.svg" rel="icon" type="image/svg+xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;800&display=swap" rel="stylesheet" />
@@ -20,7 +21,7 @@
         <meta property="og:url" content="https://jacoblamb.me" />
         <meta property="og:title" content="Jacob Lamb | Full-Stack Developer & Web Designer" />
         <meta property="og:description" content="An aspiring Full-Stack Developer & Web Designer with a passion for creating and designing high-performance responsive web apps." />
-        <meta property="og:image" content="./images/wow.png" />
+        <meta property="og:image" content="./images/favicon.ico" />
         <meta property="og:image:alt" content="profile image" />
         <!-- Twitter Meta Tags -->
         <meta property="twitter:card" content="summary_large_image" />
@@ -28,12 +29,35 @@
         <meta property="twitter:creator" content="@jacob_thesheep" />
         <meta property="twitter:title" content="Jacob Lamb | Full-Stack Developer & Web Designer" />
         <meta property="twitter:description" content="An aspiring Full-Stack Developer & Web Designer with a passion for creating and designing high-performance responsive web apps." />
-        <meta property="twitter:image" content="./images/wow.png" />
+        <meta property="twitter:image" content="./images/favicon.ico" />
         <meta property="twitter:image:alt" content="profile image" />
     </head>
 
-    <body class="h-screen overflow-y-auto prose prose-sm sm:prose-base md:prose-lg lg:prose-xl xl:prose-2xl dark:bg-gray-200 snap-y snap-mandatory">
-        <header class="bg-blue-400 dark:bg-blue-900">
+    <body class="h-screen overflow-y-auto prose prose-sm sm:prose-base md:prose-lg lg:prose-xl xl:prose-2xl dark:bg-gray-200" x-data="{ tab: 'tab1' }">
+        <nav class="flex bg-gray-400 dark:bg-gray-800 space-x-12 pl-10">
+            <a :class="{'text-yellow-600 dark:text-yellow-200' : tab === 'tab1'}" class="py-1 flex hover:text-yellow-200" href="home" @click.prevent="tab = 'tab1'">
+                Home
+            </a>
+            <a :class="{'text-yellow-600 dark:text-yellow-200' : tab === 'tab2'}" class="py-1 flex hover:text-yellow-200" href="projects" @click.prevent="tab = 'tab2'">
+                Projects
+            </a>
+            <a :class="{'text-yellow-600 dark:text-yellow-200' : tab === 'tab3'}" class="py-1 flex hover:text-yellow-200" href="about" @click.prevent="tab = 'tab3'">
+                About
+            </a>
+            <!-- <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab3'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab3'">
+                Languages
+            </a>
+            <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab4'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab4'">
+                Apps
+            </a>
+            <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab5'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab5'">
+                Tools
+            </a>
+            <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab6'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab6'">
+                Frameworks
+            </a> -->
+        </nav>
+        <header class="bg-blue-400 dark:bg-blue-900" x-show="tab === 'tab1'">
             <div class="ch-all">
                 <div>
                     <h1>Hi, I'm Jacob.</h1>
@@ -44,13 +68,9 @@
                     </p>
                 </div>
                 <!-- * Best projects showcase (3-6 max) * -->
-                <div class="fixed bottom-2 grid place-items-center inset-x-0 motion-reduce:animate-none animate-bounce highlight">
-                    <span>see my work</span>
-                    <i class="fa-solid fa-angle-down"></i>
-                </div>
             </div>
         </header>
-        <section class="bg-purple-400 dark:bg-purple-900">
+        <section class="bg-purple-400 dark:bg-purple-900" x-show="tab === 'tab2'">
             <div class="ch-all">
                 <h1>FEATURED PROJECTS</h1>
                 <p class="animate-pulse motion-reduce:animate-none">Not here yet...</p>
@@ -60,48 +80,41 @@
         -->
             </div>
         </section>
-        <section class="bg-green-400 dark:bg-green-900">
+        <section class="bg-green-400 dark:bg-green-900" x-show="tab === 'tab3'">
             <div class="ch-all">
                 <!-- todo: add profile picture -->
                 <!-- todo: create own stack of languages, apps, resources, and newsletters subsribed to -->
-                <div class="bg-gray-800 rounded" x-data="{ tab: 'tab1' }">
-                    <div class="flex bg-slate-700/50">
-                        <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab1'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab1'">
-                            About
-                        </a>
-                        <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab2'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab2'">
-                            Languages
-                        </a>
-                        <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab3'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab3'">
-                            Apps
-                        </a>
+                <p>
+                    My passion for web development and design started sometime in
+                    2017 after I had learned that my uncle was a programmer and
+                    wanted to learn more of what it's all about. Soon after, I
+                    quickly downloaded a code editor and started experimenting with
+                    HTML and CSS. Since then, I have increased my knowledge from
+                    various web development and UX/UI design courses. Today I
+                    continue to level up my skills, my confidence in networking, and
+                    building my portfolio. When I'm not working on the web, I love
+                    to read books and play games.
+                </p>
+                <!-- <div class="flex flex-row gap-4 break-words" x-show="tab === 'tab2'" x-data="{ languages: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Python', 'C'] }">
+                        <template x-for="language in languages">
+                            <p x-text="language"></p>
+                        </template>
                     </div>
-                    <div class="text-slate-50 flex px-8 h-auto">
-                        <div x-show="tab === 'tab1'">
-                            <p>
-                                My passion for web development and design started sometime in
-                                2017 after I had learned that my uncle was a programmer and
-                                wanted to learn more of what it's all about. Soon after, I
-                                quickly downloaded a code editor and started experimenting with
-                                HTML and CSS. Since then, I have increased my knowledge from
-                                various web development and UX/UI design courses. Today I
-                                continue to level up my skills, my confidence in networking, and
-                                building my portfolio. When I'm not working on the web, I love
-                                to read books and play games.
-                            </p>
-                        </div>
-                        <div class="flex flex-row gap-4" x-show="tab === 'tab2'" x-data="{ languages: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express', 'Tailwind CSS', 'Python', 'C'] }">
-                            <template x-for="language in languages">
-                                <p x-text="language"></p>
-                            </template>
-                        </div>
-                        <div class="flex flex-row gap-4" x-show="tab === 'tab3'" x-data="{ apps: ['VSCode', 'Figma', 'GitHub Desktop', 'Fig', 'Xcode', 'Hyper'] }">
-                            <template x-for="app in apps">
-                                <p x-text="app"></p>
-                            </template>
-                        </div>
+                    <div class="flex flex-row gap-4" x-show="tab === 'tab3'" x-data="{ apps: ['VSCode', 'Figma', 'GitHub Desktop', 'Fig', 'Xcode', 'Hyper'] }">
+                        <template x-for="app in apps">
+                            <p x-text="app"></p>
+                        </template>
                     </div>
-                </div>
+                    <div class="flex flex-row gap-4" x-show="tab === 'tab4'" x-data="{ tools: ['Snowpack', 'npm', 'pnpm'] }">
+                        <template x-for="tool in tools">
+                            <p x-text="tool"></p>
+                        </template>
+                    </div>
+                    <div class="flex flex-row gap-4" x-show="tab === 'tab5'" x-data="{ frameworks: ['Express', 'Tailwind CSS', 'Alpine.js', 'PostCSS'] }">
+                        <template x-for="framework in frameworks">
+                            <p x-text="framework"></p>
+                        </template>
+                    </div> -->
             </div>
         </section>
         <footer class="fixed mx-6 bottom-0 grid inset-x-0">
