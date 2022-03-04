@@ -1,39 +1,29 @@
 {
-  "name": "jacoblamb.me",
+  "name": "personal-website",
   "version": "1.0.0",
-  "description": "My personal website.",
-  "main": "postcss.config.js",
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "react"
-      ]
-    }
+  "description": "",
+  "main": "tailwind.config.js",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.2",
+    "alpinejs": "^3.9.1",
+    "autoprefixer": "^10.4.2",
+    "parcel": "^2.3.2",
+    "postcss": "^8.4.7",
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.8",
+    "tailwindcss": "^3.0.23"
   },
   "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build"
+    "dev": "pnpm exec parcel src/index.html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jacobthesheep/jacoblamb.me.git"
   },
-  "author": "Jacob Lamb <jacoblambthomas@gmail.com>",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jacobthesheep/jacoblamb.me/issues"
   },
-  "homepage": "https://github.com/jacobthesheep/jacoblamb.me#readme",
-  "devDependencies": {
-    "@snowpack/plugin-postcss": "^1.4.3",
-    "@tailwindcss/typography": "0.5.1",
-    "alpinejs": "^3.9.0",
-    "autoprefixer": "^10.4.2",
-    "date-holidays": "^3.14.2",
-    "postcss": "^8.4.6",
-    "prettier": "^2.5.1",
-    "prettier-plugin-tailwindcss": "^0.1.7",
-    "snowpack": "^3.8.8",
-    "tailwindcss": "^3.0.23"
-  }
+  "homepage": "https://github.com/jacobthesheep/jacoblamb.me#readme"
 }

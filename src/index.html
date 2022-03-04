@@ -10,18 +10,17 @@
         <meta name="author" content="Jacob Lamb" />
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="" />
-        <link href="./images/favicon.ico" rel="icon" sizes="any" />
-        <link href="./images/favicon.svg" rel="icon" type="image/svg+xml" />
+        <link href="./images/blob.svg" rel="icon" type="image/svg+xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;800&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="./main.css" type="text/css" />
+        <link rel="stylesheet" href="./index.css" type="text/css" />
         <!-- FB Meta Tags -->
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://jacoblamb.me" />
         <meta property="og:title" content="Jacob Lamb | Full-Stack Developer & Web Designer" />
         <meta property="og:description" content="An aspiring Full-Stack Developer & Web Designer with a passion for creating and designing high-performance responsive web apps." />
-        <meta property="og:image" content="./images/favicon.ico" />
+        <meta property="og:image" content="./images/blob.svg" />
         <meta property="og:image:alt" content="profile image" />
         <!-- Twitter Meta Tags -->
         <meta property="twitter:card" content="summary_large_image" />
@@ -29,19 +28,19 @@
         <meta property="twitter:creator" content="@jacob_thesheep" />
         <meta property="twitter:title" content="Jacob Lamb | Full-Stack Developer & Web Designer" />
         <meta property="twitter:description" content="An aspiring Full-Stack Developer & Web Designer with a passion for creating and designing high-performance responsive web apps." />
-        <meta property="twitter:image" content="./images/favicon.ico" />
+        <meta property="twitter:image" content="./images/blob.svg" />
         <meta property="twitter:image:alt" content="profile image" />
     </head>
 
     <body class="h-screen overflow-y-auto prose prose-sm sm:prose-base md:prose-lg lg:prose-xl xl:prose-2xl dark:bg-gray-200" x-data="{ tab: 'tab1' }">
-        <nav class="flex bg-gray-400 dark:bg-gray-800 space-x-12 pl-10">
-            <a :class="{'text-yellow-600 dark:text-yellow-200' : tab === 'tab1'}" class="py-1 flex hover:text-yellow-200" href="home" @click.prevent="tab = 'tab1'">
+        <nav class="flex bg-gray-200 dark:bg-gray-800 space-x-12 pl-10">
+            <a :class="{'!text-blue-600 dark:text-blue-200' : tab === 'tab1'}" class="py-1 flex text-blue-400 dark:text-blue-200" href="#" @click.prevent="tab = 'tab1'">
                 Home
             </a>
-            <a :class="{'text-yellow-600 dark:text-yellow-200' : tab === 'tab2'}" class="py-1 flex hover:text-yellow-200" href="projects" @click.prevent="tab = 'tab2'">
+            <a :class="{'!text-blue-600 dark:text-blue-200' : tab === 'tab2'}" class="py-1 flex text-blue-400 dark:text-blue-200" href="#" @click.prevent="tab = 'tab2'">
                 Projects
             </a>
-            <a :class="{'text-yellow-600 dark:text-yellow-200' : tab === 'tab3'}" class="py-1 flex hover:text-yellow-200" href="about" @click.prevent="tab = 'tab3'">
+            <a :class="{'!text-blue-600 dark:text-blue-200' : tab === 'tab3'}" class="py-1 flex text-blue-400 dark:text-blue-200" href="#" @click.prevent="tab = 'tab3'">
                 About
             </a>
             <!-- <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab3'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab3'">
@@ -86,15 +85,14 @@
                 <!-- todo: add profile picture -->
                 <!-- todo: create own stack of languages, apps, resources, and newsletters subsribed to -->
                 <p>
-                    My passion for web development and design started sometime in
-                    2017 after I had learned that my uncle was a programmer and
-                    wanted to learn more of what it's all about. Soon after, I
-                    quickly downloaded a code editor and started experimenting with
-                    HTML and CSS. Since then, I have increased my knowledge from
-                    various web development and UX/UI design courses. Today I
-                    continue to level up my skills, my confidence in networking, and
-                    building my portfolio. When I'm not working on the web, I love
-                    to read books and play games.
+                    My passion for web development and design started sometime in 2017
+                    after I had learned that my uncle was a programmer and wanted to learn
+                    more of what it's all about. Soon after, I quickly downloaded a code
+                    editor and started experimenting with HTML and CSS. Since then, I have
+                    increased my knowledge from various web development and UX/UI design
+                    courses. Today I continue to level up my skills, my confidence in
+                    networking, and building my portfolio. When I'm not working on the
+                    web, I love to read books and play games.
                 </p>
                 <!-- <div class="flex flex-row gap-4 break-words" x-show="tab === 'tab2'" x-data="{ languages: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Python', 'C'] }">
                         <template x-for="language in languages">
@@ -129,9 +127,8 @@
             </div>
         </footer>
         <script defer src="https://kit.fontawesome.com/062ee3baff.js" crossorigin="anonymous"></script>
-        <script defer type="module" src="./holidays.js"></script>
         <script type="module">
-            import Alpine from "./_snowpack/pkg/alpinejs.js";
+            import Alpine from "alpinejs";
 
             window.Alpine = Alpine;
 
