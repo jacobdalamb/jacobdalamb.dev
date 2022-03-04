@@ -2,10 +2,8 @@
   "name": "personal-website",
   "version": "1.0.0",
   "description": "",
-  "main": "tailwind.config.js",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.2",
-    "alpinejs": "^3.9.1",
     "autoprefixer": "^10.4.2",
     "parcel": "^2.3.2",
     "postcss": "^8.4.7",
@@ -14,7 +12,8 @@
     "tailwindcss": "^3.0.23"
   },
   "scripts": {
-    "dev": "pnpm exec parcel src/index.html"
+    "dev": "pnpm exec parcel src/index.html",
+    "build": "pnpm exec parcel build src/index.html"
   },
   "repository": {
     "type": "git",
@@ -25,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/jacobthesheep/jacoblamb.me/issues"
   },
-  "homepage": "https://github.com/jacobthesheep/jacoblamb.me#readme"
+  "homepage": "https://github.com/jacobthesheep/jacoblamb.me#readme",
+  "dependencies": {
+    "alpinejs": "^3.9.1"
+  }
 }

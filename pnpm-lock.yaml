@@ -10,9 +10,11 @@ specifiers:
   prettier-plugin-tailwindcss: ^0.1.8
   tailwindcss: ^3.0.23
 
+dependencies:
+  alpinejs: 3.9.1
+
 devDependencies:
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.23
-  alpinejs: 3.9.1
   autoprefixer: 10.4.2_postcss@8.4.7
   parcel: 2.3.2_postcss@8.4.7
   postcss: 8.4.7
@@ -751,11 +753,11 @@ packages:
     resolution: {integrity: sha512-1tdfLmNjWG6t/CsPldh+foumYFo3cpyCHgBYQ34ylaMsJ+SNHQ1kApMIa8jN+i593zQuaw3AdWH0nJTARzCFhg==}
     dependencies:
       '@vue/shared': 3.1.5
-    dev: true
+    dev: false
 
   /@vue/shared/3.1.5:
     resolution: {integrity: sha512-oJ4F3TnvpXaQwZJNF3ZK+kLPHKarDmJjJ6jyzVNDKH9md1dptjC7lWR//jrGuLdek/U6iltWxqAnYOu8gCiOvA==}
-    dev: true
+    dev: false
 
   /abortcontroller-polyfill/1.7.3:
     resolution: {integrity: sha512-zetDJxd89y3X99Kvo4qFx8GKlt6GsvN3UcRZHwU6iFA/0KiOmhkTVhe8oRoTBiTVPZu09x3vCra47+w8Yz1+2Q==}
@@ -790,7 +792,7 @@ packages:
     resolution: {integrity: sha512-RcNHza1C9hrGEScXP1igFwnP4iTn4cXbT6vhd1gDT6DsZLE8kutG4FRRF1yk2T0poQYMyyxfFlqX865HUHJy3Q==}
     dependencies:
       '@vue/reactivity': 3.1.5
-    dev: true
+    dev: false
 
   /ansi-styles/3.2.1:
     resolution: {integrity: sha512-VT0ZI6kZRdTh8YyJw3SMbYm/u+NqfsAxEpWO0Pf9sq8/e94WxxOpPKx9FR1FlyCtOVDNOQ+8ntlqFxiRc+r5qA==}
