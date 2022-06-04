@@ -2,18 +2,22 @@
   "name": "personal-website",
   "version": "1.0.0",
   "description": "",
+  "source": "src/index.html",
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.2",
-    "autoprefixer": "^10.4.2",
-    "parcel": "^2.3.2",
-    "postcss": "^8.4.7",
-    "prettier": "^2.5.1",
-    "prettier-plugin-tailwindcss": "^0.1.8",
-    "tailwindcss": "^3.0.23"
+    "@tailwindcss/typography": "0.5.2",
+    "alpinejs": "^3.10.2",
+    "autoprefixer": "^10.4.7",
+    "cssnano": "^5.1.11",
+    "parcel": "^2.6.0",
+    "postcss": "^8.4.14",
+    "postcss-import": "^14.1.0",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.11",
+    "tailwindcss": "^3.0.24"
   },
   "scripts": {
-    "dev": "pnpm exec parcel src/index.html",
-    "build": "pnpm exec parcel build src/index.html"
+    "dev": "parcel src/index.html --open firefox",
+    "build": "parcel build --no-content-hash src/index.html"
   },
   "repository": {
     "type": "git",
@@ -24,8 +28,5 @@
   "bugs": {
     "url": "https://github.com/jacobthesheep/jacoblamb.me/issues"
   },
-  "homepage": "https://github.com/jacobthesheep/jacoblamb.me#readme",
-  "dependencies": {
-    "alpinejs": "^3.9.1"
-  }
+  "homepage": "https://github.com/jacobthesheep/jacoblamb.me#readme"
 }

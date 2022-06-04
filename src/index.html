@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
-    <head>
-        <title>Jacob Lamb | Full-Stack Developer & Web Designer</title>
-        <meta name="title" content="Jacob Lamb | Full-Stack Developer & Web Designer" />
-        <meta name="description" content="An aspiring Full-Stack Developer & Web Designer with a passion for creating and designing high-performance responsive web apps." />
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="author" content="Jacob Lamb" />
-        <meta name="robots" content="index, follow" />
-        <meta name="theme-color" content="" />
-        <link href="./images/blob.svg" rel="icon" type="image/svg+xml" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;800&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="./index.css" type="text/css" />
-        <!-- FB Meta Tags -->
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://jacoblamb.me" />
-        <meta property="og:title" content="Jacob Lamb | Full-Stack Developer & Web Designer" />
-        <meta property="og:description" content="An aspiring Full-Stack Developer & Web Designer with a passion for creating and designing high-performance responsive web apps." />
-        <meta property="og:image" content="./images/blob.svg" />
-        <meta property="og:image:alt" content="profile image" />
-        <!-- Twitter Meta Tags -->
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://jacoblamb.me" />
-        <meta property="twitter:creator" content="@jacob_thesheep" />
-        <meta property="twitter:title" content="Jacob Lamb | Full-Stack Developer & Web Designer" />
-        <meta property="twitter:description" content="An aspiring Full-Stack Developer & Web Designer with a passion for creating and designing high-performance responsive web apps." />
-        <meta property="twitter:image" content="./images/blob.svg" />
-        <meta property="twitter:image:alt" content="profile image" />
-    </head>
+<head>
+    <title>Jacob Lamb | Full-Stack Developer & Web Designer</title>
+    <meta name="title" content="Jacob Lamb | Full-Stack Developer & Web Designer" />
+    <meta name="description"
+        content="An aspiring Full-Stack Developer & Web Designer with a passion for creating and designing high-performance responsive web apps." />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Jacob Lamb" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="" />
+    <link href="./images/blob.svg" rel="icon" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./index.css" type="text/css" />
+    <!-- FB Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jacoblamb.me" />
+    <meta property="og:title" content="Jacob Lamb | Full-Stack Developer & Web Designer" />
+    <meta property="og:description"
+        content="An aspiring Full-Stack Developer & Web Designer with a passion for creating and designing high-performance responsive web apps." />
+    <meta property="og:image" content="./images/blob.svg" />
+    <meta property="og:image:alt" content="profile image" />
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://jacoblamb.me" />
+    <meta property="twitter:creator" content="@jacob_thesheep" />
+    <meta property="twitter:title" content="Jacob Lamb | Full-Stack Developer & Web Designer" />
+    <meta property="twitter:description"
+        content="An aspiring Full-Stack Developer & Web Designer with a passion for creating and designing high-performance responsive web apps." />
+    <meta property="twitter:image" content="./images/blob.svg" />
+    <meta property="twitter:image:alt" content="profile image" />
+</head>
 
-    <body class="h-screen overflow-y-auto prose prose-sm sm:prose-base md:prose-lg lg:prose-xl xl:prose-2xl dark:bg-gray-200" x-data="{ tab: 'tab1' }">
-        <nav class="flex bg-gray-200 dark:bg-gray-800 space-x-12 pl-10">
-            <a :class="{'!text-blue-600 dark:text-blue-200' : tab === 'tab1'}" class="py-1 flex text-blue-400 dark:text-blue-200" href="#" @click.prevent="tab = 'tab1'">
-                Home
-            </a>
-            <a :class="{'!text-blue-600 dark:text-blue-200' : tab === 'tab2'}" class="py-1 flex text-blue-400 dark:text-blue-200" href="#" @click.prevent="tab = 'tab2'">
-                Projects
-            </a>
-            <a :class="{'!text-blue-600 dark:text-blue-200' : tab === 'tab3'}" class="py-1 flex text-blue-400 dark:text-blue-200" href="#" @click.prevent="tab = 'tab3'">
-                About
-            </a>
-            <!-- <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab3'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab3'">
+<body
+    class="h-screen overflow-y-auto prose prose-sm sm:prose-base md:prose-lg lg:prose-xl xl:prose-2xl dark:bg-gray-200"
+    x-data="{ tab: 'tab1' }">
+    <nav class="flex bg-gray-200 dark:bg-gray-800 space-x-12 pl-10">
+        <a :class="{'!text-blue-600 dark:text-blue-200' : tab === 'tab1'}" href="#" @click.prevent="tab = 'tab1'">
+            Home
+        </a>
+        <a :class="{'!text-blue-600 dark:text-blue-200' : tab === 'tab2'}" href="#" @click.prevent="tab = 'tab2'">
+            Projects
+        </a>
+        <a :class="{'!text-blue-600 dark:text-blue-200' : tab === 'tab3'}" href="#" @click.prevent="tab = 'tab3'">
+            About
+        </a>
+        <!-- <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab3'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab3'">
                 Languages
             </a>
             <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab4'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab4'">
@@ -54,47 +60,51 @@
             </a>
             <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab6'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab6'">
                 Frameworks
-            </a> -->
-        </nav>
-        <header class="bg-blue-400 dark:bg-blue-900" x-show="tab === 'tab1'">
-            <div class="ch-all">
-                <div>
-                    <h1>Hi, I'm Jacob.</h1>
-                    <p class="lead">
-                        An aspiring
-                        <span class="highlight">Full-Stack Developer & Web Designer</span>
-                        with a passion for creating high-performance responsive web apps.
-                    </p>
-                </div>
-                <!-- * Best projects showcase (3-6 max) * -->
+            </a>
+            <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab6'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab6'">
+                Frameworks
+            </a>
+        -->
+    </nav>
+    <header class="bg-blue-400 dark:bg-blue-900" x-show="tab === 'tab1'">
+        <div class="ch-all">
+            <div>
+                <h1>Hi, I'm Jacob.</h1>
+                <p class="lead">
+                    An aspiring
+                    <span class="highlight">Full-Stack Developer & Web Designer</span>
+                    with a passion for creating high-performance responsive web apps.
+                </p>
             </div>
-        </header>
-        <section class="bg-purple-400 dark:bg-purple-900" x-show="tab === 'tab2'">
-            <div class="ch-all">
-                <h1>FEATURED PROJECTS</h1>
-                <p class="animate-pulse motion-reduce:animate-none">Not here yet...</p>
-                <!--
+            <!-- * Best projects showcase (3-6 max) * -->
+        </div>
+    </header>
+    <section class="bg-purple-400 dark:bg-purple-900" x-show="tab === 'tab2'">
+        <div class="ch-all">
+            <h1>FEATURED PROJECTS</h1>
+            <p class="animate-pulse motion-reduce:animate-none">Not here yet...</p>
+            <!--
           * showcase all projects *
           TODO: Add a live demo for the projects (at least photos)
         -->
-            </div>
-        </section>
-        <section class="bg-green-400 dark:bg-green-900" x-show="tab === 'tab3'">
-            <div class="ch-all">
-                <h1>ABOUT</h1>
-                <!-- todo: add profile picture -->
-                <!-- todo: create own stack of languages, apps, resources, and newsletters subsribed to -->
-                <p>
-                    My passion for web development and design started sometime in 2017
-                    after I had learned that my uncle was a programmer and wanted to learn
-                    more of what it's all about. Soon after, I quickly downloaded a code
-                    editor and started experimenting with HTML and CSS. Since then, I have
-                    increased my knowledge from various web development and UX/UI design
-                    courses. Today I continue to level up my skills, my confidence in
-                    networking, and building my portfolio. When I'm not working on the
-                    web, I love to read books and play games.
-                </p>
-                <!-- <div class="flex flex-row gap-4 break-words" x-show="tab === 'tab2'" x-data="{ languages: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Python', 'C'] }">
+        </div>
+    </section>
+    <section class="bg-green-400 dark:bg-green-900" x-show="tab === 'tab3'">
+        <div class="ch-all">
+            <h1>ABOUT</h1>
+            <!-- todo: add profile picture -->
+            <!-- todo: create own stack of languages, apps, resources, and newsletters subsribed to -->
+            <p>
+                My passion for web development and design started sometime in 2017
+                after I had learned that my uncle was a programmer and wanted to learn
+                more of what it's all about. Soon after, I quickly downloaded a code
+                editor and started experimenting with HTML and CSS. Since then, I have
+                increased my knowledge from various web development and UX/UI design
+                courses. Today I continue to level up my skills, my confidence in
+                networking, and building my portfolio. When I'm not working on the
+                web, I love to read books and play games.
+            </p>
+            <!-- <div class="flex flex-row gap-4 break-words" x-show="tab === 'tab2'" x-data="{ languages: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Python', 'C'] }">
                         <template x-for="language in languages">
                             <p x-text="language"></p>
                         </template>
@@ -114,52 +124,64 @@
                             <p x-text="framework"></p>
                         </template>
                     </div> -->
+        </div>
+    </section>
+    <footer class="fixed mx-6 bottom-0 grid inset-x-0">
+        <div class="prose">
+            <div class="flex justify-between items-center max-w-xs">
+                <a data-blobity-tooltip="email me" href="mailto:jacobtlamb@hey.com" role="link" aria-label="email-link"
+                    rel="noreferrer" class="icon group"><i role="button" aria-label="email-icon"
+                        class="fa-solid fa-envelope-square fa-2x i-link"></i></a>
+                <a data-blobity-tooltip="check my twitter" href="https://twitter.com/jacob_thesheep" role="link"
+                    aria-label="twitter-link" rel="noreferrer" class="icon group"><i role="button"
+                        aria-label="twitter-icon" class="fa-brands fa-twitter-square fa-2x i-link"></i></a>
+                <a data-blobity-tooltip="check my GitHub" href="https://github.com/jacobthesheep" role="link"
+                    aria-label="github-link" rel="noreferrer" class="icon group"><i role="button"
+                        aria-label="github-icon" class="fa-brands fa-github-square fa-2x i-link"></i></a>
+                <p class="prose-sm">Jacob Lamb | 2020 - <span class="year"></span></p>
             </div>
-        </section>
-        <footer class="fixed mx-6 bottom-0 grid inset-x-0">
-            <div class="prose">
-                <div class="flex justify-between items-center max-w-xs">
-                    <a data-blobity-tooltip="email me" href="mailto:jacobtlamb@hey.com" role="link" aria-label="email-link" rel="noreferrer" class="icon group"><i role="button" aria-label="email-icon" class="fa-solid fa-envelope-square fa-2x i-link"></i></a>
-                    <a data-blobity-tooltip="check my twitter" href="https://twitter.com/jacob_thesheep" role="link" aria-label="twitter-link" rel="noreferrer" class="icon group"><i role="button" aria-label="twitter-icon" class="fa-brands fa-twitter-square fa-2x i-link"></i></a>
-                    <a data-blobity-tooltip="check my GitHub" href="https://github.com/jacobthesheep" role="link" aria-label="github-link" rel="noreferrer" class="icon group"><i role="button" aria-label="github-icon" class="fa-brands fa-github-square fa-2x i-link"></i></a>
-                    <p class="prose-sm">Jacob Lamb | 2020 - <span class="year"></span></p>
-                </div>
-            </div>
-        </footer>
-        <script defer src="https://kit.fontawesome.com/062ee3baff.js" crossorigin="anonymous"></script>
-        <script type="module">
-            import Alpine from "alpinejs";
+        </div>
+    </footer>
+    <script defer src="https://kit.fontawesome.com/062ee3baff.js" crossorigin="anonymous"></script>
+    <script type="module">
+        import Alpine from "alpinejs";
 
-            window.Alpine = Alpine;
+        window.Alpine = Alpine;
 
-            Alpine.start();
-        </script>
-        <script>
-            document.querySelector(".year").textContent = new Date().getFullYear();
-            function updateMetaThemeColor() {
-                const root = document.querySelector(":root");
-                const themeColor =
-                    getComputedStyle(root).getPropertyValue("--theme-color");
-                document
-                    .querySelector('[name="theme-color"]')
-                    .setAttribute("content", `${themeColor}`);
-            }
-            updateMetaThemeColor();
-            window
-                .matchMedia("(prefers-color-scheme: dark)")
-                .addEventListener("change", updateMetaThemeColor);
-        </script>
-        <script>
-            const firebaseConfig = {
-                apiKey: "AIzaSyD9SRX0aCz7G4SjHV6M0dzT8IFu3d5UM9E",
-                authDomain: "portfolio-website-8e32d.firebaseapp.com",
-                projectId: "portfolio-website-8e32d",
-                storageBucket: "portfolio-website-8e32d.appspot.com",
-                messagingSenderId: "160296992965",
-                appId: "1:160296992965:web:d1b0c209ee94f833f5f0ac",
-                measurementId: "G-TXMP23B54B",
-            };
-        </script>
-    </body>
+        Alpine.start();
+
+        Alpine.store('tabs', {
+            current: 'first',
+
+            items: ['first', 'second', 'third'],
+        })
+    </script>
+    <script>
+        document.querySelector(".year").textContent = new Date().getFullYear();
+        function updateMetaThemeColor() {
+            const root = document.querySelector(":root");
+            const themeColor =
+                getComputedStyle(root).getPropertyValue("--theme-color");
+            document
+                .querySelector('[name="theme-color"]')
+                .setAttribute("content", `${themeColor}`);
+        }
+        updateMetaThemeColor();
+        window
+            .matchMedia("(prefers-color-scheme: dark)")
+            .addEventListener("change", updateMetaThemeColor);
+    </script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD9SRX0aCz7G4SjHV6M0dzT8IFu3d5UM9E",
+            authDomain: "portfolio-website-8e32d.firebaseapp.com",
+            projectId: "portfolio-website-8e32d",
+            storageBucket: "portfolio-website-8e32d.appspot.com",
+            messagingSenderId: "160296992965",
+            appId: "1:160296992965:web:d1b0c209ee94f833f5f0ac",
+            measurementId: "G-TXMP23B54B",
+        };
+    </script>
+</body>
 
 </html>
