@@ -13,7 +13,7 @@
     "postcss-import": "^14.1.0",
     "prettier": "^2.6.2",
     "prettier-plugin-tailwindcss": "^0.1.11",
-    "tailwindcss": "^3.0.24"
+    "tailwindcss": "^3.1.0"
   },
   "scripts": {
     "dev": "parcel src/index.html --open firefox",
