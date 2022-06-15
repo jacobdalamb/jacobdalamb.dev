@@ -36,46 +36,32 @@
     <meta property="twitter:image:alt" content="profile image" />
 </head>
 
-<body
-    class="h-screen overflow-y-auto prose prose-sm sm:prose-base md:prose-lg lg:prose-xl xl:prose-2xl dark:bg-gray-200"
-    x-data="{ tab: 'tab1' }">
-    <nav class="flex bg-gray-200 dark:bg-gray-800 space-x-12 pl-10">
-        <a :class="{'!text-blue-600 dark:text-blue-200' : tab === 'tab1'}" href="#" @click.prevent="tab = 'tab1'">
+<body class="h-screen dark:bg-gray-200" x-data="{ tab: 'tab1' }">
+    <nav class="flex fixed w-full bg-slate-200 dark:bg-gray-800 space-x-12 pl-10">
+        <a :class="{'text-blue-600 dark:text-blue-200' : tab === 'tab1'}" href="#" @click.prevent="tab = 'tab1'">
             Home
         </a>
-        <a :class="{'!text-blue-600 dark:text-blue-200' : tab === 'tab2'}" href="#" @click.prevent="tab = 'tab2'">
+        <a :class="{'text-blue-600 dark:text-blue-200' : tab === 'tab2'}" href="#" @click.prevent="tab = 'tab2'">
             Projects
         </a>
-        <a :class="{'!text-blue-600 dark:text-blue-200' : tab === 'tab3'}" href="#" @click.prevent="tab = 'tab3'">
+        <a :class="{'text-blue-600 dark:text-blue-200' : tab === 'tab3'}" href="#" @click.prevent="tab = 'tab3'">
             About
         </a>
-        <!-- <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab3'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab3'">
-                Languages
-            </a>
-            <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab4'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab4'">
-                Apps
-            </a>
-            <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab5'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab5'">
-                Tools
-            </a>
-            <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab6'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab6'">
-                Frameworks
-            </a>
-            <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab6'}" class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab6'">
-                Frameworks
-            </a>
-        -->
+        <a :class="{'text-blue-600 dark:text-blue-200' : tab === 'tab4'}" href="#" @click.prevent="tab = 'tab4'">
+            Uses
+        </a>
+        <!-- <a :class="{'text-blue-600 dark:text-blue-200' : tab === 'tab4'}" href="#" @click.prevent="tab = 'tab7'">
+            Contact Cards
+        </a> -->
     </nav>
     <header class="bg-blue-400 dark:bg-blue-900" x-show="tab === 'tab1'">
         <div class="ch-all">
-            <div>
-                <h1>Hi, I'm Jacob.</h1>
-                <p class="lead">
-                    An aspiring
-                    <span class="highlight">Full-Stack Developer & Web Designer</span>
-                    with a passion for creating high-performance responsive web apps.
-                </p>
-            </div>
+            <h1>Hi, I'm Jacob.</h1>
+            <p class="lead">
+                An aspiring
+                <span class="highlight">Full-Stack Developer & Web Designer</span>
+                with a passion for creating high-performance responsive web apps.
+            </p>
             <!-- * Best projects showcase (3-6 max) * -->
         </div>
     </header>
@@ -127,8 +113,8 @@
         </div>
     </section>
     <footer class="fixed mx-6 bottom-0 grid inset-x-0">
-        <div class="prose">
-            <div class="flex justify-between items-center max-w-xs">
+        <div class="flex justify-between">
+            <div class="flex flex-auto justify-between max-w-[10rem] mb-2">
                 <a data-blobity-tooltip="email me" href="mailto:jacobtlamb@hey.com" role="link" aria-label="email-link"
                     rel="noreferrer" class="icon group"><i role="button" aria-label="email-icon"
                         class="fa-solid fa-envelope-square fa-2x i-link"></i></a>
@@ -138,8 +124,8 @@
                 <a data-blobity-tooltip="check my GitHub" href="https://github.com/jacobthesheep" role="link"
                     aria-label="github-link" rel="noreferrer" class="icon group"><i role="button"
                         aria-label="github-icon" class="fa-brands fa-github-square fa-2x i-link"></i></a>
-                <p class="prose-sm">Jacob Lamb | 2020 - <span class="year"></span></p>
             </div>
+            <p class="mt-1 text-base">Jacob Lamb | 2020 - <span class="year"></span></p>
         </div>
     </footer>
     <script defer src="https://kit.fontawesome.com/062ee3baff.js" crossorigin="anonymous"></script>
