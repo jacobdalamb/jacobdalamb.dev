@@ -16,11 +16,6 @@
   :root {
     --theme-color: #60a5fa;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --theme-color: #1e3a8a;
-    }
-  }
   html,
   body {
     @apply h-full;
@@ -62,11 +57,42 @@
   p {
     @apply mb-[1em];
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li {
+    @apply mb-[1em] text-black;
+  }
+  ul li {
+    @apply list-disc ml-8;
+  }
   nav a {
-    @apply py-1 flex text-blue-400 dark:text-blue-200;
+    @apply py-1 flex text-black text-lg hover:underline hover:decoration-2;
   }
   p {
     @apply text-lg max-w-prose;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --theme-color: #1e3a8a;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li {
+      @apply text-white;
+    }
+    nav a {
+      @apply text-blue-50;
+    }
   }
 }
 
@@ -80,9 +106,6 @@
   .ch-all {
     width: min(80%, 90%);
     margin: 0 auto;
-  }
-  .uses div {
-    @apply inline-block mx-4 border-2 border-red-500;
   }
   .bubble::after {
     @apply content-[""] rounded-full h-1 z-[1] absolute block bottom-0 bg-white transition left-0 right-0;

@@ -37,19 +37,19 @@
 </head>
 
 <body class="h-screen dark:bg-gray-200" x-data="{ tab: 'tab1' }">
-    <nav class="flex fixed w-full bg-slate-200 dark:bg-gray-800 space-x-12 pl-10">
-        <a :class="{'text-blue-600 dark:text-blue-200' : tab === 'tab1'}" href="#" @click.prevent="tab = 'tab1'">
+    <nav class="flex flex-auto fixed w-full justify-between max-w-md mx-6 mt-2">
+        <a :class="{'underline decoration-wavy !decoration-1' : tab === 'tab1'}" href="#" @click.prevent="tab = 'tab1'">
             Home
         </a>
-        <a :class="{'text-blue-600 dark:text-blue-200' : tab === 'tab2'}" href="#" @click.prevent="tab = 'tab2'">
+        <a :class="{'underline decoration-wavy !decoration-1' : tab === 'tab2'}" href="#" @click.prevent="tab = 'tab2'">
             Projects
         </a>
-        <a :class="{'text-blue-600 dark:text-blue-200' : tab === 'tab3'}" href="#" @click.prevent="tab = 'tab3'">
+        <a :class="{'underline decoration-wavy !decoration-1' : tab === 'tab3'}" href="#" @click.prevent="tab = 'tab3'">
             About
         </a>
-        <a :class="{'text-blue-600 dark:text-blue-200' : tab === 'tab4'}" href="#" @click.prevent="tab = 'tab4'">
+        <!-- <a :class="{'underline decoration-wavy !decoration-1' : tab === 'tab4'}" href="#" @click.prevent="tab = 'tab4'">
             Uses
-        </a>
+        </a> -->
         <!-- <a :class="{'text-blue-600 dark:text-blue-200' : tab === 'tab4'}" href="#" @click.prevent="tab = 'tab7'">
             Contact Cards
         </a> -->
@@ -112,6 +112,45 @@
                     </div> -->
         </div>
     </section>
+    <!-- <section class="bg-pink-400 dark:bg-pink-900" x-show="tab === 'tab4'">
+        <div class="ch-all">
+            <h1>Uses</h1>
+            <p>What I use on the regular.</p>
+            <div>
+                <div>
+                    <h2>Hardware</h2>
+                    <ul>
+                        <li>MacBook Air (M1, 2020)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Software</h2>
+                    <ul>
+                        <li>Visual Studio Code</li>
+                        <li>Figma</li>
+                        <li>GitHub Desktop</li>
+                        <li>Xcode</li>
+                        <li>Hyper</li>
+                        <li>Snowpack</li>
+                        <li>npm</li>
+                        <li>pnpm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- <section class="bg-slate-400" x-show="tab === 'tab7'">
+        <div class="ch-all">
+            <user-card name="John Doe" avatar="https://randomuser.me/api/portraits/men/1.jpg">
+                <div slot="email">johndoe@gmail.com</div>
+                <div slot="phone">8584920291</div>
+            </user-card>
+            <user-card name="Jane Doe" avatar="https://randomuser.me/api/portraits/women/11.jpg">
+                <div slot="email">janedoe@gmail.com</div>
+                <div slot="phone">8583282901</div>
+            </user-card>
+        </div>
+    </section> -->
     <footer class="fixed mx-6 bottom-0 grid inset-x-0">
         <div class="flex justify-between">
             <div class="flex flex-auto justify-between max-w-[10rem] mb-2">
@@ -125,10 +164,11 @@
                     aria-label="github-link" rel="noreferrer" class="icon group"><i role="button"
                         aria-label="github-icon" class="fa-brands fa-github-square fa-2x i-link"></i></a>
             </div>
-            <p class="mt-1 text-base">Jacob Lamb | 2020 - <span class="year"></span></p>
+            <p class="mt-1 text-base">Jacob Lamb | 2020 - <span x-text="new Date().getFullYear()"></span></p>
         </div>
     </footer>
     <script defer src="https://kit.fontawesome.com/062ee3baff.js" crossorigin="anonymous"></script>
+    <script src="userCard.js"></script>
     <script type="module">
         import Alpine from "alpinejs";
 
@@ -143,7 +183,6 @@
         })
     </script>
     <script>
-        document.querySelector(".year").textContent = new Date().getFullYear();
         function updateMetaThemeColor() {
             const root = document.querySelector(":root");
             const themeColor =
