@@ -216,6 +216,8 @@ button, input, select, textarea {
 }
 
 header, section {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity) );
   height: 100vh;
   flex-direction: column;
   justify-content: center;
@@ -245,13 +247,7 @@ h2 {
   font-size: 3rem;
 }
 
-h1, h2, h3, p {
-  margin-bottom: 1em;
-}
-
 h1, h2, h3, h4, h5, h6, li, p {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity) );
   margin-bottom: 1em;
 }
 
@@ -286,13 +282,15 @@ p {
     --theme-color: #1e3a8a;
   }
 
-  h1, h2, h3, h4, h5, h6, li, p {
-    --tw-text-opacity: 1;
+  header, section {
     color: rgb(255 255 255 / var(--tw-text-opacity) );
   }
 
-  nav a {
+  header, nav a, section {
     --tw-text-opacity: 1;
+  }
+
+  nav a {
     color: rgb(239 246 255 / var(--tw-text-opacity) );
   }
 }
@@ -348,6 +346,12 @@ p {
   max-width: 36rem;
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.list {
+  flex-direction: row;
+  gap: 1rem;
+  display: flex;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -430,10 +434,6 @@ p {
   margin-top: .25rem;
 }
 
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
 }
@@ -472,24 +472,21 @@ p {
   animation: pulse 2s cubic-bezier(.4, 0, .6, 1) infinite;
 }
 
-.flex-row {
-  flex-direction: row;
-}
-
 .justify-between {
   justify-content: space-between;
 }
 
-.gap-4 {
-  gap: 1rem;
+.border-r-2 {
+  border-right-width: 2px;
 }
 
-.break-words {
-  overflow-wrap: break-word;
+.border-b-2 {
+  border-bottom-width: 2px;
 }
 
-.border {
-  border-width: 1px;
+.border-b-sky-300 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(125 211 252 / var(--tw-border-opacity) );
 }
 
 .bg-blue-400 {
@@ -512,9 +509,27 @@ p {
   background-color: rgb(244 114 182 / var(--tw-bg-opacity) );
 }
 
-.bg-slate-400 {
+.bg-slate-700\/50 {
+  background-color: #33415580;
+}
+
+.bg-gray-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity) );
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity) );
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.py-1 {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .text-base {
@@ -525,6 +540,16 @@ p {
 .text-blue-600 {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity) );
+}
+
+.text-sky-300 {
+  --tw-text-opacity: 1;
+  color: rgb(125 211 252 / var(--tw-text-opacity) );
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity) );
 }
 
 .underline {
