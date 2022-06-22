@@ -600,6 +600,11 @@ p {
     --tw-text-opacity: 1;
     color: rgb(191 219 254 / var(--tw-text-opacity) );
   }
+
+  .dark\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity) );
+  }
 }
 
 /*# sourceMappingURL=index.61d3354a.css.map */

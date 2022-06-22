@@ -47,9 +47,9 @@
         <a :class="{'underline decoration-wavy !decoration-1' : tab === 'tab3'}" href="#" @click.prevent="tab = 'tab3'">
             About
         </a>
-        <!-- <a :class="{'underline decoration-wavy !decoration-1' : tab === 'tab4'}" href="#" @click.prevent="tab = 'tab4'">
+        <a :class="{'underline decoration-wavy !decoration-1' : tab === 'tab4'}" href="#" @click.prevent="tab = 'tab4'">
             Uses
-        </a> -->
+        </a>
         <!-- <a :class="{'text-blue-600 dark:text-blue-200' : tab === 'tab4'}" href="#" @click.prevent="tab = 'tab7'">
             Contact Cards
         </a> -->
@@ -90,67 +90,65 @@
                 networking, and building my portfolio. When I'm not working on the
                 web, I love to read books and play games.
             </p>
-            <!-- <div class="flex flex-row gap-4 break-words" x-show="tab === 'tab2'" x-data="{ languages: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Python', 'C'] }">
-                        <template x-for="language in languages">
-                            <p x-text="language"></p>
-                        </template>
-                    </div>
-                    <div class="flex flex-row gap-4" x-show="tab === 'tab3'" x-data="{ apps: ['VSCode', 'Figma', 'GitHub Desktop', 'Fig', 'Xcode', 'Hyper'] }">
-                        <template x-for="app in apps">
-                            <p x-text="app"></p>
-                        </template>
-                    </div>
-                    <div class="flex flex-row gap-4" x-show="tab === 'tab4'" x-data="{ tools: ['Snowpack', 'npm', 'pnpm'] }">
-                        <template x-for="tool in tools">
-                            <p x-text="tool"></p>
-                        </template>
-                    </div>
-                    <div class="flex flex-row gap-4" x-show="tab === 'tab5'" x-data="{ frameworks: ['Express', 'Tailwind CSS', 'Alpine.js', 'PostCSS'] }">
-                        <template x-for="framework in frameworks">
-                            <p x-text="framework"></p>
-                        </template>
-                    </div> -->
         </div>
     </section>
-    <!-- <section class="bg-pink-400 dark:bg-pink-900" x-show="tab === 'tab4'">
-        <div class="ch-all">
+    <section class="bg-pink-400 dark:bg-pink-900" x-show="tab === 'tab4'">
+        <div class="ch-all" x-data="{ tab: 'tab6' }">
             <h1>Uses</h1>
             <p>What I use on the regular.</p>
-            <div>
-                <div>
-                    <h2>Hardware</h2>
+
+            <div class="flex bg-slate-700/50">
+                <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab6'}"
+                    class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab6'">
+                    Languages
+                </a>
+                <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab7'}"
+                    class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab7'">
+                    Frameworks
+                </a>
+                <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab8'}"
+                    class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab8'">
+                    Tools & Services
+                </a>
+                <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab9'}"
+                    class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab9'">
+                    Desktop Apps
+                </a>
+                <a :class="{'text-sky-300 border-b-sky-300' : tab === 'tab10'}"
+                    class="py-1 flex border-r-2 border-b-2 px-4" href="#" @click.prevent="tab = 'tab10'">
+                    Miscellaneous
+                </a>
+            </div>
+
+            <div class="bg-gray-600 text-white" style="min-height: 50%;">
+                <div class="list p-5" x-show="tab === 'tab6'">
                     <ul>
-                        <li>MacBook Air (M1, 2020)</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
                     </ul>
                 </div>
-                <div>
-                    <h2>Software</h2>
-                    <ul>
-                        <li>Visual Studio Code</li>
-                        <li>Figma</li>
-                        <li>GitHub Desktop</li>
-                        <li>Xcode</li>
-                        <li>Hyper</li>
-                        <li>Snowpack</li>
-                        <li>npm</li>
-                        <li>pnpm</li>
-                    </ul>
+                <div class="list" x-show="tab === 'tab7'">
+
+                </div>
+                <div class="list" x-show="tab === 'tab8'">
+
+                </div>
+                <div class="list" x-show="tab === 'tab9'">
+
+                </div>
+                <div class="list" x-show="tab === 'tab10'">
+
                 </div>
             </div>
         </div>
-    </section> -->
-    <!-- <section class="bg-slate-400" x-show="tab === 'tab7'">
-        <div class="ch-all">
-            <user-card name="John Doe" avatar="https://randomuser.me/api/portraits/men/1.jpg">
-                <div slot="email">johndoe@gmail.com</div>
-                <div slot="phone">8584920291</div>
-            </user-card>
-            <user-card name="Jane Doe" avatar="https://randomuser.me/api/portraits/women/11.jpg">
-                <div slot="email">janedoe@gmail.com</div>
-                <div slot="phone">8583282901</div>
-            </user-card>
-        </div>
-    </section> -->
+    </section>
     <footer class="fixed mx-6 bottom-0 grid inset-x-0">
         <div class="flex justify-between">
             <div class="flex flex-auto justify-between max-w-[10rem] mb-2">
@@ -164,23 +162,16 @@
                     aria-label="github-link" rel="noreferrer" class="icon group"><i role="button"
                         aria-label="github-icon" class="fa-brands fa-github-square fa-2x i-link"></i></a>
             </div>
-            <p class="mt-1 text-base">Jacob Lamb | 2020 - <span x-text="new Date().getFullYear()"></span></p>
+            <p class="mt-1 text-base dark:text-white">Jacob Lamb | 2020 - <span x-text="new Date().getFullYear()"></span></p>
         </div>
     </footer>
     <script defer src="https://kit.fontawesome.com/062ee3baff.js" crossorigin="anonymous"></script>
-    <script src="userCard.js"></script>
     <script type="module">
         import Alpine from "alpinejs";
 
         window.Alpine = Alpine;
 
         Alpine.start();
-
-        Alpine.store('tabs', {
-            current: 'first',
-
-            items: ['first', 'second', 'third'],
-        })
     </script>
     <script>
         function updateMetaThemeColor() {
