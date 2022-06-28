@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	*,
+	*::before,
+	*::after {
+		@apply box-content;
+	}
+	* {
+		@apply m-0 p-0;
+	}
+	::selection {
+		@apply bg-gray-900 text-white dark:bg-gray-200 dark:text-gray-900;
+	}
+	:root {
+		--theme-color: #60a5fa;
+	}
+	html,
+	body {
+		@apply h-full;
+	}
+	body {
+		@apply leading-normal antialiased;
+	}
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply break-words;
+	}
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+	}
+	ul,
+	li {
+		@apply list-none;
+	}
+	header,
+	section {
+		@apply flex flex-col justify-center h-screen text-black;
+	}
+	a {
+		@apply transition-all duration-200 ease-out hover:ease-in;
+	}
+	h1 {
+		@apply text-6xl font-bold;
+	}
+	h2 {
+		@apply text-5xl font-bold;
+	}
+	h1,
+	h2,
+	h3,
+	p {
+		@apply mb-[1em];
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		@apply mb-[1em];
+	}
+	p {
+		@apply text-lg max-w-prose;
+	}
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--theme-color: #1e3a8a;
+		}
+		header,
+		section {
+			@apply text-white;
+		}
+		nav a {
+			@apply text-blue-50;
+		}
+	}
+}
+
+@layer components {
+	.lead {
+		@apply text-2xl max-w-xl;
+	}
+	.list {
+		@apply flex flex-row gap-4;
+	}
+	.highlight {
+		@apply dark:text-yellow-200;
+	}
+	.ch-all {
+		@apply mx-auto my-0 w-4/5;
+	}
+	.bubble::after {
+		@apply content-[""] rounded-full h-1 z-[1] absolute block bottom-0 bg-white transition left-0 right-0;
+	}
+	.bubble:hover::after {
+		@apply opacity-0;
+	}
+	.i-link {
+		@apply group-hover:text-white dark:group-hover:text-yellow-200 dark:text-gray-900;
+	}
+	.icon {
+		@apply rounded text-center h-8 w-8 bg-white dark:bg-gray-300 hover:bg-gray-900;
+	}
+}
