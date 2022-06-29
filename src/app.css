@@ -82,35 +82,11 @@
 		section {
 			@apply text-white;
 		}
-		nav a {
-			@apply text-blue-50;
-		}
 	}
 }
 
 @layer components {
-	.lead {
-		@apply text-2xl max-w-xl;
-	}
-	.list {
-		@apply flex flex-row gap-4;
-	}
-	.highlight {
-		@apply dark:text-yellow-200;
-	}
 	.ch-all {
 		@apply mx-auto my-0 w-4/5;
-	}
-	.bubble::after {
-		@apply content-[""] rounded-full h-1 z-[1] absolute block bottom-0 bg-white transition left-0 right-0;
-	}
-	.bubble:hover::after {
-		@apply opacity-0;
-	}
-	.i-link {
-		@apply group-hover:text-white dark:group-hover:text-yellow-200 dark:text-gray-900;
-	}
-	.icon {
-		@apply rounded text-center h-8 w-8 bg-white dark:bg-gray-300 hover:bg-gray-900;
 	}
 }

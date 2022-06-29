@@ -24,4 +24,9 @@
 	.selected {
 		@apply underline decoration-wavy decoration-1;
 	}
+	@media (prefers-color-scheme: dark) {
+		nav a {
+			@apply text-blue-50;
+		}
+	}
 </style>

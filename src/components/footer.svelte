@@ -45,3 +45,18 @@
 		Jacob Lamb | 2020 - {currentDateTime}
 	</p>
 </footer>
+
+<style>
+	.bubble::after {
+		@apply content-[""] rounded-full h-1 z-[1] absolute block bottom-0 bg-white transition left-0 right-0;
+	}
+	.bubble:hover::after {
+		@apply opacity-0;
+	}
+	.i-link {
+		@apply group-hover:text-white dark:group-hover:text-yellow-200 dark:text-gray-900;
+	}
+	.icon {
+		@apply rounded text-center h-8 w-8 bg-white dark:bg-gray-300 hover:bg-gray-900;
+	}
+</style>

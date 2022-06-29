@@ -1,5 +1,0 @@
-import{S as A,i as H,s as F,e as c,t as f,k as I,c as o,a as h,h as m,d as n,m as y,b as g,g as J,F as a,n as x}from"../chunks/index-ed5415b0.js";function P(w){let e,t,l,v,_,s,b,r,E,D;return{c(){e=c("header"),t=c("div"),l=c("h1"),v=f("Hi, I'm Jacob."),_=I(),s=c("p"),b=f(`An aspiring
-			`),r=c("span"),E=f("Full-Stack Developer & Web Designer"),D=f(`
-			with a passion for creating high-performance responsive web apps.`),this.h()},l(i){e=o(i,"HEADER",{class:!0});var p=h(e);t=o(p,"DIV",{class:!0});var d=h(t);l=o(d,"H1",{});var S=h(l);v=m(S,"Hi, I'm Jacob."),S.forEach(n),_=y(d),s=o(d,"P",{class:!0});var u=h(s);b=m(u,`An aspiring
-			`),r=o(u,"SPAN",{class:!0});var k=h(r);E=m(k,"Full-Stack Developer & Web Designer"),k.forEach(n),D=m(u,`
-			with a passion for creating high-performance responsive web apps.`),u.forEach(n),d.forEach(n),p.forEach(n),this.h()},h(){g(r,"class","highlight"),g(s,"class","lead"),g(t,"class","ch-all"),g(e,"class","bg-blue-400 dark:bg-blue-900")},m(i,p){J(i,e,p),a(e,t),a(t,l),a(l,v),a(t,_),a(t,s),a(s,b),a(s,r),a(r,E),a(s,D)},p:x,i:x,o:x,d(i){i&&n(e)}}}class W extends A{constructor(e){super(),H(this,e,null,P,F,{})}}export{W as default};

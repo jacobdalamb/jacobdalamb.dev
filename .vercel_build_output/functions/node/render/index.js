@@ -5534,27 +5534,33 @@ var layout_svelte_exports = {};
 __export(layout_svelte_exports, {
   default: () => _layout
 });
-var Footer, css, Nav, _layout;
+var css$1, Footer, css, Nav, _layout;
 var init_layout_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/__layout.svelte.js"() {
     init_index_9f6ceea8();
+    css$1 = {
+      code: ".group.svelte-1agre4k:hover .i-link.svelte-1agre4k{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))\n}@media(prefers-color-scheme: dark){.i-link.svelte-1agre4k.svelte-1agre4k{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))\n    }.group.svelte-1agre4k:hover .i-link.svelte-1agre4k{--tw-text-opacity:1;color:rgb(254 240 138 / var(--tw-text-opacity))\n    }}.icon.svelte-1agre4k.svelte-1agre4k{height:2rem;width:2rem;border-radius:0.25rem;--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity));text-align:center\n}.icon.svelte-1agre4k.svelte-1agre4k:hover{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))\n}@media(prefers-color-scheme: dark){.icon.svelte-1agre4k.svelte-1agre4k{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity))\n    }}",
+      map: null
+    };
     Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let currentDateTime = new Date().getFullYear();
-      return `<footer class="${"fixed inset-x-0 bottom-0 mx-6 flex flex-wrap gap-x-24"}"><div class="${"mb-2 mr-auto flex max-w-[10rem] flex-[1_1_150px] justify-between"}"><a data-cube-solidity-tooltip="${"email me"}" href="${"mailto:jacobtlamb@hey.com"}" aria-label="${"email-link"}" rel="${"noreferrer"}" class="${"icon group"}"><i role="${"button"}" aria-label="${"email-icon"}" class="${"fa-solid fa-envelope-square fa-2x i-link"}"></i></a>
-		<a data-cube-solidity-tooltip="${"check my twitter"}" href="${"https://twitter.com/jacob_thesheep"}" aria-label="${"twitter-link"}" rel="${"noreferrer"}" class="${"icon group"}"><i role="${"button"}" aria-label="${"twitter-icon"}" class="${"fa-brands fa-twitter-square fa-2x i-link"}"></i></a>
-		<a data-cube-solidity-tooltip="${"check my GitHub"}" href="${"https://github.com/jacobthesheep"}" aria-label="${"github-link"}" rel="${"noreferrer"}" class="${"icon group"}"><i role="${"button"}" aria-label="${"github-icon"}" class="${"fa-brands fa-github-square fa-2x i-link"}"></i></a></div>
-	<p class="${"mt-1 text-base dark:text-white"}">Jacob Lamb | 2020 - ${escape(currentDateTime)}</p></footer>`;
+      $$result.css.add(css$1);
+      return `<footer class="${"fixed inset-x-0 bottom-0 mx-6 flex flex-wrap gap-x-24"}"><div class="${"mb-2 mr-auto flex max-w-[10rem] flex-[1_1_150px] justify-between"}"><a data-cube-solidity-tooltip="${"email me"}" href="${"mailto:jacobtlamb@hey.com"}" aria-label="${"email-link"}" rel="${"noreferrer"}" class="${"icon group svelte-1agre4k"}"><i role="${"button"}" aria-label="${"email-icon"}" class="${"fa-solid fa-envelope-square fa-2x i-link svelte-1agre4k"}"></i></a>
+		<a data-cube-solidity-tooltip="${"check my twitter"}" href="${"https://twitter.com/jacob_thesheep"}" aria-label="${"twitter-link"}" rel="${"noreferrer"}" class="${"icon group svelte-1agre4k"}"><i role="${"button"}" aria-label="${"twitter-icon"}" class="${"fa-brands fa-twitter-square fa-2x i-link svelte-1agre4k"}"></i></a>
+		<a data-cube-solidity-tooltip="${"check my GitHub"}" href="${"https://github.com/jacobthesheep"}" aria-label="${"github-link"}" rel="${"noreferrer"}" class="${"icon group svelte-1agre4k"}"><i role="${"button"}" aria-label="${"github-icon"}" class="${"fa-brands fa-github-square fa-2x i-link svelte-1agre4k"}"></i></a></div>
+	<p class="${"mt-1 text-base dark:text-white"}">Jacob Lamb | 2020 - ${escape(currentDateTime)}</p>
+</footer>`;
     });
     css = {
-      code: "nav.svelte-19q4iec a.svelte-19q4iec{display:flex;padding-top:0.25rem;padding-bottom:0.25rem;font-size:1.125rem;line-height:1.75rem;--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))\n}nav.svelte-19q4iec a.svelte-19q4iec:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline;text-decoration-thickness:2px\n}.selected.svelte-19q4iec.svelte-19q4iec{-webkit-text-decoration-line:underline;text-decoration-line:underline;-webkit-text-decoration-style:wavy;text-decoration-style:wavy;text-decoration-thickness:1px\n}",
+      code: "nav.svelte-v735w a.svelte-v735w{display:flex;padding-top:0.25rem;padding-bottom:0.25rem;font-size:1.125rem;line-height:1.75rem;--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))\n}nav.svelte-v735w a.svelte-v735w:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline;text-decoration-thickness:2px\n}.selected.svelte-v735w.svelte-v735w{-webkit-text-decoration-line:underline;text-decoration-line:underline;-webkit-text-decoration-style:wavy;text-decoration-style:wavy;text-decoration-thickness:1px\n}@media(prefers-color-scheme: dark){nav.svelte-v735w a.svelte-v735w{--tw-text-opacity:1;color:rgb(239 246 255 / var(--tw-text-opacity))\n		}}",
       map: null
     };
     Nav = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       $$result.css.add(css);
-      return `<nav class="${"flex flex-auto fixed w-full justify-between max-w-md mx-6 mt-2 svelte-19q4iec"}"><a href="${"/"}" class="${["svelte-19q4iec", "selected"].join(" ").trim()}">Home </a>
-	<a href="${"/projects"}" class="${["svelte-19q4iec", ""].join(" ").trim()}">Projects
+      return `<nav class="${"flex flex-auto fixed w-full justify-between max-w-md mx-6 mt-2 svelte-v735w"}"><a href="${"/"}" class="${["svelte-v735w", "selected"].join(" ").trim()}">Home </a>
+	<a href="${"/projects"}" class="${["svelte-v735w", ""].join(" ").trim()}">Projects
 	</a>
-	<a href="${"/about"}" class="${["svelte-19q4iec", ""].join(" ").trim()}">About
+	<a href="${"/about"}" class="${["svelte-v735w", ""].join(" ").trim()}">About
 	</a>
 	
 </nav>`;
@@ -5581,9 +5587,9 @@ var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     init_layout_svelte();
     index = 0;
-    entry = "pages/__layout.svelte-b85429bc.js";
-    js = ["pages/__layout.svelte-b85429bc.js", "chunks/index-ed5415b0.js"];
-    css2 = ["assets/pages/__layout.svelte-e53414b7.css"];
+    entry = "pages/__layout.svelte-d51ea777.js";
+    js = ["pages/__layout.svelte-d51ea777.js", "chunks/index-ed5415b0.js"];
+    css2 = ["assets/pages/__layout.svelte-846dafdb.css"];
   }
 });
 
@@ -5650,8 +5656,8 @@ var init_index_svelte = __esm({
     init_index_9f6ceea8();
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<header class="${"bg-blue-400 dark:bg-blue-900"}"><div class="${"ch-all"}"><h1>Hi, I&#39;m Jacob.</h1>
-		<p class="${"lead"}">An aspiring
-			<span class="${"highlight"}">Full-Stack Developer &amp; Web Designer</span>
+		<p class="${"text-2xl max-w-xl"}">An aspiring
+			<span class="${"dark:text-yellow-200"}">Full-Stack Developer &amp; Web Designer</span>
 			with a passion for creating high-performance responsive web apps.
 		</p>
 		</div></header>`;
@@ -5673,8 +5679,8 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/3.js"() {
     init_index_svelte();
     index3 = 3;
-    entry3 = "pages/index.svelte-152e4281.js";
-    js3 = ["pages/index.svelte-152e4281.js", "chunks/index-ed5415b0.js"];
+    entry3 = "pages/index.svelte-f7132455.js";
+    js3 = ["pages/index.svelte-f7132455.js", "chunks/index-ed5415b0.js"];
     css4 = [];
   }
 });
@@ -8297,7 +8303,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["cube-solid.svg"]),
   mimeTypes: { ".svg": "image/svg+xml" },
   _: {
-    entry: { "file": "start-90599487.js", "js": ["start-90599487.js", "chunks/index-ed5415b0.js"], "css": [] },
+    entry: { "file": "start-b763335f.js", "js": ["start-b763335f.js", "chunks/index-ed5415b0.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
