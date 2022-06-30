@@ -5552,15 +5552,15 @@ var init_layout_svelte = __esm({
 </footer>`;
     });
     css = {
-      code: "nav.svelte-v735w a.svelte-v735w{display:flex;padding-top:0.25rem;padding-bottom:0.25rem;font-size:1.125rem;line-height:1.75rem;--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))\n}nav.svelte-v735w a.svelte-v735w:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline;text-decoration-thickness:2px\n}.selected.svelte-v735w.svelte-v735w{-webkit-text-decoration-line:underline;text-decoration-line:underline;-webkit-text-decoration-style:wavy;text-decoration-style:wavy;text-decoration-thickness:1px\n}@media(prefers-color-scheme: dark){nav.svelte-v735w a.svelte-v735w{--tw-text-opacity:1;color:rgb(239 246 255 / var(--tw-text-opacity))\n		}}",
+      code: "a.svelte-3su6vw{display:flex;padding-top:0.25rem;padding-bottom:0.25rem;--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))\n}a.svelte-3su6vw:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline;text-decoration-thickness:2px\n}a.svelte-3su6vw:first-of-type{font-size:1.125rem;line-height:1.75rem\n}.selected.svelte-3su6vw{-webkit-text-decoration-line:underline;text-decoration-line:underline;-webkit-text-decoration-style:double;text-decoration-style:double;text-decoration-thickness:2px\n}@media(prefers-color-scheme: dark){a.svelte-3su6vw{--tw-text-opacity:1;color:rgb(239 246 255 / var(--tw-text-opacity))\n		}}",
       map: null
     };
     Nav = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       $$result.css.add(css);
-      return `<nav class="${"flex flex-auto fixed w-full justify-between max-w-md mx-6 mt-2 svelte-v735w"}"><a href="${"/"}" class="${["svelte-v735w", "selected"].join(" ").trim()}">Home </a>
-	<a href="${"/projects"}" class="${["svelte-v735w", ""].join(" ").trim()}">Projects
+      return `<nav class="${"flex flex-auto fixed w-full justify-between max-w-md mx-6 mt-2"}"><a href="${"/"}" class="${"svelte-3su6vw"}">Jacob Lamb </a>
+	<a href="${"/projects"}" class="${["svelte-3su6vw", ""].join(" ").trim()}">Projects
 	</a>
-	<a href="${"/about"}" class="${["svelte-v735w", ""].join(" ").trim()}">About
+	<a href="${"/about"}" class="${["svelte-3su6vw", ""].join(" ").trim()}">About
 	</a>
 	
 </nav>`;
@@ -5587,9 +5587,9 @@ var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     init_layout_svelte();
     index = 0;
-    entry = "pages/__layout.svelte-d51ea777.js";
-    js = ["pages/__layout.svelte-d51ea777.js", "chunks/index-ed5415b0.js"];
-    css2 = ["assets/pages/__layout.svelte-846dafdb.css"];
+    entry = "pages/__layout.svelte-48694364.js";
+    js = ["pages/__layout.svelte-48694364.js", "chunks/index-ed5415b0.js"];
+    css2 = ["assets/pages/__layout.svelte-0ffc9cc0.css"];
   }
 });
 
@@ -8303,7 +8303,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["cube-solid.svg"]),
   mimeTypes: { ".svg": "image/svg+xml" },
   _: {
-    entry: { "file": "start-b763335f.js", "js": ["start-b763335f.js", "chunks/index-ed5415b0.js"], "css": [] },
+    entry: { "file": "start-8653641e.js", "js": ["start-8653641e.js", "chunks/index-ed5415b0.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),

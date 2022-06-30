@@ -3,7 +3,7 @@
 </script>
 
 <nav class="flex flex-auto fixed w-full justify-between max-w-md mx-6 mt-2">
-	<a href="/" class:selected={current === 'active'} on:click={() => (current = 'active')}> Home </a>
+	<a href="/" on:click={() => (current = 'active')}> Jacob Lamb </a>
 	<a
 		href="/projects"
 		class:selected={current === 'projects'}
@@ -18,14 +18,17 @@
 </nav>
 
 <style>
-	nav a {
-		@apply py-1 flex text-black text-lg hover:underline hover:decoration-2;
+	a {
+		@apply py-1 flex text-black hover:underline hover:decoration-2;
+	}
+	a:first-of-type {
+		@apply text-lg;
 	}
 	.selected {
-		@apply underline decoration-wavy decoration-1;
+		@apply underline decoration-double decoration-2;
 	}
 	@media (prefers-color-scheme: dark) {
-		nav a {
+		a {
 			@apply text-blue-50;
 		}
 	}
