@@ -1,4 +1,4 @@
-import{S as k,i as _,s as S,e as l,t as v,k as x,c,a as m,h as y,d,m as T,b,g as U,F as n,n as f}from"../chunks/index-ed5415b0.js";function E(I){let e,t,a,h,p,o,u;return{c(){e=l("section"),t=l("div"),a=l("h1"),h=v("ABOUT"),p=x(),o=l("p"),u=v(`My passion for web development and design started sometime in 2017 after I had learned that my
+import{S as k,i as _,s as S,e as l,t as v,k as x,c,a as m,h as y,d,m as T,b,g as U,F as n,n as f}from"../chunks/index-b610c8d6.js";function E(I){let e,t,a,h,p,o,u;return{c(){e=l("section"),t=l("div"),a=l("h1"),h=v("ABOUT"),p=x(),o=l("p"),u=v(`My passion for web development and design started sometime in 2017 after I had learned that my
 			uncle was a programmer and wanted to learn more of what it's all about. Soon after, I quickly
 			downloaded a code editor and started experimenting with HTML and CSS. Since then, I have
 			increased my knowledge from various web development and UX/UI design courses. Today I continue

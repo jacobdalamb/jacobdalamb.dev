@@ -18,7 +18,7 @@
 </nav>
 
 <style>
-	a {
+	a:not(:first-of-type) {
 		@apply py-1 flex text-black hover:underline hover:decoration-2;
 	}
 	a:first-of-type {
