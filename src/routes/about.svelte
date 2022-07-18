@@ -1,4 +1,4 @@
-<section class="bg-green-400 dark:bg-green-900">
+<section class="">
 	<div class="ch-all">
 		<h1>ABOUT</h1>
 		<!-- todo: add profile picture -->

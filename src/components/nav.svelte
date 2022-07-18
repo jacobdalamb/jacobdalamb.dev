@@ -2,7 +2,7 @@
 	let current = 'active';
 </script>
 
-<nav class="flex flex-auto fixed w-full justify-between max-w-md mx-6 mt-2">
+<nav class="flex flex-auto fixed w-full justify-between max-w-md mx-6 mt-2 items-baseline">
 	<a href="/" on:click={() => (current = 'active')}> Jacob Lamb </a>
 	<a
 		href="/projects"
@@ -19,7 +19,7 @@
 
 <style>
 	a:not(:first-of-type) {
-		@apply py-1 flex text-black hover:underline hover:decoration-2;
+		@apply py-1 hidden hover:underline hover:decoration-2 tablet:flex;
 	}
 	a:first-of-type {
 		@apply text-lg;
@@ -27,9 +27,7 @@
 	.selected {
 		@apply underline decoration-double decoration-2;
 	}
-	@media (prefers-color-scheme: dark) {
-		a {
-			@apply text-blue-50;
-		}
+	a {
+		@apply dark:text-blue-50;
 	}
 </style>

@@ -19,7 +19,8 @@
 	}
 	html,
 	body {
-		@apply h-full;
+		@apply h-full bg-slate-100 dark:bg-slate-800 text-black;
+		height: 100dvh; /* Currently supported only on Firefox and Safari - https://caniuse.com/viewport-unit-variants */
 	}
 	body {
 		@apply leading-normal antialiased;
@@ -45,13 +46,13 @@
 	}
 	header,
 	section {
-		@apply flex flex-col justify-center h-screen text-black;
+		@apply flex flex-col justify-center h-screen;
 	}
 	a {
 		@apply transition-all duration-200 ease-out hover:ease-in;
 	}
 	h1 {
-		@apply text-6xl font-bold;
+		@apply text-5xl font-bold;
 	}
 	h2 {
 		@apply text-5xl font-bold;
