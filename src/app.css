@@ -14,9 +14,6 @@
 	::selection {
 		@apply bg-gray-900 text-white dark:bg-gray-200 dark:text-gray-900;
 	}
-	:root {
-		--theme-color: #60a5fa;
-	}
 	html,
 	body {
 		@apply h-full bg-slate-100 dark:bg-slate-800 text-black;
@@ -76,9 +73,6 @@
 		@apply text-lg max-w-prose;
 	}
 	@media (prefers-color-scheme: dark) {
-		:root {
-			--theme-color: #1e3a8a;
-		}
 		header,
 		section {
 			@apply text-white;

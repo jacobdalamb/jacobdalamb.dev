@@ -36,20 +36,6 @@
 <body>
     <div>%sveltekit.body%</div>
     <script defer src="https://kit.fontawesome.com/062ee3baff.js" crossorigin="anonymous"></script>
-    <script>
-        function updateMetaThemeColor() {
-            const root = document.querySelector(":root");
-            const themeColor =
-                getComputedStyle(root).getPropertyValue("--theme-color");
-            document
-                .querySelector('[name="theme-color"]')
-                .setAttribute("content", `${themeColor}`);
-        }
-        updateMetaThemeColor();
-        window
-            .matchMedia("(prefers-color-scheme: dark)")
-            .addEventListener("change", updateMetaThemeColor);
-    </script>
 </body>
 
 
