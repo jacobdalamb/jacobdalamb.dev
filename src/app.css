@@ -12,11 +12,11 @@
 		@apply m-0 p-0;
 	}
 	::selection {
-		@apply bg-gray-900 text-white dark:bg-gray-200 dark:text-gray-900;
+		@apply bg-slate-800 text-slate-50 dark:bg-slate-200 dark:text-slate-800;
 	}
 	html,
 	body {
-		@apply h-full bg-slate-100 dark:bg-slate-800 text-black;
+		@apply h-full bg-slate-50 dark:bg-slate-800 text-slate-800;
 		height: 100dvh; /* Currently supported only on Firefox and Safari - https://caniuse.com/viewport-unit-variants */
 	}
 	body {
