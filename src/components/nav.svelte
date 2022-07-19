@@ -2,8 +2,8 @@
 	let current = 'active';
 </script>
 
-<nav class="flex flex-auto fixed w-full justify-between max-w-md mx-6 mt-2 items-baseline">
-	<a href="/" on:click={() => (current = 'active')}> Jacob Lamb </a>
+<nav class="flex flex-auto fixed w-full justify-between max-w-md mt-2 items-baseline">
+	<!-- <a href="/" on:click={() => (current = 'active')}> Jacob Lamb </a> -->
 	<a
 		href="/projects"
 		class:selected={current === 'projects'}
@@ -18,8 +18,8 @@
 </nav>
 
 <style>
-	a:not(:first-of-type) {
-		@apply py-1 hidden hover:underline hover:decoration-2 tablet:flex;
+	nav {
+		@apply hidden;
 	}
 	a:first-of-type {
 		@apply text-lg;

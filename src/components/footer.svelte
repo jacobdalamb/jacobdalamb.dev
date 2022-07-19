@@ -1,4 +1,4 @@
-<footer class="fixed inset-x-0 bottom-0 mx-6 flex flex-wrap gap-x-24">
+<footer class="inset-x-0 bottom-0 flex flex-wrap gap-x-24">
 	<div class="mb-2 mr-auto flex max-w-[10rem] flex-[1_1_150px] justify-between">
 		<a
 			data-cube-solidity-tooltip="email me"
@@ -23,7 +23,7 @@
 			<i role="button" aria-label="github-icon" class="fa-brands fa-github-square fa-2x" />
 		</a>
 	</div>
-	<p class="mt-1 text-base dark:text-white">
+	<p class="mt-1 text-base">
 		Jacob Lamb | 2020 - {new Date().getFullYear()}
 	</p>
 </footer>

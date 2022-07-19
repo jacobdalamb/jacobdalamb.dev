@@ -4,7 +4,7 @@
 </svelte:head>
 
 <section class="">
-	<div class="ch-all">
+	<div class="">
 		<h1>ABOUT</h1>
 		<!-- todo: add profile picture -->
 		<!-- todo: create own stack of languages, apps, resources, and newsletters subsribed to -->

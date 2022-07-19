@@ -4,7 +4,7 @@
 </svelte:head>
 
 <section class="">
-	<div class="ch-all">
+	<div class="">
 		<h1>FEATURED PROJECTS</h1>
 		<p class="animate-pulse motion-reduce:animate-none">Not here yet...</p>
 		<!--

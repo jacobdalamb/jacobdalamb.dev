@@ -16,11 +16,26 @@
 	}
 	html,
 	body {
-		@apply h-full bg-slate-50 dark:bg-slate-800 text-slate-800;
-		height: 100dvh; /* Currently supported only on Firefox and Safari - https://caniuse.com/viewport-unit-variants */
+		@apply bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-50;
+	}
+	/* Currently supported only on Firefox and Safari - https://caniuse.com/viewport-unit-variants */
+	@supports (height: 100dvh) {
+		html,
+		body {
+			@apply h-[100dvh];
+		}
+	}
+	@supports not (height: 100dvh) {
+		html,
+		body {
+			@apply h-full;
+		}
 	}
 	body {
 		@apply leading-normal antialiased;
+	}
+	body > * {
+		@apply mx-auto w-4/5;
 	}
 	p,
 	h1,
@@ -71,17 +86,5 @@
 	}
 	p {
 		@apply text-lg max-w-prose;
-	}
-	@media (prefers-color-scheme: dark) {
-		header,
-		section {
-			@apply text-white;
-		}
-	}
-}
-
-@layer components {
-	.ch-all {
-		@apply mx-auto my-0 w-4/5;
 	}
 }

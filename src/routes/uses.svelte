@@ -4,7 +4,7 @@
 </svelte:head>
 
 <section class="">
-	<div class="ch-all">
+	<div class="">
 		<h1>Uses</h1>
 		<p>What I use on the regular.</p>
 	</div>

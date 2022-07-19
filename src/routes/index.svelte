@@ -4,7 +4,7 @@
 </svelte:head>
 
 <header class="">
-	<div class="ch-all">
+	<div class="">
 		<h1>Hi, I'm Jacob. <br /> A Frontend Developer</h1>
 		<p class="text-2xl max-w-xl">
 			I'm also a <b
