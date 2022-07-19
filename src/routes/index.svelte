@@ -1,3 +1,8 @@
+<svelte:head>
+	<title>Jacob Lamb</title>
+	<meta name="description" content="A Frontend Developer" />
+</svelte:head>
+
 <header class="">
 	<div class="ch-all">
 		<h1>Hi, I'm Jacob. <br /> A Frontend Developer</h1>

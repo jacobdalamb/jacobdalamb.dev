@@ -1,3 +1,8 @@
+<svelte:head>
+	<title>Jacob Lamb | About</title>
+	<meta name="description" content="About me" />
+</svelte:head>
+
 <section class="">
 	<div class="ch-all">
 		<h1>ABOUT</h1>

@@ -1,3 +1,8 @@
+<svelte:head>
+	<title>Jacob Lamb | Projects</title>
+	<meta name="description" content="Projects I've created or working on" />
+</svelte:head>
+
 <section class="">
 	<div class="ch-all">
 		<h1>FEATURED PROJECTS</h1>
