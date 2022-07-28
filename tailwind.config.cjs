@@ -9,7 +9,7 @@ module.exports = {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Rubik', ...defaultTheme.fontFamily.sans]
+				sans: ['RubikVariable', ...defaultTheme.fontFamily.sans]
 			}
 		}
 	}

@@ -37,22 +37,19 @@
 	body > * {
 		@apply mx-auto w-4/5;
 	}
-	p,
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		@apply break-words;
-	}
 	input,
 	button,
 	textarea,
 	select {
 		font: inherit;
 	}
+	input,
+	select,
+	textarea {
+		font-size: 1rem;
+	}
 	ul,
+	ol,
 	li {
 		@apply list-none;
 	}
@@ -64,27 +61,29 @@
 		@apply transition-all duration-200 ease-out hover:ease-in;
 	}
 	h1 {
-		@apply text-5xl font-bold;
+		font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
 	}
 	h2 {
-		@apply text-5xl font-bold;
+		font-size: clamp(1.75rem, 5vw + 1rem, 4rem);
+	}
+	h3 {
+		font-size: clamp(2rem, 6vw + 1rem, 5rem);
 	}
 	h1,
 	h2,
-	h3,
-	p {
-		@apply mb-[1em];
+	h3 {
+		@apply font-bold;
 	}
+	p {
+		@apply text-lg max-w-prose;
+	}
+	p,
 	h1,
 	h2,
 	h3,
 	h4,
 	h5,
-	h6,
-	p {
-		@apply mb-[1em];
-	}
-	p {
-		@apply text-lg max-w-prose;
+	h6 {
+		@apply break-words mb-[1em];
 	}
 }
