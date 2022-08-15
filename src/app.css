@@ -6,36 +6,63 @@
 	*,
 	*::before,
 	*::after {
-		@apply box-content;
+		box-sizing: border-box;
 	}
 	* {
-		@apply m-0 p-0;
+		margin: 0;
+		padding: 0;
+	}
+	@media (prefers-color-scheme: dark) {
+		::selection {
+			background-color: theme(colors.slate.50);
+			color: theme(colors.slate.800);
+		}
+		html,
+		body {
+			background-color: theme(colors.slate.800);
+			color: theme(colors.slate.50);
+		}
 	}
 	::selection {
-		@apply bg-slate-800 text-slate-50 dark:bg-slate-200 dark:text-slate-800;
+		background-color: theme(colors.slate.800);
+		color: theme(colors.slate.50);
 	}
 	html,
 	body {
-		@apply bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-50;
+		background-color: theme(colors.slate.50);
+		color: theme(colors.slate.800);
 	}
 	/* Currently supported only on Firefox and Safari - https://caniuse.com/viewport-unit-variants */
 	@supports (height: 100dvh) {
 		html,
 		body {
-			@apply h-[100dvh];
+			height: 100dvh;
+		}
+		header,
+		section {
+			height: 100dvh;
 		}
 	}
+
 	@supports not (height: 100dvh) {
 		html,
 		body {
-			@apply h-full;
+			height: 100%;
+		}
+		header,
+		section {
+			height: 100%;
 		}
 	}
+
 	body {
-		@apply leading-normal antialiased;
+		line-height: 1.5;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
 	body > * {
-		@apply mx-auto w-4/5;
+		margin: 0 auto;
+		width: 80%;
 	}
 	input,
 	button,
@@ -51,14 +78,19 @@
 	ul,
 	ol,
 	li {
-		@apply list-none;
+		list-style-type: none;
 	}
 	header,
 	section {
-		@apply flex flex-col justify-center h-screen;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 	a {
-		@apply transition-all duration-200 ease-out hover:ease-in;
+		transition: all 200ms ease-out;
+	}
+	a:hover {
+		transition-timing-function: ease-in;
 	}
 	h1 {
 		font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
@@ -72,10 +104,11 @@
 	h1,
 	h2,
 	h3 {
-		@apply font-bold;
+		font-weight: bold;
 	}
 	p {
-		@apply text-lg max-w-prose;
+		font-size: 1.125rem;
+		max-width: 65ch;
 	}
 	p,
 	h1,
@@ -84,6 +117,7 @@
 	h4,
 	h5,
 	h6 {
-		@apply break-words mb-[1em];
+		overflow-wrap: break-word;
+		margin-bottom: 1em;
 	}
 }
