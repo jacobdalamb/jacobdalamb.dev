@@ -1,0 +1,85 @@
+---
+import '../styles/global.css'
+import '@fontsource/rubik/variable.css'
+import Footer from '../components/Footer.astro'
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>My Website</title>
+    <meta name="author" content="Jacob Lamb" />
+    <meta
+      name="description"
+      content="Frontend Developer & Web Designer who creates high-performant and responsive web apps."
+    />
+    <meta name="robots" content="index,follow" /><meta name="theme-color" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jacoblamb.me" />
+    <meta property="og:title" content="Jacob Lamb | Frontend Developer & Web Designer" />
+    <meta
+      property="og:description"
+      content="Frontend Developer & Web Designer who creates high-performant and responsive web apps."
+    />
+    <meta property="og:image:alt" content="profile image" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://jacoblamb.me" />
+    <meta property="twitter:creator" content="@jacob_thesheep" />
+    <meta property="twitter:title" content="Jacob Lamb | Frontend Developer & Web Designer" />
+    <meta
+      property="twitter:description"
+      content="Frontend Developer & Web Designer who creates high-performant and responsive web apps."
+    />
+    <meta property="twitter:image:alt" content="profile image" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+    <link rel="shortcut icon" href="/favicons/favicon.ico" />
+    <script defer src="https://kit.fontawesome.com/062ee3baff.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header class="">
+      <div class="">
+        <h1>Hi, I'm Jacob. <br /> A Frontend Developer</h1>
+        <p class="text-2xl max-w-xl">
+          I'm also a <b
+            class="text-pink-900 dark:text-yellow-200 selection:text-yellow-200 dark:selection:text-pink-900"
+            >web designer
+          </b>
+          who creates high-performant and responsive web apps.
+        </p>
+        <!-- * Best projects showcase (3-6 max) * -->
+      </div>
+    </header>
+    <section class="">
+      <div class="">
+        <h1>PROJECTS</h1>
+        <p class="animate-pulse motion-reduce:animate-none">Not here yet...</p>
+        <!--
+                  * showcase all projects *
+                  TODO: Add a live demo for the projects (at least photos)
+                -->
+      </div>
+    </section>
+    <section class="">
+      <div class="">
+        <h1>ABOUT</h1>
+        <!-- todo: add profile picture -->
+        <!-- todo: create own stack of languages, apps, resources, and newsletters subsribed to -->
+        <p>
+          My passion for web development and eye for design started sometime in 2016 where I swiftly downloaded a code
+          editor and started experimenting with HTML and CSS. Since then, I have increased my knowledge from various web
+          development and UX/UI design courses. Today I continue to level up my skills and f**king network. When I'm not
+          surfing the web, I like to read books, play games and workout. If you want to learn more bits about me check
+          out my
+          <a class="link underline text-blue-600" href="https://read.cv/jacobthesheep">new CV profile.</a>
+        </p>
+      </div>
+    </section>
+    <Footer />
+  </body>
+</html>
