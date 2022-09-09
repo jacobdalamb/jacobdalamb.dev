@@ -93,7 +93,7 @@
     transition-timing-function: ease-in;
   }
   h1 {
-    font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
+    font-size: clamp(2rem, 5vw + 1rem, 4rem);
   }
   h2 {
     font-size: clamp(1.75rem, 5vw + 1rem, 4rem);

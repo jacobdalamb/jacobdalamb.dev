@@ -10,16 +10,17 @@ import Footer from '../components/Footer.astro'
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>My Website</title>
+    <title>Jacob Lamb - Creative Developer</title>
     <meta name="author" content="Jacob Lamb" />
     <meta
       name="description"
-      content="Frontend Developer & Web Designer who creates high-performant and responsive web apps."
+      content="I'm a creative developer who builds accessible, high-performant, responsive webites."
     />
-    <meta name="robots" content="index,follow" /><meta name="theme-color" content="" />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jacoblamb.me" />
-    <meta property="og:title" content="Jacob Lamb | Frontend Developer & Web Designer" />
+    <meta property="og:title" content="Jacob Lamb - Creative Developer" />
     <meta
       property="og:description"
       content="Frontend Developer & Web Designer who creates high-performant and responsive web apps."
@@ -28,10 +29,10 @@ import Footer from '../components/Footer.astro'
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://jacoblamb.me" />
     <meta property="twitter:creator" content="@jacob_thesheep" />
-    <meta property="twitter:title" content="Jacob Lamb | Frontend Developer & Web Designer" />
+    <meta property="twitter:title" content="Jacob Lamb - Creative Developer" />
     <meta
       property="twitter:description"
-      content="Frontend Developer & Web Designer who creates high-performant and responsive web apps."
+      content="I'm a creative developer who builds accessible, high-performant, responsive webites."
     />
     <meta property="twitter:image:alt" content="profile image" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
@@ -42,18 +43,31 @@ import Footer from '../components/Footer.astro'
   </head>
 
   <body>
-    <header class="">
-      <div class="">
-        <h1>Hi, I'm Jacob. <br /> A Frontend Developer</h1>
+    <header>
+      <div>
+        <h1 class="mb-[0.375em]">Hi, I'm Jacob.</h1>
         <p class="text-2xl max-w-xl">
-          I'm also a <b
-            class="text-pink-900 dark:text-yellow-200 selection:text-yellow-200 dark:selection:text-pink-900"
-            >web designer
-          </b>
-          who creates high-performant and responsive web apps.
+          I'm a <b>creative developer</b>
+          who builds accessible, high-performant, responsive webites.
         </p>
       </div>
     </header>
     <Footer />
+    <style>
+      b {
+        color: theme(colors.pink.900);
+      }
+      b::selection {
+        color: theme(colors.yellow.200);
+      }
+      @media (prefers-color-scheme: dark) {
+        b {
+          color: theme(colors.yellow.200);
+        }
+        b::selection {
+          color: theme(colors.pink.900);
+        }
+      }
+    </style>
   </body>
 </html>
