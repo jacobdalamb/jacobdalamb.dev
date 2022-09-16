@@ -1,18 +1,25 @@
 ---
 import Clock from '../components/Clock.svelte'
+import Tooltip from './Tooltip.svelte'
 ---
 
 <footer class="inset-x-0 bottom-0 grid sm:grid-cols-3 gap-3">
   <div class="flex max-w-[10rem] justify-between">
-    <a class="link" href="mailto:jacobtlamb@hey.com" aria-label="email-link" rel="noreferrer"
-      ><i role="button" aria-label="email-icon" class="fa-solid fa-envelope-square fa-2x"></i>
-    </a>
-    <a class="link" href="https://twitter.com/jacob_thesheep" aria-label="twitter-link" rel="noreferrer"
-      ><i role="button" aria-label="twitter-icon" class="fa-brands fa-twitter-square fa-2x"></i>
-    </a>
-    <a class="link" href="https://github.com/jacobthesheep" aria-label="github-link" rel="noreferrer">
-      <i role="button" aria-label="github-icon" class="fa-brands fa-github-square fa-2x"></i>
-    </a>
+    <Tooltip client:visible title="email me">
+      <a class="link" href="mailto:jacobtlamb@hey.com" aria-label="email-link" rel="noreferrer"
+        ><i role="button" aria-label="email-icon" class="fa-solid fa-envelope-square fa-2x"></i>
+      </a>
+    </Tooltip>
+    <Tooltip client:visible title="tweet me">
+      <a class="link" href="https://twitter.com/jacob_thesheep" aria-label="twitter-link" rel="noreferrer"
+        ><i role="button" aria-label="twitter-icon" class="fa-brands fa-twitter-square fa-2x"></i>
+      </a>
+    </Tooltip>
+    <Tooltip client:visible title="develop with me">
+      <a class="link" href="https://github.com/jacobthesheep" aria-label="github-link" rel="noreferrer">
+        <i role="button" aria-label="github-icon" class="fa-brands fa-github-square fa-2x"></i>
+      </a>
+    </Tooltip>
   </div>
   <Clock client:visible />
   <p>
@@ -33,7 +40,6 @@ import Clock from '../components/Clock.svelte'
     opacity: 1;
   }
   p {
-    /* margin-top: theme(margin.1); */
     font-size: theme(fontSize.base);
   }
   footer > * {
