@@ -2,10 +2,13 @@
   export let title = ''
   let isHovered = false
   let x
+  let y
+  // 765px
 
   function mouseOver(event) {
     isHovered = true
     x = event.pageX - 50
+    y = event.pageY - 80
   }
   function mouseLeave() {
     isHovered = false
@@ -17,21 +20,22 @@
 </div>
 
 {#if isHovered}
-  <div style="top: 765px; left: {x}px;" class="tooltip">{title}</div>
+  <div style="top: {y}px; left: {x}px;" class="tooltip">{title}</div>
 {/if}
 
 <style>
   .tooltip {
-    border: 1px solid #ddd;
-    box-shadow: 1px 1px 1px #ddd;
-    background: white;
+    border: 2px solid theme(colors.slate.800);
+    background-color: theme(colors.slate.50);
     border-radius: 4px;
     padding: 8px 16px;
     position: absolute;
   }
   @media (prefers-color-scheme: dark) {
     .tooltip {
-      color: black;
+      background-color: theme(colors.slate.800);
+      color: theme(colors.slate.50);
+      border: 2px solid theme(colors.slate.50);
     }
   }
 </style>
