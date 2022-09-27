@@ -2,80 +2,42 @@
 import '../styles/global.css';
 import '@fontsource/rubik/variable.css';
 import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/favicons/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Jacob Lamb - Creative Developer</title>
-		<meta name="author" content="Jacob Lamb" />
-		<meta
-			name="description"
-			content="I'm a creative developer who builds accessible, high-performant, responsive webites."
-		/>
-		<meta name="robots" content="index,follow" />
-		<meta name="theme-color" content="" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://jacoblamb.me" />
-		<meta property="og:title" content="Jacob Lamb - Creative Developer" />
-		<meta
-			property="og:description"
-			content="Frontend Developer & Web Designer who creates high-performant and responsive web apps."
-		/>
-		<meta property="og:image:alt" content="profile image" />
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content="https://jacoblamb.me" />
-		<meta property="twitter:creator" content="@jacob_thesheep" />
-		<meta property="twitter:title" content="Jacob Lamb - Creative Developer" />
-		<meta
-			property="twitter:description"
-			content="I'm a creative developer who builds accessible, high-performant, responsive webites."
-		/>
-		<meta property="twitter:image:alt" content="profile image" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
-		<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
-		<link rel="shortcut icon" href="/favicons/favicon.ico" />
-		<script defer src="https://kit.fontawesome.com/062ee3baff.js" crossorigin="anonymous"></script>
-	</head>
-
-	<body>
-		<header>
+<Layout>
+	<header>
+		<div>
+			<!-- ¿Appeal to book sites? -->
+			<h1 class="mb-[0.375em]">Hi, I'm Jacob.</h1>
+			<p class="text-2xl max-w-xl">
+				I like to build accessible, high-performant, and responsive web apps.
+			</p>
 			<div>
-				<!-- ¿Appeal to book sites? -->
-				<h1 class="mb-[0.375em]">Hi, I'm Jacob.</h1>
-				<p class="text-2xl max-w-xl">
-					I like to build accessible, high-performant, and responsive web apps.
-				</p>
-				<div>
-					<a href="https://read.cv/jacobthesheep" aria-label="resume-link" rel="noreferrer"
-						>view resume</a
-					>
-					<a href="https://codepen.io/jacobthesheep" aria-label="codepen-link" rel="noreferrer"
-						>view codepens</a
-					>
-				</div>
+				<a href="https://read.cv/jacobthesheep" aria-label="resume-link" rel="noreferrer"
+					>view resume</a
+				>
+				<a href="https://codepen.io/jacobthesheep" aria-label="codepen-link" rel="noreferrer"
+					>view codepens</a
+				>
 			</div>
-		</header>
-		<Footer />
-		<style>
+		</div>
+	</header>
+	<Footer />
+	<style>
+		b {
+			color: theme(colors.pink.900);
+		}
+		b::selection {
+			color: theme(colors.yellow.200);
+		}
+		@media (prefers-color-scheme: dark) {
 			b {
-				color: theme(colors.pink.900);
-			}
-			b::selection {
 				color: theme(colors.yellow.200);
 			}
-			@media (prefers-color-scheme: dark) {
-				b {
-					color: theme(colors.yellow.200);
-				}
-				b::selection {
-					color: theme(colors.pink.900);
-				}
+			b::selection {
+				color: theme(colors.pink.900);
 			}
-		</style>
-	</body>
-</html>
+		}
+	</style>
+</Layout>
