@@ -1,13 +1,19 @@
 ---
-import Clock from '../components/Clock.svelte'
 import Tooltip from './Tooltip.svelte';
 ---
 
 <footer class="inset-x-0 bottom-0 grid sm:grid-cols-3 gap-3">
 	<div class="flex max-w-[10rem] justify-between">
 		<Tooltip client:visible title="email me">
-			<a class="link" href="mailto:jacobtlamb@hey.com" aria-label="email-link" rel="noreferrer"
-			><i role="button" aria-label="email-icon" class="fa-solid fa-envelope-square fa-2x"></i>
+			<a
+				class="link"
+				href="mailto:jacobtlamb@hey.com"
+				aria-label="email-link"
+				rel="noreferrer"
+			><i
+					role="button"
+					aria-label="email-icon"
+					class="fa-solid fa-envelope-square fa-2x"></i>
 			</a>
 		</Tooltip>
 		<Tooltip client:visible title="tweet me">
@@ -16,7 +22,10 @@ import Tooltip from './Tooltip.svelte';
 				href="https://twitter.com/jacob_thesheep"
 				aria-label="twitter-link"
 				rel="noreferrer"
-			><i role="button" aria-label="twitter-icon" class="fa-brands fa-twitter-square fa-2x"></i>
+			><i
+					role="button"
+					aria-label="twitter-icon"
+					class="fa-brands fa-twitter-square fa-2x"></i>
 			</a>
 		</Tooltip>
 		<Tooltip client:visible title="develop with me">
@@ -26,33 +35,35 @@ import Tooltip from './Tooltip.svelte';
 				aria-label="github-link"
 				rel="noreferrer"
 			>
-				<i role="button" aria-label="github-icon" class="fa-brands fa-github-square fa-2x"></i>
+				<i
+					role="button"
+					aria-label="github-icon"
+					class="fa-brands fa-github-square fa-2x"></i>
 			</a>
 		</Tooltip>
 	</div>
-	<Clock client:visible />
 	<p>
-		Jacob Lamb | 2020 - {new Date().getFullYear()}
+        Jacob Lamb | 2020 - {new Date().getFullYear()}
 	</p>
 </footer>
 
 <style>
-	@media (prefers-color-scheme: dark) {
-		i {
-			color: theme(colors.slate.100);
-		}
-	}
-	div:hover a {
-		opacity: 0.3;
-	}
-	.link:hover {
-		opacity: 1;
-	}
-	p {
-		font-size: theme(fontSize.base);
-	}
-	footer {
-		margin-bottom: 1rem;
-		overflow: auto;
-	}
+    @media (prefers-color-scheme: dark) {
+        i {
+            color: theme(colors.slate.100);
+        }
+    }
+    div:hover a {
+        opacity: 0.3;
+    }
+    .link:hover {
+        opacity: 1;
+    }
+    p {
+        font-size: theme(fontSize.base);
+    }
+    footer {
+        margin-bottom: 1rem;
+        overflow: auto;
+    }
 </style>
