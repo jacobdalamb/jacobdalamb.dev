@@ -1,17 +1,8 @@
 {
-  "name": "personal-website",
-  "version": "5.0.0",
+  "name": "jacoblamb.me",
+  "type": "module",
+  "version": "0.0.1",
   "private": true,
-  "author": "Jacob Lamb",
-  "license": "ISC",
-  "homepage": "https://github.com/jacobthesheep/jacoblamb.me#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jacobthesheep/jacoblamb.me.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jacobthesheep/jacoblamb.me/issues"
-  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -22,21 +13,20 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@fontsource/rubik": "^4.5.11"
+    "@astrojs/svelte": "^1.0.2",
+    "@astrojs/tailwind": "^2.1.2",
+    "@astrojs/vercel": "^2.3.3",
+    "@fontsource/rubik": "^4.5.11",
+    "astro": "^1.6.5",
+    "svelte": "^3.46.4",
+    "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.27.0",
-    "@astrojs/mdx": "^0.11.4",
-    "@astrojs/svelte": "^1.0.2",
-    "@astrojs/tailwind": "^2.1.1",
-    "@astrojs/vercel": "^2.3.1",
-    "@typescript-eslint/parser": "^5.41.0",
-    "astro": "^1.5.2",
-    "autoprefixer": "^10.4.12",
-    "eslint": "^8.26.0",
-    "eslint-plugin-astro": "^0.20.0",
-    "postcss": "^8.4.18",
-    "svelte": "^3.52.0",
-    "tailwindcss": "^3.2.1"
+    "@antfu/eslint-config": "^0.29.4",
+    "@typescript-eslint/parser": "^5.42.1",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.27.0",
+    "eslint-plugin-astro": "^0.21.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1"
   }
 }

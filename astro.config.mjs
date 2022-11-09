@@ -1,13 +1,13 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import vercel from '@astrojs/vercel/serverless';
-import svelte from '@astrojs/svelte';
 
-import mdx from '@astrojs/mdx';
+import svelte from "@astrojs/svelte";
 
-// https://astro.build/config
+import vercel from "@astrojs/vercel/serverless";
+
+import tailwind from "@astrojs/tailwind";
+
 export default defineConfig({
-	integrations: [tailwind(), svelte(), mdx()],
-	output: 'server',
-	adapter: vercel(),
+  integrations: [svelte(), tailwind()],
+  output: "server",
+  adapter: vercel()
 });
