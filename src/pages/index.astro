@@ -1,41 +1,48 @@
 ---
-import Footer from '../components/Footer.astro'
-import Layout from '../layouts/Layout.astro';
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Jacob Lamb - Creative Developer" description="I'm a creative developer who builds accessible, high-performant, responsive webites.">
-	<header>
-		<div>
-			<!-- ¿Appeal to book sites? -->
-			<h1 class="mb-[0.375em]">Hi, I'm Jacob.</h1>
-			<p class="text-2xl max-w-xl">
-				I like to build accessible, high-performant, and responsive web apps.
-			</p>
-			<div>
-				<a href="https://read.cv/jacobthesheep" aria-label="resume-link" rel="noreferrer"
-				>view resume</a
-				>
-				<a href="https://codepen.io/jacobthesheep" aria-label="codepen-link" rel="noreferrer"
-				>view codepens</a
-				>
-			</div>
-		</div>
-	</header>
-	<Footer />
-	<style>
-		b {
-			color: theme(colors.pink.900);
-		}
-		b::selection {
-			color: theme(colors.yellow.200);
-		}
-		@media (prefers-color-scheme: dark) {
-			b {
-				color: theme(colors.yellow.200);
-			}
-			b::selection {
-				color: theme(colors.pink.900);
-			}
-		}
-	</style>
+<Layout
+  title="Jacob Lamb - Creative Developer"
+  description="I'm a creative developer who builds accessible, high-performant, responsive webites."
+>
+  <header>
+    <div>
+      <!-- ¿Appeal to book sites? -->
+      <h1 class="mb-[0.375em]">Hi, I'm Jacob.</h1>
+      <p class="text-2xl max-w-xl">
+        I like to build accessible, high-performant, and responsive web apps.
+      </p>
+      <div>
+        <a
+          href="https://read.cv/jacobthesheep"
+          aria-label="resume-link"
+          rel="noreferrer">view resume</a
+        >
+        <a
+          href="https://codepen.io/jacobthesheep"
+          aria-label="codepen-link"
+          rel="noreferrer">view codepens</a
+        >
+      </div>
+    </div>
+  </header>
+  <Footer />
+  <style>
+    b {
+      color: theme(colors.pink.900);
+    }
+    b::selection {
+      color: theme(colors.yellow.200);
+    }
+    @media (prefers-color-scheme: dark) {
+      b {
+        color: theme(colors.yellow.200);
+      }
+      b::selection {
+        color: theme(colors.pink.900);
+      }
+    }
+  </style>
 </Layout>
