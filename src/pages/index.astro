@@ -10,39 +10,35 @@ import Layout from "../layouts/Layout.astro";
   <header>
     <div>
       <!-- ¿Appeal to book sites? -->
-      <h1 class="mb-[0.375em]">Hi, I'm Jacob.</h1>
-      <p class="text-2xl max-w-xl">
+      <h1>Hi, I'm Jacob.</h1>
+      <p>
         I like to build accessible, high-performant, and responsive web apps.
       </p>
       <div>
-        <a
-          href="https://read.cv/jacobthesheep"
-          aria-label="resume-link"
-          rel="noreferrer">view resume</a
-        >
-        <a
-          href="https://codepen.io/jacobthesheep"
-          aria-label="codepen-link"
-          rel="noreferrer">view codepens</a
+        <a href="https://read.cv/jacobthesheep" rel="noreferrer">view resume</a>
+        <a href="https://codepen.io/jacobthesheep" rel="noreferrer"
+          >view codepens</a
         >
       </div>
     </div>
   </header>
   <Footer />
   <style>
-    b {
-      color: theme(colors.pink.900);
+    h1 {
+      font-size: var(--font-size-fluid-3);
     }
-    b::selection {
-      color: theme(colors.yellow.200);
+    p {
+      font-size: var(--font-size-fluid-1);
+      max-inline-size: var(--size-content-2);
     }
-    @media (prefers-color-scheme: dark) {
-      b {
-        color: theme(colors.yellow.200);
-      }
-      b::selection {
-        color: theme(colors.pink.900);
-      }
+    a {
+      transition: all 200ms ease-out;
+      font-size: var(--font-size-fluid-0);
+      color: #bbf7d0;
+    }
+
+    a:hover {
+      transition-timing-function: ease-in;
     }
   </style>
 </Layout>

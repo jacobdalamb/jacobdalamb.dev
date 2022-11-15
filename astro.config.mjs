@@ -4,10 +4,8 @@ import svelte from "@astrojs/svelte";
 
 import vercel from "@astrojs/vercel/serverless";
 
-import tailwind from "@astrojs/tailwind";
-
 export default defineConfig({
-	integrations: [svelte(), tailwind()],
+	integrations: [svelte()],
 	output: "server",
 	adapter: vercel(),
 });
