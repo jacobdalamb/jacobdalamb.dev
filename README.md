@@ -2,8 +2,9 @@
 
 ## Stack
 
-- **Framework**: [Astro](https://astr.build/) w/ [Svelte](https://svelte.dev/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Backend Framework**: [Astro](https://astr.build/)
+- **Frontend Framework**: [Svelte](https://svelte.dev/)
+- **Styling**: [Open Props](https://open-props.style/)
 - **Deployment**: [Vercel](https://vercel.com/)
 
 ## Overview
