@@ -34,20 +34,16 @@ body {
     }
 }
 
-/* Currently supported only on Firefox and Safari - https://caniuse.com/viewport-unit-variants */
 @supports (height: 100dvh) {
 
-    html,
     body {
-        height: 100dvh;
+        min-height: 100dvh;
     }
 }
 
 @supports not (height: 100dvh) {
-
-    html,
     body {
-        height: 100%;
+        min-height: 100vh;
     }
 }
 
