@@ -12,11 +12,14 @@ import Layout from "../layouts/Layout.astro";
       <p>
         I like to build accessible, high-performant, and responsive web apps.
       </p>
-      <div>
-        <a href="https://read.cv/jacobthesheep" rel="external">view resume</a>
+      <div class="links">
+        <a href="https://read.cv/jacobthesheep" rel="external"
+          >view resume <i class="fa-solid fa-arrow-up-right fa-sm"></i>
+        </a>
         <a href="https://codepen.io/jacobthesheep" rel="external">
-          view codepens</a
-        >
+          <i class="fa-brands fa-codepen"></i> view codepens <i
+            class="fa-solid fa-arrow-up-right fa-sm"></i>
+        </a>
       </div>
     </div>
   </header>
@@ -32,9 +35,12 @@ import Layout from "../layouts/Layout.astro";
       transition: all 200ms ease-out;
       font-size: var(--font-size-fluid-0);
     }
-
     a:hover {
       transition-timing-function: ease-in;
+    }
+    .links {
+      display: inline-flex;
+      gap: 1rem;
     }
   </style>
 </Layout>

@@ -18,7 +18,12 @@ const { title, description } = Astro.props;
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/favicons/favicon.ico"
+      sizes="any"
+    />
     <link
       rel="icon"
       type="image/svg+xml"
@@ -73,32 +78,6 @@ const { title, description } = Astro.props;
   <body>
     <slot />
     <footer>
-      <div>
-        <a
-          data-text="email me"
-          class="tooltip"
-          href="mailto:jacobtlamb@hey.com"
-          rel="external icon"
-          ><i role="button" class="fa-solid fa-envelope-square fa-2x"></i>
-        </a>
-
-        <a
-          data-text="tweet me"
-          class="tooltip"
-          href="https://twitter.com/jacob_thesheep"
-          rel="external icon"
-          ><i role="button" class="fa-brands fa-twitter-square fa-2x"></i>
-        </a>
-
-        <a
-          data-text="develop with me"
-          class="tooltip"
-          href="https://github.com/jacobthesheep"
-          rel="external icon"
-        >
-          <i role="button" class="fa-brands fa-github-square fa-2x"></i>
-        </a>
-      </div>
       <p>
         Jacob Lamb | 2020 - {new Date().getFullYear()}
       </p>
@@ -113,67 +92,5 @@ const { title, description } = Astro.props;
     padding-bottom: var(--size-fluid-1);
     display: grid;
     gap: var(--size-fluid-1);
-  }
-  div {
-    display: grid;
-    gap: var(--size-fluid-1);
-    grid-auto-flow: column;
-    max-width: var(--size-13);
-  }
-  div:hover a {
-    opacity: 0.3;
-  }
-  p {
-    font-size: var(--font-size-fluid-0);
-  }
-  .tooltip {
-    display: inline-flex;
-    align-items: center;
-    white-space: nowrap;
-    overflow: hidden;
-    height: 32px;
-    width: 34px;
-    border-radius: 4px;
-    border: 2px solid transparent;
-    transition: width 300ms ease-in-out 0s, background-color 300ms linear 200ms;
-  }
-  .tooltip:hover,
-  .tooltip:focus-visible {
-    opacity: 1;
-    border: 2px solid var(--c-tooltip);
-    min-width: fit-content;
-    width: 120px;
-    padding-right: 1rem;
-    background-color: var(--c-tooltip);
-    color: var(--c-bg);
-    transition: width 300ms ease-in-out 0s, background-color 100ms linear 0s;
-  }
-  .tooltip:focus-visible {
-    outline: 1px solid var(--c-tooltip);
-    outline-offset: 4px;
-  }
-  .tooltip:after {
-    content: attr(data-text);
-    margin-left: 12px;
-    animation: fadeIn 600ms linear forwards;
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @media (prefers-color-scheme: dark) {
-    /* i {
-      color: var(--c-text);
-    }
-    .tooltip:hover i {
-      color: var(--c-bg);
-    } */
   }
 </style>

@@ -17,7 +17,7 @@
     --c-active-text: ActiveText;
     --c-highlight-bg: black;
     --c-highlight-text: white;
-    --c-tooltip: #000;
+    --c-tooltip: black;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -71,21 +71,26 @@ body>* {
 a {
     outline: none;
     text-decoration: none;
+    transition: all 200ms ease-out;
 }
 
-a:not(:has(i)) {
+a:hover {
+    transition-timing-function: ease-in;
+}
+
+a {
     color: var(--c-link-text);
 }
 
-a:not(:has(i)):visited {
+a:visited {
     color: var(--c-visited-text);
 }
 
-a:not(:has(i)):active {
+a:active {
     color: var(--c-active-text);
 }
 
-a:not(:has(i)):hover {
+a:hover {
     text-decoration: underline;
 }
 
