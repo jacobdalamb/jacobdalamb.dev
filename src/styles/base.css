@@ -9,33 +9,59 @@
     padding: 0;
 }
 
-::selection {
-    background-color: var(--gray-8);
-    color: var(--gray-1);
-}
-
-html,
-body {
-    font-family: "RubikVariable", sans-serif;
-    background-color: var(--gray-1);
-    color: var(--gray-8);
+:root {
+    --c-bg: #fff;
+    --c-text: #000;
+    --c-link-text: blue;
+    --c-visited-text: purple;
+    --c-tooltip: #000;
 }
 
 @media (prefers-color-scheme: dark) {
-    ::selection {
-        background-color: var(--gray-1);
-        color: var(--gray-8);
-    }
-
-    html,
-    body {
-        background-color: #1e293b;
-        color: #f8fafc;
+    :root {
+        --c-bg: black;
+        --c-text: white;
+        --c-link-text: aqua;
+        --c-visited-text: mistyrose;
+        --c-tooltip: aqua;
     }
 }
 
-@supports (height: 100dvh) {
+@supports (color-scheme: light dark) {
+    :root {
+        --c-bg: Canvas;
+        --c-text: CanvasText;
+        --c-link-text: LinkText;
+        --c-visited-text: VisitedText;
+    }
 
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --c-link-text: aqua;
+            --c-visited-text: mistyrose;
+        }
+    }
+}
+
+/* For Safari on iOS. Hacky, but it works. */
+@supports (background-color: -apple-system-control-background) and (color: text) {
+    :root {
+        --c-bg: -apple-system-control-background;
+        --c-text: text;
+    }
+}
+
+html {
+    background: var(--c-bg);
+    color: var(--c-text);
+}
+
+::selection {
+    background-color: var(--c-text);
+    color: var(--c-bg);
+}
+
+@supports (height: 100dvh) {
     body {
         min-height: 100dvh;
     }
@@ -65,4 +91,42 @@ body>* {
 a {
     outline: none;
     text-decoration: none;
+}
+
+a:not(:has(i)) {
+    color: var(--c-link-text);
+}
+
+a:not(:has(i)):visited {
+    color: var(--c-visited-text);
+}
+
+a:not(:has(i)):hover {
+    text-decoration: underline;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
 }
