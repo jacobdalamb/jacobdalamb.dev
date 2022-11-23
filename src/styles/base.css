@@ -10,44 +10,24 @@
 }
 
 :root {
-    --c-bg: #fff;
-    --c-text: #000;
-    --c-link-text: blue;
-    --c-visited-text: purple;
+    --c-bg: Canvas;
+    --c-text: CanvasText;
+    --c-link-text: LinkText;
+    --c-visited-text: VisitedText;
+    --c-active-text: ActiveText;
+    --c-highlight-bg: black;
+    --c-highlight-text: white;
     --c-tooltip: #000;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --c-bg: black;
-        --c-text: white;
         --c-link-text: aqua;
         --c-visited-text: mistyrose;
+        --c-active-text: none;
+        --c-highlight-bg: white;
+        --c-highlight-text: black;
         --c-tooltip: aqua;
-    }
-}
-
-@supports (color-scheme: light dark) {
-    :root {
-        --c-bg: Canvas;
-        --c-text: CanvasText;
-        --c-link-text: LinkText;
-        --c-visited-text: VisitedText;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --c-link-text: aqua;
-            --c-visited-text: mistyrose;
-        }
-    }
-}
-
-/* For Safari on iOS. Hacky, but it works. */
-@supports (background-color: -apple-system-control-background) and (color: text) {
-    :root {
-        --c-bg: -apple-system-control-background;
-        --c-text: text;
     }
 }
 
@@ -57,8 +37,8 @@ html {
 }
 
 ::selection {
-    background-color: var(--c-text);
-    color: var(--c-bg);
+    background-color: var(--c-highlight-bg);
+    color: var(--c-highlight-text);
 }
 
 @supports (height: 100dvh) {
@@ -99,6 +79,10 @@ a:not(:has(i)) {
 
 a:not(:has(i)):visited {
     color: var(--c-visited-text);
+}
+
+a:not(:has(i)):active {
+    color: var(--c-active-text);
 }
 
 a:not(:has(i)):hover {
