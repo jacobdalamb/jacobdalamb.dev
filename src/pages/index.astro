@@ -8,35 +8,29 @@ import Layout from "../layouts/Layout.astro";
 >
   <header>
     <div>
-      <h1>Hi, I'm Jacob.</h1>
-      <p>
+      <span>Hi, I'm Jacob.</span>
+      <span>
         I like to build accessible, high-performant, and responsive web apps.
-      </p>
+      </span>
       <div class="links">
-        <a href="https://read.cv/jacobthesheep" rel="external"
-          >view resume <i class="fa-solid fa-arrow-up-right fa-sm"></i>
-        </a>
+        <a href="https://read.cv/jacobthesheep" rel="external">view resume</a>
         <a href="https://codepen.io/jacobthesheep" rel="external">
-          <i class="fa-brands fa-codepen"></i> view codepens <i
-            class="fa-solid fa-arrow-up-right fa-sm"></i>
+          <i class="fa-brands fa-codepen"></i> view codepens
         </a>
       </div>
     </div>
   </header>
   <style>
-    h1 {
-      font-size: var(--font-size-fluid-3);
+    header > div {
+      display: flex;
+      flex-direction: column;
     }
-    p {
-      font-size: var(--font-size-fluid-1);
+    header > div span:first-child {
+      font-size: var(--font-size-xxxl);
+    }
+    span {
+      font-size: var(--font-size-md);
       max-inline-size: var(--size-content-2);
-    }
-    a {
-      transition: all 200ms ease-out;
-      font-size: var(--font-size-fluid-0);
-    }
-    a:hover {
-      transition-timing-function: ease-in;
     }
     .links {
       display: inline-flex;
