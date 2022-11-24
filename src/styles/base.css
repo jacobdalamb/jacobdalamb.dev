@@ -40,6 +40,7 @@ html {
     color: var(--c-text);
     font-feature-settings: "zero", "tnum";
     font-optical-sizing: auto;
+    font-display: optional;
 }
 
 ::selection {
