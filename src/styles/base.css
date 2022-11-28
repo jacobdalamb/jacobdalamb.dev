@@ -41,7 +41,7 @@
 }
 
 html {
-    background: var(--c-bg);
+    background-color: var(--c-bg);
     color: var(--c-text);
     font-feature-settings: "zero", "tnum";
     font-optical-sizing: auto;
