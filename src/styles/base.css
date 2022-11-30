@@ -21,16 +21,8 @@
     --font-size-xl: clamp(1.95rem, 0.53vw + 1.82rem, 2.66rem);
     --font-size-xxl: clamp(2.44rem, 0.82vw + 2.24rem, 3.55rem);
     --font-size-xxxl: clamp(3.05rem, 1.25vw + 2.74rem, 4.73rem);
-    /* Icon Weights */
-    --brands-wgt: 400;
-    --solid-wgt: 900;
-    --regular-wgt: 400;
-    --light-wgt: 300;
-    --thin-wgt: 100;
-    --sharp-solid-wgt: 900;
-    /* Icon Family */
-    --pro: "Font Awesome 6 Pro";
-    --brands: "Font Awesome 6 Brands";
+    /* Icon Alias */
+    --external-link: "\f08e";
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,7 +37,6 @@ html {
     color: var(--c-text);
     font-feature-settings: "zero", "tnum";
     font-optical-sizing: auto;
-    font-display: optional;
 }
 
 ::selection {
@@ -164,7 +155,6 @@ select {
     font: inherit;
 }
 
-/* https://fontawesome.com/docs/web/add-icons/pseudo-elements */
 .icon,
 .icon::before,
 .icon::after {
@@ -177,11 +167,11 @@ select {
 
 a[rel~="external"]::after {
     margin-left: 0.25em;
-    font-size: 0.75em;
     vertical-align: top;
-    font-family: var(--pro);
-    font-weight: var(--solid-wgt);
-    content: "\f08e";
+    font: var(--fa-font-solid);
+    font-size: 0.75em;
+    /* content: var(--fa-icon-arrow-up-right-from-square, "\2192"); */
+    content: var(--external-link);
 }
 
 @media (hover: hover) {
