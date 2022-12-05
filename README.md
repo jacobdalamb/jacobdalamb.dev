@@ -1,4 +1,4 @@
-# [https://jacoblamb.me](jacoblamb.me)
+# [jacoblamb.me](https://jacoblamb.me)
 My personal website and portfolio.
 ## Stack
 - **Backend Framework**: [Astro](https://astr.build/)
