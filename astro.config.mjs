@@ -4,8 +4,8 @@ import vercel from "@astrojs/vercel/serverless";
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  site: "https://jacoblamb.me",
-  integrations: [svelte(), tailwind()],
-  output: "server",
-  adapter: vercel()
+	site: "https://jacoblamb.me",
+	integrations: [svelte(), tailwind()],
+	output: "server",
+	adapter: vercel(),
 });
