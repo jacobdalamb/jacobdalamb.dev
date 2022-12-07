@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
-var chroma = require("chroma-js");
 module.exports = {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	theme: {
@@ -26,10 +25,8 @@ module.exports = {
 						return vars;
 					}
 
-					const hslValue = chroma(value).css("hsl");
-
 					// Add the new color variable to the vars object
-					return { ...vars, [`--color${colorGroup}-${colorKey}`]: hslValue };
+					return { ...vars, [`--color${colorGroup}-${colorKey}`]: value };
 				}, {});
 			}
 
