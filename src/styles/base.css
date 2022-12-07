@@ -1,4 +1,3 @@
-@import "tw-colors.css";
 *,
 *::before,
 *::after {
@@ -36,9 +35,8 @@
 html {
     background-color: var(--c-bg);
     color: var(--c-text);
-    font-family: "RubikVariable", sans-serif, var(--font-sans, sans-serif);
+    font-feature-settings: "zero", "tnum";
     font-optical-sizing: auto;
-    font-feature-settings: "tnum";
 }
 
 ::selection {
