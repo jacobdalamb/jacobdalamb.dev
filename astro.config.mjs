@@ -8,10 +8,13 @@ export default defineConfig({
 	site: "https://jacoblamb.me",
 	integrations: [
 		svelte(),
-		tailwind({ config: { applyBaseStyles: false } }),
+		tailwind({
+			config: {
+				applyBaseStyles: false,
+			},
+		}),
 		purgecss(),
 	],
-	integrations: [svelte(), tailwind()],
 	output: "server",
 	adapter: vercel(),
 });
