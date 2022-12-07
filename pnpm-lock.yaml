@@ -6,7 +6,6 @@ specifiers:
   '@astrojs/vercel': ^2.3.5
   '@fontsource/rubik': ^4.5.11
   astro: ^1.6.13
-  astro-purgecss: ^1.3.0
   autoprefixer: ^10.4.13
   chroma-js: ^2.4.2
   open-props: ^1.5.1
@@ -21,7 +20,6 @@ dependencies:
   '@astrojs/vercel': 2.3.5
   '@fontsource/rubik': 4.5.11
   astro: 1.6.13
-  astro-purgecss: 1.3.0_astro@1.6.13
   chroma-js: 2.4.2
   open-props: 1.5.1
   svelte: 3.54.0
@@ -919,15 +917,6 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /astro-purgecss/1.3.0_astro@1.6.13:
-    resolution: {integrity: sha512-B7d1Ku4VqM81zwxuu0V1WEiD6tSo+wGsPrIUQhwNQO6tsZIu6ZmFaBwfL5d0TPjtPHfbsQ+AM9xeAIq3euFzCw==}
-    peerDependencies:
-      astro: ^1.0.0
-    dependencies:
-      astro: 1.6.13
-      purgecss: 5.0.0
-    dev: false
-
   /astro/1.6.13:
     resolution: {integrity: sha512-26Ip+7iCdHiK4FQokEWNYTcVDkJ76KLwlzUsuzLck8QBiUFQQUm9fs5nITHDI06k1EYfODYPH81xqZavXlC3Hg==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
@@ -1077,12 +1066,6 @@ packages:
     dependencies:
       balanced-match: 1.0.2
       concat-map: 0.0.1
-    dev: false
-
-  /brace-expansion/2.0.1:
-    resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
-    dependencies:
-      balanced-match: 1.0.2
     dev: false
 
   /braces/3.0.2:
@@ -1247,11 +1230,6 @@ packages:
 
   /comma-separated-tokens/2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
-    dev: false
-
-  /commander/9.4.1:
-    resolution: {integrity: sha512-5EEkTNyHNGFPD2H+c/dXXfQZYa/scCKasxWcXJaWnNJ99pnQN9Vnmqow+p+PlFPE63Q6mThaZws1T+HxfpgtPw==}
-    engines: {node: ^12.20.0 || >=14}
     dev: false
 
   /common-ancestor-path/1.0.1:
@@ -1868,17 +1846,6 @@ packages:
       minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
-    dev: false
-
-  /glob/8.0.3:
-    resolution: {integrity: sha512-ull455NHSHI/Y1FqGaaYFaLGkNMMJbavMrEGFXG/PGrg6y7sutWHUHrz6gy6WEBH6akM1M414dWKCNs+IhKdiQ==}
-    engines: {node: '>=12'}
-    dependencies:
-      fs.realpath: 1.0.0
-      inflight: 1.0.6
-      inherits: 2.0.4
-      minimatch: 5.1.1
-      once: 1.4.0
     dev: false
 
   /global-agent/3.0.0:
@@ -2834,13 +2801,6 @@ packages:
       brace-expansion: 1.1.11
     dev: false
 
-  /minimatch/5.1.1:
-    resolution: {integrity: sha512-362NP+zlprccbEt/SkxKfRMHnNY85V74mVnpUpNyr3F35covl09Kec7/sEFLt3RA4oXmewtoaanoIf67SE5Y5g==}
-    engines: {node: '>=10'}
-    dependencies:
-      brace-expansion: 2.0.1
-    dev: false
-
   /minimist/1.2.7:
     resolution: {integrity: sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==}
     dev: false
@@ -3266,16 +3226,6 @@ packages:
 
   /property-information/6.2.0:
     resolution: {integrity: sha512-kma4U7AFCTwpqq5twzC1YVIDXSqg6qQK6JN0smOw8fgRy1OkMi0CYSzFmsy6dnqSenamAtj0CyXMUJ1Mf6oROg==}
-    dev: false
-
-  /purgecss/5.0.0:
-    resolution: {integrity: sha512-RAnuxrGuVyLLTr8uMbKaxDRGWMgK5CCYDfRyUNNcaz5P3kGgD2b7ymQGYEyo2ST7Tl/ScwFgf5l3slKMxHSbrw==}
-    hasBin: true
-    dependencies:
-      commander: 9.4.1
-      glob: 8.0.3
-      postcss: 8.4.19
-      postcss-selector-parser: 6.0.11
     dev: false
 
   /queue-microtask/1.2.3:
