@@ -1,4 +1,4 @@
-@import "tw-colors.css";
+/* @import "tw-colors.css"; */
 
 *,
 *::before,
@@ -177,14 +177,6 @@ details:focus-within {
     -webkit-font-smoothing: antialiased;
     text-decoration: none;
     padding: 0 2px;
-}
-
-a[rel~="external"]::after {
-    margin-left: 0.25em;
-    vertical-align: top;
-    font: var(--fa-font-solid);
-    font-size: 0.75em;
-    content: var(--external-link);
 }
 
 @media (hover: hover) {

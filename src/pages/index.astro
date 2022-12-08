@@ -3,40 +3,75 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
-  title="Jacob Lamb - Creative Developer"
-  description="I'm a creative developer who builds accessible, high-performant, responsive webites."
+    title="Jacob Lamb - Creative Developer"
+    description="I'm a creative developer who builds accessible, high-performant, responsive webites."
 >
-  <header>
-    <div>
-      <span>Hi, I'm Jacob.</span>
-      <span>
-        I like to build accessible, high-performant, and responsive web apps.
-      </span>
-      <div class="links">
-        <a href="https://read.cv/jacobthesheep" rel="external" class="icon"
-          >view resume</a
-        >
-        <a href="https://codepen.io/jacobthesheep" rel="external" class="icon"
-          >view codepens</a
-        >
-      </div>
-    </div>
-  </header>
-  <style>
-    header > div {
-      display: flex;
-      flex-direction: column;
-    }
-    header > div span:first-child {
-      font-size: var(--font-size-xxxl);
-    }
-    span {
-      font-size: var(--font-size-md);
-      max-inline-size: var(--size-content-2);
-    }
-    .links {
-      display: inline-flex;
-      gap: 1rem;
-    }
-  </style>
+    <header>
+        <div>
+            <span>Hi, I'm Jacob.</span>
+            <span>
+                I like to build accessible, high-performant, and responsive web
+                apps.
+            </span>
+        </div>
+        <div>
+            <a
+                href="https://read.cv/jacobthesheep"
+                rel="external"
+                class="button"
+                ><i
+                    class="fa-light fa-memo fa-rotate-by"
+                    style="--fa-rotate-angle: 25deg;"></i>
+                Read.cv
+            </a>
+            <a
+                href="https://codepen.io/jacobthesheep"
+                rel="external"
+                class="button"
+                ><i class="fa-brands fa-codepen fa-fw"></i>
+                Codepen
+            </a>
+        </div>
+    </header>
+    <style>
+        a.button {
+            display: flex;
+            flex: none;
+            justify-content: center;
+            align-items: center;
+            gap: var(--size-2);
+            padding: var(--size-2) var(--size-3);
+            background-color: var(--c-text);
+            color: var(--c-bg);
+            border-radius: var(--radius-2);
+            font-weight: 600;
+            /* border: 2px solid var(--c-text); */
+        }
+        a.button:hover {
+            background-color: var(--color-blue-700);
+        }
+        @media (prefers-color-scheme: dark) {
+            a.button:hover {
+                background-color: var(--color-yellow-400);
+            }
+        }
+        header {
+            display: grid;
+            gap: var(--size-fluid-2);
+        }
+        header > div:first-child {
+            display: grid;
+        }
+        header > div:first-child span:first-child {
+            font-size: var(--font-size-xxxl);
+        }
+        span {
+            font-size: var(--font-size-md);
+            max-inline-size: var(--size-content-2);
+        }
+        header > div:nth-child(2) {
+            display: inline-flex;
+            gap: 1rem;
+        }
+    </style>
 </Layout>
