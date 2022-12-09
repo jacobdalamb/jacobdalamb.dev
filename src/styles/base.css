@@ -4,13 +4,6 @@
     box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --c-link-text: var(--color-teal-200);
-        --c-visited-text: var(--color-rose-100);
-    }
-}
-
 html {
     background-color: var(--c-bg);
     color: var(--c-text);

@@ -241,3 +241,18 @@
     --color-rose-800: hsl(343.4, 79.66%, 34.71%);
     --color-rose-900: hsl(341.54, 75.48%, 30.39%)
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --c-link-text: var(--color-teal-200);
+        --c-visited-text: var(--color-rose-100);
+    }
+}
+
+/* For Safari on iOS, hacky but it works */
+@supports (background-color: -apple-system-control-background) and (color: text) {
+    :root {
+        --c-bg: -apple-system-control-background;
+        --c-text: text;
+    }
+}
