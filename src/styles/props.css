@@ -1,12 +1,4 @@
 :root {
-    /* Colors */
-    --c-bg: Canvas;
-    --c-text: CanvasText;
-    --c-link-text: LinkText;
-    --c-visited-text: VisitedText;
-    --c-active-text: ActiveText;
-    --c-highlight-bg: CanvasText;
-    --c-highlight-text: Canvas;
     /* Font sizes */
     --font-size-sm: clamp(0.8rem, 0.03vw + 0.79rem, 0.84rem);
     --font-size-base: clamp(1rem, 0.09vw + 0.98rem, 1.13rem);
@@ -239,11 +231,21 @@
     --color-rose-600: hsl(346.84, 77.17%, 49.8%);
     --color-rose-700: hsl(345.35, 82.69%, 40.78%);
     --color-rose-800: hsl(343.4, 79.66%, 34.71%);
-    --color-rose-900: hsl(341.54, 75.48%, 30.39%)
+    --color-rose-900: hsl(341.54, 75.48%, 30.39%);
+    /* Colors */
+    --c-bg: var(--color-slate-900);
+    --c-text: var(--color-slate-50);
+    --c-link-text: LinkText;
+    --c-visited-text: VisitedText;
+    --c-active-text: ActiveText;
+    --c-highlight-bg: CanvasText;
+    --c-highlight-text: Canvas;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
+        --c-bg: var(--color-slate-50);
+        --c-text: var(--color-slate-900);
         --c-link-text: var(--color-teal-200);
         --c-visited-text: var(--color-rose-100);
     }
@@ -254,5 +256,12 @@
     :root {
         --c-bg: -apple-system-control-background;
         --c-text: text;
+    }
+}
+
+@supports (background-color: Canvas) and (color: CanvasText) {
+    :root {
+        --c-bg: Canvas;
+        --c-text: CanvasText;
     }
 }
