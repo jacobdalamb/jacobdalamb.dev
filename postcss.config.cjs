@@ -3,6 +3,6 @@ const OpenProps = require("open-props");
 module.exports = {
 	plugins: [
 		require("autoprefixer"),
-		require("postcss-jit-props")({ ...OpenProps, files: ["./tw-colors.css"] }),
+		require("postcss-jit-props")({ ...OpenProps, files: ["./src/styles/props.css"] }),
 	],
 };

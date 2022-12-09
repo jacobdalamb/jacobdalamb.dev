@@ -1,30 +1,7 @@
-/* @import "tw-colors.css"; */
-
 *,
 *::before,
 *::after {
     box-sizing: border-box;
-}
-
-:root {
-    /* Colors */
-    --c-bg: Canvas;
-    --c-text: CanvasText;
-    --c-link-text: LinkText;
-    --c-visited-text: VisitedText;
-    --c-active-text: ActiveText;
-    --c-highlight-bg: CanvasText;
-    --c-highlight-text: Canvas;
-    /* Font sizes */
-    --font-size-sm: clamp(0.8rem, 0.03vw + 0.79rem, 0.84rem);
-    --font-size-base: clamp(1rem, 0.09vw + 0.98rem, 1.13rem);
-    --font-size-md: clamp(1.25rem, 0.18vw + 1.2rem, 1.5rem);
-    --font-size-lg: clamp(1.56rem, 0.32vw + 1.48rem, 2rem);
-    --font-size-xl: clamp(1.95rem, 0.53vw + 1.82rem, 2.66rem);
-    --font-size-xxl: clamp(2.44rem, 0.82vw + 2.24rem, 3.55rem);
-    --font-size-xxxl: clamp(3.05rem, 1.25vw + 2.74rem, 4.73rem);
-    /* Icon Alias */
-    --external-link: "\f08e";
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,16 +24,8 @@ html {
     color: var(--c-highlight-text);
 }
 
-@supports (height: 100dvh) {
-    body {
-        min-height: 100dvh;
-    }
-}
-
-@supports not (height: 100dvh) {
-    body {
-        min-height: 100vh;
-    }
+body {
+    min-height: 100dvh;
 }
 
 body {
@@ -76,31 +45,6 @@ body>* {
     width: 85%;
 }
 
-h1 {
-    font-size: var(--font-size-xxxl);
-}
-
-h2 {
-    font-size: var(--font-size-xxl);
-}
-
-h3 {
-    font-size: var(--font-size-xl);
-}
-
-h4 {
-    font-size: var(--font-size-lg);
-}
-
-h5 {
-    font-size: var(--font-size-md);
-}
-
-h6 {
-    font-size: var(--font-size-base);
-}
-
-p,
 a {
     font-size: var(--font-size-base);
 }
@@ -119,68 +63,8 @@ a:hover {
     transition-timing-function: ease-in;
 }
 
-a {
-    color: var(--c-link-text);
-}
-
-a:visited {
-    color: var(--c-visited-text);
-}
-
-a:active {
-    color: var(--c-active-text);
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-    display: block;
-    max-width: 100%;
-}
-
-p,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    overflow-wrap: break-word;
-}
-
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
-
-input:focus-within,
-button:focus-within,
-textarea:focus-within,
-select:focus-within,
-a:focus-within,
-details:focus-within {
+a:focus-within {
     outline: none;
     border-radius: 4px;
     box-shadow: 0 0 0 4px SelectedItem;
-}
-
-.icon,
-.icon::before,
-.icon::after {
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    text-decoration: none;
-    padding: 0 2px;
-}
-
-@media (hover: hover) {
-    a:not(:has(i)):hover {
-        text-decoration: underline;
-    }
 }

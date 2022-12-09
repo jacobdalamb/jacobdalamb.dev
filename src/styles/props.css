@@ -1,4 +1,23 @@
 :root {
+    /* Colors */
+    --c-bg: Canvas;
+    --c-text: CanvasText;
+    --c-link-text: LinkText;
+    --c-visited-text: VisitedText;
+    --c-active-text: ActiveText;
+    --c-highlight-bg: CanvasText;
+    --c-highlight-text: Canvas;
+    /* Font sizes */
+    --font-size-sm: clamp(0.8rem, 0.03vw + 0.79rem, 0.84rem);
+    --font-size-base: clamp(1rem, 0.09vw + 0.98rem, 1.13rem);
+    --font-size-md: clamp(1.25rem, 0.18vw + 1.2rem, 1.5rem);
+    --font-size-lg: clamp(1.56rem, 0.32vw + 1.48rem, 2rem);
+    --font-size-xl: clamp(1.95rem, 0.53vw + 1.82rem, 2.66rem);
+    --font-size-xxl: clamp(2.44rem, 0.82vw + 2.24rem, 3.55rem);
+    --font-size-xxxl: clamp(3.05rem, 1.25vw + 2.74rem, 4.73rem);
+    /* Icon Alias */
+    --external-link: "\f08e";
+    /* Tailwind Colors */
     --color-black: hsl(0, 0%, 0%);
     --color-white: hsl(0, 0%, 100%);
     --color-slate-50: hsl(210, 40%, 98.04%);
