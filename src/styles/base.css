@@ -12,6 +12,14 @@ html {
     font-optical-sizing: auto;
 }
 
+/* For Safari on iOS, hacky but it works */
+@supports (background-color: -apple-system-control-background) {
+    html body {
+        --c-bg: -apple-system-control-background;
+        --c-text: text;
+    }
+}
+
 ::selection {
     background-color: var(--c-highlight-bg);
     color: var(--c-highlight-text);
@@ -59,5 +67,5 @@ a:hover {
 a:focus-within {
     outline: none;
     border-radius: 4px;
-    box-shadow: 0 0 0 4px SelectedItem;
+    box-shadow: 0 0 0 4px var(--c-selected-item);
 }

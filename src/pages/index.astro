@@ -47,11 +47,18 @@ import Layout from "../layouts/Layout.astro";
             font-weight: 600;
         }
         a.button:hover {
-            background-color: var(--color-blue-700);
+            background-color: var(--c-link-text);
         }
         @media (prefers-color-scheme: dark) {
             a.button:hover {
-                background-color: var(--color-yellow-400);
+                background-color: #ffff54;
+            }
+        }
+        @supports (background-color: Mark) {
+            @media (prefers-color-scheme: dark) {
+                a.button:hover {
+                    background-color: var(--c-mark-bg);
+                }
             }
         }
         header {

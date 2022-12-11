@@ -1,62 +1,62 @@
 ---
-import "@fontsource/rubik/variable-full.css";
+import "@fontsource/rubik/variable.css";
 import "../styles/base.css";
 export interface Props {
-  title: string;
-  description: string;
+    title: string;
+    description: string;
 }
 const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <meta name="author" content="Jacob Lamb" />
-    <meta name="description" content={description} />
-    <meta name="robots" content="index,follow" />
-    <meta name="color-scheme" content="light dark" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="/assets/website.png" />
-    <meta property="og:image:alt" content="website icon" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:url" content="https://twitter.com/jacob_thesheep" />
-    <meta name="twitter:image" content="/assets/website.png" />
-    <meta name="twitter:image:alt" content="website " />
-    <meta name="twitter:creator" content="@jacob_thesheep" />
-    <link rel="icon" href="/favicons/favicon.ico" sizes="any" />
-    <link rel="icon" href="/favicons/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
-    <script
-      async
-      src="https://kit.fontawesome.com/062ee3baff.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <slot />
-    <footer>
-      <small>
-        Jacob Lamb | 2020 - {new Date().getFullYear()}
-      </small>
-    </footer>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <meta name="author" content="Jacob Lamb" />
+        <meta name="description" content={description} />
+        <meta name="robots" content="index,follow" />
+        <meta name="color-scheme" content="light dark" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="/assets/website.png" />
+        <meta property="og:image:alt" content="website icon" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:url" content="https://twitter.com/jacob_thesheep" />
+        <meta name="twitter:image" content="/assets/website.png" />
+        <meta name="twitter:image:alt" content="website " />
+        <meta name="twitter:creator" content="@jacob_thesheep" />
+        <link rel="icon" href="/favicons/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicons/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+        <script
+            async
+            src="https://kit.fontawesome.com/062ee3baff.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <slot />
+        <footer>
+            <small>
+                Jacob Lamb | 2020 - {new Date().getFullYear()}
+            </small>
+        </footer>
+    </body>
 </html>
 
 <style>
-  footer {
-    position: absolute;
-    bottom: 0.15em;
-    padding-bottom: var(--size-fluid-1);
-    display: grid;
-    gap: var(--size-fluid-1);
-  }
+    footer {
+        position: absolute;
+        bottom: 0.15em;
+        padding-bottom: var(--size-fluid-1);
+        display: grid;
+        gap: var(--size-fluid-1);
+    }
 </style>
