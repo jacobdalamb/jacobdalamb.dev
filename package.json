@@ -12,12 +12,11 @@
     },
     "dependencies": {
         "@astrojs/svelte": "^1.0.2",
-        "@astrojs/vercel": "^2.3.5",
+        "@astrojs/vercel": "^2.4.0",
         "@fontsource/rubik": "^4.5.13",
-        "@vercel/edge": "^0.1.2",
-        "astro": "^1.6.14",
-        "open-props": "^1.5.1",
-        "svelte": "^3.54.0"
+        "astro": "^1.8.0",
+        "open-props": "^1.5.3",
+        "svelte": "^3.55.0"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.13",

@@ -31,7 +31,6 @@ module.exports = {
 			"--font-size-xl": "clamp(1.95rem, 0.53vw + 1.82rem, 2.66rem)",
 			"--font-size-xxl": "clamp(2.44rem, 0.82vw + 2.24rem, 3.55rem)",
 			"--font-size-xxxl": "clamp(3.05rem, 1.25vw + 2.74rem, 4.73rem)",
-			"--icon-external-link": "\f08e",
 		}),
 	],
 };
