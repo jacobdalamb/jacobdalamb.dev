@@ -3,7 +3,7 @@ import svelte from "@astrojs/svelte";
 import vercel from "@astrojs/vercel/serverless";
 
 export default defineConfig({
-	site: "https://jacoblamb.me",
+	site: "https://www.jacoblamb.me",
 	integrations: [svelte()],
 	output: "server",
 	adapter: vercel(),

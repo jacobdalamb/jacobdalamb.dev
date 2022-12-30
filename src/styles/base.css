@@ -35,7 +35,7 @@ body {
     justify-content: center;
     align-items: center;
     line-height: 1.5;
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-1);
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -47,11 +47,11 @@ body>* {
 }
 
 a {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-1);
 }
 
 small {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-0);
 }
 
 a {
