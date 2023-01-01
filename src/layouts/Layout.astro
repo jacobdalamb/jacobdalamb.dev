@@ -24,13 +24,19 @@ const { title, description } = Astro.props;
         <meta name="color-scheme" content="light dark" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content="/assets/apple-touch-icon.webp" />
+        <meta
+            property="og:image"
+            content={`${Astro.url.origin}/assets/apple-touch-icon.webp`}
+        />
         <meta property="og:image:alt" content="website icon" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:url" content="https://twitter.com/jacob_thesheep" />
-        <meta name="twitter:image" content="/assets/apple-touch-icon.webp" />
-        <meta name="twitter:image:alt" content="website " />
+        <meta
+            name="twitter:image"
+            content={`${Astro.url.origin}/assets/apple-touch-icon.webp`}
+        />
+        <meta name="twitter:image:alt" content="website icon" />
         <meta name="twitter:creator" content="@jacob_thesheep" />
         <link rel="icon" href="/favicons/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicons/icon.svg" type="image/svg+xml" />
