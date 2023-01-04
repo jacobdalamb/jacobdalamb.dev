@@ -4,11 +4,11 @@ specifiers:
   '@astrojs/svelte': ^1.0.2
   '@astrojs/vercel': ^2.4.0
   '@fontsource/rubik': ^4.5.13
-  astro: ^1.8.0
+  astro: ^1.9.0
   autoprefixer: ^10.4.13
   open-props: ^1.5.3
   postcss: ^8.4.20
-  postcss-jit-props: ^1.0.8
+  postcss-jit-props: ^1.0.9
   rome: ^11.0.0
   svelte: ^3.55.0
 
@@ -16,14 +16,14 @@ dependencies:
   '@astrojs/svelte': 1.0.2_xeiaa2evzjq5p4je5exzqp6seq
   '@astrojs/vercel': 2.4.0
   '@fontsource/rubik': 4.5.13
-  astro: 1.8.0
+  astro: 1.9.0
   open-props: 1.5.3
   svelte: 3.55.0
 
 devDependencies:
   autoprefixer: 10.4.13_postcss@8.4.20
   postcss: 8.4.20
-  postcss-jit-props: 1.0.8_postcss@8.4.20
+  postcss-jit-props: 1.0.9_postcss@8.4.20
   rome: 11.0.0
 
 packages:
@@ -875,8 +875,8 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /astro/1.8.0:
-    resolution: {integrity: sha512-MZIJveOC1OCIA0w2XmxjDtKviAEuYdF142DVq0VApInE1lm+CvAoyMgJs0a1h4mydD2vgQZpTjPhYKJIdxDjOA==}
+  /astro/1.9.0:
+    resolution: {integrity: sha512-wHHMOHgqBGV4L8ThjCeBuVHq0mGF1F515jRyp5ns0MzFcu2nFk1frlXBKZEfmMMM84cilq3HeimrRTLkIGxI8A==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
     hasBin: true
     dependencies:
@@ -909,7 +909,7 @@ packages:
       estree-walker: 3.0.1
       execa: 6.1.0
       fast-glob: 3.2.12
-      github-slugger: 1.5.0
+      github-slugger: 2.0.0
       gray-matter: 4.0.3
       html-entities: 2.3.3
       html-escaper: 3.0.3
@@ -1739,6 +1739,10 @@ packages:
 
   /github-slugger/1.5.0:
     resolution: {integrity: sha512-wIh+gKBI9Nshz2o46B0B3f5k/W+WI9ZAv6y5Dn5WJ5SK1t0TnDimB4WE5rmTD05ZAIn8HALCZVmCsvj0w0v0lw==}
+    dev: false
+
+  /github-slugger/2.0.0:
+    resolution: {integrity: sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==}
     dev: false
 
   /glob-parent/5.1.2:
@@ -3019,8 +3023,8 @@ packages:
       find-up: 4.1.0
     dev: false
 
-  /postcss-jit-props/1.0.8_postcss@8.4.20:
-    resolution: {integrity: sha512-cM9RAnigzeWzEmr6Vd+oycL83ae0gBmEJQySWvoBFeUc81PhRn/oS/QzIafU3OFhG6sFbMYZr4rO927+PzT7uQ==}
+  /postcss-jit-props/1.0.9_postcss@8.4.20:
+    resolution: {integrity: sha512-sMAo7eVF480LnEGG7G0uS+4L0wRZoXiLthxJePUqo4gHrzu17hU5obAdiscjp/aZag9TqokU6dpI1zHyDGxslA==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       postcss: ^8.2.8

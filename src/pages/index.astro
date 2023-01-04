@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro";
+import { social } from "../data/social";
 ---
 
 <Layout
@@ -15,52 +17,22 @@ import Layout from "../layouts/Layout.astro";
             </span>
         </div>
         <div>
-            <a
-                href="https://read.cv/jacobthesheep"
-                rel="external"
-                class="button"
-                ><i
-                    class="fa-light fa-memo fa-rotate-by"
-                    style="--fa-rotate-angle: 25deg;"></i>
-                Read.cv
-            </a>
-            <a
-                href="https://codepen.io/jacobthesheep"
-                rel="external"
-                class="button"
-                ><i class="fa-brands fa-codepen fa-fw"></i>
-                Codepen
-            </a>
+            {
+                social.map((item) => (
+                    <Link href={item.url} rel="external" isButton={true}>
+                        <i
+                            class:list={[item.icon, item.style, item.rotate]}
+                            style={
+                                item.rotate ? "--fa-rotate-angle: 25deg;" : ""
+                            }
+                        />
+                        {item.name}
+                    </Link>
+                ))
+            }
         </div>
     </header>
     <style>
-        a.button {
-            display: flex;
-            flex: none;
-            justify-content: center;
-            align-items: center;
-            gap: var(--size-2);
-            padding: var(--size-2) var(--size-3);
-            background-color: var(--c-text);
-            color: var(--c-bg);
-            border-radius: var(--radius-2);
-            font-weight: 600;
-        }
-        a.button:hover {
-            background-color: var(--c-link-text);
-        }
-        @media (prefers-color-scheme: dark) {
-            a.button:hover {
-                background-color: #ffff54;
-            }
-        }
-        @supports (background-color: Mark) {
-            @media (prefers-color-scheme: dark) {
-                a.button:hover {
-                    background-color: var(--c-mark-bg);
-                }
-            }
-        }
         header {
             display: grid;
             gap: var(--size-fluid-2);
