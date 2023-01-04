@@ -1,7 +1,7 @@
 export const social = [
 	{
 		url: "https://read.cv/jacobthesheep",
-		name: "Readme.cv",
+		name: "Read.cv",
 		icon: "fa-memo",
 		style: "fa-light",
 		rotate: "fa-rotate-by",
