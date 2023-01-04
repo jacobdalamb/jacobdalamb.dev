@@ -1,8 +1,10 @@
 # [jacoblamb.me](https://jacoblamb.me)
-My personal website and portfolio.
+
+My personal website.
+
 ## Stack
-- **Backend Framework**: [Astro](https://astr.build/)
-- **Frontend Framework**: [Svelte](https://svelte.dev/)
+
+- **Meta Framework**: [Astro](https://astro.build/)
 - **Javascript Flavor**: [Typescript](https://typescriptlang.org/)
 - **Formatter / Linter**: [Rome](https://rome.tools/)
 - **Styling**: [Open Props](https://open-props.style/)
