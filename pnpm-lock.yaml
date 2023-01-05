@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/vercel': ^2.4.0
   '@fontsource/rubik': ^4.5.13
-  astro: ^1.9.0
+  astro: ^1.9.1
   autoprefixer: ^10.4.13
   open-props: ^1.5.3
   postcss: ^8.4.20
@@ -13,7 +13,7 @@ specifiers:
 dependencies:
   '@astrojs/vercel': 2.4.0
   '@fontsource/rubik': 4.5.13
-  astro: 1.9.0
+  astro: 1.9.1
   open-props: 1.5.3
 
 devDependencies:
@@ -811,8 +811,8 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /astro/1.9.0:
-    resolution: {integrity: sha512-wHHMOHgqBGV4L8ThjCeBuVHq0mGF1F515jRyp5ns0MzFcu2nFk1frlXBKZEfmMMM84cilq3HeimrRTLkIGxI8A==}
+  /astro/1.9.1:
+    resolution: {integrity: sha512-aQ6rvAP4w4VCgipVYA/zPmnkuTbFrMZ/+x/sAv2W1uJHWU2iQmrVRrrjUFJl+i1TuYYlHAuC2vKK7aRyXCjD4A==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
     hasBin: true
     dependencies:

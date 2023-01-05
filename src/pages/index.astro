@@ -8,7 +8,7 @@ import { social } from "../data/social";
     title="Jacob Lamb - Creative Developer"
     description="I'm a creative developer who builds accessible, high-performant, responsive webites."
 >
-    <header>
+    <main>
         <div>
             <span>Hi, I'm Jacob.</span>
             <span>
@@ -21,7 +21,7 @@ import { social } from "../data/social";
                 social.map((item) => (
                     <Link href={item.url} rel="external" isButton={true}>
                         <i
-                            class:list={[item.icon, item.style, item.rotate]}
+                            class:list={[item.icon, item.style, item.rotate, "fa-fw"]}
                             style={
                                 item.rotate ? "--fa-rotate-angle: 25deg;" : ""
                             }
@@ -31,23 +31,22 @@ import { social } from "../data/social";
                 ))
             }
         </div>
-    </header>
+    </main>
     <style>
-        header {
-            display: grid;
+        main {
+            display: flex;
+            flex-direction: column;
             gap: var(--size-fluid-2);
         }
-        header > div:first-child {
-            display: grid;
-        }
-        header > div:first-child span:first-child {
+        main > div:first-child span:first-child {
             font-size: var(--font-size-7);
         }
         span {
+            display: block;
             font-size: var(--font-size-3);
             max-inline-size: var(--size-content-2);
         }
-        header > div:nth-child(2) {
+        main > div:nth-child(2) {
             display: inline-flex;
             gap: 1rem;
         }

@@ -33,21 +33,20 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     line-height: 1.5;
     font-size: var(--font-size-1);
-    margin: 0;
+    margin: 0 0 0 var(--size-fluid-7);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-body>* {
-    margin: 0 auto;
-    width: 85%;
-}
-
 a {
     font-size: var(--font-size-1);
+}
+
+a[rel="external"]::after {
+    content: '\2191';
+    transform: rotate(45deg);
 }
 
 small {
