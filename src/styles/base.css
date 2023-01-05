@@ -33,11 +33,17 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     line-height: 1.5;
     font-size: var(--font-size-1);
-    margin: 0 0 0 var(--size-fluid-7);
+    margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+body>* {
+    margin: 0 auto;
+    width: 85%;
 }
 
 a {
