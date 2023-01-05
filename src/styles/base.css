@@ -63,24 +63,6 @@ a.button {
     font-weight: 600;
 }
 
-a.button:hover {
-    background-color: var(--c-link-text);
-}
-
-@media (prefers-color-scheme: dark) {
-    a.button:hover {
-        background-color: #ffff54;
-    }
-}
-
-@supports (background-color: Mark) {
-    @media (prefers-color-scheme: dark) {
-        a.button:hover {
-            background-color: var(--c-mark-bg);
-        }
-    }
-}
-
 small {
     font-size: var(--font-size-0);
 }
@@ -91,12 +73,33 @@ a {
     transition: all 200ms ease-out;
 }
 
-a:hover {
-    transition-timing-function: ease-in;
-}
-
 a:focus-within {
     outline: none;
     border-radius: 4px;
     box-shadow: 0 0 0 4px var(--c-selected-item);
+}
+
+@media (hover: hover) {
+    a:hover {
+        transition-timing-function: ease-in;
+    }
+
+    a.button:hover {
+        background-color: var(--c-link-text);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        a.button:hover {
+            background-color: #ffff54;
+        }
+    }
+
+    @supports (background-color: Mark) {
+        @media (prefers-color-scheme: dark) {
+            a.button:hover {
+                background-color: var(--c-mark-bg);
+            }
+        }
+    }
+
 }
