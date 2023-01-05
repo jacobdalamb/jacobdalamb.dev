@@ -19,9 +19,19 @@ import { social } from "../data/social";
         <div>
             {
                 social.map((item) => (
-                    <Link href={item.url} rel="external" isButton={true}>
+                    <Link
+                        href={item.url}
+                        rel="external"
+                        isButton={true}
+                        isExternal={true}
+                    >
                         <i
-                            class:list={[item.icon, item.style, item.rotate, "fa-fw"]}
+                            class:list={[
+                                item.icon,
+                                item.style,
+                                item.rotate,
+                                "fa-fw",
+                            ]}
                             style={
                                 item.rotate ? "--fa-rotate-angle: 25deg;" : ""
                             }

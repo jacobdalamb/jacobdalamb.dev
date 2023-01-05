@@ -4,6 +4,7 @@ import type { HTMLAttributes } from "astro/types";
 interface Props extends HTMLAttributes<"a"> {
     text?: string;
     isButton?: boolean;
+    isExternal?: boolean;
     icon?: {
         name: string;
         style: string;
@@ -13,39 +14,22 @@ interface Props extends HTMLAttributes<"a"> {
     };
 }
 
-const { text, href, isButton = false, icon, ...attrs } = Astro.props as Props;
+const {
+    text,
+    href,
+    isExternal = false,
+    isButton = false,
+    icon,
+    ...attrs
+} = Astro.props as Props;
 ---
 
-<a href={href} class:list={[{ button: isButton }]} {...attrs}>
+<a
+    href={href}
+    rel={isExternal ? "external" : ""}
+    class:list={[{ button: isButton }]}
+    {...attrs}
+>
     <slot />
+    {isExternal && <i class="fa-solid fa-arrow-up-right" />}
 </a>
-
-<style>
-    a.button {
-        display: flex;
-        flex: none;
-        justify-content: center;
-        align-items: center;
-        gap: var(--size-2);
-        padding: var(--size-2) var(--size-3);
-        background-color: var(--c-text);
-        color: var(--c-bg);
-        border-radius: var(--radius-2);
-        font-weight: 600;
-    }
-    a.button:hover {
-        background-color: var(--c-link-text);
-    }
-    @media (prefers-color-scheme: dark) {
-        a.button:hover {
-            background-color: #ffff54;
-        }
-    }
-    @supports (background-color: Mark) {
-        @media (prefers-color-scheme: dark) {
-            a.button:hover {
-                background-color: var(--c-mark-bg);
-            }
-        }
-    }
-</style>

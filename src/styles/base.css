@@ -50,9 +50,35 @@ a {
     font-size: var(--font-size-1);
 }
 
-a[rel="external"]::after {
-    content: '\2191';
-    transform: rotate(45deg);
+a.button {
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    gap: var(--size-2);
+    padding: var(--size-2) var(--size-3);
+    background-color: var(--c-text);
+    color: var(--c-bg);
+    border-radius: var(--radius-2);
+    font-weight: 600;
+}
+
+a.button:hover {
+    background-color: var(--c-link-text);
+}
+
+@media (prefers-color-scheme: dark) {
+    a.button:hover {
+        background-color: #ffff54;
+    }
+}
+
+@supports (background-color: Mark) {
+    @media (prefers-color-scheme: dark) {
+        a.button:hover {
+            background-color: var(--c-mark-bg);
+        }
+    }
 }
 
 small {
