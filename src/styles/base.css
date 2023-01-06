@@ -57,10 +57,19 @@ a.button {
     align-items: center;
     gap: var(--size-2);
     padding: var(--size-2) var(--size-3);
-    background-color: var(--sc-text);
-    color: var(--sc-bg);
+    color: var(--sc-text);
+    background-color: var(--sc-bg);
+    border: 2px solid var(--sc-text);
     border-radius: var(--radius-2);
     font-weight: 600;
+}
+
+@supports (background-color: ButtonBorder) {
+    a.button {
+        color: var(--sc-button-text);
+        background-color: var(--sc-button-bg);
+        border: 2px solid var(--sc-button-border);
+    }
 }
 
 small {
@@ -77,8 +86,6 @@ a:focus-within {
     outline: none;
     border-radius: 4px;
     box-shadow: 0 0 0 4px var(--sc-selected-item);
-    color: var(--sc-selected-item-text);
-    background-color: var(--sc-bg);
 }
 
 @media (hover: hover) {
@@ -88,22 +95,16 @@ a:focus-within {
     }
 
     a.button:hover {
-        background-color: var(--sc-link-text);
-        color: var(--sc-link-button-text);
+        color: var(--sc-bg);
+        background-color: var(--sc-text);
+        border: 2px solid var(--sc-bg);
     }
 
-
-    @media (prefers-color-scheme: dark) {
+    @supports (background-color: ButtonBorder) {
         a.button:hover {
-            background-color: #ffff54;
-        }
-    }
-
-    @supports (background-color: Mark) {
-        @media (prefers-color-scheme: dark) {
-            a.button:hover {
-                background-color: var(--sc-mark-bg);
-            }
+            color: var(--sc-button-bg);
+            background-color: var(--sc-button-text);
+            border: 2px solid var(--sc-button-border);
         }
     }
 
