@@ -78,16 +78,20 @@ a:focus-within {
     border-radius: 4px;
     box-shadow: 0 0 0 4px var(--sc-selected-item);
     color: var(--sc-selected-item-text);
+    background-color: var(--sc-bg);
 }
 
 @media (hover: hover) {
     a:hover {
+        color: var(--sc-link-text);
         transition-timing-function: ease-in;
     }
 
     a.button:hover {
         background-color: var(--sc-link-text);
+        color: var(--sc-link-button-text);
     }
+
 
     @media (prefers-color-scheme: dark) {
         a.button:hover {

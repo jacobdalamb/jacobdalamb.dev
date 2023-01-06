@@ -7,6 +7,7 @@ module.exports = {
 			"--sc-bg": "var(--arc-palette-background, Canvas)",
 			"--sc-text": "var(--arc-palette-foregroundPrimary, CanvasText)",
 			"--sc-link-text": "LinkText",
+			"--sc-link-button-text": "var(--arc-palette-backgroundExtra, Canvas)",
 			"--sc-visited-text": "VisitedText",
 			"--sc-active-text": "ActiveText",
 			"--sc-button-bg": "ButtonFace",
