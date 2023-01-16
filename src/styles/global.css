@@ -46,12 +46,8 @@ body>* {
     width: 85%;
 }
 
-a {
-    font-size: var(--font-size-1);
-}
-
 a.button {
-    display: flex;
+    display: inline-flex;
     flex: none;
     justify-content: center;
     align-items: center;
@@ -62,6 +58,7 @@ a.button {
     border: 2px solid var(--sc-text);
     border-radius: var(--radius-2);
     font-weight: 600;
+    width: 150px;
 }
 
 @supports (background-color: ButtonBorder) {
@@ -70,10 +67,6 @@ a.button {
         background-color: var(--sc-button-bg);
         border: 2px solid var(--sc-button-border);
     }
-}
-
-small {
-    font-size: var(--font-size-0);
 }
 
 a {
