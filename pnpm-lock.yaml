@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@astrojs/vercel': ^2.4.0
-  '@fontsource/rubik': ^4.5.13
+  '@fontsource/rubik': ^4.5.14
   astro: ^1.9.2
   autoprefixer: ^10.4.13
   open-props: ^1.5.3
@@ -12,7 +12,7 @@ specifiers:
 
 dependencies:
   '@astrojs/vercel': 2.4.0
-  '@fontsource/rubik': 4.5.13
+  '@fontsource/rubik': 4.5.14
   astro: 1.9.2
   open-props: 1.5.3
 
@@ -408,8 +408,8 @@ packages:
     dev: false
     optional: true
 
-  /@fontsource/rubik/4.5.13:
-    resolution: {integrity: sha512-oykfZOFcr+yHiCisHEbX9byVhr7dH4V0XvUSTFZt6xk1Qx+3FFyi8iV4iy/aiKLJOFfgfN6aPMtgifGR6hvIUA==}
+  /@fontsource/rubik/4.5.14:
+    resolution: {integrity: sha512-EvMK3kkeAgKkk8qAeT4PjpyAYyu72pIlJm+SXJ5vR/xhCX2yj2xoq3+YS38rPmPcCAnrAVONoQ3ezLxVm6jhBA==}
     dev: false
 
   /@jridgewell/gen-mapping/0.1.1:
