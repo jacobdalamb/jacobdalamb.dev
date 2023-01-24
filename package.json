@@ -11,10 +11,10 @@
         "astro": "astro"
     },
     "dependencies": {
-        "@astrojs/vercel": "^2.4.0",
+        "@astrojs/vercel": "^3.0.0",
         "@fontsource/rubik": "^4.5.14",
-        "astro": "^1.9.2",
-        "open-props": "^1.5.3"
+        "astro": "^2.0.0",
+        "open-props": "^1.5.5"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.13",
