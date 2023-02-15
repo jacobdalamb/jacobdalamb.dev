@@ -21,6 +21,19 @@ html {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    @supports (background-color: -apple-system-control-background) {
+        html body {
+            --sc-bg: -apple-system-control-background;
+            --sc-text: text;
+        }
+    }
+
+    html body {
+        --sc-link-text: yellow;
+    }
+}
+
 ::selection {
     background-color: var(--sc-highlight-bg);
     color: var(--sc-bg);
@@ -57,56 +70,25 @@ a {
     color: var(--sc-link-text);
 }
 
-a.active {
-    font-weight: bold;
-}
-
-@media (prefers-color-scheme: dark) {
-    a {
-        color: #ffff54;
-    }
-
-    @supports (background-color: Mark) {
-        a {
-            color: var(--sc-mark-bg);
-        }
-    }
-}
-
 a:hover {
     transition-timing-function: ease-in;
 }
 
-a:visited {
-    color: var(--sc-visited-text);
-}
-
-a:active {
-    color: var(--sc-active-text);
-}
-
 a.button {
     display: inline-flex;
+    white-space: nowrap;
     flex: none;
     justify-content: center;
     align-items: center;
     gap: var(--size-2);
-    color: var(--sc-text);
-    background-color: var(--sc-bg);
-    border: 2px solid var(--sc-text);
-    padding: var(--size-2) var(--size-3);
+    color: var(--sc-button-text);
+    background-color: var(--sc-button-bg);
+    border: 2px solid var(--sc-button-border);
+    padding-inline: var(--size-6);
+    padding-block: var(--size-2);
     margin: var(--border);
     border-radius: var(--radius-2);
-    width: 150px;
-    font-weight: 600;
-}
-
-@supports (background-color: ButtonBorder) {
-    a.button {
-        color: var(--sc-button-text);
-        background-color: var(--sc-button-bg);
-        border: 2px solid var(--sc-button-border);
-    }
+    font-weight: var(--font-weight-6);
 }
 
 p,

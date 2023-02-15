@@ -13,7 +13,7 @@
     "dependencies": {
         "@astrojs/vercel": "^3.1.1",
         "@fontsource/rubik": "^4.5.14",
-        "astro": "^2.0.11",
+        "astro": "^2.0.12",
         "open-props": "^1.5.5"
     },
     "devDependencies": {

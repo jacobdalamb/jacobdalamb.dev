@@ -6,6 +6,7 @@ export interface Props {
     description: string;
 }
 const { title, description } = Astro.props;
+let thisYear = `${new Date().getFullYear()}`;
 ---
 
 <!DOCTYPE html>
@@ -61,7 +62,9 @@ const { title, description } = Astro.props;
         <slot id="slot-container" />
         <footer>
             <small>
-                Jacob Lamb | 2020 - {new Date().getFullYear()}
+                Jacob Lamb | <time datetime="2020">2020</time> - <time
+                    datetime={thisYear}>{thisYear}</time
+                >
             </small>
         </footer>
     </body>
