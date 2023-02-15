@@ -1,9 +1,11 @@
-.vercel
-.astro
-.vscode
 # build output
 dist/
 .output/
+
+# generated types
+.astro/
+.vercel/
+.vscode/
 
 # dependencies
 node_modules/
