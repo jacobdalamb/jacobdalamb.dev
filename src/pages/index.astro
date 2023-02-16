@@ -1,12 +1,15 @@
 ---
 import Layout from "../layouts/BaseLayout.astro";
 import Link from "../components/Link.astro";
+const props = {
+    title: "Jacob Lamb - Creative Developer",
+    description:
+        "I'm a creative developer who builds accessible, high-performant, responsive webites.",
+    image: "home",
+};
 ---
 
-<Layout
-    title="Jacob Lamb - Creative Developer"
-    description="I'm a creative developer who builds accessible, high-performant, responsive webites."
->
+<Layout {...props}>
     <main>
         <div>
             <span>Hi, I'm Jacob.</span>
