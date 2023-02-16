@@ -1,11 +1,8 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    /* outline: 2px solid red; */
-}
+@import "open-props/normalize";
+@import "open-props/buttons";
 
 html {
+    block-size: 100%;
     background-color: var(--sc-bg);
     color: var(--sc-text);
     font-family: "RubikVariable", sans-serif, var(--font-sans, sans-serif);
@@ -21,34 +18,12 @@ html {
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    @supports (background-color: -apple-system-control-background) {
-        html body {
-            --sc-bg: -apple-system-control-background;
-            --sc-text: text;
-        }
-    }
-
-    html body {
-        --sc-link-text: yellow;
-    }
-}
-
-::selection {
-    background-color: var(--sc-highlight-bg);
-    color: var(--sc-bg);
-}
-
 body {
-    height: 100dvh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.5;
-    font-size: var(--font-size-1);
-    margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -56,78 +31,4 @@ body {
 body>* {
     margin: 0 auto;
     width: 85%;
-}
-
-p {
-    max-inline-size: var(--size-content-3);
-    margin-block: var(--size-fluid-3);
-}
-
-a {
-    outline: none;
-    text-decoration: none;
-    transition: all 200ms ease-out;
-    color: var(--sc-link-text);
-}
-
-a:hover {
-    transition-timing-function: ease-in;
-}
-
-a.button {
-    display: inline-flex;
-    white-space: nowrap;
-    flex: none;
-    justify-content: center;
-    align-items: center;
-    gap: var(--size-2);
-    color: var(--sc-button-text);
-    background-color: var(--sc-button-bg);
-    border: 2px solid var(--sc-button-border);
-    padding-inline: var(--size-6);
-    padding-block: var(--size-2);
-    margin: var(--border);
-    border-radius: var(--radius-2);
-    font-weight: var(--font-weight-6);
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    overflow-wrap: break-word;
-}
-
-a:focus {
-    border-radius: 4px;
-    outline: none;
-    box-shadow: 0 0 0 4px var(--sc-selected-item);
-}
-
-@media (hover: hover) {
-
-    a:hover {
-        transition-timing-function: ease-in;
-    }
-
-    a.button:hover {
-        color: var(--sc-bg);
-        background-color: var(--sc-text);
-        border: 2px solid var(--sc-bg);
-    }
-
-    @supports (background-color: ButtonBorder) {
-        a.button:hover {
-            color: var(--sc-button-bg);
-            background-color: var(--sc-button-text);
-            border: 2px solid var(--sc-button-border);
-        }
-    }
-
-    a:not(.button):hover {
-        text-decoration: underline;
-    }
 }
