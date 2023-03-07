@@ -11,40 +11,18 @@ const props = {
 
 <Layout {...props}>
     <main>
-        <div>
-            <span>Hi, I'm Jacob.</span>
-            <span>
-                I like to build accessible, high-performant, and responsive web
-                apps.
-            </span>
-        </div>
-        <div>
-            <Link
-                href="https://read.cv/jacobthesheep"
-                isButton={true}
-                isExternal={true}
-            >
-                Read.cv
-            </Link>
-        </div>
+        <h1>Hi, I'm Jacob.</h1>
+        <p>
+            I like to build accessible, high-performant, and responsive web
+            apps.
+        </p>
+
+        <Link
+            href="https://read.cv/jacobthesheep"
+            isButton={true}
+            isExternal={true}
+        >
+            Read.cv
+        </Link>
     </main>
-    <style>
-        main {
-            display: flex;
-            flex-direction: column;
-            gap: var(--size-fluid-2);
-        }
-        main > div:first-child span:first-child {
-            font-size: var(--font-size-7);
-        }
-        span {
-            display: block;
-            font-size: var(--font-size-3);
-            max-inline-size: var(--size-content-2);
-        }
-        main > div:nth-child(2) {
-            display: inline-flex;
-            gap: 1rem;
-        }
-    </style>
 </Layout>

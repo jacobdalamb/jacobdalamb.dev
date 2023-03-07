@@ -41,7 +41,7 @@ let thisYear = `${new Date().getFullYear()}`;
         ></script>
     </head>
     <body>
-        <slot id="slot-container" />
+        <slot />
         <footer>
             <small>
                 Jacob Lamb | <time datetime="2020">2020</time> - <time
@@ -51,13 +51,3 @@ let thisYear = `${new Date().getFullYear()}`;
         </footer>
     </body>
 </html>
-
-<style>
-    footer {
-        position: absolute;
-        bottom: 0.15em;
-        padding-bottom: var(--size-fluid-1);
-        display: grid;
-        gap: var(--size-fluid-1);
-    }
-</style>

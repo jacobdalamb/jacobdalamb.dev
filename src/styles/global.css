@@ -1,5 +1,8 @@
-@import "open-props/normalize";
-@import "open-props/buttons";
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 html {
     block-size: 100%;
@@ -19,16 +22,108 @@ html {
 }
 
 body {
+    --character-offset: 100ch;
+    --spacing: var(--size-fluid-5);
+    min-block-size: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr min(var(--character-offset), calc(100% - var(--spacing))) 1fr;
+    grid-column-gap: calc(var(--spacing) / 2);
+    padding: var(--size-fluid-3) 0;
+    margin: 0;
+    line-height: 1.5;
+    font-size: var(--font-size-1);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    position: relative;
 }
 
 body>* {
-    margin: 0 auto;
-    width: 85%;
+    grid-column: 2;
+}
+
+p {
+    max-inline-size: var(--size-content-3);
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: var(--sc-link-text);
+}
+
+a:visited {
+    color: var(--sc-visited-text);
+}
+
+@media (prefers-color-scheme: dark) {
+    a {
+        color: yellow;
+    }
+}
+
+img {
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+input,
+button,
+select {
+    font: inherit;
+}
+
+:is(input, button, a, select):is(:focus) {
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 0 0 4px var(--sc-selected-item);
+}
+
+form {
+    display: table;
+}
+
+form div {
+    display: table-row;
+}
+
+label,
+input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-right: 10px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+@media (hover: hover) {
+    a:hover {
+        text-decoration: underline;
+    }
 }
