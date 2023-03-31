@@ -41,6 +41,10 @@ let thisYear = `${new Date().getFullYear()}`;
         ></script>
     </head>
     <body>
+        <header>
+            <img src="icon.svg" alt="logo" width="50" height="50">
+            <h1>Jacob Lamb</h1>
+        </header>
         <slot />
         <footer>
             <small>
@@ -51,3 +55,10 @@ let thisYear = `${new Date().getFullYear()}`;
         </footer>
     </body>
 </html>
+
+<style>
+    header {
+        display: flex;
+        align-items: center;
+    }
+</style>
