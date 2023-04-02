@@ -6,29 +6,24 @@
 
 html {
     block-size: 100%;
-    background-color: var(--sc-bg);
-    color: var(--sc-text);
+    background-color: var(--gray-0);
+    color: var(--gray-10);
     font-family: "RubikVariable", sans-serif, var(--font-sans, sans-serif);
     font-feature-settings: "tnum";
     font-optical-sizing: auto;
 }
 
-/* For Safari on iOS, hacky but it works */
-@supports (background-color: -apple-system-control-background) {
-    html body {
-        --sc-bg: -apple-system-control-background;
-        --sc-text: text;
-    }
-}
-
 body {
+    --character-offset: 75ch;
+    --spacing: 64px;
     min-block-size: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr min(var(--character-offset), calc(100% - var(--spacing))) 1fr;
+    grid-column-gap: calc(var(--spacing) / 2);
     line-height: 1.5;
     font-size: var(--font-size-1);
-    margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -44,16 +39,23 @@ p {
 a {
     outline: none;
     text-decoration: none;
-    color: var(--sc-link-text);
+    color: mediumblue;
+    font-weight: bold;
 }
 
-a:visited {
-    color: var(--sc-visited-text);
+
+a:hover:not(.button) {
+    text-underline-offset: 4px;
+    text-decoration: underline dashed 2px mediumblue;
 }
 
 @media (prefers-color-scheme: dark) {
     a {
         color: yellow;
+    }
+
+    a:hover:not(.button) {
+        text-decoration-color: yellow;
     }
 }
 
@@ -80,6 +82,7 @@ h4,
 h5,
 h6 {
     overflow-wrap: break-word;
+    /* margin-block: 0; */
 }
 
 input,
@@ -89,9 +92,8 @@ select {
 }
 
 :is(input, button, a, select):is(:focus) {
-    border-radius: 4px;
     outline: none;
-    box-shadow: 0 0 0 4px var(--sc-selected-item);
+    box-shadow: 0 0 0 4px skyblue;
 }
 
 form {
@@ -112,37 +114,103 @@ label {
     padding-right: 10px;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
+header img {
+    height: 3rem;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    /* mix-blend-mode: color-burn; */
 }
 
 .button {
+    --button-shadow-color: var(--red-10);
+    font-size: var(--font-size-2);
     padding: 0.5rem 1rem;
-    background-color: antiquewhite;
-    border: 1px solid black;
-    border-radius: 99999px;
+    border-radius: var(--radius-2);
+    text-align: center;
+    width: fit-content;
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+    display: inline-block;
+    outline: 2px dashed transparent;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: .3s;
+    border: 2px solid var(--button-shadow-color);
+    color: var(--gray-0);
+    box-shadow: 0.5px 1px 0 0 var(--button-shadow-color), 1.5px 2px 0 0 var(--button-shadow-color), 2.5px 3px 0 0 var(--button-shadow-color), 3.5px 4px 0 0 var(--button-shadow-color), 4.5px 5px 0 0 var(--button-shadow-color), 5.5px 6px 0 0 var(--button-shadow-color);
+}
+
+.button.primary {
+    background-color: var(--red-7);
+}
+
+.button:hover {
+    box-shadow: 0 0 0 0 var(--button-shadow-color), 0 0 0 0 var(--button-shadow-color), 0 0 0 0 var(--button-shadow-color), 0 0 0 0 var(--button-shadow-color), 0 0 0 0 var(--button-shadow-color), 0 0 0 0 var(--button-shadow-color);
+    top: 6px;
+    left: 5.5px;
+    transform: rotateX(5deg) rotateY(3deg) rotateZ(.25deg);
+}
+
+/* New CSS */
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    margin-top: auto;
+}
+
+main h2 {
+    font-size: var(--font-size-fluid-3);
+}
+
+main p {
+    font-size: var(--font-size-3);
+    max-inline-size: var(--size-content-2);
 }
 
 article>div {
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: auto;
-    gap: 16px;
-    height: 300px;
-    overflow-x: scroll;
+    gap: var(--size-5);
+
 }
 
 article article {
     padding: 0.5rem 1rem;
-    border: 1px solid black;
-    background-color: cornsilk;
-    border-radius: 1rem;
-    width: 250px;
+    border: 2px solid var(--gray-4);
+    background-color: var(--gray-3);
+    border-radius: var(--radius-3);
 }
 
-@media (hover: hover) {
-    a:hover {
-        text-decoration: underline;
+@media (prefers-color-scheme: dark) {
+
+    html,
+    header {
+        background-color: var(--gray-10);
+        color: var(--gray-0);
+    }
+
+    footer {
+        background-color: var(--gray-12);
+    }
+
+    .button {
+        --button-shadow-color: var(--gray-4);
+    }
+
+    .button.primary {
+        --button-shadow-color: #D6ECF5;
+        background-color: #133E4F;
+        color: var(--gray-0)
+    }
+
+    .button.secondary {
+        color: var(--gray-0);
+    }
+
+    article article {
+        background-color: var(--gray-9);
     }
 }

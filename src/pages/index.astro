@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/BaseLayout.astro";
 import Link from "../components/Link.astro";
+import { work } from "../data/work";
 const props = {
     title: "Jacob Lamb - Creative Developer",
     description:
@@ -13,16 +14,31 @@ const props = {
     <main>
         <h2>Hi, I'm Jacob.</h2>
         <p>
-            I like to build accessible, high-performant, and responsive web
-            apps.
+            I build accessible, high-performant, and responsive websites for
+            content-focused business.
         </p>
 
         <Link
             href="https://read.cv/jacobthesheep"
-            isButton={true}
             isExternal={true}
+            style="button primary"
         >
-            my resume
+            view my resume
         </Link>
+        <article>
+            <h3>Recent work</h3>
+            <div>
+                {
+                    work.map((article) => (
+                        <article>
+                            <h3>{article.title}</h3>
+                            <Link href={article.site} isExternal={true}>
+                                Go here
+                            </Link>
+                        </article>
+                    ))
+                }
+            </div>
+        </article>
     </main>
 </Layout>

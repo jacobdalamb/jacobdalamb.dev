@@ -2,22 +2,17 @@
 import type { HTMLAttributes } from "astro/types";
 
 interface Props extends HTMLAttributes<"a"> {
-    isButton?: boolean;
     isExternal?: boolean;
+    style?: "button primary" | "button secondary";
 }
 
-const {
-    href,
-    isExternal = false,
-    isButton = false,
-    ...attrs
-} = Astro.props as Props;
+const { href, isExternal = false, style, ...attrs } = Astro.props as Props;
 ---
 
 <a
     href={href}
     rel={isExternal ? "external" : "prefetch"}
-    class:list={[{ button: isButton }]}
+    class:list={style}
     {...attrs}
 >
     <slot />

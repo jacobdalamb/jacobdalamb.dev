@@ -13,13 +13,13 @@
     "dependencies": {
         "@astrojs/vercel": "^3.2.1",
         "@fontsource/rubik": "^4.5.14",
-        "astro": "^2.1.8",
+        "astro": "^2.1.9",
         "open-props": "^1.5.7"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.14",
         "postcss": "^8.4.21",
-        "postcss-jit-props": "^1.0.12",
+        "postcss-jit-props": "^1.0.13",
         "rome": "^12.0.0"
     }
 }
