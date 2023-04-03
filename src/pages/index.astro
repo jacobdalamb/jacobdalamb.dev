@@ -12,33 +12,36 @@ const props = {
 
 <Layout {...props}>
     <main>
-        <h2>Hi, I'm Jacob.</h2>
-        <p>
-            I build accessible, high-performant, and responsive websites for
-            content-focused business.
-        </p>
-
-        <Link
-            href="https://read.cv/jacobthesheep"
-            isExternal={true}
-            style="button primary"
-        >
-            view my resume
-        </Link>
-        <!-- <article>
-            <h3>Recent work</h3>
-            <div>
-                {
-                    work.map((article) => (
-                        <article>
-                            <h3>{article.title}</h3>
-                            <Link href={article.site} isExternal={true}>
-                                Go here
-                            </Link>
-                        </article>
-                    ))
-                }
-            </div>
-        </article> -->
+        <div>
+            <h2>Hi, I'm Jacob.</h2>
+            <p>
+                I build accessible, high-performant, and responsive websites for
+                content-focused business.
+            </p>
+            <Link
+                href="https://read.cv/jacobthesheep"
+                isExternal={true}
+                style="button primary"
+            >
+                view my resume
+            </Link>
+        </div>
+        <!-- <div>
+            <article>
+                <h3>Recent work</h3>
+                <div>
+                    {
+                        work.map((article) => (
+                            <article>
+                                <h3>{article.title}</h3>
+                                <Link href={article.site} isExternal={true}>
+                                    Go here
+                                </Link>
+                            </article>
+                        ))
+                    }
+                </div>
+            </article>
+        </div> -->
     </main>
 </Layout>
