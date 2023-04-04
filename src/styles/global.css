@@ -12,6 +12,7 @@
     --text-reverse: var(--gray-0);
     --bg: var(--gray-0);
     --bg-reverse: var(--gray-9);
+    --link-color: mediumblue;
 }
 
 html {
@@ -33,7 +34,7 @@ body {
     grid-template-columns: 1fr min(var(--character-offset), calc(100% - var(--spacing))) 1fr;
     grid-column-gap: calc(var(--spacing) / 2);
     row-gap: var(--size-8);
-    line-height: 1.5;
+    line-height: var(--font-lineheight-3);
     font-size: var(--font-size-1);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -50,29 +51,19 @@ p {
 a {
     outline: none;
     text-decoration: none;
-    color: mediumblue;
+    color: var(--link-color);
     font-weight: bold;
 }
 
 
 a:hover:not(.button) {
     text-underline-offset: 4px;
-    text-decoration: underline dashed 2px mediumblue;
-}
-
-@media (prefers-color-scheme: dark) {
-    a {
-        color: yellow;
-    }
-
-    a:hover:not(.button) {
-        text-decoration-color: yellow;
-    }
+    text-decoration: underline dashed 2px var(--link-color);
 }
 
 img {
     object-fit: cover;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: var(--ratio-widescreen);
 }
 
 img,
@@ -102,9 +93,14 @@ select {
     font: inherit;
 }
 
+:is(input, button, a, select) {
+    border-radius: var(--radius-2);
+    width: fit-content;
+}
+
 :is(input, button, a, select):is(:focus) {
     outline: none;
-    box-shadow: 0 0 0 4px var(--box-shadow-focus);
+    box-shadow: 0 0 0 var(--size-1) var(--box-shadow-focus);
 }
 
 form {
@@ -118,15 +114,15 @@ form div {
 label,
 input {
     display: table-cell;
-    margin-bottom: 10px;
+    margin-bottom: var(--size-1);
 }
 
 label {
-    padding-right: 10px;
+    padding-right: var(--size-1);
 }
 
 header img {
-    height: 3rem;
+    height: var(--size-8);
     aspect-ratio: 3/2;
     object-fit: contain;
     /* mix-blend-mode: color-burn; */
@@ -134,18 +130,16 @@ header img {
 
 .button {
     font-size: var(--font-size-2);
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-2);
+    padding: var(--size-2) var(--size-3);
     text-align: center;
     width: fit-content;
     transform: rotateX(0) rotateY(0) rotateZ(0);
     display: inline-block;
-    outline: 2px dashed transparent;
     position: relative;
     top: 0;
     left: 0;
     transition: .3s;
-    border: 2px solid var(--button-shadow-color);
+    border: var(--border-size-2) solid var(--button-shadow-color);
     color: var(--gray-0);
     box-shadow: 0.5px 1px 0 0 var(--button-shadow-color), 1.5px 2px 0 0 var(--button-shadow-color), 2.5px 3px 0 0 var(--button-shadow-color), 3.5px 4px 0 0 var(--button-shadow-color), 4.5px 5px 0 0 var(--button-shadow-color), 5.5px 6px 0 0 var(--button-shadow-color);
 }
@@ -222,6 +216,7 @@ article article:hover {
         --box-shadow-focus: yellow;
         --button-shadow-color: var(--red-7);
         --button-primary-bg-color: var(--red-10);
+        --link-color: yellow;
     }
 
     article article {
