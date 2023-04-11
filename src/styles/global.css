@@ -36,8 +36,6 @@ body {
     row-gap: var(--size-8);
     line-height: var(--font-lineheight-3);
     font-size: var(--font-size-1);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 body>* {
@@ -98,9 +96,17 @@ select {
     width: fit-content;
 }
 
-:is(input, button, a, select):is(:focus) {
+input,
+button,
+a,
+select {
+    border-radius: var(--radius-2);
+    width: fit-content;
+}
+
+:is(input, button, a, select):is(:focus-visible) {
     outline: none;
-    box-shadow: 0 0 0 var(--size-1) var(--box-shadow-focus);
+    box-shadow: 0 0 0 2px var(--box-shadow-focus);
 }
 
 form {

@@ -10,11 +10,13 @@
 		"preview": "astro preview",
 		"astro": "astro"
 	},
-	"browserslist": ["defaults"],
+	"browserslist": [
+		"defaults"
+	],
 	"dependencies": {
-		"@astrojs/vercel": "^3.2.1",
+		"@astrojs/vercel": "^3.2.2",
 		"@fontsource/rubik": "^4.5.14",
-		"astro": "^2.1.9",
+		"astro": "^2.2.0",
 		"open-props": "^1.5.7"
 	},
 	"devDependencies": {
