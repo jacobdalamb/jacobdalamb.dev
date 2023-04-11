@@ -85,6 +85,17 @@ h6 {
     /* margin-block: 0; */
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote {
+    white-space: unset;
+    text-wrap: balance;
+}
+
 input,
 button,
 select {
@@ -96,12 +107,8 @@ select {
     width: fit-content;
 }
 
-input,
-button,
-a,
-select {
-    border-radius: var(--radius-2);
-    width: fit-content;
+:is(input, button, a.button, select) {
+    padding: var(--size-2) var(--size-3);
 }
 
 :is(input, button, a, select):is(:focus-visible) {

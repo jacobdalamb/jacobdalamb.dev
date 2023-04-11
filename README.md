@@ -1,4 +1,4 @@
-# [jacoblamb.me](https://jacoblamb.me)
+# [jtlamb.dev](https://jtlamb.dev)
 
 My personal website.
 
