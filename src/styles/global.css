@@ -105,7 +105,7 @@ select {
     width: fit-content;
 }
 
-:is(input, button, a.button, select) {
+:is(input, button, a[data-button], select) {
     padding: var(--size-2) var(--size-3);
 }
 
