@@ -3,7 +3,6 @@ import type { HTMLAttributes } from "astro/types";
 
 interface Props extends HTMLAttributes<"a"> {
     isExternal?: boolean;
-    style?: "button primary" | "button secondary";
 }
 
 const { href, isExternal = false, style, ...attrs } = Astro.props as Props;
@@ -12,7 +11,6 @@ const { href, isExternal = false, style, ...attrs } = Astro.props as Props;
 <a
     href={href}
     rel={isExternal ? "external" : "prefetch"}
-    class:list={style}
     {...attrs}
 >
     <slot />

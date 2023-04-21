@@ -1,47 +1,97 @@
 ---
 import Layout from "../layouts/BaseLayout.astro";
 import Link from "../components/Link.astro";
-import { work } from "../data/work";
 const props = {
-    title: "Jacob Lamb - Creative Developer",
+    title: "Jacob Lamb",
     description:
-        "I'm a creative developer who builds accessible, high-performant, responsive webites.",
+        "Crafting fast, user-friendly websites for your content-focused business.",
     image: "home",
 };
+
+import { validatedTestimonials, validatedWorks } from "../data/data";
+import { Image } from "@astrojs/image/components";
 ---
 
 <Layout {...props}>
     <main>
-        <div>
-            <h2>Hi, I'm Jacob.</h2>
+        <section>
+            <h1>Hi, I'm Jacob, a creative <span>developer</span></h1>
             <p>
-                I build accessible, high-performant, and responsive websites for
-                content-focused business.
+                {props.description}
             </p>
             <Link
                 href="https://read.cv/jacobthesheep"
                 isExternal={true}
-                style="button primary"
+                data-button="primary"
             >
                 view my resume
             </Link>
-        </div>
-        <!-- <div>
+        </section>
+        <!-- <section>
             <article>
-                <h3>Recent work</h3>
-                <div>
+                <h2>Recent work</h2>
+                <p>Check out my latest work</p>
+                <ul>
                     {
-                        work.map((article) => (
-                            <article>
-                                <h3>{article.title}</h3>
-                                <Link href={article.site} isExternal={true}>
-                                    Go here
+                        validatedWorks.map((work) => (
+                            <li>
+                                <Link href={work.url} isExternal={true}>
+                                    {work.title}
                                 </Link>
-                            </article>
+                                <ul>
+                                    <li>
+                                        <figure>
+                                            <div>
+                                                <img
+                                                    src={work.screenshot.before}
+                                                    width="1260"
+                                                    height="970"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <figcaption>Before</figcaption>
+                                        </figure>
+                                    </li>
+                                    <li>
+                                        <figure>
+                                            <div>
+                                                <img
+                                                    src={work.screenshot.after}
+                                                    width="1260"
+                                                    height="970"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <figcaption>After</figcaption>
+                                        </figure>
+                                    </li>
+                                </ul>
+                            </li>
                         ))
                     }
-                </div>
+                </ul>
             </article>
-        </div> -->
+        </section>
+        <section>
+            <article>
+                <h2>Mentions</h2>
+                <ul>
+                    {
+                        validatedTestimonials.map((client) => (
+                            <li>
+                                <figure>
+                                    <blockquote>{client.testimony}</blockquote>
+                                    <figcaption>
+                                        {client.client}
+                                        <br />
+                                        <small>{client.job}</small>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </article>
+        </section> -->
     </main>
 </Layout>

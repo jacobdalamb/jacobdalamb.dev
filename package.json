@@ -14,14 +14,16 @@
 		"defaults"
 	],
 	"dependencies": {
-		"@astrojs/vercel": "^3.2.2",
+		"@astrojs/image": "^0.16.6",
+		"@astrojs/tailwind": "^3.1.1",
+		"@astrojs/vercel": "^3.2.4",
 		"@fontsource/rubik": "^4.5.14",
-		"astro": "^2.2.0",
-		"open-props": "^1.5.7"
+		"astro": "^2.3.0",
+		"open-props": "^1.5.7",
+		"zod": "^3.21.4"
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.14",
-		"postcss": "^8.4.21",
 		"postcss-jit-props": "^1.0.13",
 		"postcss-preset-env": "^8.3.0",
 		"rome": "^12.0.0"
