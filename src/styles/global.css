@@ -116,29 +116,6 @@
         box-shadow: 0 0 0 2px var(--box-shadow-focus);
     }
 
-    form {
-        display: table;
-    }
-
-    form div {
-        display: table-row;
-    }
-
-    label,
-    input {
-        display: table-cell;
-        margin-bottom: var(--size-1);
-    }
-
-    label {
-        padding-right: var(--size-1);
-    }
-
-    pre,
-    pre code {
-        font-family: 'MonoLisa', 'Nimbus Mono PS', 'Courier New', 'Cutive Mono', monospace;
-    }
-
     blockquote {
         margin: 0;
         max-inline-size: var(--size-content-2);
