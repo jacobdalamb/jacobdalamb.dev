@@ -22,7 +22,7 @@
         block-size: 100%;
         background-color: var(--bg);
         color: var(--text);
-        font-family: "RubikVariable", sans-serif, var(--font-sans, sans-serif);
+        font-family: "RubikVariable", system-ui, sans-serif;
         font-feature-settings: "tnum";
         font-optical-sizing: auto;
     }
