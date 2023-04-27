@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/BaseLayout.astro";
+import Link from "../components/Link.astro";
+const props = {
+    title: "Uses",
+    description: "My favorite products that I use",
+    image: "uses",
+};
+import { validatedUses } from "../data";
+---
+
+<Layout {...props}>
+    <main>
+        <section>
+            <ul>
+                {
+                    validatedUses.map((useGroup) => (
+                        <li>
+                            <h3>{useGroup.title}</h3>
+                            <ul>
+                                {useGroup.use.map((useItem) => (
+                                    <li>
+                                        {useItem.url ? (
+                                            <Link
+                                                href={useItem.url}
+                                                isExternal={true}
+                                            >
+                                                {useItem.title}
+                                            </Link>
+                                        ) : (
+                                            useItem.title
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                        </li>
+                    ))
+                }
+            </ul>
+        </section>
+    </main>
+</Layout>
