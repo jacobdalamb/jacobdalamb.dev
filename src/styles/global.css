@@ -7,14 +7,29 @@
     }
 
     :root {
-        --button-shadow-color: var(--red-10);
-        --button-primary-bg-color: var(--red-7);
-        --text: var(--gray-9);
-        --text-reverse: var(--gray-0);
-        --bg: var(--gray-0);
-        --bg-1: var(--gray-1);
-        --bg-reverse: var(--gray-9);
-        --link-color: mediumblue;
+        --text: var(--gray-0);
+        --text-reverse: var(--gray-9);
+        --bg: var(--gray-9);
+        --bg-1: var(--gray-8);
+        --bg-reverse: var(--gray-0);
+        --box-shadow-focus: yellow;
+        --button-shadow-color: var(--red-7);
+        --button-primary-bg-color: var(--red-10);
+        --link-color: yellow;
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --button-shadow-color: var(--red-10);
+            --button-primary-bg-color: var(--red-7);
+            --text: var(--gray-9);
+            --text-reverse: var(--gray-0);
+            --bg: var(--gray-0);
+            --bg-1: var(--gray-1);
+            --bg-reverse: var(--gray-9);
+            --link-color: mediumblue;
+        }
+
     }
 
     html {
@@ -45,9 +60,7 @@
         outline: none;
         text-decoration: none;
         color: var(--link-color);
-        font-weight: bold;
     }
-
 
     a:hover:not([data-button]) {
         text-decoration: underline 2px var(--link-color);
@@ -163,6 +176,7 @@
     }
 
     a[data-button] {
+        font-weight: bold;
         font-size: var(--font-size-2);
         padding: var(--size-2) var(--size-3);
         text-align: center;
@@ -253,7 +267,7 @@ main h1 {
 
 :is(h1, h2, h3)~p {
     font-size: var(--font-size-3);
-    max-inline-size: var(--size-content-2);
+    max-inline-size: calc(var(--size-content-2) - 5ch);
 }
 
 article ul {
@@ -290,19 +304,4 @@ figure img {
     height: 100%;
     width: 100%;
     aspect-ratio: var(--ratio-widescreen);
-}
-
-@media (prefers-color-scheme: dark) {
-
-    :root {
-        --text: var(--gray-0);
-        --text-reverse: var(--gray-9);
-        --bg: var(--gray-9);
-        --bg-1: var(--gray-8);
-        --bg-reverse: var(--gray-0);
-        --box-shadow-focus: yellow;
-        --button-shadow-color: var(--red-7);
-        --button-primary-bg-color: var(--red-10);
-        --link-color: yellow;
-    }
 }
