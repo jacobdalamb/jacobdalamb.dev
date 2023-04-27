@@ -10,6 +10,9 @@ dependencies:
   '@astrojs/vercel':
     specifier: ^3.2.4
     version: 3.2.4(astro@2.3.0)(react@18.2.0)
+  '@fontsource/comfortaa':
+    specifier: ^4.5.11
+    version: 4.5.11
   '@fontsource/rubik':
     specifier: ^4.5.14
     version: 4.5.14
@@ -949,6 +952,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource/comfortaa@4.5.11:
+    resolution: {integrity: sha512-KKC2C6KbF9BD6m9+wMf5hK0wFjIi3p3J/6C4JZW6OF9G6K4qZJFp2dBZzsEBepKh4s9/Q5G1SWsUUZY3ZeZNDA==}
+    dev: false
 
   /@fontsource/rubik@4.5.14:
     resolution: {integrity: sha512-EvMK3kkeAgKkk8qAeT4PjpyAYyu72pIlJm+SXJ5vR/xhCX2yj2xoq3+YS38rPmPcCAnrAVONoQ3ezLxVm6jhBA==}
