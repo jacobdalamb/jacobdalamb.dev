@@ -245,7 +245,7 @@ header {
 }
 
 header span a {
-    color: initial;
+    color: var(--text);
 }
 
 header div {
