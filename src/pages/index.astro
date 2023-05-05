@@ -9,89 +9,17 @@ const props = {
 };
 
 import { validatedTestimonials, validatedWorks } from "../data";
-import { Image } from "@astrojs/image/components";
+
 ---
 
 <Layout {...props}>
     <main>
-        <section>
-            <h1>Hey, I'm Jacob Lamb.</h1>
-            <p>
-                {props.description}
-            </p>
-            <Link
-                href="https://read.cv/jacobthesheep"
-                isExternal={true}
-                data-button="primary"
-            >
-                view my resume
-            </Link>
-        </section>
-        <!-- <section>
-            <article>
-                <h2>Recent work</h2>
-                <p>Check out my latest work</p>
-                <ul>
-                    {
-                        validatedWorks.map((work) => (
-                            <li>
-                                <Link href={work.url} isExternal={true}>
-                                    {work.title}
-                                </Link>
-                                <ul>
-                                    <li>
-                                        <figure>
-                                            <div>
-                                                <img
-                                                    src={work.screenshot.before}
-                                                    width="1260"
-                                                    height="970"
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <figcaption>Before</figcaption>
-                                        </figure>
-                                    </li>
-                                    <li>
-                                        <figure>
-                                            <div>
-                                                <img
-                                                    src={work.screenshot.after}
-                                                    width="1260"
-                                                    height="970"
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <figcaption>After</figcaption>
-                                        </figure>
-                                    </li>
-                                </ul>
-                            </li>
-                        ))
-                    }
-                </ul>
-            </article>
-        </section>
-        <section>
-            <article>
-                <h2>Mentions</h2>
-                <ul>
-                    {
-                        validatedTestimonials.map((client) => (
-                            <li>
-                                <figure>
-                                    <blockquote>{client.testimony}</blockquote>
-                                    <figcaption>
-                                        {client.client}
-                                        <br />
-                                        <small>{client.job}</small>
-                                    </figcaption>
-                                </figure>
-                            </li>
-                        ))
-                    }
-                </ul>
-            </article>
-        </section> -->
+        <h1>Hey, I'm Jacob Lamb.</h1>
+        <p>
+            {props.description}
+        </p>
+        <Link href="https://read.cv/jacobthesheep">
+            view my resume
+        </Link>
     </main>
 </Layout>

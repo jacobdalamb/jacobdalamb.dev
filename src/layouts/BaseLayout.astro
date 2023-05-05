@@ -74,15 +74,11 @@ const navLinks = await Astro.glob("../pages/*.astro");
                 <span><Link href="/">{author}</Link></span>
             </div>
             <nav>
-                <ul>
-                    {
-                        navLinks.slice(2).map((link) => (
-                            <li>
-                                <Link href={link.url}>{link.url}</Link>
-                            </li>
-                        ))
-                    }
-                </ul>
+                {
+                    navLinks
+                        .slice(1)
+                        .map((link) => <Link href={link.url}>{link.url}</Link>)
+                }
             </nav>
         </header>
         <slot />

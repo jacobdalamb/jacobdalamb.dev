@@ -1,17 +1,23 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-
-interface Props extends HTMLAttributes<"a"> {
-    isExternal?: boolean;
+type Props = HTMLAttributes<"a">;
+const { href: rawHref, style, ...attrs } = Astro.props as Props;
+const href = (rawHref instanceof URL ? rawHref.toString() : rawHref) ?? "";
+function isExternalLink(url: string): boolean {
+    return /^https?:\/\//.test(url);
 }
-
-const { href, isExternal = false, style, ...attrs } = Astro.props as Props;
+function isInternalLink(url: string): boolean {
+    return /^\//.test(url);
+}
+const isExternal = isExternalLink(href);
+const isInternal = isInternalLink(href);
+const relAttribute = isExternal
+    ? { rel: "external" }
+    : isInternal
+    ? { rel: "prefetch" }
+    : {};
 ---
 
-<a
-    href={href}
-    rel={isExternal ? "external" : "prefetch"}
-    {...attrs}
->
+<a href={href} {...relAttribute} {...attrs}>
     <slot />
 </a>

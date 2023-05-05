@@ -20,15 +20,12 @@ import { validatedUses } from "../data";
                 {
                     validatedUses.map((useGroup) => (
                         <li>
-                            <h3>{useGroup.title}</h3>
+                            {useGroup.title}
                             <ul>
                                 {useGroup.use.map((useItem) => (
                                     <li>
                                         {useItem.url ? (
-                                            <Link
-                                                href={useItem.url}
-                                                isExternal={true}
-                                            >
+                                            <Link href={useItem.url}>
                                                 {useItem.title}
                                             </Link>
                                         ) : (
