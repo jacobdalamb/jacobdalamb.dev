@@ -14,10 +14,10 @@
 		"defaults"
 	],
 	"dependencies": {
-		"@astrojs/vercel": "^3.3.0",
+		"@astrojs/vercel": "^3.4.0",
 		"@fontsource/comfortaa": "^4.5.11",
 		"@fontsource/rubik": "^4.5.14",
-		"astro": "^2.4.1",
+		"astro": "^2.5.0",
 		"open-props": "^1.5.8",
 		"zod": "^3.21.4"
 	},
