@@ -14,17 +14,19 @@
 		"defaults"
 	],
 	"dependencies": {
-		"@astrojs/vercel": "^3.4.0",
-		"@fontsource/comfortaa": "^4.5.11",
-		"@fontsource/rubik": "^4.5.14",
-		"astro": "^2.5.0",
+		"@astrojs/vercel": "^3.5.0",
+		"@fontsource-variable/comfortaa": "^5.0.0",
+		"@fontsource-variable/rubik": "^5.0.1",
+		"astro": "^2.6.0",
 		"open-props": "^1.5.8",
 		"zod": "^3.21.4"
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.14",
 		"postcss-jit-props": "^1.0.13",
-		"postcss-preset-env": "^8.3.2",
+		"postcss-preset-env": "^8.4.2",
+		"prettier": "^2.8.8",
+		"prettier-plugin-astro": "^0.10.0",
 		"rome": "^12.0.0"
 	}
 }

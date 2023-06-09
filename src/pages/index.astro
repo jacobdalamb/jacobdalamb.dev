@@ -2,24 +2,21 @@
 import Layout from "../layouts/BaseLayout.astro";
 import Link from "../components/Link.astro";
 const props = {
-    title: "",
-    description:
-        "I'm here to craft fast, user-friendly websites for your content-focused business.",
-    image: "home",
+  title: "",
+  description:
+    "I'm here to craft fast, user-friendly websites for your content-focused business.",
+  image: "home",
 };
 
 import { validatedTestimonials, validatedWorks } from "../data";
-
 ---
 
 <Layout {...props}>
-    <main>
-        <h1>Hey, I'm Jacob Lamb.</h1>
-        <p>
-            {props.description}
-        </p>
-        <Link href="https://read.cv/jacobthesheep">
-            view my resume
-        </Link>
-    </main>
+  <main>
+    <h1>Hey, I'm Jacob Lamb.</h1>
+    <p>
+      {props.description}
+    </p>
+    <Link href="https://read.cv/jacobthesheep">view my resume</Link>
+  </main>
 </Layout>

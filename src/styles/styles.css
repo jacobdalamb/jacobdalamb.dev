@@ -2,6 +2,7 @@
 @import "open-props/normalize";
 
 html {
+    font-family: "Rubik Variable", system-ui, sans-serif;
     font-feature-settings: "tnum";
     font-optical-sizing: auto;
 }
@@ -19,7 +20,7 @@ h4,
 h5,
 h6,
 blockquote {
-    font-family: "Comfortaa", ui-rounded, sans-serif;
+    font-family: "Comfortaa Variable", ui-rounded, sans-serif;
     white-space: unset;
     text-wrap: balance;
 }

@@ -4,20 +4,20 @@ type Props = HTMLAttributes<"a">;
 const { href: rawHref, style, ...attrs } = Astro.props as Props;
 const href = (rawHref instanceof URL ? rawHref.toString() : rawHref) ?? "";
 function isExternalLink(url: string): boolean {
-    return /^https?:\/\//.test(url);
+  return /^https?:\/\//.test(url);
 }
 function isInternalLink(url: string): boolean {
-    return /^\//.test(url);
+  return /^\//.test(url);
 }
 const isExternal = isExternalLink(href);
 const isInternal = isInternalLink(href);
 const relAttribute = isExternal
-    ? { rel: "external" }
-    : isInternal
-    ? { rel: "prefetch" }
-    : {};
+  ? { rel: "external" }
+  : isInternal
+  ? { rel: "prefetch" }
+  : {};
 ---
 
 <a href={href} {...relAttribute} {...attrs}>
-    <slot />
+  <slot />
 </a>

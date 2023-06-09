@@ -1,7 +1,7 @@
 ---
-import "../styles/global.css";
-import "@fontsource/rubik/variable.css";
-import "@fontsource/comfortaa/variable.css";
+import "../styles/styles.css";
+import "@fontsource-variable/rubik";
+import "@fontsource-variable/comfortaa";
 const { title, description, image } = Astro.props as PageMeta;
 const author = "Jacob Lamb";
 const completeTitle = `${title}${title ? " - " : ""}${author}`;
@@ -13,79 +13,79 @@ const navLinks = await Astro.glob("../pages/*.astro");
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width,initial-scale=1,viewport-fit=cover"
-        />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.webp" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{completeTitle}</title>
-        <meta name="author" content={author} />
-        <link rel="author" href="https://jtlamb.dev/" />
-        <meta name="description" content={description} />
-        <meta name="color-scheme" content="dark light" />
-        <meta property="og:title" content={completeTitle} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={Astro.url} />
-        <meta property="og:image" content={socialImageURL} />
-        <meta name="twitter:title" content={completeTitle} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={socialImageURL} />
-        <link href="https://github.com/jacobthesheep" rel="me" />
-        <link href="https://twitter.com/jacob_thesheep" rel="me" />
-        <link href="https://codepen.io/jacobthesheep" rel="me" />
-    </head>
-    <body>
-        <header>
-            <div>
-                <!--?xml version="1.0" standalone="no"?-->
-                <svg
-                    version="1.0"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="180.000000pt"
-                    height="180.000000pt"
-                    viewBox="0 0 180.000000 180.000000"
-                    preserveAspectRatio="xMidYMid meet"
-                >
-                    <g
-                        transform="translate(0.000000,180.000000) scale(0.100000,-0.100000)"
-                        stroke="none"
-                    >
-                        <path
-                            d="M533 1518 c-28 -31 -83 -300 -67 -326 10 -15 37 -17 286 -20 l275 -2
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.webp" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{completeTitle}</title>
+    <meta name="author" content={author} />
+    <link rel="author" href="https://jtlamb.dev/" />
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="dark light" />
+    <meta property="og:title" content={completeTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:image" content={socialImageURL} />
+    <meta name="twitter:title" content={completeTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={socialImageURL} />
+    <link href="https://github.com/jacobthesheep" rel="me" />
+    <link href="https://twitter.com/jacob_thesheep" rel="me" />
+    <link href="https://codepen.io/jacobthesheep" rel="me" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <!--?xml version="1.0" standalone="no"?-->
+        <svg
+          version="1.0"
+          xmlns="http://www.w3.org/2000/svg"
+          width="180.000000pt"
+          height="180.000000pt"
+          viewBox="0 0 180.000000 180.000000"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <g
+            transform="translate(0.000000,180.000000) scale(0.100000,-0.100000)"
+            stroke="none"
+          >
+            <path
+              d="M533 1518 c-28 -31 -83 -300 -67 -326 10 -15 37 -17 286 -20 l275 -2
                 -34 -163 c-47 -227 -69 -312 -89 -343 -20 -29 -69 -54 -107 -54 -34 0 -74 35
                 -82 70 -13 59 -17 60 -245 60 l-210 0 -16 -25 c-23 -35 -15 -135 15 -197 49
                 -101 178 -193 331 -234 87 -24 297 -24 394 -1 105 26 191 72 254 136 55 54
                 117 157 141 231 16 51 181 821 181 846 0 44 1 44 -515 44 l-492 0 -20 -22z"
-                        ></path>
-                    </g>
-                </svg>
-                <span><Link href="/">{author}</Link></span>
-            </div>
-            <nav>
-                {
-                    navLinks
-                        .slice(1)
-                        .map((link) => <Link href={link.url}>{link.url}</Link>)
-                }
-            </nav>
-        </header>
-        <slot />
-        <footer>
-            <p>
-                <small>
-                    &copy;
-                    <time datetime="2020"> 2020</time> -
-                    <time datetime={thisYear}>{thisYear}</time>
-                    built by {author}
-                </small>
-            </p>
-        </footer>
-    </body>
+            ></path>
+          </g>
+        </svg>
+        <span><Link href="/">{author}</Link></span>
+      </div>
+      <nav>
+        {
+          navLinks
+            .slice(1)
+            .map((link) => <Link href={link.url}>{link.url}</Link>)
+        }
+      </nav>
+    </header>
+    <slot />
+    <footer>
+      <p>
+        <small>
+          &copy;
+          <time datetime="2020"> 2020</time> -
+          <time datetime={thisYear}>{thisYear}</time>
+          built by {author}
+        </small>
+      </p>
+    </footer>
+  </body>
 </html>
