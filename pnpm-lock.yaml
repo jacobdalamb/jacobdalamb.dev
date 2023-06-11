@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -7,16 +7,16 @@ settings:
 dependencies:
   '@astrojs/vercel':
     specifier: ^3.5.0
-    version: 3.5.0(astro@2.6.0)(react@18.2.0)
+    version: 3.5.0(astro@2.6.3)(react@18.2.0)
   '@fontsource-variable/comfortaa':
-    specifier: ^5.0.0
-    version: 5.0.0
+    specifier: ^5.0.3
+    version: 5.0.3
   '@fontsource-variable/rubik':
     specifier: ^5.0.1
     version: 5.0.1
   astro:
-    specifier: ^2.6.0
-    version: 2.6.0
+    specifier: ^2.6.3
+    version: 2.6.3
   open-props:
     specifier: ^1.5.8
     version: 1.5.8
@@ -41,8 +41,8 @@ devDependencies:
     specifier: ^0.10.0
     version: 0.10.0
   rome:
-    specifier: ^12.0.0
-    version: 12.0.0
+    specifier: ^12.1.3
+    version: 12.1.3
 
 packages:
 
@@ -86,13 +86,13 @@ packages:
       vscode-uri: 3.0.7
     dev: false
 
-  /@astrojs/markdown-remark@2.2.1(astro@2.6.0):
+  /@astrojs/markdown-remark@2.2.1(astro@2.6.3):
     resolution: {integrity: sha512-VF0HRv4GpC1XEMLnsKf6jth7JSmlt9qpqP0josQgA2eSpCIAC/Et+y94mgdBIZVBYH/yFnMoIxgKVe93xfO2GA==}
     peerDependencies:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.6.0
+      astro: 2.6.3
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -132,7 +132,7 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/vercel@3.5.0(astro@2.6.0)(react@18.2.0):
+  /@astrojs/vercel@3.5.0(astro@2.6.3)(react@18.2.0):
     resolution: {integrity: sha512-2uhwcY6fwgLZVlk13jgz6oN4pY6N1DDQZXeMwkcohVyGPbnToFxpjTnhI19neq0r9eA0aA7oHqY1oG6quV9/Og==}
     peerDependencies:
       astro: ^2.6.0
@@ -141,7 +141,7 @@ packages:
       '@astrojs/webapi': 2.2.0
       '@vercel/analytics': 0.1.11(react@18.2.0)
       '@vercel/nft': 0.22.6
-      astro: 2.6.0
+      astro: 2.6.3
       esbuild: 0.17.19
       fast-glob: 3.2.12
       set-cookie-parser: 2.6.0
@@ -1034,8 +1034,8 @@ packages:
     dev: false
     optional: true
 
-  /@fontsource-variable/comfortaa@5.0.0:
-    resolution: {integrity: sha512-dP5gUVldvxfCA4Im9q4H/l9Eusxaesb9LVJzqggTFEcxDNwWuhpsUjSAec8ITFAJd7n+2H6Wupj6z2MQ3C8HSQ==}
+  /@fontsource-variable/comfortaa@5.0.3:
+    resolution: {integrity: sha512-NnFgVr6+NhB1nldYRiNkZyXb1/YXLhAedkQeRV1Qj7Qd06st8mjqZbbzJ9vFWDk61ZUBBraJDjkAw+04SHk2YA==}
     dev: false
 
   /@fontsource-variable/rubik@5.0.1:
@@ -1139,48 +1139,48 @@ packages:
       picomatch: 2.3.1
     dev: false
 
-  /@rometools/cli-darwin-arm64@12.0.0:
-    resolution: {integrity: sha512-kEFCzU6cgy6vfY0mkMzq57ea3srqV5X2wyCAxjVfA2JF7fioq695uWhy7yOCBW+nUUFIz62N9v1nf/aYqX8XkA==}
+  /@rometools/cli-darwin-arm64@12.1.3:
+    resolution: {integrity: sha512-AmFTUDYjBuEGQp/Wwps+2cqUr+qhR7gyXAUnkL5psCuNCz3807TrUq/ecOoct5MIavGJTH6R4aaSL6+f+VlBEg==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@rometools/cli-darwin-x64@12.0.0:
-    resolution: {integrity: sha512-YDevVPKrkRFdjjM/3zOpOWI5mEY2ivjKM2eR8Yqv9xH3SZhyD/t67f/xo7Azp6NkGUVXSnHLGdkmIg+qrYgz5A==}
+  /@rometools/cli-darwin-x64@12.1.3:
+    resolution: {integrity: sha512-k8MbWna8q4LRlb005N2X+JS1UQ+s3ZLBBvwk4fP8TBxlAJXUz17jLLu/Fi+7DTTEmMhM84TWj4FDKW+rNar28g==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@rometools/cli-linux-arm64@12.0.0:
-    resolution: {integrity: sha512-n2LJg6eAZENUcJF99wjDeqQCr/40IqGUJDbX7NwiU1RvCy+RBZNmhcmSAaKOc6rCoLUcM9W5q+H4jfn4bWfJBA==}
+  /@rometools/cli-linux-arm64@12.1.3:
+    resolution: {integrity: sha512-X/uLhJ2/FNA3nu5TiyeNPqiD3OZoFfNfRvw6a3ut0jEREPvEn72NI7WPijH/gxSz55znfQ7UQ6iM4DZumUknJg==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@rometools/cli-linux-x64@12.0.0:
-    resolution: {integrity: sha512-VuQO4eOrKmfrLrc8KzMaZypz3i1rD9FXRxwOFk6ha16DNHV+17dRQYm7jRZ1p+HrXdjAJYTScxR/E03yGLThlQ==}
+  /@rometools/cli-linux-x64@12.1.3:
+    resolution: {integrity: sha512-csP17q1eWiUXx9z6Jr/JJPibkplyKIwiWPYNzvPCGE8pHlKhwZj3YHRuu7Dm/4EOqx0XFIuqqWZUYm9bkIC8xg==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@rometools/cli-win32-arm64@12.0.0:
-    resolution: {integrity: sha512-lvOh5/B8YuQdI2ieGJnJ6CUMZxvVwA8+1VDkEZJyl5IEF8AXzbXYx4k6SFA5a79cfXEL9tJuJy0rn+Zs/+1yJQ==}
+  /@rometools/cli-win32-arm64@12.1.3:
+    resolution: {integrity: sha512-RymHWeod57EBOJY4P636CgUwYA6BQdkQjh56XKk4pLEHO6X1bFyMet2XL7KlHw5qOTalzuzf5jJqUs+vf3jdXQ==}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@rometools/cli-win32-x64@12.0.0:
-    resolution: {integrity: sha512-yTfz71k8+9QIDzglKnMbEMMv1JUk30qfeSomgEUG2v0qDSbSq0Gs1ff0H0dysYOHLvZZmWA3IheOY/SC8fj1nA==}
+  /@rometools/cli-win32-x64@12.1.3:
+    resolution: {integrity: sha512-yHSKYidqJMV9nADqg78GYA+cZ0hS1twANAjiFibQdXj9aGzD+s/IzIFEIi/U/OBLvWYg/SCw0QVozi2vTlKFDQ==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
@@ -1399,8 +1399,8 @@ packages:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
     dev: false
 
-  /astro@2.6.0:
-    resolution: {integrity: sha512-Y//Gfy/DB43qIT6aB/0nuB0KyCj/JcLIWW8OTxfMEDyq3hGoensCD8SdWCyjcrKRVE3C9ntkszJ5RyLZh3Fg0g==}
+  /astro@2.6.3:
+    resolution: {integrity: sha512-gJoBX+t11qAeYDjterGEaQZx7qqlGOigWhE0zkcEBv4zy7l4IpKx6nGGUNzD/l8x6WomZxkdZROsOsiEaWSJmQ==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     peerDependencies:
@@ -1412,7 +1412,7 @@ packages:
       '@astrojs/compiler': 1.4.1
       '@astrojs/internal-helpers': 0.1.0
       '@astrojs/language-server': 1.0.0
-      '@astrojs/markdown-remark': 2.2.1(astro@2.6.0)
+      '@astrojs/markdown-remark': 2.2.1(astro@2.6.3)
       '@astrojs/telemetry': 2.1.1
       '@astrojs/webapi': 2.2.0
       '@babel/core': 7.22.1
@@ -1431,7 +1431,7 @@ packages:
       cookie: 0.5.0
       debug: 4.3.4
       deepmerge-ts: 4.3.0
-      devalue: 4.3.0
+      devalue: 4.3.2
       diff: 5.1.0
       es-module-lexer: 1.2.1
       esbuild: 0.17.19
@@ -1838,8 +1838,8 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /devalue@4.3.0:
-    resolution: {integrity: sha512-n94yQo4LI3w7erwf84mhRUkUJfhLoCZiLyoOZ/QFsDbcWNZePrLwbQpvZBUG2TNxwV3VjCKPxkiiQA6pe3TrTA==}
+  /devalue@4.3.2:
+    resolution: {integrity: sha512-KqFl6pOgOW+Y6wJgu80rHpo2/3H07vr8ntR9rkkFIRETewbf5GaYYcakYfiKz89K+sLsuPkQIZaXDMjUObZwWg==}
     dev: false
 
   /diff@5.1.0:
@@ -3772,18 +3772,18 @@ packages:
       fsevents: 2.3.2
     dev: false
 
-  /rome@12.0.0:
-    resolution: {integrity: sha512-w/tLvLj5PGUCx3R+Kna08BMq4zL83Xzh9spvrqoWa3Nkzk16SkD8JSpyWWP9WhI2r3qv3Xvc7FnYZ4QDnjAiYg==}
+  /rome@12.1.3:
+    resolution: {integrity: sha512-e+ff72hxDpe/t5/Us7YRBVw3PBET7SeczTQNn6tvrWdrCaAw3qOukQQ+tDCkyFtS4yGsnhjrJbm43ctNbz27Yg==}
     engines: {node: '>=14.*'}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      '@rometools/cli-darwin-arm64': 12.0.0
-      '@rometools/cli-darwin-x64': 12.0.0
-      '@rometools/cli-linux-arm64': 12.0.0
-      '@rometools/cli-linux-x64': 12.0.0
-      '@rometools/cli-win32-arm64': 12.0.0
-      '@rometools/cli-win32-x64': 12.0.0
+      '@rometools/cli-darwin-arm64': 12.1.3
+      '@rometools/cli-darwin-x64': 12.1.3
+      '@rometools/cli-linux-arm64': 12.1.3
+      '@rometools/cli-linux-x64': 12.1.3
+      '@rometools/cli-win32-arm64': 12.1.3
+      '@rometools/cli-win32-x64': 12.1.3
     dev: true
 
   /run-parallel@1.2.0:
