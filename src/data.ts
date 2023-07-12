@@ -110,10 +110,6 @@ const uses = [
 				url: "https://desktop.github.com/",
 			},
 			{
-				title: "VS Code Profile",
-				url: "https://gist.github.com/jacobthesheep/3679668360f4ef817fc27faf61deddcc/",
-			},
-			{
 				title: "Caddy",
 				url: "https://caddyserver.com/",
 			},
@@ -139,10 +135,6 @@ const uses = [
 				url: "https://cleanshot.com/",
 			},
 			{
-				title: "Balance",
-				url: "https://alexandersandberg.com/apps/balance/",
-			},
-			{
 				title: "Raycast",
 				url: "https://www.raycast.com/",
 			},
@@ -160,10 +152,10 @@ const uses = [
 		title: "Gear",
 		use: [
 			{
-				title: "MacBook Air (M1)",
+				title: "MacBook Air (M1) — [8GB Memory, 245GB Storage]",
 			},
 			{
-				title: "iPhone (2nd Generation)",
+				title: "iPhone SE (2nd Generation) — [64GB Storage]",
 			},
 			{
 				title: "AirPods Pro (2nd Generation)",
