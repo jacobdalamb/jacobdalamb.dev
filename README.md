@@ -9,7 +9,7 @@ My personal website.
 - **Meta Framework**: [Astro](https://astro.build/)
 - **Javascript Flavor**: [Typescript](https://typescriptlang.org/)
 - **Formatter / Linter**: [Rome](https://rome.tools/) and [Prettier Astro Plugin](https://github.com/withastro/prettier-plugin-astro)
-- **Styling**: [Open Props](https://open-props.style/), [TailwindCSS](https://tailwindcss.com), and [shadcn/ui](https://ui.shadcn.com/)
+- **Styling**: [Open Props](https://open-props.style/)
 - **Deployment**: [Vercel](https://vercel.com/)
   
 ## License
