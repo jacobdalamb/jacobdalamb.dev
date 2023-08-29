@@ -14,24 +14,11 @@
 		"defaults"
 	],
 	"dependencies": {
-		"@astrojs/react": "^2.3.2",
-		"@astrojs/tailwind": "^4.0.0",
 		"@astrojs/vercel": "^3.8.2",
 		"@fontsource-variable/comfortaa": "^5.0.8",
 		"@fontsource-variable/rubik": "^5.0.10",
-		"@radix-ui/react-slot": "^1.0.2",
-		"@types/react": "^18.0.21",
-		"@types/react-dom": "^18.0.6",
 		"astro": "^2.10.14",
-		"class-variance-authority": "^0.7.0",
-		"clsx": "^2.0.0",
-		"lucide-react": "^0.269.0",
 		"open-props": "^1.5.15",
-		"react": "^18.0.0",
-		"react-dom": "^18.0.0",
-		"tailwind-merge": "^1.14.0",
-		"tailwindcss": "^3.0.24",
-		"tailwindcss-animate": "^1.0.6",
 		"zod": "^3.22.2"
 	},
 	"devDependencies": {

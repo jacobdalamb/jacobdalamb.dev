@@ -1,214 +1,102 @@
 @import "open-props/style";
 @import "open-props/normalize";
 @import "open-props/buttons";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-@layer base {
-    :root {
-        --background: 0 0% 100%;
-        --foreground: 222.2 84% 4.9%;
-
-        --card: 0 0% 100%;
-        --card-foreground: 222.2 84% 4.9%;
-
-        --popover: 0 0% 100%;
-        --popover-foreground: 222.2 84% 4.9%;
-
-        --primary: 222.2 47.4% 11.2%;
-        --primary-foreground: 210 40% 98%;
-
-        --secondary: 210 40% 96.1%;
-        --secondary-foreground: 222.2 47.4% 11.2%;
-
-        --muted: 210 40% 96.1%;
-        --muted-foreground: 215.4 16.3% 46.9%;
-
-        --accent: 210 40% 96.1%;
-        --accent-foreground: 222.2 47.4% 11.2%;
-
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 210 40% 98%;
-
-        --border: 214.3 31.8% 91.4%;
-        --input: 214.3 31.8% 91.4%;
-        --ring: 222.2 84% 4.9%;
-
-        --radius: 0.5rem;
-    }
-
-    .dark {
-        --background: 222.2 84% 4.9%;
-        --foreground: 210 40% 98%;
-
-        --card: 222.2 84% 4.9%;
-        --card-foreground: 210 40% 98%;
-
-        --popover: 222.2 84% 4.9%;
-        --popover-foreground: 210 40% 98%;
-
-        --primary: 210 40% 98%;
-        --primary-foreground: 222.2 47.4% 11.2%;
-
-        --secondary: 217.2 32.6% 17.5%;
-        --secondary-foreground: 210 40% 98%;
-
-        --muted: 217.2 32.6% 17.5%;
-        --muted-foreground: 215 20.2% 65.1%;
-
-        --accent: 217.2 32.6% 17.5%;
-        --accent-foreground: 210 40% 98%;
-
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 210 40% 98%;
-
-        --border: 217.2 32.6% 17.5%;
-        --input: 217.2 32.6% 17.5%;
-        --ring: 212.7 26.8% 83.9%;
-    }
+html {
+    font-family: "Rubik Variable", system-ui, sans-serif;
+    font-feature-settings: "tnum";
+    font-optical-sizing: auto;
 }
 
-@layer base {
-    * {
-        box-sizing: border-box;
-    }
+body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-10);
+}
 
-    html {
-        font-family: "Rubik Variable", system-ui, sans-serif;
-        font-feature-settings: "tnum";
-        font-optical-sizing: auto;
-    }
+:is(input, button, a, select) {
+    border-radius: var(--radius-2);
+    width: fit-content;
+}
 
-    body {
-        @apply bg-background text-foreground;
-        display: flex;
-        flex-direction: column;
-        gap: var(--size-10);
-    }
+figure:has(blockquote) {
+    background-color: var(--bg-1);
+    justify-content: space-between;
+    box-shadow: var(--shadow-5);
+    border-radius: var(--radius-3);
+    padding: var(--size-5);
+}
 
-    :is(input, button, a, select) {
-        border-radius: var(--radius-2);
-        width: fit-content;
-    }
+svg {
+    width: var(--size-7);
+    height: fit-content;
+}
 
-    figure:has(blockquote) {
-        background-color: var(--bg-1);
-        justify-content: space-between;
-        box-shadow: var(--shadow-5);
-        border-radius: var(--radius-3);
-        padding: var(--size-5);
-    }
+svg g {
+    fill: var(--text);
+}
 
-    svg {
-        width: var(--size-7);
-        height: fit-content;
-    }
+ul li::marker {
+    color: var(--pink-5);
+}
 
-    svg g {
-        fill: var(--text);
-    }
+:is(h1, h2, h3, h4, h5, h6)+p {
+    margin: var(--size-5) 0;
+}
 
-    :where(ol, ul) {
-        padding-left: var(--size-8);
-    }
+main,
+footer {
+    --page-max-width: 55ch;
+    --page-padding: clamp(var(--size-fluid-2), 6vw, var(--size-fluid-3));
+    --full: minmax(var(--page-padding), 1fr);
+    --content: min(var(--page-max-width), 100% - var(--page-padding) * 2);
+    --popout: minmax(0, 2rem);
+    --feature: minmax(0, 5rem);
+    display: grid;
+    grid-template-columns: [full-start] var(--full) [feature-start] var(--feature) [popout-start] var(--popout) [content-start] var(--content) [content-end] var(--popout) [popout-end] var(--feature) [feature-end] var(--full) [full-end];
+}
 
-    :where(li) {
-        padding-left: var(--size-2);
-    }
+main>*,
+article>*,
+footer>* {
+    grid-column: content;
+}
 
-    ul {
-        display: block;
-        list-style-type: disc;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        padding-inline-start: 40px;
-    }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--size-fluid-2);
+    background-color: var(--bg);
+}
 
-    ul ul {
-        list-style-type: circle;
-        margin-block-start: 0px;
-        margin-block-end: 0px;
-    }
+header div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: var(--size-2);
+}
 
-    ul li::marker {
-        color: var(--pink-5);
-    }
+footer {
+    display: flex;
+    justify-content: center;
+    border-top: 2px dashed var(--surface-2);
+    margin-top: auto;
+    padding-block: var(--size-5) calc(var(--size-5) + env(safe-area-inset-bottom));
+}
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
-        margin-bottom: var(--size-5);
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote {
+    font-family: "Comfortaa Variable", ui-rounded, sans-serif;
+    white-space: unset;
+    text-wrap: balance;
+}
 
-    main,
-    footer {
-        --page-max-width: 55ch;
-        --page-padding: clamp(var(--size-fluid-2), 6vw, var(--size-fluid-3));
-        --full: minmax(var(--page-padding), 1fr);
-        --content: min(var(--page-max-width), 100% - var(--page-padding) * 2);
-        --popout: minmax(0, 2rem);
-        --feature: minmax(0, 5rem);
-        display: grid;
-        grid-template-columns: [full-start] var(--full) [feature-start] var(--feature) [popout-start] var(--popout) [content-start] var(--content) [content-end] var(--popout) [popout-end] var(--feature) [feature-end] var(--full) [full-end];
-    }
-
-    main>*,
-    article>*,
-    footer>* {
-        grid-column: content;
-    }
-
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: var(--size-fluid-2);
-        background-color: var(--bg);
-    }
-
-    header div {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        gap: var(--size-2);
-    }
-
-    footer {
-        display: flex;
-        justify-content: center;
-        border-top: 2px dashed var(--surface-2);
-        margin-top: auto;
-        padding-block: var(--size-5) calc(var(--size-5) + env(safe-area-inset-bottom));
-    }
-
-    h1 {
-        font-size: var(--size-7);
-        font-weight: 700;
-        line-height: 1.2;
-    }
-
-    h2 {
-        font-size: var(--size-6);
-        font-weight: 700;
-        line-height: 1.2;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    blockquote {
-        font-family: "Comfortaa Variable", ui-rounded, sans-serif;
-        white-space: unset;
-        text-wrap: balance;
-    }
+p {
+    text-wrap: pretty;
 }
