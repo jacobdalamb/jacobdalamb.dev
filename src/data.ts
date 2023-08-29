@@ -9,8 +9,8 @@ const Testimonial = z.array(
 );
 
 const Screenshot = z.object({
-	before: z.string(),
-	after: z.string(),
+	before: z.string().endsWith(".png"),
+	after: z.string().endsWith(".png"),
 });
 
 const Work = z.array(
@@ -75,18 +75,18 @@ const works: {
 		title: "Temple Aviv Judea",
 		url: "https://www.avivjudea.org/",
 		screenshot: {
-			before: "assets/temple_aviv_judea_before.png",
-			after: "assets/temple_aviv_judea_after.png",
+			before: "assets/images/temple_aviv_judea_before.png",
+			after: "assets/images/temple_aviv_judea_after.png",
 		},
 	},
-	// {
-	//     title: "Beth Shalom",
-	//     url: "https://www.bethshalomcorona.com/",
-	//     screenshot: {
-	//         before: "assets/beth_shalom_before.png",
-	//         after: "assets/beth_shalom_after.png",
-	//     },
-	// },
+	{
+		title: "Beth Shalom",
+		url: "https://www.bethshalomcorona.com/",
+		screenshot: {
+			before: "assets/images/beth_shalom_before.png",
+			after: "assets/images/beth_shalom_after.png",
+		},
+	},
 ];
 
 const uses = [

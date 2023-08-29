@@ -8,7 +8,8 @@
 		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"astro": "astro"
+		"astro": "astro",
+        "format": "biome format --write ./src"
 	},
 	"browserslist": [
 		"defaults"
@@ -17,13 +18,13 @@
 		"@astrojs/vercel": "^3.8.2",
 		"@fontsource-variable/comfortaa": "^5.0.8",
 		"@fontsource-variable/rubik": "^5.0.10",
-		"astro": "^2.10.14",
+		"astro": "^2.10.15",
 		"open-props": "^1.5.15",
 		"zod": "^3.22.2"
 	},
 	"devDependencies": {
-		"prettier": "^3.0.2",
-		"prettier-plugin-astro": "^0.12.0",
-		"rome": "^12.1.3"
+		"@biomejs/biome": "^1.0.0",
+		"prettier": "^3.0.3",
+		"prettier-plugin-astro": "^0.12.0"
 	}
 }
