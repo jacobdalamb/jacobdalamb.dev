@@ -8,17 +8,16 @@
 		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"astro": "astro",
-        "format": "biome format --write ./src"
+		"astro": "astro"
 	},
 	"browserslist": [
 		"defaults"
 	],
 	"dependencies": {
-		"@astrojs/vercel": "^3.8.2",
+		"@astrojs/vercel": "^4.0.0",
 		"@fontsource-variable/comfortaa": "^5.0.8",
 		"@fontsource-variable/rubik": "^5.0.10",
-		"astro": "^2.10.15",
+		"astro": "^3.0.2",
 		"open-props": "^1.5.15",
 		"zod": "^3.22.2"
 	},
