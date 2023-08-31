@@ -3,86 +3,90 @@
 @import "open-props/buttons";
 
 html {
-    font-family: "Rubik Variable", system-ui, sans-serif;
-    font-feature-settings: "tnum";
-    font-optical-sizing: auto;
+  font-family: "Rubik Variable", system-ui, sans-serif;
+  font-feature-settings: "tnum";
+  font-optical-sizing: auto;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    gap: var(--size-10);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-10);
 }
 
 :is(input, button, a, select) {
-    border-radius: var(--radius-2);
-    width: fit-content;
+  border-radius: var(--radius-2);
+  width: fit-content;
 }
 
 figure:has(blockquote) {
-    background-color: var(--bg-1);
-    justify-content: space-between;
-    box-shadow: var(--shadow-5);
-    border-radius: var(--radius-3);
-    padding: var(--size-5);
+  background-color: var(--bg-1);
+  justify-content: space-between;
+  box-shadow: var(--shadow-5);
+  border-radius: var(--radius-3);
+  padding: var(--size-5);
 }
 
 svg {
-    width: var(--size-7);
-    height: fit-content;
+  width: var(--size-7);
+  height: fit-content;
 }
 
 svg g {
-    fill: var(--text);
+  fill: var(--text);
 }
 
 ul li::marker {
-    color: var(--pink-5);
+  color: var(--pink-5);
 }
 
-:is(h1, h2, h3, h4, h5, h6)+p {
-    margin: var(--size-5) 0;
+:is(h1, h2, h3, h4, h5, h6) + p {
+  margin: var(--size-5) 0;
 }
 
 main,
 footer {
-    --page-max-width: 55ch;
-    --page-padding: clamp(var(--size-fluid-2), 6vw, var(--size-fluid-3));
-    --full: minmax(var(--page-padding), 1fr);
-    --content: min(var(--page-max-width), 100% - var(--page-padding) * 2);
-    --popout: minmax(0, 2rem);
-    --feature: minmax(0, 5rem);
-    display: grid;
-    grid-template-columns: [full-start] var(--full) [feature-start] var(--feature) [popout-start] var(--popout) [content-start] var(--content) [content-end] var(--popout) [popout-end] var(--feature) [feature-end] var(--full) [full-end];
+  --page-max-width: 55ch;
+  --page-padding: clamp(var(--size-fluid-2), 6vw, var(--size-fluid-3));
+  --full: minmax(var(--page-padding), 1fr);
+  --content: min(var(--page-max-width), 100% - var(--page-padding) * 2);
+  --popout: minmax(0, 2rem);
+  --feature: minmax(0, 5rem);
+  display: grid;
+  grid-template-columns: [full-start] var(--full) [feature-start] var(--feature) [popout-start] var(
+      --popout
+    ) [content-start] var(--content) [content-end] var(--popout) [popout-end] var(
+      --feature
+    ) [feature-end] var(--full) [full-end];
 }
 
-main>*,
-article>*,
-footer>* {
-    grid-column: content;
+main > *,
+article > *,
+footer > * {
+  grid-column: content;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--size-fluid-2);
-    background-color: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--size-fluid-2);
+  background-color: var(--bg);
 }
 
 header div {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: var(--size-2);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: var(--size-2);
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    border-top: 2px dashed var(--surface-2);
-    margin-top: auto;
-    padding-block: var(--size-5) calc(var(--size-5) + env(safe-area-inset-bottom));
+  display: flex;
+  justify-content: center;
+  border-top: 2px dashed var(--surface-2);
+  margin-top: auto;
+  padding-block: var(--size-5) calc(var(--size-5) + env(safe-area-inset-bottom));
 }
 
 h1,
@@ -92,11 +96,11 @@ h4,
 h5,
 h6,
 blockquote {
-    font-family: "Comfortaa Variable", ui-rounded, sans-serif;
-    white-space: unset;
-    text-wrap: balance;
+  font-family: "Comfortaa Variable", ui-rounded, sans-serif;
+  white-space: unset;
+  text-wrap: balance;
 }
 
 p {
-    text-wrap: pretty;
+  text-wrap: pretty;
 }

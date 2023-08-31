@@ -1,6 +1,6 @@
 # [jtlamb.dev](https://jtlamb.dev)
 
-My personal website. 
+My personal website.
 
 [![Built with Astro](https://astro.badg.es/v1/built-with-astro.svg)](https://astro.build)
 
@@ -11,7 +11,7 @@ My personal website.
 - **Formatter / Linter**: [Biome](https://biomejs.dev/) and [Prettier Astro Plugin](https://github.com/withastro/prettier-plugin-astro)
 - **Styling**: [Open Props](https://open-props.style/)
 - **Deployment**: [Vercel](https://vercel.com/)
-  
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
