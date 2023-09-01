@@ -53,11 +53,14 @@ footer {
   --popout: minmax(0, 2rem);
   --feature: minmax(0, 5rem);
   display: grid;
-  grid-template-columns: [full-start] var(--full) [feature-start] var(--feature) [popout-start] var(
+  grid-template-columns:
+    [full-start] var(--full) [feature-start] var(--feature) [popout-start] var(
       --popout
-    ) [content-start] var(--content) [content-end] var(--popout) [popout-end] var(
+    )
+    [content-start] var(--content) [content-end] var(--popout) [popout-end] var(
       --feature
-    ) [feature-end] var(--full) [full-end];
+    )
+    [feature-end] var(--full) [full-end];
 }
 
 main > *,

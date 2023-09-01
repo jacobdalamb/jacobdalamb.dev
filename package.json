@@ -18,10 +18,10 @@
     "defaults"
   ],
   "dependencies": {
-    "@astrojs/vercel": "^4.0.1",
+    "@astrojs/vercel": "^4.0.3",
     "@fontsource-variable/comfortaa": "^5.0.8",
     "@fontsource-variable/rubik": "^5.0.10",
-    "astro": "^3.0.4",
+    "astro": "^3.0.6",
     "open-props": "^1.5.15",
     "zod": "^3.22.2"
   },

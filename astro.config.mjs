@@ -1,5 +1,5 @@
 import vercel from "@astrojs/vercel/serverless";
-import { defineConfig, passthroughImageService } from "astro/config";
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
   site: "https://portfolio-jacobthesheep.vercel.app/",
@@ -7,7 +7,4 @@ export default defineConfig({
   adapter: vercel({
     analytics: true,
   }),
-  image: {
-    service: passthroughImageService(),
-  },
 });
