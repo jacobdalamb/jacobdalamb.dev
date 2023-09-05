@@ -14,9 +14,6 @@
     "format:source": "biome check --apply-unsafe ./",
     "format:ci": "pnpm run format:source && pnpm run format:code"
   },
-  "browserslist": [
-    "defaults"
-  ],
   "dependencies": {
     "@astrojs/vercel": "^4.0.3",
     "@fontsource-variable/comfortaa": "^5.0.8",
