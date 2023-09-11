@@ -1,0 +1,10 @@
+**/dist
+**/node_modules
+**/.vercel
+
+pnpm-lock.yaml
+*.js
+*.ts
+*.mjs
+*.cjs
+*.json
