@@ -18,10 +18,10 @@
 		"precommit": "pnpm run check-format && pnpm run lint"
 	},
 	"dependencies": {
-		"@astrojs/vercel": "^4.0.5",
+		"@astrojs/vercel": "^5.0.0",
 		"@fontsource-variable/comfortaa": "^5.0.8",
 		"@fontsource-variable/rubik": "^5.0.10",
-		"astro": "^3.0.12",
+		"astro": "^3.1.0",
 		"open-props": "^1.5.15",
 		"zod": "^3.22.2"
 	},
