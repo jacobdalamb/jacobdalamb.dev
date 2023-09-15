@@ -1,33 +1,34 @@
 {
-	"name": "jtlamb.dev",
-	"type": "module",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro",
-		"format": "prettier --write . && biome format --write ./*",
-		"lint": "biome lint ./*",
-		"lint:fix": "biome lint --apply ./*",
-		"check": "biome check ./*",
-		"check:fix": "biome check --apply ./*",
-		"check-format": "prettier --check . && biome check ./*",
-		"precommit": "pnpm run check-format && pnpm run lint"
-	},
-	"dependencies": {
-		"@astrojs/vercel": "^5.0.0",
-		"@fontsource-variable/comfortaa": "^5.0.8",
-		"@fontsource-variable/rubik": "^5.0.10",
-		"astro": "^3.1.0",
-		"open-props": "^1.5.15",
-		"zod": "^3.22.2"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.1.2",
-		"prettier": "^3.0.3",
-		"prettier-plugin-astro": "^0.12.0"
-	}
+  "name": "jtlamb.dev",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write . && biome format --write ./*",
+    "lint": "biome lint ./*",
+    "lint:fix": "biome lint --apply ./*",
+    "check": "biome check ./*",
+    "check:fix": "biome check --apply ./*",
+    "check-format": "prettier --check . && biome check ./*",
+    "precommit": "pnpm run check-format && pnpm run lint"
+  },
+  "dependencies": {
+    "@astrojs/vercel": "^5.0.0",
+    "@fontsource-variable/comfortaa": "^5.0.8",
+    "@fontsource-variable/rubik": "^5.0.10",
+    "astro": "^3.1.0",
+    "open-props": "^1.5.15",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.1.2",
+    "bun-types": "^1.0.1",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0"
+  }
 }
