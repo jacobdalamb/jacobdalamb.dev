@@ -1,34 +1,46 @@
 {
-  "name": "jtlamb.dev",
-  "type": "module",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "format": "prettier --write . && biome format --write ./*",
-    "lint": "biome lint ./*",
-    "lint:fix": "biome lint --apply ./*",
-    "check": "biome check ./*",
-    "check:fix": "biome check --apply ./*",
-    "check-format": "prettier --check . && biome check ./*",
-    "precommit": "bun run check-format && bun run lint"
-  },
-  "dependencies": {
-    "@astrojs/vercel": "^5.0.2",
-    "@fontsource-variable/comfortaa": "^5.0.14",
-    "@fontsource-variable/rubik": "^5.0.16",
-    "astro": "^3.2.3",
-    "open-props": "^1.6.4",
-    "zod": "^3.22.4"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.2.2",
-    "bun-types": "1.0.4",
-    "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.12.0"
-  }
+	"name": "jtlamb.dev",
+	"type": "module",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"format": "prettier --write . && biome format --write ./*",
+		"lint": "biome lint ./*",
+		"lint:fix": "biome lint --apply ./*",
+		"check": "biome check ./*",
+		"check:fix": "biome check --apply ./*",
+		"check-format": "prettier --check . && biome check ./*",
+		"precommit": "bun run check-format && bun run lint",
+		"compile": "projectz compile",
+		"posttest": "bun run compile"
+	},
+	"dependencies": {
+		"@astrojs/vercel": "^5.0.2",
+		"@fontsource-variable/comfortaa": "^5.0.14",
+		"@fontsource-variable/rubik": "^5.0.16",
+		"astro": "^3.2.3",
+		"open-props": "^1.6.4",
+		"zod": "^3.22.4"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.2.2",
+		"bun-types": "1.0.4",
+		"prettier": "^3.0.3",
+		"prettier-plugin-astro": "^0.12.0"
+	},
+	"description": "My personal website.",
+	"keywords": ["personal-website"],
+	"author": "Jacob Lamb",
+	"maintainers": [],
+	"contributors": [],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jacobthesheep/jtlamb.dev"
+	},
+	"bugs": {}
 }
