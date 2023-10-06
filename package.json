@@ -24,7 +24,7 @@
 		"@fontsource-variable/comfortaa": "^5.0.14",
 		"@fontsource-variable/rubik": "^5.0.16",
 		"astro": "^3.2.3",
-		"open-props": "^1.6.4",
+		"open-props": "^1.6.5",
 		"zod": "^3.22.4"
 	},
 	"devDependencies": {
