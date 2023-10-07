@@ -2,9 +2,30 @@
 import "../styles/styles.css";
 import "@fontsource-variable/rubik";
 import "@fontsource-variable/comfortaa";
+
+import pkg from "../../package.json";
+const pkgName = pkg.name;
+const author = pkg.author;
+const repoURL = pkg.repository.url;
+const siteURL = Astro.site;
+
+let authorName = "";
+let authorEmail = "";
+let authorUrl = "";
+
+const regex = /^(.+)\s+<(.+)> \((.+)\)$/;
+const match = author.match(regex);
+
+if (match) {
+  authorName = match[1];
+  authorEmail = match[2];
+  authorUrl = match[3];
+} else {
+  console.log('Author information could not be parsed.');
+}
+
 const { title, description, image } = Astro.props as PageMeta;
-const author = "Jacob Lamb";
-const completeTitle = `${title}${title ? " - " : ""}${author}`;
+const completeTitle = `${title}${title ? " - " : ""}${authorName}`;
 import Link from "../components/Link.astro";
 const socialImageURL = new URL(`/assets/og_${image}.png`, Astro.url);
 let thisYear = `${new Date().getFullYear()}`;
@@ -25,8 +46,8 @@ import { ViewTransitions } from "astro:transitions";
     <link rel="apple-touch-icon" href="/apple-touch-icon.webp" />
     <meta name="generator" content={Astro.generator} />
     <title>{completeTitle}</title>
-    <meta name="author" content={author} />
-    <link rel="author" href="https://jtlamb.dev/" />
+    <meta name="author" content={authorName} />
+    <link rel="author" href={authorUrl} />
     <meta name="description" content={description} />
     <meta name="color-scheme" content="dark light" />
     <meta property="og:title" content={completeTitle} />
@@ -68,7 +89,7 @@ import { ViewTransitions } from "astro:transitions";
             ></path>
           </g>
         </svg>
-        <span><Link href="/">{author}</Link></span>
+        <span><Link href="/">{authorName}</Link></span>
       </div>
       <nav>
         {
@@ -80,13 +101,16 @@ import { ViewTransitions } from "astro:transitions";
     </header>
     <slot />
     <footer>
-      <p>
-        <small>
-          &copy;
-          <time datetime="2020"> 2020</time> -
-          <time datetime={thisYear}>{thisYear}</time>
-           built by {author}
-        </small>
+        <p>
+        <a href="https://astro.build"
+          ><img
+            src="https://astro.badg.es/v2/built-with-astro/tiny.svg"
+            alt="Built with Astro"
+            width="120"
+            height="20"
+          /></a
+        >
+        <a href={`${repoURL}`}>source code on GitHub</a>
       </p>
     </footer>
   </body>

@@ -86,10 +86,19 @@ header div {
 
 footer {
   display: flex;
+text-align: center;
   justify-content: center;
   border-top: 2px dashed var(--surface-2);
   margin-top: auto;
   padding-block: var(--size-5) calc(var(--size-5) + env(safe-area-inset-bottom));
+}
+
+footer>* {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--size-3);
 }
 
 h1,

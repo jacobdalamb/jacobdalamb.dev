@@ -96,6 +96,7 @@ const uses = [
 			{
 				title: 'VS Code',
 				url: 'https://code.visualstudio.com/',
+                note: 'hope to switch to [Zed](https://zed.dev/) soon'
 			},
 			{
 				title: 'Tabby',
@@ -108,10 +109,6 @@ const uses = [
 			{
 				title: 'GitHub Desktop',
 				url: 'https://desktop.github.com/',
-			},
-			{
-				title: 'Caddy',
-				url: 'https://caddyserver.com/',
 			},
 		],
 	},
@@ -138,14 +135,6 @@ const uses = [
 				title: 'Raycast',
 				url: 'https://www.raycast.com/',
 			},
-			{
-				title: 'Figma',
-				url: 'https://www.figma.com/',
-			},
-			{
-				title: 'QuickGPT',
-				url: 'https://sindresorhus.com/quickgpt',
-			},
 		],
 	},
 	{
@@ -155,7 +144,10 @@ const uses = [
 				title: 'MacBook Air (M1) — [8GB Memory, 245GB Storage]',
 			},
 			{
-				title: 'iPhone SE (2nd Generation) — [64GB Storage]',
+				title: 'iPhone 13 mini — [128GB Storage]',
+			},
+			{
+				title: 'Apple Watch SE (2nd generation)',
 			},
 			{
 				title: 'AirPods Pro (2nd Generation)',
