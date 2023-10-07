@@ -34,13 +34,15 @@
 		"prettier-plugin-astro": "^0.12.0"
 	},
 	"description": "My personal website.",
+	"license": "MIT",
 	"keywords": ["personal-website"],
-	"author": "Jacob Lamb",
+	"author": "Jacob Lamb <jacobtlamb@hey.com> (https://jtlamb-dev.vercel.app/)",
+	"homepage": "https://github.com/jacobthesheep/jtlamb.dev#readme",
 	"maintainers": [],
 	"contributors": [],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/jacobthesheep/jtlamb.dev"
+		"url": "https://github.com/jacobthesheep/jtlamb.dev.git"
 	},
 	"bugs": {}
 }
