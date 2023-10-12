@@ -1,6 +1,7 @@
 {
 	"cleanUrls": true,
 	"trailingSlash": false,
+	"installCommand": "pnpm install",
 	"headers": [
 		{
 			"source": "/(.*)",
