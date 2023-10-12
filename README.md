@@ -9,7 +9,7 @@ My personal website.
 - **Meta Framework**: [Astro](https://astro.build/)
 - **Javascript Flavor**: [Typescript](https://typescriptlang.org/)
 - **Formatter / Linter**: [Biome](https://biomejs.dev/) and [Prettier Astro Plugin](https://github.com/withastro/prettier-plugin-astro)
-- **Styling**: [Open Props](https://open-props.style/)
+- **Styling**: [Open Props](https://open-props.style/) and [Vanilla Extract](https://vanilla-extract.style/)
 - **Deployment**: [Vercel](https://vercel.com/)
 
 ## License

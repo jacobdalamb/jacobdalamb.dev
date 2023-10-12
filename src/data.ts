@@ -96,7 +96,7 @@ const uses = [
 			{
 				title: 'VS Code',
 				url: 'https://code.visualstudio.com/',
-                note: 'hope to switch to [Zed](https://zed.dev/) soon'
+				note: 'hope to switch to [Zed](https://zed.dev/) soon',
 			},
 			{
 				title: 'Tabby',

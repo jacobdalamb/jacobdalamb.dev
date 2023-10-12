@@ -1,7 +1,7 @@
 ---
-import "../styles/styles.css";
 import "@fontsource-variable/rubik";
 import "@fontsource-variable/comfortaa";
+import * as styles from "../styles/app.css";
 
 import pkg from "../../package.json";
 const pkgName = pkg.name;
@@ -21,7 +21,7 @@ if (match) {
   authorEmail = match[2];
   authorUrl = match[3];
 } else {
-  console.log('Author information could not be parsed.');
+  console.log("Author information could not be parsed.");
 }
 
 const { title, description, image } = Astro.props as PageMeta;
@@ -64,11 +64,12 @@ import { ViewTransitions } from "astro:transitions";
     <link href="https://codepen.io/jacobthesheep" rel="me" />
     <ViewTransitions />
   </head>
-  <body>
+  <body class:list={[styles.bodyStyles]}>
     <header>
       <div>
         <!--?xml version="1.0" standalone="no"?-->
         <svg
+          class:list={[styles.logo]}
           version="1.0"
           xmlns="http://www.w3.org/2000/svg"
           width="180.000000pt"
@@ -101,18 +102,20 @@ import { ViewTransitions } from "astro:transitions";
     </header>
     <slot />
     <footer>
-        <p>
-        <a href="https://astro.build"
-          ><img
-            src="https://astro.badg.es/v2/built-with-astro/tiny.svg"
-            alt="Built with Astro"
-            width="120"
-            height="20"
-          /></a
-        >
-        <a href={`${repoURL}`}>source code on GitHub</a>
-      </p>
+      <a href="https://astro.build"
+        ><img
+          src="https://astro.badg.es/v2/built-with-astro/tiny.svg"
+          alt="Built with Astro"
+          width="120"
+          height="20"
+        /></a
+      >
+      <a href={`${repoURL}`}>source code on GitHub</a>
     </footer>
+    <style>
+      @import "open-props/style";
+      @import "open-props/normalize";
+      @import "open-props/buttons";
+    </style>
   </body>
-
 </html>
