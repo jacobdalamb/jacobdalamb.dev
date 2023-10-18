@@ -22,12 +22,12 @@
 		"@fontsource-variable/comfortaa": "^5.0.15",
 		"@fontsource-variable/rubik": "^5.0.17",
 		"@vanilla-extract/css": "^1.13.0",
-		"astro": "^3.3.0",
-		"open-props": "^1.6.5",
+		"astro": "^3.3.2",
+		"open-props": "^1.6.7",
 		"zod": "^3.22.4"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.2.2",
+		"@biomejs/biome": "^1.2.2",
 		"@vanilla-extract/vite-plugin": "^3.9.0",
 		"prettier": "^3.0.3",
 		"prettier-plugin-astro": "^0.12.0"
