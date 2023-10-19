@@ -27,16 +27,14 @@
 		"zod": "^3.22.4"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.2.2",
+		"@biomejs/biome": "^1.3.0",
 		"@vanilla-extract/vite-plugin": "^3.9.0",
 		"prettier": "^3.0.3",
 		"prettier-plugin-astro": "^0.12.0"
 	},
 	"description": "My personal website.",
 	"license": "MIT",
-	"keywords": [
-		"personal-website"
-	],
+	"keywords": ["personal-website"],
 	"author": "Jacob Lamb <jacobtlamb@hey.com> (https://jtlamb-dev.vercel.app/)",
 	"homepage": "https://github.com/jacobthesheep/jtlamb.dev#readme",
 	"maintainers": [],
