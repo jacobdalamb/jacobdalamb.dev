@@ -99,8 +99,8 @@ const uses = [
 				note: 'hope to switch to [Zed](https://zed.dev/) soon',
 			},
 			{
-				title: 'Tabby',
-				url: 'https://tabby.sh/',
+				title: 'Alacritty',
+				url: 'https://alacritty.org/',
 			},
 			{
 				title: 'Fig',
