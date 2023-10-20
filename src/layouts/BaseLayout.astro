@@ -1,36 +1,14 @@
 ---
 import "@fontsource-variable/rubik";
-import "@fontsource-variable/comfortaa";
 import * as styles from "../styles/app.css";
+import { authorName, authorUrl, repoURL } from "./meta";
+import { ViewTransitions } from "astro:transitions";
+import Link from "../components/Link.astro";
 
-import pkg from "../../package.json";
-const pkgName = pkg.name;
-const author = pkg.author;
-const repoURL = pkg.repository.url;
-const siteURL = Astro.site;
-
-let authorName = "";
-let authorEmail = "";
-let authorUrl = "";
-
-const regex = /^(.+)\s+<(.+)> \((.+)\)$/;
-const match = author.match(regex);
-
-if (match) {
-  authorName = match[1];
-  authorEmail = match[2];
-  authorUrl = match[3];
-} else {
-  console.log("Author information could not be parsed.");
-}
-
+const navLinks = await Astro.glob("../pages/*.astro");
 const { title, description, image } = Astro.props as PageMeta;
 const completeTitle = `${title}${title ? " - " : ""}${authorName}`;
-import Link from "../components/Link.astro";
 const socialImageURL = new URL(`/assets/og_${image}.png`, Astro.url);
-let thisYear = `${new Date().getFullYear()}`;
-const navLinks = await Astro.glob("../pages/*.astro");
-import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
