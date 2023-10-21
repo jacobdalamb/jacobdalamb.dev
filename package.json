@@ -4,17 +4,16 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
+		"astro": "astro",
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"check": "astro check && biome check ./*",
-		"check:fix": "biome check --apply ./*",
-		"astro": "astro",
 		"format": "prettier --write . && biome format --write ./*",
-		"lint": "biome lint ./*",
+		"lint": "astro check && biome lint ./*",
 		"lint:fix": "biome lint --apply ./*",
 		"check-format": "prettier --check . && biome check ./*",
+		"check-format:fix": "biome --apply ./*",
 		"precommit": "pnpm run check-format && pnpm run lint"
 	},
 	"dependencies": {
