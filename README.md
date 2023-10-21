@@ -10,17 +10,17 @@ All commands are run from the root of the project, from a terminal:
 
 | Command                 | Action                                       |
 | :---------------------- | :------------------------------------------- |
-| `pnpm i`                | Installs dependencies                        |
-| `pnpm start`            | Starts local dev server at `localhost:4321`  |
-| `pnpm build`            | Build your production site                   |
-| `pnpm preview`          | Preview your build locally, before deploying |
-| `pnpm run format`       | Formats the code using Prettier and Biome    |
-| `pnpm run lint`         | Lints the code using Biome                   |
-| `pnpm run lint:fix`     | Fixes lint issues using Biome                |
-| `pnpm run check`        | Checks the code using Biome                  |
-| `pnpm run check:fix`    | Fixes code issues using Biome                |
-| `pnpm run check-format` | Checks code formatting                       |
-| `pnpm run precommit`    | Runs the precommit check                     |
+| `pnpm dev`              | Starts local dev server using Astro          |
+| `pnpm start`            | Starts local dev server using Astro          |
+| `pnpm build`            | Builds your production site using Astro      |
+| `pnpm preview`          | Previews your build locally using Astro      |
+| `pnpm check`            | Checks the code using Astro and Biome        |
+| `pnpm check:fix`        | Fixes code issues using Biome                |
+| `pnpm format`           | Formats the code using Prettier and Biome    |
+| `pnpm lint`             | Lints the code using Biome                   |
+| `pnpm lint:fix`         | Fixes lint issues using Biome                |
+| `pnpm check-format`     | Checks code formatting with Prettier and Biome |
+| `pnpm precommit`        | Runs the precommit check using Prettier and Biome |
 
 ## License
 
