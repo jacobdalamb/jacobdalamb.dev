@@ -5,7 +5,6 @@ import { authorName, authorUrl, repoURL } from "./meta";
 import { ViewTransitions } from "astro:transitions";
 import Link from "../components/Link.astro";
 
-const navLinks = await Astro.glob("../pages/*.astro");
 const { title, description, image } = Astro.props as PageMeta;
 const completeTitle = `${title}${title ? " - " : ""}${authorName}`;
 const socialImageURL = new URL(`/assets/og_${image}.png`, Astro.url);
@@ -70,13 +69,6 @@ const socialImageURL = new URL(`/assets/og_${image}.png`, Astro.url);
         </svg>
         <span><Link href="/">{authorName}</Link></span>
       </div>
-      <nav>
-        {
-          navLinks
-            .slice(1)
-            .map((link) => <Link href={link.url}>{link.url}</Link>)
-        }
-      </nav>
     </header>
     <slot />
     <footer>
