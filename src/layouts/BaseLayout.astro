@@ -1,6 +1,7 @@
 ---
 import "@fontsource-variable/rubik";
-import * as styles from "../styles/app.css";
+import * as globalStyles from "../styles/app.css";
+import * as dataStyles from "../styles/data.css";
 import { authorName, authorUrl, repoURL } from "./meta";
 import { ViewTransitions } from "astro:transitions";
 import Link from "../components/Link.astro";
@@ -41,12 +42,12 @@ const socialImageURL = new URL(`/assets/og_${image}.png`, Astro.url);
     <link href="https://codepen.io/jacobthesheep" rel="me" />
     <ViewTransitions />
   </head>
-  <body class:list={[styles.body]}>
+  <body class:list={[globalStyles, dataStyles]}>
     <header>
       <div>
         <!--?xml version="1.0" standalone="no"?-->
         <svg
-          class:list={[styles.logo]}
+          class:list={[globalStyles.logo]}
           version="1.0"
           xmlns="http://www.w3.org/2000/svg"
           width="180.000000pt"
