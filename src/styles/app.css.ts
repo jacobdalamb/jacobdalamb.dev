@@ -1,6 +1,6 @@
 import { globalStyle, style } from '@vanilla-extract/css';
 
-export const bodyStyles = globalStyle('body', {
+export const body = globalStyle('body', {
 	display: 'flex',
 	flexDirection: 'column',
 	gap: 'var(--size-10)',
@@ -12,15 +12,14 @@ export const logo = style({
 	fill: 'var(--text-1)',
 });
 
-export const layoutStyles = globalStyle('main', {
+export const layout = globalStyle('main', {
 	display: 'flex',
 	flexDirection: 'column',
-	gap: 'var(--size-5)',
 	margin: '0 auto !important',
 	padding: 'var(--size-fluid-3)',
 });
 
-export const footerStyles = globalStyle('footer', {
+export const footer = globalStyle('footer', {
 	display: 'flex',
 	margin: 'auto auto 0 auto !important',
 	textAlign: 'center',
@@ -32,16 +31,33 @@ export const footerStyles = globalStyle('footer', {
 	paddingInline: 'var(--size-5)',
 });
 
-export const headerStyles = globalStyle('header', {
+export const header = globalStyle('header', {
 	display: 'flex',
 	justifyContent: 'space-between',
 	alignItems: 'center',
 	padding: 'var(--size-fluid-2)',
 });
 
-export const headerDivStyles = globalStyle('header div', {
+export const headerDiv = globalStyle('header div', {
 	display: 'flex',
 	alignItems: 'center',
 	width: '100%',
 	gap: 'var(--size-2)',
+});
+
+export const dataTable = globalStyle('[data-table]', {
+	display: 'grid',
+	gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+	gap: 'var(--size-3)',
+});
+
+export const dataCard = globalStyle('[data-card]', {
+	display: 'flex',
+	flexDirection: 'column',
+});
+
+export const titleContent = globalStyle(':is(h1, h2, h3) ~ *', {
+	fontSize: 'var(--font-size-1)',
+	maxInlineSize: 'var(--size-content-2)',
+	marginBlockStart: 'var(--size-5)',
 });

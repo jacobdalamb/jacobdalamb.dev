@@ -41,7 +41,7 @@ const socialImageURL = new URL(`/assets/og_${image}.png`, Astro.url);
     <link href="https://codepen.io/jacobthesheep" rel="me" />
     <ViewTransitions />
   </head>
-  <body class:list={[styles.bodyStyles]}>
+  <body class:list={[styles.body]}>
     <header>
       <div>
         <!--?xml version="1.0" standalone="no"?-->
@@ -82,10 +82,10 @@ const socialImageURL = new URL(`/assets/og_${image}.png`, Astro.url);
       >
       <a href={`${repoURL}`}>source code on GitHub</a>
     </footer>
-  </body>
     <style is:global>
       @import "open-props/style";
       @import "open-props/normalize";
       @import "open-props/buttons";
     </style>
+  </body>
 </html>

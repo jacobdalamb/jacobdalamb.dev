@@ -1,20 +1,37 @@
 ---
 import Layout from "../layouts/BaseLayout.astro";
 import Link from "../components/Link.astro";
+import Card from "../components/Card.svelte";
 const props = {
   title: "",
-  description:
-    "I'm here to craft fast, user-friendly websites for your content-focused business.",
+  description: "",
   image: "home",
 };
+const age = new Date().getFullYear() - 2002;
 ---
 
 <Layout {...props}>
   <main>
     <h1>Hey, I'm Jacob Lamb.</h1>
     <p>
-      {props.description}
+      I'm {age} y/o and I'm a self-taught developer. I'm currently studing Web
+      Design and Development at <Link
+        set:text="Palomar College"
+        href="https://www.palomar.edu/"
+      />. I like <Link
+        set:text="reading"
+        href="https://literal.club/jacobthelamb"
+      />
+       and playing games.
     </p>
-    <Link href="https://read.cv/jacobthesheep">view my resume</Link>
+    <span>
+      <Link href="https://read.cv/jacobthesheep">view my resume</Link>
+    </span>
+    <section>
+      <h2>Projects</h2>
+      <div data-table>
+        <Card />
+      </div>
+    </section>
   </main>
 </Layout>
