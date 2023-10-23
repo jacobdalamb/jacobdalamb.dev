@@ -6,6 +6,11 @@ export const body = globalStyle('body', {
 	gap: 'var(--size-10)',
 });
 
+export const titleContent = globalStyle(':is(h1, h2, h3) ~ *', {
+	maxInlineSize: 'var(--size-content-2)',
+	marginBlockStart: 'var(--size-5)',
+});
+
 export const logo = style({
 	width: 'var(--size-7)',
 	height: 'fit-content',
@@ -54,10 +59,4 @@ export const dataTable = globalStyle('[data-table]', {
 export const dataCard = globalStyle('[data-card]', {
 	display: 'flex',
 	flexDirection: 'column',
-});
-
-export const titleContent = globalStyle(':is(h1, h2, h3) ~ *', {
-	fontSize: 'var(--font-size-1)',
-	maxInlineSize: 'var(--size-content-2)',
-	marginBlockStart: 'var(--size-5)',
 });
