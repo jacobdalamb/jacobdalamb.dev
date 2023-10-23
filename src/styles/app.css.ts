@@ -6,9 +6,9 @@ export const body = globalStyle('body', {
 	gap: 'var(--size-10)',
 });
 
-export const titleContent = globalStyle(':is(h1, h2, h3) ~ *', {
-	maxInlineSize: 'var(--size-content-2)',
-	marginBlockStart: 'var(--size-5)',
+export const title = globalStyle(':is(h1, h2, h3) ~ *, :is(*) ~ h1, h2, h3', {
+    maxInlineSize: 'var(--size-content-2)',
+    marginBlockStart: 'var(--size-5)',
 });
 
 export const logo = style({
