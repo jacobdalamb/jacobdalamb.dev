@@ -20,6 +20,10 @@
 				{
 					"key": "X-XSS-Protection",
 					"value": "1; mode=block"
+				},
+				{
+					"key": "Cross-Origin-Resource-Policy",
+					"value": "same-site"
 				}
 			]
 		},

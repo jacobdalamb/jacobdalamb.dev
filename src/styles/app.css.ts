@@ -4,6 +4,7 @@ export const body = globalStyle('body', {
 	display: 'flex',
 	flexDirection: 'column',
 	gap: 'var(--size-10)',
+	backgroundColor: 'var(--surface-2)',
 });
 
 export const titleContent = globalStyle(':is(h1, h2, h3) ~ *, :is(*) ~ h1, h2, h3', {
@@ -48,4 +49,9 @@ export const header = globalStyle('header', {
 export const headerDiv = globalStyle('header div', {
 	display: 'flex',
 	alignItems: 'center',
+});
+
+export const nav = globalStyle('nav', {
+	display: 'flex',
+	gap: 'var(--size-3)',
 });

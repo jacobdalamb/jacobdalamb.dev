@@ -6,6 +6,34 @@ import { authorName, authorUrl, repoURL } from "./meta";
 import { ViewTransitions } from "astro:transitions";
 import Link from "../components/Link.astro";
 
+const pages = await Astro.glob("../pages/*.astro");
+const pageTitles: string[] = [];
+
+for (const page of pages) {
+  let pageTitle = page.url?.replace("/", "").replace("-", " ") || "";
+
+  if (!pageTitle) {
+    pageTitle = "home";
+  }
+
+  pageTitles.push(pageTitle);
+}
+
+const pageData = pages.map((page, index) => ({
+  url: page.url,
+  title: pageTitles[index],
+}));
+
+pageData.sort((a, b) => {
+  if (a.title === "home") {
+    return -1;
+  }
+  if (b.title === "home") {
+    return 1;
+  }
+  return 0;
+});
+
 const { title, description, image } = Astro.props as PageMeta;
 const completeTitle = `${title}${title ? " - " : ""}${authorName}`;
 const socialImageURL = new URL(`/assets/og_${image}.png`, Astro.url);
@@ -70,6 +98,15 @@ const socialImageURL = new URL(`/assets/og_${image}.png`, Astro.url);
         </svg>
         <span><Link href="/">{authorName}</Link></span>
       </div>
+      <nav>
+        {
+          pageData.map((page) => (
+            <Link href={page.url ? page.url : "./"}>
+              {page.title ? page.title : "home"}
+            </Link>
+          ))
+        }
+      </nav>
     </header>
     <slot />
     <footer>

@@ -8,6 +8,26 @@ const props = {
   image: "home",
 };
 const age = new Date().getFullYear() - 2002;
+const projects = [
+  {
+    title: "jtlamb-dev.vercel.app",
+    description: "Personal website built with Astro",
+    image: "",
+    url: "https://jtlamb-dev.vercel.app/",
+  },
+  {
+    title: "1BibleStudy (in progress)",
+    description: "All-in-one Bible study tool",
+    image: "",
+    url: "https://torahcycle-info.vercel.app/",
+  },
+  {
+    title: "1Bookmark (upcoming)",
+    description: "",
+    image: "",
+    url: "",
+  },
+];
 ---
 
 <Layout {...props}>
@@ -30,7 +50,7 @@ const age = new Date().getFullYear() - 2002;
     <section>
       <h2>Projects</h2>
       <div data-table>
-        <Card />
+        <Card items={projects} />
       </div>
     </section>
   </main>
