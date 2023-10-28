@@ -1,43 +1,49 @@
 <script lang="ts">
-  const projects = [
-    {
-      title: "jtlamb-dev.vercel.app",
-      description: "Personal website built with Astro",
-      image: "",
-      link: "https://jtlamb-dev.vercel.app/",
-    },
-    {
-      title: "1BibleStudy (in progress)",
-      description: "All-in-one Bible study tool",
-      image: "",
-      link: "https://torahcycle-info.vercel.app/",
-    },
-    {
-      title: "1Bookmark (upcoming)",
-      description: "",
-      image: "",
-      link: "",
-    },
-  ];
+  export let items: any[];
+
+  function formatDate(dateString: string): string {
+    const date = new Date(dateString);
+    return `${date.toLocaleDateString()}`;
+  }
 </script>
 
-{#each projects as project}
+{#each items as item}
   <div data-card>
     <div data-card-header>
-      <span data-badge />
-    </div>
-    <!-- <div data-card-image>
-      <img src={project.image} alt={project.title} />
-    </div> -->
-    <div data-card-content>
-      {#if project.link}
-        <a href={project.link} target="_blank" rel="noopener noreferrer"
-          >{project.title}</a
+      {#if item.folder}
+        <img
+          data-image-cover
+          loading="lazy"
+          src={item.cover}
+          alt={item.title}
+          on:error={() => (item.cover = "../../public/assets/og_home.png")}
+        />
+      {:else if item.url}
+        <a href={item.url} target="_blank" rel="noopener noreferrer"
+          >{item.title}</a
         >
       {:else}
-        <span>{project.title}</span>
+        <span>{item.title}</span>
       {/if}
-      <p>{project.description}</p>
+    </div>
+    <div data-card-content>
+      {#if item.folder}
+        {#if item.url}
+          <a href={item.url} target="_blank" rel="noopener noreferrer"
+            >{item.title}</a
+          >
+        {:else}
+          <span>{item.title}</span>
+        {/if}
+      {/if}
+      {#if item.description}
+        <p>{item.description}</p>
+      {/if}
+    </div>
+    <div data-card-footer>
+      {#if item.created}
+        <time datetime={item.created}>{formatDate(item.created)}</time>
+      {/if}
     </div>
   </div>
 {/each}
