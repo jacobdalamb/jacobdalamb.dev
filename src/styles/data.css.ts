@@ -6,11 +6,6 @@ export const dataTable = globalStyle('[data-table]', {
 	gap: 'var(--size-3)',
 });
 
-// export const dataCard = globalStyle('[data-card]', {
-// 	display: 'flex',
-// 	flexDirection: 'column',
-// });
-
 export const dataCard = globalStyle('[data-card]', {
 	backgroundColor: 'var(--surface-1)',
 	boxShadow: 'var(--shadow-1)',
@@ -72,12 +67,12 @@ export const dataSidebar = globalStyle('[data-sidebar]', {
 	},
 });
 
-export const dataSome = globalStyle('[data-some]', {
+export const dataSome = globalStyle('[data-bookmark-page]', {
 	display: 'flex',
-	flexDirection: 'column', // Stack children vertically on smaller screens
+	flexDirection: 'column',
 	'@media': {
 		'screen and (min-width: 768px)': {
-			flexDirection: 'row', // Stack children horizontally on larger screens
+			flexDirection: 'row',
 		},
 	},
 });
