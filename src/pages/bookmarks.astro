@@ -2,12 +2,23 @@
 import Layout from "../layouts/BaseLayout.astro";
 import Link from "../components/Link.astro";
 import Card from "../components/Card.svelte";
+import { formatDate } from "../utils/date";
 import { getGistData } from "@/utils/getGist";
 
+interface FileContent {
+  content: string;
+}
+
 const gistData = getGistData();
-const gistCreatedAt = gistData.created_at;
 const gistUpdatedAt = gistData.updated_at;
-const bookmarks = JSON.parse(gistData.files["bookmarks.json"].content);
+let bookmarks;
+if (gistData && gistData.files && gistData.files["bookmarks.json"]) {
+  bookmarks = JSON.parse(
+    (gistData.files["bookmarks.json"] as unknown as FileContent).content,
+  );
+} else {
+  console.error("No bookmarks found");
+}
 
 const props = {
   title: "",
@@ -15,8 +26,7 @@ const props = {
   image: "home",
 };
 
-// Function to group bookmarks by folder
-function groupByFolder(bookmarks: any) {
+function groupByFolder(bookmarks: Array<any>) {
   return bookmarks.reduce((acc, bookmark) => {
     const folder = bookmark.folder || "Unsorted";
     if (!acc[folder]) acc[folder] = [];
@@ -48,7 +58,9 @@ const groupedBookmarks = groupByFolder(bookmarks);
         <h2>Bookmarks</h2>
         <small>
           Last updated on
-          <time datetime={gistUpdatedAt}>{gistUpdatedAt}</time>
+          <time datetime={gistUpdatedAt}
+            >{gistUpdatedAt ? formatDate(gistUpdatedAt) : ""}</time
+          >
         </small>
       </div>
       <div>

@@ -17,6 +17,9 @@ dependencies:
   '@fontsource-variable/rubik':
     specifier: ^5.0.19
     version: 5.0.19
+  '@octokit/types':
+    specifier: ^12.1.1
+    version: 12.1.1
   '@vanilla-extract/css':
     specifier: ^1.13.0
     version: 1.13.0

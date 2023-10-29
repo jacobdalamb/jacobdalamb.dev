@@ -1,10 +1,6 @@
 <script lang="ts">
   export let items: any[];
-
-  function formatDate(dateString: string): string {
-    const date = new Date(dateString);
-    return `${date.toLocaleDateString()}`;
-  }
+  import { formatDate } from "../utils/date";
 </script>
 
 {#each items as item}
@@ -43,8 +39,8 @@
     <div data-card-footer>
       {#if item.created}
         <small>
-            Created on:
-            <time datetime={item.created}>{formatDate(item.created)}</time>
+          Created on:
+          <time datetime={item.created}>{formatDate(item.created)}</time>
         </small>
       {/if}
     </div>
