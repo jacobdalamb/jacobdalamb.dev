@@ -2,13 +2,12 @@
 import Layout from "../layouts/BaseLayout.astro";
 import Link from "../components/Link.astro";
 import Card from "../components/Card.svelte";
-import bookmarks from "../../public/assets/bookmarks.json";
 import { getGistData } from "@/utils/getGist";
 
 const gistData = getGistData();
-const gistFilename = gistData.files["bookmarks.json"].filename;
 const gistCreatedAt = gistData.created_at;
 const gistUpdatedAt = gistData.updated_at;
+const bookmarks = JSON.parse(gistData.files["bookmarks.json"].content);
 
 const props = {
   title: "",
@@ -45,7 +44,13 @@ const groupedBookmarks = groupByFolder(bookmarks);
       </nav>
     </aside>
     <main>
-      <h2>Bookmarks</h2>
+      <div>
+        <h2>Bookmarks</h2>
+        <small>
+          Last updated on
+          <time datetime={gistUpdatedAt}>{gistUpdatedAt}</time>
+        </small>
+      </div>
       <div>
         {
           Object.entries(groupedBookmarks).map(([folder, items]) => (

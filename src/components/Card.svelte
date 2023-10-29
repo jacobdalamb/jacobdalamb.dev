@@ -42,7 +42,10 @@
     </div>
     <div data-card-footer>
       {#if item.created}
-        <time datetime={item.created}>{formatDate(item.created)}</time>
+        <small>
+            Created on:
+            <time datetime={item.created}>{formatDate(item.created)}</time>
+        </small>
       {/if}
     </div>
   </div>
