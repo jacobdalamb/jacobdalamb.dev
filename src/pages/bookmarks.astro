@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/BaseLayout.astro";
+import Link from "../components/Link.astro";
+import Card from "../components/Card.svelte";
+import bookmarks from "../../public/assets/bookmarks.json";
+import { getGistData } from "@/utils/getGist";
+
+const gistData = getGistData();
+const gistFilename = gistData.files["bookmarks.json"].filename;
+const gistCreatedAt = gistData.created_at;
+const gistUpdatedAt = gistData.updated_at;
+
+const props = {
+  title: "",
+  description: "",
+  image: "home",
+};
+
+// Function to group bookmarks by folder
+function groupByFolder(bookmarks: any) {
+  return bookmarks.reduce((acc, bookmark) => {
+    const folder = bookmark.folder || "Unsorted";
+    if (!acc[folder]) acc[folder] = [];
+    acc[folder].push(bookmark);
+    return acc;
+  }, {});
+}
+
+const groupedBookmarks = groupByFolder(bookmarks);
+---
+
+<Layout {...props}>
+  <div data-bookmark-page>
+    <aside data-sidebar>
+      <nav>
+        <ul>
+          {
+            Object.keys(groupedBookmarks).map((folder) => (
+              <li>
+                <Link href={`#${folder}`}>{folder}</Link>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <h2>Bookmarks</h2>
+      <div>
+        {
+          Object.entries(groupedBookmarks).map(([folder, items]) => (
+            <>
+              <h3 id={folder}>{folder}</h3>
+              <div data-bookmarks>
+                <Card items={items} />
+              </div>
+            </>
+          ))
+        }
+      </div>
+    </main>
+  </div>
+</Layout>
