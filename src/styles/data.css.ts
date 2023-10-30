@@ -11,12 +11,19 @@ export const dataCard = globalStyle('[data-card]', {
 	boxShadow: 'var(--shadow-1)',
 	color: 'var(--text-1)',
 	borderRadius: 'var(--radius-3)',
+	padding: 'var(--size-5)',
+	display: 'flex',
+	flexDirection: 'column',
+	gap: 'var(--size-3)',
 });
 
-export const dataCardContent = globalStyle('[data-card-content], [data-card-footer]', {
-	padding: '0 var(--size-5) var(--size-5) var(--size-5)',
+export const dataCardDivs = globalStyle('[data-card] div h3', {
+	textOverflow: 'ellipsis',
+	overflow: 'hidden',
+	display: '-webkit-box',
+	WebkitLineClamp: '2',
+	WebkitBoxOrient: 'vertical',
 });
-
 export const dataCardDescription = globalStyle('[data-card-description]', {
 	color: 'var(--text-1)',
 });
@@ -31,10 +38,6 @@ export const dataBadge = globalStyle('[data-badge]', {
 	fontWeight: 'var(--font-weight-7)',
 });
 
-export const dataCardHeader = globalStyle('[data-card-header]', {
-	padding: 'var(--size-5)',
-});
-
 export const dataMobile = globalStyle('[data-mobile]', {
 	display: 'grid',
 	gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
@@ -43,7 +46,8 @@ export const dataMobile = globalStyle('[data-mobile]', {
 
 export const dataBookmarks = globalStyle('[data-bookmarks]', {
 	display: 'grid',
-	gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+	gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
+	gridTemplateRows: 'subgrid',
 	gap: 'var(--size-3)',
 });
 
@@ -51,8 +55,14 @@ export const dataImageCover = globalStyle('[data-image-cover]', {
 	width: '100%',
 	height: '100%',
 	objectFit: 'cover',
-	borderRadius: 'var(--radius-3)',
-	backgroundColor: 'var(--surface-2)',
+	borderTopLeftRadius: 'calc(var(--radius-3) - var(--size-1))',
+	borderTopRightRadius: 'calc(var(--radius-3) - var(--size-1))',
+	backgroundColor: 'var(--surface-3)',
+});
+
+export const dataFullBleed = globalStyle('[data-full-bleed]', {
+	margin: 'calc(var(--size-5) * -1)',
+	width: 'calc(100% + var(--size-5) * 2)',
 });
 
 export const dataSidebar = globalStyle('[data-sidebar]', {
@@ -75,4 +85,9 @@ export const dataSome = globalStyle('[data-bookmark-page]', {
 			flexDirection: 'row',
 		},
 	},
+});
+
+export const dataBookmarksLayout = globalStyle('[data-bookmarks-layout]', {
+	margin: 0,
+	maxWidth: '100%',
 });

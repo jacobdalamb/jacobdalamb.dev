@@ -40,7 +40,7 @@ const groupedBookmarks = groupByFolder(bookmarks);
 
 <Layout {...props}>
   <div data-bookmark-page>
-    <aside data-sidebar>
+    <!-- <aside data-sidebar>
       <nav>
         <ul>
           {
@@ -52,8 +52,8 @@ const groupedBookmarks = groupByFolder(bookmarks);
           }
         </ul>
       </nav>
-    </aside>
-    <main>
+    </aside> -->
+    <main data-bookmarks-layout>
       <div>
         <h2>Bookmarks</h2>
         <small>
@@ -69,7 +69,7 @@ const groupedBookmarks = groupByFolder(bookmarks);
             <>
               <h3 id={folder}>{folder}</h3>
               <div data-bookmarks>
-                <Card items={items} />
+                <Card items={items} client:load />
               </div>
             </>
           ))
