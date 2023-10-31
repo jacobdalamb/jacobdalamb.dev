@@ -1,6 +1,5 @@
 <script lang="ts">
   export let items: any[];
-  import { formatDate } from "../utils/date";
 
   const brokenImage = "../../assets/broken-image.jpeg";
 

@@ -118,3 +118,24 @@ export const dataBookmarksLayout = globalStyle('[data-bookmarks-layout]', {
 export const dataCardFooter = globalStyle('[data-card-footer]', {
 	marginTop: 'auto',
 });
+
+export const dataBookmarkNav = globalStyle('[data-bookmark-nav]', {
+	position: 'fixed',
+	bottom: 0,
+	width: '100%',
+	zIndex: 1,
+	backgroundColor: 'var(--surface-1)',
+});
+
+export const dataBookmarkNavList = globalStyle('[data-bookmark-nav] ul', {
+	display: 'flex',
+	flexWrap: 'nowrap',
+	listStyle: 'none',
+	overflowX: 'auto',
+	gap: 'var(--size-5)',
+	padding: 'var(--size-5) var(--size-3)',
+});
+
+export const dataBookmarkNavListItems = globalStyle('[data-bookmark-nav] ul li', {
+	whiteSpace: 'nowrap',
+});

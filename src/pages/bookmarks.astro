@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/BaseLayout.astro";
 import ImageCard from "../components/ImageCard.svelte";
+import Link from "../components/Link.astro";
 import { formatDate } from "../utils/date";
 import { getGistData } from "@/utils/getGist";
 
@@ -35,23 +36,28 @@ function groupByFolder(bookmarks: Array<any>) {
 }
 
 const groupedBookmarks = groupByFolder(bookmarks);
+
+function cleanFolderName(folder: string): string {
+  return folder.replace(/.*\//, "").trim();
+}
 ---
 
 <Layout {...props}>
+  <nav data-bookmark-nav>
+    <ul>
+      {
+        Object.keys(groupedBookmarks).map((folder) => {
+          const cleanedFolder = cleanFolderName(folder);
+          return (
+            <li>
+              <Link href={`#${cleanedFolder}`}>{cleanedFolder}</Link>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </nav>
   <div data-bookmark-page>
-    <!-- <aside data-sidebar>
-      <nav>
-        <ul>
-          {
-            Object.keys(groupedBookmarks).map((folder) => (
-              <li>
-                <Link href={`#${folder}`}>{folder}</Link>
-              </li>
-            ))
-          }
-        </ul>
-      </nav>
-    </aside> -->
     <main data-bookmarks-layout>
       <div>
         <h2>Bookmarks</h2>
@@ -64,14 +70,17 @@ const groupedBookmarks = groupByFolder(bookmarks);
       </div>
       <div>
         {
-          Object.entries(groupedBookmarks).map(([folder, items]) => (
-            <>
-              <h3 id={folder}>{folder}</h3>
-              <div data-mood-board>
-                <ImageCard items={items} client:load />
-              </div>
-            </>
-          ))
+          Object.entries(groupedBookmarks).map(([folder, items]) => {
+            const cleanedFolder = cleanFolderName(folder);
+            return (
+              <>
+                <h3 id={cleanedFolder}>{cleanedFolder}</h3>
+                <div data-mood-board>
+                  <ImageCard items={items} client:load />
+                </div>
+              </>
+            );
+          })
         }
       </div>
     </main>
