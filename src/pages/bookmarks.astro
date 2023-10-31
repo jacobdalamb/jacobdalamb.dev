@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/BaseLayout.astro";
-import Card from "../components/Card.svelte";
+import ImageCard from "../components/ImageCard.svelte";
 import { formatDate } from "../utils/date";
 import { getGistData } from "@/utils/getGist";
 
@@ -67,8 +67,8 @@ const groupedBookmarks = groupByFolder(bookmarks);
           Object.entries(groupedBookmarks).map(([folder, items]) => (
             <>
               <h3 id={folder}>{folder}</h3>
-              <div data-bookmarks>
-                <Card items={items} client:load />
+              <div data-mood-board>
+                <ImageCard items={items} client:load />
               </div>
             </>
           ))

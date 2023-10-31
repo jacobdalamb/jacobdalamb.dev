@@ -14,13 +14,6 @@ export const dataCard = globalStyle('[data-card]', {
 	padding: 'var(--size-5)',
 });
 
-export const dataCardBox = globalStyle('[data-card-box]', {
-	marginTop: 'var(--size-8)',
-	display: 'flex',
-	flexDirection: 'column',
-	height: '230px',
-});
-
 export const dataCardDivs = globalStyle('[data-card] div :is([data-description])', {
 	textOverflow: 'ellipsis',
 	overflow: 'hidden',
@@ -49,32 +42,50 @@ export const dataBadge = globalStyle('[data-badge]', {
 	fontWeight: 'var(--font-weight-7)',
 });
 
+export const dataBadgeLink = globalStyle('[data-badge-link]', {
+	position: 'absolute',
+	left: 'var(--size-1)',
+	bottom: 'var(--size-1)',
+	backgroundColor: 'var(--surface-1)',
+	maxWidth: 'calc(var(--size-content-1) - 1ch)',
+});
+
+export const dataBadgeLinkSpan = globalStyle('[data-badge-link] span', {
+	color: 'var(--text-2)',
+	fontSize: 'var(--font-size-0)',
+	fontWeight: 'var(--font-weight-7)',
+	textOverflow: 'ellipsis',
+	overflow: 'hidden',
+	whiteSpace: 'nowrap',
+});
+
 export const dataMobile = globalStyle('[data-mobile]', {
 	display: 'grid',
 	gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
 	gap: 'var(--size-fluid-2)',
 });
 
-export const dataBookmarks = globalStyle('[data-bookmarks]', {
+export const dataImageLink = globalStyle('[data-image-link]', {
+	marginBlock: '0',
+	marginInline: '0',
+	paddingBlock: '0',
+	paddingInline: '0',
+	position: 'relative',
+});
+
+export const moodBoard = globalStyle('[data-mood-board]', {
 	display: 'grid',
-	gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
-	gridTemplateRows: 'subgrid',
+	gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
 	gap: 'var(--size-3)',
+	borderRadius: 'var(--radius-3)',
 });
 
 export const dataImageCover = globalStyle('[data-image-cover]', {
 	width: '100%',
 	height: '100%',
+	borderRadius: 'var(--radius-3)',
 	objectFit: 'cover',
-	borderTopLeftRadius: 'calc(var(--radius-3) - var(--size-1))',
-	borderTopRightRadius: 'calc(var(--radius-3) - var(--size-1))',
-	backgroundColor: 'var(--surface-3)',
-	blockSize: '100px',
-});
-
-export const dataFullBleed = globalStyle('[data-full-bleed]', {
-	margin: 'calc(var(--size-5) * -1)',
-	width: 'calc(100% + var(--size-5) * 2)',
+	objectPosition: 'center',
 });
 
 export const dataSidebar = globalStyle('[data-sidebar]', {
@@ -89,7 +100,7 @@ export const dataSidebar = globalStyle('[data-sidebar]', {
 	},
 });
 
-export const dataSome = globalStyle('[data-bookmark-page]', {
+export const dataBookMarkPage = globalStyle('[data-bookmark-page]', {
 	display: 'flex',
 	flexDirection: 'column',
 	'@media': {
