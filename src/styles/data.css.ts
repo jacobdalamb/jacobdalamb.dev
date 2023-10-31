@@ -12,20 +12,31 @@ export const dataCard = globalStyle('[data-card]', {
 	color: 'var(--text-1)',
 	borderRadius: 'var(--radius-3)',
 	padding: 'var(--size-5)',
-	display: 'flex',
-	flexDirection: 'column',
-	gap: 'var(--size-3)',
 });
 
-export const dataCardDivs = globalStyle('[data-card] div h3', {
+export const dataCardBox = globalStyle('[data-card-box]', {
+	marginTop: 'var(--size-8)',
+	display: 'flex',
+	flexDirection: 'column',
+	height: '230px',
+});
+
+export const dataCardDivs = globalStyle('[data-card] div :is([data-description])', {
 	textOverflow: 'ellipsis',
 	overflow: 'hidden',
 	display: '-webkit-box',
-	WebkitLineClamp: '2',
+	WebkitLineClamp: '3',
 	WebkitBoxOrient: 'vertical',
 });
+
 export const dataCardDescription = globalStyle('[data-card-description]', {
 	color: 'var(--text-1)',
+});
+
+export const dataCardContent = globalStyle('[data-card-content]', {
+	display: 'flex',
+	flexDirection: 'column',
+	gap: 'var(--size-3)',
 });
 
 export const dataBadge = globalStyle('[data-badge]', {
@@ -58,6 +69,7 @@ export const dataImageCover = globalStyle('[data-image-cover]', {
 	borderTopLeftRadius: 'calc(var(--radius-3) - var(--size-1))',
 	borderTopRightRadius: 'calc(var(--radius-3) - var(--size-1))',
 	backgroundColor: 'var(--surface-3)',
+	blockSize: '100px',
 });
 
 export const dataFullBleed = globalStyle('[data-full-bleed]', {
@@ -90,4 +102,8 @@ export const dataSome = globalStyle('[data-bookmark-page]', {
 export const dataBookmarksLayout = globalStyle('[data-bookmarks-layout]', {
 	margin: 0,
 	maxWidth: '100%',
+});
+
+export const dataCardFooter = globalStyle('[data-card-footer]', {
+	marginTop: 'auto',
 });

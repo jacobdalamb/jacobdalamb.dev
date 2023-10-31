@@ -1,10 +1,20 @@
-import { globalStyle, style } from '@vanilla-extract/css';
+import { globalFontFace, globalStyle, style } from '@vanilla-extract/css';
+
+// const geistSans = 'GlobalGeistSans';
+
+// globalFontFace(geistSans, {
+// 	src: 'local("GeistSans"), url("../../assets/fonts/GeistVF.woff2") format("woff2")',
+// 	fontDisplay: 'swap',
+// 	fontWeight: '100 900',
+// 	fontStyle: 'normal',
+// });
 
 export const body = globalStyle('body', {
 	display: 'flex',
 	flexDirection: 'column',
 	gap: 'var(--size-10)',
 	backgroundColor: 'var(--surface-2)',
+	// fontFamily: geistSans,
 });
 
 export const titleContent = globalStyle(':is(h1, h2, h3) ~ *, :is(*) ~ h1, h2, h3', {

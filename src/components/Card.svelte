@@ -11,9 +11,9 @@
         window.matchMedia &&
         window.matchMedia("(prefers-color-scheme: dark)").matches
       ) {
-        return "../../assets/default-image-dark.svg";
+        return "../../assets/default-image-dark.png";
       } else {
-        return "../../assets/default-image-light.svg";
+        return "../../assets/default-image-light.png";
       }
     };
 
@@ -37,47 +37,49 @@
           <img
             data-image-cover
             width="254"
-            height="254"
+            height="100"
             loading="lazy"
-            src={item.cover || defaultImage}
+            src={item.cover}
             alt={item.title}
           />
         </div>
       {:else if item.url}
-        <h3>
+        <p>
           <a href={item.url} target="_blank" rel="noopener noreferrer"
             >{item.title}</a
           >
-        </h3>
+        </p>
       {:else}
-        <h3>{item.title}</h3>
+        <p>{item.title}</p>
       {/if}
     </div>
-    <div data-card-content>
-      {#if item.folder}
-        {#if item.url}
-          <h3>
-            <a href={item.url} target="_blank" rel="noopener noreferrer"
-              >{item.title}</a
-            >
-          </h3>
-        {:else}
-          <span>{item.title}</span>
+    <div data-card-box>
+      <div data-card-content>
+        {#if item.folder}
+          {#if item.url}
+            <p>
+              <a href={item.url} target="_blank" rel="noopener noreferrer"
+                >{item.title}</a
+              >
+            </p>
+          {:else}
+            <span>{item.title}</span>
+          {/if}
         {/if}
-      {/if}
-      {#if item.description}
-        <p>{item.description}</p>
-      {:else}
-        <p>{item.excerpt}</p>
-      {/if}
-    </div>
-    <div data-card-footer>
-      {#if item.created}
-        <small>
-          Created on:
-          <time datetime={item.created}>{formatDate(item.created)}</time>
-        </small>
-      {/if}
+        {#if item.description}
+          <p data-description>{item.description}</p>
+        {:else}
+          <p data-description>{item.excerpt}</p>
+        {/if}
+      </div>
+      <div data-card-footer>
+        {#if item.created}
+          <small>
+            Created on:
+            <time datetime={item.created}>{formatDate(item.created)}</time>
+          </small>
+        {/if}
+      </div>
     </div>
   </div>
 {/each}
