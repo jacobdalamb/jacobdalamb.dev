@@ -1,24 +1,30 @@
 <script lang="ts">
+  import {
+    dataImageCover,
+    dataBadge,
+    dataBadgeLink,
+    dataImageLink,
+  } from "../styles/data.css";
   export let items: any[];
 
   const brokenImage = "../../assets/broken-image.jpeg";
 
-  function handleError(event) {
+  function handleError(event: any) {
     event.target.src = brokenImage;
   }
 </script>
 
 {#each items as item}
-  <div data-card-image>
-    <a href={item.url} data-image-link>
+  <div>
+    <a href={item.url} class={dataImageLink}>
       <img
-        data-image-cover
+        class={dataImageCover}
         loading="lazy"
         on:error={handleError}
         src={item.cover || brokenImage}
         alt={item.title}
       />
-      <div data-badge data-badge-link>
+      <div class={`${dataBadge} ${dataBadgeLink}`}>
         <span
           >{item.url
             .replace("https://", "")

@@ -1,10 +1,11 @@
 <script lang="ts">
   export let items: any[];
+  import { dataCard, dataCardContent } from "../styles/data.css";
 </script>
 
 {#each items as item}
-  <div data-card>
-    <div data-card-header>
+  <div class={dataCard}>
+    <div>
       <p>
         <a href={item.url} target="_blank" rel="noopener noreferrer"
           >{item.title}</a
@@ -12,8 +13,8 @@
       </p>
     </div>
 
-    <div data-card-content>
-      <p data-description>{item.description}</p>
+    <div class={dataCardContent}>
+      <p>{item.description}</p>
     </div>
   </div>
 {/each}

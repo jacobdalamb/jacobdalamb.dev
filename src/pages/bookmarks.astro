@@ -4,6 +4,12 @@ import ImageCard from "../components/ImageCard.svelte";
 import Link from "../components/Link.astro";
 import { formatDate } from "../utils/date";
 import { getGistData } from "@/utils/getGist";
+import {
+  dataBookmarkNav,
+  dataBookMarkPage,
+  dataBookmarksLayout,
+  moodBoard,
+} from "../styles/data.css";
 
 interface FileContent {
   content: string;
@@ -43,7 +49,7 @@ function cleanFolderName(folder: string): string {
 ---
 
 <Layout {...props}>
-  <nav data-bookmark-nav>
+  <nav class:list={dataBookmarkNav}>
     <ul>
       {
         Object.keys(groupedBookmarks).map((folder) => {
@@ -57,8 +63,8 @@ function cleanFolderName(folder: string): string {
       }
     </ul>
   </nav>
-  <div data-bookmark-page>
-    <main data-bookmarks-layout>
+  <div class:list={dataBookMarkPage}>
+    <main class:list={dataBookmarksLayout}>
       <div>
         <h2>Bookmarks</h2>
         <small>
@@ -75,7 +81,7 @@ function cleanFolderName(folder: string): string {
             return (
               <>
                 <h3 id={cleanedFolder}>{cleanedFolder}</h3>
-                <div data-mood-board>
+                <div class:list={moodBoard}>
                   <ImageCard items={items} client:load />
                 </div>
               </>

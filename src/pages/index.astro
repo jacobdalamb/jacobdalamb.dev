@@ -2,6 +2,8 @@
 import Layout from "../layouts/BaseLayout.astro";
 import Link from "../components/Link.astro";
 import Card from "../components/Card.svelte";
+import { dataTable } from "../styles/data.css";
+
 const props = {
   title: "",
   description: "",
@@ -49,7 +51,7 @@ const projects = [
     </span>
     <section>
       <h2>Projects</h2>
-      <div data-table>
+      <div class:list={dataTable}>
         <Card items={projects} />
       </div>
     </section>

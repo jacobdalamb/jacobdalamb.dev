@@ -1,12 +1,12 @@
 import { globalStyle, style } from '@vanilla-extract/css';
 
-export const dataTable = globalStyle('[data-table]', {
+export const dataTable = style({
 	display: 'grid',
 	gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
 	gap: 'var(--size-3)',
 });
 
-export const dataCard = globalStyle('[data-card]', {
+export const dataCard = style({
 	backgroundColor: 'var(--surface-1)',
 	boxShadow: 'var(--shadow-1)',
 	color: 'var(--text-1)',
@@ -14,7 +14,17 @@ export const dataCard = globalStyle('[data-card]', {
 	padding: 'var(--size-5)',
 });
 
-export const dataCardDivs = globalStyle('[data-card] div :is([data-description])', {
+export const dataCardDescription = style({
+	color: 'var(--text-1)',
+});
+
+export const dataCardContent = style({
+	display: 'flex',
+	flexDirection: 'column',
+	gap: 'var(--size-3)',
+});
+
+globalStyle(`${dataCardContent} p`, {
 	textOverflow: 'ellipsis',
 	overflow: 'hidden',
 	display: '-webkit-box',
@@ -22,17 +32,7 @@ export const dataCardDivs = globalStyle('[data-card] div :is([data-description])
 	WebkitBoxOrient: 'vertical',
 });
 
-export const dataCardDescription = globalStyle('[data-card-description]', {
-	color: 'var(--text-1)',
-});
-
-export const dataCardContent = globalStyle('[data-card-content]', {
-	display: 'flex',
-	flexDirection: 'column',
-	gap: 'var(--size-3)',
-});
-
-export const dataBadge = globalStyle('[data-badge]', {
+export const dataBadge = style({
 	display: 'inline-flex',
 	width: 'fit-content',
 	border: '1px solid var(--text-2)',
@@ -42,7 +42,7 @@ export const dataBadge = globalStyle('[data-badge]', {
 	fontWeight: 'var(--font-weight-7)',
 });
 
-export const dataBadgeLink = globalStyle('[data-badge-link]', {
+export const dataBadgeLink = style({
 	position: 'absolute',
 	left: 'var(--size-1)',
 	bottom: 'var(--size-1)',
@@ -50,7 +50,7 @@ export const dataBadgeLink = globalStyle('[data-badge-link]', {
 	maxWidth: 'calc(var(--size-content-1) - 1ch)',
 });
 
-export const dataBadgeLinkSpan = globalStyle('[data-badge-link] span', {
+globalStyle(`${dataBadgeLink} span`, {
 	color: 'var(--text-2)',
 	fontSize: 'var(--font-size-0)',
 	fontWeight: 'var(--font-weight-7)',
@@ -59,13 +59,13 @@ export const dataBadgeLinkSpan = globalStyle('[data-badge-link] span', {
 	whiteSpace: 'nowrap',
 });
 
-export const dataMobile = globalStyle('[data-mobile]', {
+export const dataMobile = style({
 	display: 'grid',
 	gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
 	gap: 'var(--size-fluid-2)',
 });
 
-export const dataImageLink = globalStyle('[data-image-link]', {
+export const dataImageLink = style({
 	marginBlock: '0',
 	marginInline: '0',
 	paddingBlock: '0',
@@ -73,14 +73,20 @@ export const dataImageLink = globalStyle('[data-image-link]', {
 	position: 'relative',
 });
 
-export const moodBoard = globalStyle('[data-mood-board]', {
+export const dataLogo = style({
+	width: 'var(--size-7)',
+	height: 'fit-content',
+	fill: 'var(--text-1)',
+});
+
+export const moodBoard = style({
 	display: 'grid',
 	gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
 	gap: 'var(--size-3)',
 	borderRadius: 'var(--radius-3)',
 });
 
-export const dataImageCover = globalStyle('[data-image-cover]', {
+export const dataImageCover = style({
 	width: '100%',
 	height: '100%',
 	borderRadius: 'var(--radius-3)',
@@ -88,7 +94,7 @@ export const dataImageCover = globalStyle('[data-image-cover]', {
 	objectPosition: 'center',
 });
 
-export const dataSidebar = globalStyle('[data-sidebar]', {
+export const dataSidebar = style({
 	position: 'sticky',
 	top: '0',
 	height: '100vh',
@@ -100,7 +106,7 @@ export const dataSidebar = globalStyle('[data-sidebar]', {
 	},
 });
 
-export const dataBookMarkPage = globalStyle('[data-bookmark-page]', {
+export const dataBookMarkPage = style({
 	display: 'flex',
 	flexDirection: 'column',
 	'@media': {
@@ -110,16 +116,16 @@ export const dataBookMarkPage = globalStyle('[data-bookmark-page]', {
 	},
 });
 
-export const dataBookmarksLayout = globalStyle('[data-bookmarks-layout]', {
+export const dataBookmarksLayout = style({
 	margin: 0,
 	maxWidth: '100%',
 });
 
-export const dataCardFooter = globalStyle('[data-card-footer]', {
+export const dataCardFooter = style({
 	marginTop: 'auto',
 });
 
-export const dataBookmarkNav = globalStyle('[data-bookmark-nav]', {
+export const dataBookmarkNav = style({
 	position: 'fixed',
 	bottom: 0,
 	width: '100%',
@@ -127,7 +133,7 @@ export const dataBookmarkNav = globalStyle('[data-bookmark-nav]', {
 	backgroundColor: 'var(--surface-1)',
 });
 
-export const dataBookmarkNavList = globalStyle('[data-bookmark-nav] ul', {
+globalStyle(`${dataBookmarkNav} ul`, {
 	display: 'flex',
 	flexWrap: 'nowrap',
 	listStyle: 'none',
@@ -136,6 +142,6 @@ export const dataBookmarkNavList = globalStyle('[data-bookmark-nav] ul', {
 	padding: 'var(--size-5) var(--size-3)',
 });
 
-export const dataBookmarkNavListItems = globalStyle('[data-bookmark-nav] ul li', {
+globalStyle(`${dataBookmarkNav} ul li`, {
 	whiteSpace: 'nowrap',
 });
