@@ -1,4 +1,4 @@
-import { globalFontFace, globalStyle, style } from '@vanilla-extract/css';
+import { globalStyle } from '@vanilla-extract/css';
 
 // const geistSans = 'GlobalGeistSans';
 

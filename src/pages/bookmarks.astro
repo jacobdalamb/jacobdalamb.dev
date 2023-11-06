@@ -82,7 +82,7 @@ function cleanFolderName(folder: string): string {
               <>
                 <h3 id={cleanedFolder}>{cleanedFolder}</h3>
                 <div class:list={moodBoard}>
-                  <ImageCard items={items} client:load />
+                  <ImageCard items={items as any[]} client:load />
                 </div>
               </>
             );
