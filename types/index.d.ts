@@ -4,6 +4,7 @@ interface PageMeta {
 	image?: string;
 }
 
-interface GistData {
-	updated_at: Date;
+interface Bookmark {
+	title: string;
+	url: string;
 }

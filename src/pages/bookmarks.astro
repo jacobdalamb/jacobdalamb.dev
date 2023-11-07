@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/BaseLayout.astro";
-import ImageCard from "../components/ImageCard.svelte";
 import Link from "../components/Link.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import { getGistData } from "@/utils/getGist";
@@ -8,12 +7,13 @@ import {
   dataBookmarkNav,
   dataBookMarkPage,
   dataBookmarksLayout,
-  moodBoard,
 } from "../styles/data.css";
 
-interface FileContent {
-  content: string;
-}
+const props = {
+  title: "",
+  description: "",
+  image: "home",
+};
 
 const gistData = await getGistData();
 let bookmarks;
@@ -32,12 +32,6 @@ if (
   console.error("No bookmarks or bookmarks.json content found");
 }
 
-const props = {
-  title: "",
-  description: "",
-  image: "home",
-};
-
 function groupByFolder(bookmarks: Array<any>) {
   return bookmarks.reduce((acc, bookmark) => {
     const folder = bookmark.folder || "Unsorted";
@@ -47,11 +41,11 @@ function groupByFolder(bookmarks: Array<any>) {
   }, {});
 }
 
-const groupedBookmarks = groupByFolder(bookmarks);
-
 function cleanFolderName(folder: string): string {
   return folder.replace(/.*\//, "").trim();
 }
+
+const groupedBookmarks = groupByFolder(bookmarks);
 ---
 
 <Layout {...props}>
@@ -85,9 +79,14 @@ function cleanFolderName(folder: string): string {
             return (
               <>
                 <h3 id={cleanedFolder}>{cleanedFolder}</h3>
-                <div class:list={moodBoard}>
-                  <ImageCard items={items as any[]} client:load />
-                </div>
+
+                <ul>
+                  {(items as Bookmark[]).map((item) => (
+                    <li>
+                      <Link href={item.url}>{item.title}</Link>
+                    </li>
+                  ))}
+                </ul>
               </>
             );
           })
