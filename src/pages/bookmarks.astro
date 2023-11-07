@@ -2,7 +2,7 @@
 import Layout from "../layouts/BaseLayout.astro";
 import ImageCard from "../components/ImageCard.svelte";
 import Link from "../components/Link.astro";
-import { formatDate } from "../utils/date";
+import FormattedDate from "../components/FormattedDate.astro";
 import { getGistData } from "@/utils/getGist";
 import {
   dataBookmarkNav,
@@ -15,15 +15,21 @@ interface FileContent {
   content: string;
 }
 
-const gistData = getGistData();
-const gistUpdatedAt = gistData.updated_at;
+const gistData = await getGistData();
 let bookmarks;
-if (gistData && gistData.files && gistData.files["bookmarks.json"]) {
-  bookmarks = JSON.parse(
-    (gistData.files["bookmarks.json"] as unknown as FileContent).content,
-  );
+let gistUpdatedAt: Date | undefined;
+
+if (
+  gistData?.files &&
+  gistData.files["bookmarks.json"] &&
+  typeof gistData.files["bookmarks.json"].content === "string"
+) {
+  bookmarks = JSON.parse(gistData.files["bookmarks.json"].content);
+  if (gistData.updated_at) {
+    gistUpdatedAt = new Date(gistData.updated_at);
+  }
 } else {
-  console.error("No bookmarks found");
+  console.error("No bookmarks or bookmarks.json content found");
 }
 
 const props = {
@@ -69,9 +75,7 @@ function cleanFolderName(folder: string): string {
         <h2>Bookmarks</h2>
         <small>
           Last updated on
-          <time datetime={gistUpdatedAt}
-            >{gistUpdatedAt ? formatDate(gistUpdatedAt) : ""}</time
-          >
+          {gistUpdatedAt && <FormattedDate date={gistUpdatedAt} />}
         </small>
       </div>
       <div>

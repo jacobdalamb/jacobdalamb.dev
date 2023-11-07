@@ -8,22 +8,26 @@ const match = bookmarkGistSrc.match(gistRegex);
 const gist_id = match ? match[1] : undefined;
 
 type listGistsResponse = Endpoints["GET /gists/{gist_id}"]["response"];
-let gistData: listGistsResponse["data"];
+type GistDataType = listGistsResponse["data"];
 
 const octokit = new Octokit({
 	auth: gistToken,
 });
 
-if (gist_id) {
-	const response = await octokit.request("GET /gists/{gist_id}", {
-		gist_id,
-		headers: {
-			"X-GitHub-Api-Version": "2022-11-28",
-		},
-	});
-	gistData = response.data;
-}
-
-export function getGistData() {
-	return gistData;
+export async function getGistData() {
+	try {
+		if (gist_id) {
+			const response = await octokit.request("GET /gists/{gist_id}", {
+				gist_id,
+				headers: {
+					"X-GitHub-Api-Version": "2022-11-28",
+				},
+			});
+			return response.data;
+		}
+		throw new Error("Gist ID is undefined");
+	} catch (error) {
+		console.error("Failed to get Gist data:", error);
+		return null;
+	}
 }

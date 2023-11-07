@@ -3,3 +3,7 @@ interface PageMeta {
 	description: string;
 	image?: string;
 }
+
+interface GistData {
+	updated_at: Date;
+}
