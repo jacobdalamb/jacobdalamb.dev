@@ -35,7 +35,7 @@ pageData.sort((a, b) => {
 
 const { title, description, image } = Astro.props as PageMeta;
 const completeTitle = `${title}${title ? " - " : ""}${authorName}`;
-const socialImageURL = new URL(`/assets/og_${image}.png`, Astro.url);
+const socialImageURL = new URL(`/og_${image}.png`, Astro.url);
 ---
 
 <!doctype html>

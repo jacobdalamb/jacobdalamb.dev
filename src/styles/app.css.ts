@@ -3,7 +3,7 @@ import { globalFontFace, globalStyle } from "@vanilla-extract/css";
 const geistSans = "GlobalGeistSans";
 
 globalFontFace(geistSans, {
-	src: 'local("GeistSans"), url("../../assets/fonts/GeistVariableVF.woff2") format("woff2")',
+	src: 'local("GeistSans"), url("../../GeistVariableVF.woff2") format("woff2")',
 	fontDisplay: "swap",
 	fontWeight: "100 900",
 	fontStyle: "normal",
