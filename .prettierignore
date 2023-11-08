@@ -1,10 +1,37 @@
-**/dist
-**/node_modules
-**/.vercel
+# build output
+dist
 
+# generated types
+.astro
+.vercel
+
+# dependencies
+node_modules
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# files
 pnpm-lock.yaml
-*.js
-*.ts
-*.mjs
-*.cjs
-*.json
+bun.lockb
+**/*.js
+**/*.ts
+**/*.mjs
+**/*.cjs
+# Ignore all JSON files
+**/*.json
+
+# Except for these specific ones
+!package.json
+!tsconfig.json
+!jsconfig.json

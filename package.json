@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "private": true,
-   "description": "My personal website.",
+  "description": "My personal website.",
   "license": "MIT",
   "keywords": [
     "personal-website"
@@ -15,9 +15,9 @@
     "url": "https://github.com/jacobthesheep/jtlamb.dev.git"
   },
   "engines": {
-  "node": "18.x"
-},
-"pkgx": "node@18.18.0",
+    "node": "18.x"
+  },
+  "pkgx": "node@18.18.0",
   "scripts": {
     "astro": "astro",
     "dev": "astro dev",
