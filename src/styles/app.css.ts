@@ -1,9 +1,17 @@
 import { globalFontFace, globalStyle } from "@vanilla-extract/css";
 
 const geistSans = "GlobalGeistSans";
+const geistMono = "GlobalGeistMono";
 
 globalFontFace(geistSans, {
 	src: 'local("GeistSans"), url("../../GeistVariableVF.woff2") format("woff2")',
+	fontDisplay: "swap",
+	fontWeight: "100 900",
+	fontStyle: "normal",
+});
+
+globalFontFace(geistMono, {
+	src: 'local("GeistMono"), url("../../GeistMonoVariableVF.woff2") format("woff2")',
 	fontDisplay: "swap",
 	fontWeight: "100 900",
 	fontStyle: "normal",
@@ -14,7 +22,6 @@ globalStyle("body", {
 	flexDirection: "column",
 	gap: "var(--size-10)",
 	backgroundColor: "var(--surface-2)",
-	fontFamily: geistSans,
 });
 
 globalStyle(":is(h1, h2, h3) ~ *, :is(*) ~ h1, h2, h3", {
