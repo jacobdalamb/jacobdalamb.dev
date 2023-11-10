@@ -1,5 +1,5 @@
 {
-  "name": "jtlamb.dev",
+  "name": "jacobdalamb.dev",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -8,11 +8,11 @@
   "keywords": [
     "personal-website"
   ],
-  "author": "Jacob Lamb <jacobtlamb@hey.com> (https://jtlamb-dev.vercel.app/)",
-  "homepage": "https://github.com/jacobthesheep/jtlamb.dev#readme",
+  "author": "Jacob Lamb <jacobtlamb@hey.com> (https://www.jacobdalamb.dev/)",
+  "homepage": "https://github.com/jacobthesheep/jacobdalamb.dev#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jacobthesheep/jtlamb.dev.git"
+    "url": "https://github.com/jacobthesheep/jacobdalamb.dev.git"
   },
   "engines": {
     "node": "18.x"
