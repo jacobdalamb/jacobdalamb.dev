@@ -24,7 +24,7 @@ globalStyle("body", {
 	backgroundColor: "var(--surface-2)",
 });
 
-globalStyle(":is(h1, h2, h3) ~ *, :is(*) ~ h1, h2, h3", {
+globalStyle(":is(h1, h2, h3) ~ *, :is(*) ~ :is(h1, h2, h3)", {
 	marginBlockStart: "var(--size-5)",
 });
 
