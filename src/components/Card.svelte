@@ -7,14 +7,18 @@
   <div class={dataCard}>
     <div>
       <p>
-        <a href={item.url} target="_blank" rel="noopener noreferrer"
-          >{item.title}</a
+        <a
+          href={item.url || item.site}
+          target="_blank"
+          rel="noopener noreferrer">{item.title}</a
         >
       </p>
     </div>
 
-    <div class={dataCardContent}>
-      <p>{item.description}</p>
-    </div>
+    {#if item.description}
+      <div class={dataCardContent}>
+        <p>{item.description}</p>
+      </div>
+    {/if}
   </div>
 {/each}

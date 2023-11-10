@@ -3,6 +3,8 @@ import Layout from "../layouts/BaseLayout.astro";
 import Link from "../components/Link.astro";
 import Card from "../components/Card.svelte";
 import { dataTable } from "../styles/data.css";
+import { authorUrl, repoURL } from "../utils/meta";
+import humanizeUrl from "humanize-url";
 
 const props = {
   title: "",
@@ -12,22 +14,18 @@ const props = {
 const age = new Date().getFullYear() - 2002;
 const projects = [
   {
-    title: "jtlamb-dev.vercel.app",
-    description: "Personal website built with Astro",
-    image: "",
-    url: "https://jtlamb-dev.vercel.app/",
+    title: `${humanizeUrl(authorUrl)}`,
+    site: `${authorUrl}`,
+    repo: `${repoURL}`,
   },
   {
-    title: "1BibleStudy (wip)",
+    title: `${humanizeUrl("https://1biblestudy.jacobdalamb.dev/")}`,
     description: "All-in-one Bible study tool",
-    image: "",
-    url: "https://torahcycle-info.vercel.app/",
+    site: "https://1biblestudy.jacobdalamb.dev/",
   },
   {
     title: "1Bookmark (soon)",
     description: "All-in-one bookmark manager",
-    image: "",
-    url: "",
   },
 ];
 ---
