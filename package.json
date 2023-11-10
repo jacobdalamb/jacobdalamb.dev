@@ -37,13 +37,13 @@
     "@astrojs/vercel": "^5.2.0",
     "@octokit/types": "^12.2.0",
     "@vanilla-extract/css": "^1.14.0",
-    "astro": "^3.5.0",
+    "astro": "^3.5.2",
     "dayjs": "^1.11.10",
     "geist": "^1.1.0",
     "humanize-url": "^3.0.0",
     "octokit": "^3.1.1",
     "open-props": "^1.6.10",
-    "svelte": "^4.2.2",
+    "svelte": "^4.2.3",
     "typescript": "^5.2.2",
     "zod": "^3.22.4"
   },
@@ -52,6 +52,6 @@
     "@vanilla-extract/vite-plugin": "^3.9.0",
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.1",
-    "prettier-plugin-svelte": "^3.0.3"
+    "prettier-plugin-svelte": "^3.1.0"
   }
 }
