@@ -5,7 +5,7 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://portfolio-jacobthesheep.vercel.app/",
+	site: "https://www.jacobdalamb.dev/",
 	output: "server",
 	adapter: vercel({
 		webAnalytics: {
