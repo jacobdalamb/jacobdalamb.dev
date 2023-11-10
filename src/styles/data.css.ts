@@ -2,7 +2,7 @@ import { globalStyle, style } from "@vanilla-extract/css";
 
 export const dataTable = style({
 	display: "grid",
-	gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+	gridTemplateColumns: "auto",
 	gap: "var(--size-3)",
 });
 
