@@ -1,4 +1,4 @@
-# [jtlamb.dev](https://jtlamb-dev.vercel.app/)
+# [jtlamb.dev](https://www.jacobdalamb.dev)
 
 My personal website.
 
