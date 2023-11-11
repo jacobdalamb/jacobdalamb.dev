@@ -7,11 +7,15 @@
   <div class={dataCard}>
     <div>
       <p>
-        <a
-          href={item.url || item.site}
-          target="_blank"
-          rel="noopener noreferrer">{item.title}</a
-        >
+        {#if item.url === ""}
+          {item.title}
+        {:else}
+          <a
+            href={item.url || item.site}
+            target="_blank"
+            rel="noopener noreferrer">{item.title}</a
+          >
+        {/if}
       </p>
     </div>
 
