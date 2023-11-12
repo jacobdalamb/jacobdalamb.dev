@@ -37,7 +37,7 @@
     "@astrojs/vercel": "^5.2.0",
     "@octokit/types": "^12.2.0",
     "@vanilla-extract/css": "^1.14.0",
-    "astro": "^3.5.2",
+    "astro": "^3.5.3",
     "dayjs": "^1.11.10",
     "geist": "^1.1.0",
     "humanize-url": "^3.0.0",
