@@ -82,7 +82,7 @@ const groupedBookmarks = groupByFolder(bookmarks);
                 <ul>
                   {(items as Bookmark[]).map((item) => (
                     <li>
-                      <Link href={item.url}>{item.title}</Link>
+                      <Link href={item.url} set:text={item.title} />
                     </li>
                   ))}
                 </ul>

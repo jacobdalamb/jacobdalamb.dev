@@ -48,7 +48,7 @@ const socialImageURL = new URL(`/og_${image}.png`, Astro.url);
     />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.webp" />
+    <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.webp" /> -->
     <meta name="generator" content={Astro.generator} />
     <title>{completeTitle}</title>
     <meta name="author" content={authorName} />
@@ -103,7 +103,7 @@ const socialImageURL = new URL(`/og_${image}.png`, Astro.url);
             ></path>
           </g>
         </svg>
-        <span><Link href="/">{authorName}</Link></span>
+        <Link href="/">{authorName}</Link>
       </div>
       <nav>
         {
@@ -117,15 +117,15 @@ const socialImageURL = new URL(`/og_${image}.png`, Astro.url);
     </header>
     <slot />
     <footer>
-      <a href="https://astro.build"
-        ><img
+      <Link href="https://astro.build">
+        <img
           src="https://astro.badg.es/v2/built-with-astro/tiny.svg"
           alt="Built with Astro"
           width="120"
           height="20"
-        /></a
-      >
-      <a href={`${repoURL}`}>source code on GitHub</a>
+        />
+      </Link>
+      <Link href={`${repoURL}`} set:text="source code on GitHub" />
     </footer>
   </body>
 </html>
