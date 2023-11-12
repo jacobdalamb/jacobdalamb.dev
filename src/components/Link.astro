@@ -1,16 +1,27 @@
 ---
 import type { HTMLAttributes } from "astro/types";
+
 type Props = HTMLAttributes<"a">;
+
 const { href: rawHref, style, ...attrs } = Astro.props as Props;
 const href = (rawHref instanceof URL ? rawHref.toString() : rawHref) ?? "";
+const site = Astro.site;
+
 function isExternalLink(url: string): boolean {
-  return /^https?:\/\//.test(url);
+  return URL.canParse(url);
 }
+
 function isInternalLink(url: string): boolean {
-  return /^\//.test(url);
+  if (site) {
+    return URL.canParse(url, site.toString());
+  } else {
+    return /^\//.test(url);
+  }
 }
+
 const isExternal = isExternalLink(href);
 const isInternal = isInternalLink(href);
+
 const relAttribute = isExternal
   ? { rel: "external" }
   : isInternal
