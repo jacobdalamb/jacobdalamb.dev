@@ -6,29 +6,43 @@ type Props = HTMLAttributes<"a">;
 const { href: rawHref, style, ...attrs } = Astro.props as Props;
 const href = (rawHref instanceof URL ? rawHref.toString() : rawHref) ?? "";
 const site = Astro.site;
+const { pathname } = Astro.url;
+
+function isActiveLink(url: string): boolean {
+  return url === pathname || url === "." || url === "./";
+}
 
 function isExternalLink(url: string): boolean {
   return URL.canParse(url);
 }
 
 function isInternalLink(url: string): boolean {
-  if (site) {
-    return URL.canParse(url, site.toString());
-  } else {
-    return /^\//.test(url);
-  }
+  return URL.canParse(url, site?.toString());
+}
+
+function isSpecialLink(url: string): boolean {
+  return (
+    url.startsWith("mailto:") ||
+    url.startsWith("tel:") ||
+    url.startsWith("sms:")
+  );
 }
 
 const isExternal = isExternalLink(href);
 const isInternal = isInternalLink(href);
-
-const relAttribute = isExternal
-  ? { rel: "external" }
-  : isInternal
-  ? { rel: "prefetch" }
-  : {};
+const isSpecial = isSpecialLink(href);
+const isActive = isActiveLink(href);
 ---
 
-<a href={href} {...relAttribute} {...attrs}>
+<a
+  href={href}
+  class:list={[{ active: isActive }]}
+  {...isExternal && !isSpecial
+    ? { rel: "external" }
+    : isInternal && !isSpecial && !isActive
+      ? { rel: "prefetch" }
+      : {}}
+  {...attrs}
+>
   <slot />
 </a>
