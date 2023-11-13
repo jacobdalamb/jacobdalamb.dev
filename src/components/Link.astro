@@ -24,7 +24,8 @@ function isSpecialLink(url: string): boolean {
   return (
     url.startsWith("mailto:") ||
     url.startsWith("tel:") ||
-    url.startsWith("sms:")
+    url.startsWith("sms:") ||
+    url.startsWith("#")
   );
 }
 
