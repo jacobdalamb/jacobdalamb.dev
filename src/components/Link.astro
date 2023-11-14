@@ -33,17 +33,18 @@ const isExternal = isExternalLink(href);
 const isInternal = isInternalLink(href);
 const isSpecial = isSpecialLink(href);
 const isActive = isActiveLink(href);
+
+let relAttribute: object = {};
+
+if (isExternal && !isSpecial) {
+  relAttribute = { rel: "external noopener noreferrer" };
+} else if (isInternal && !isSpecial && !isActive) {
+  relAttribute = { rel: "prefetch" };
+} else {
+  relAttribute = {};
+}
 ---
 
-<a
-  href={href}
-  class:list={[{ active: isActive }]}
-  {...isExternal && !isSpecial
-    ? { rel: "external" }
-    : isInternal && !isSpecial && !isActive
-      ? { rel: "prefetch" }
-      : {}}
-  {...attrs}
->
+<a href={href} class:list={[{ active: isActive }]} {...relAttribute} {...attrs}>
   <slot />
 </a>
