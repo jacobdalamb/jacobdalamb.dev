@@ -5,7 +5,7 @@
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"ignore": ["dist", "node_modules", ".vercel", ".yaml", ".astro"]
+		"ignore": [".yaml"]
 	},
 	"linter": {
 		"enabled": true,
