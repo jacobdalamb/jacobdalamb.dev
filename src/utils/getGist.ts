@@ -1,4 +1,3 @@
-// import type { Endpoints } from "@octokit/types";
 import { Octokit } from "octokit";
 const gistToken = import.meta.env.SECRET_GIST_TOKEN;
 const bookmarkGistSrc =
@@ -6,9 +5,6 @@ const bookmarkGistSrc =
 const gistRegex = /https:\/\/gist\.github\.com\/[^\/]+\/([a-f0-9]+)\.js/;
 const match = bookmarkGistSrc.match(gistRegex);
 const gist_id = match ? match[1] : undefined;
-
-// type listGistsResponse = Endpoints["GET /gists/{gist_id}"]["response"];
-// type GistDataType = listGistsResponse["data"];
 
 const octokit = new Octokit({
 	auth: gistToken,

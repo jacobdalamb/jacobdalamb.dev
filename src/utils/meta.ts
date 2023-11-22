@@ -1,18 +1,11 @@
+import { parse } from "somebody";
 import pkg from "../../package.json";
 const author = pkg.author;
+const parsedAuthor = parse(author);
 const repoURL = pkg.repository.url;
 
-let authorName = "";
-let authorUrl = "";
+const authorName = parsedAuthor.name;
+const authorUrl = parsedAuthor.url;
+const authorUrlString = authorUrl.toString();
 
-const regex = /^(.+)\s+<(.+)> \((.+)\)$/;
-const match = author.match(regex);
-
-if (match) {
-	authorName = match[1];
-	authorUrl = match[3];
-} else {
-	console.log("Author information could not be parsed.");
-}
-
-export { authorName, authorUrl, repoURL };
+export { authorName, authorUrl, repoURL, authorUrlString };

@@ -2,10 +2,11 @@ import svelte from "@astrojs/svelte";
 import vercel from "@astrojs/vercel/serverless";
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import { defineConfig } from "astro/config";
+import { authorUrlString } from "./src/utils/meta";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://www.jacobdalamb.dev/",
+	site: authorUrlString,
 	output: "server",
 	adapter: vercel({
 		webAnalytics: {
