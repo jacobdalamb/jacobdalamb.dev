@@ -29,30 +29,26 @@
     "lint:fix": "biome lint --apply .",
     "check-format": "prettier --check . && biome check .",
     "check-format:fix": "biome --apply .",
-    "precommit": "bun run check-format && bun run lint"
+    "precommit": "bun run check-format && bun run lint && knip"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",
     "@astrojs/svelte": "^4.0.4",
     "@astrojs/vercel": "^5.2.0",
-    "@octokit/types": "^12.3.0",
     "@vanilla-extract/css": "^1.14.0",
     "astro": "^3.5.7",
     "dayjs": "^1.11.10",
-    "dependency-cruiser": "^15.3.0",
-    "geist": "^1.1.0",
     "humanize-url": "^3.0.0",
     "octokit": "^3.1.2",
     "open-props": "^1.6.12",
     "somebody": "^3.0.0",
     "svelte": "^4.2.7",
-    "typescript": "^5.3.2",
-    "zod": "^3.22.4"
+    "typescript": "^5.3.2"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.3.3",
     "@vanilla-extract/vite-plugin": "^3.9.2",
-    "knip": "^2.41.5",
+    "knip": "^2.41.6",
     "prettier": "^3.1.0",
     "prettier-plugin-astro": "^0.12.2",
     "prettier-plugin-svelte": "^3.1.1"

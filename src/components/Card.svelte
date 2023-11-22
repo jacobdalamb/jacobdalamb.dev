@@ -1,6 +1,6 @@
 <script lang="ts">
   export let items: any[];
-  import { dataCard, dataCardContent } from "../styles/data.css";
+  import { dataCard, dataCardContent } from "../styles/data.css.ts";
 </script>
 
 {#each items as item}
