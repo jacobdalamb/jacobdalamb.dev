@@ -1,8 +1,7 @@
 ---
 import Layout from "../layouts/BaseLayout.astro";
 import Link from "../components/Link.astro";
-import Card from "../components/Card.svelte";
-import { dataTable } from "../styles/data.css";
+import { dataTable, dataCard, dataCardContent } from "../styles/data.css";
 import { authorUrl, repoURL } from "../utils/meta";
 import humanizeUrl from "humanize-url";
 
@@ -51,7 +50,22 @@ const projects = [
     <section>
       <h2>Projects</h2>
       <div class:list={dataTable}>
-        <Card items={projects} />
+        {
+          projects.map((item) => (
+            <div class:list={dataCard}>
+              <div>
+                <p>
+                  <Link href={item.site} set:text={item.title} />
+                </p>
+              </div>
+              {item.description && (
+                <div class:list={dataCardContent}>
+                  <p>{item.description}</p>
+                </div>
+              )}
+            </div>
+          ))
+        }
       </div>
     </section>
   </main>
