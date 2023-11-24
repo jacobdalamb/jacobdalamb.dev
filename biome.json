@@ -3,14 +3,28 @@
 	"organizeImports": {
 		"enabled": true
 	},
-	"files": {
-		"ignoreUnknown": true,
-		"ignore": [".yaml"]
-	},
 	"linter": {
 		"enabled": true,
 		"rules": {
 			"recommended": true
 		}
+	},
+	"files": {
+		"ignoreUnknown": true,
+		"ignore": [
+			"dist",
+			".astro",
+			".vercel",
+			"node_modules",
+			"npm-debug.log*",
+			"yarn-debug.log*",
+			"yarn-error.log*",
+			"pnpm-debug.log*",
+			".env",
+			".env.production",
+			".DS_Store",
+			"pnpm-lock.yaml",
+			"bun.lockb"
+		]
 	}
 }
