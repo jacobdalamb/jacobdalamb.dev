@@ -30,6 +30,8 @@
     "check-format": "prettier --check . && biome check .",
     "check-format:fix": "biome --apply .",
     "update-biome-version": "zsh updateBiomeVersion.zsh",
+    "update-biome-ignore": "zsh updateBiomeIgnore.zsh",
+    "update-biome": "bun run update-biome-version && bun run update-biome-ignore && bun run format",
     "precommit": "bun run check-format && bun run lint && knip"
   },
   "dependencies": {
