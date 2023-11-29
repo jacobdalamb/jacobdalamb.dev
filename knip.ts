@@ -6,6 +6,7 @@ const config: KnipConfig = {
 			"astro.config.{js,cjs,mjs,ts}",
 			"src/content/config.ts",
 			"src/pages/**/*.{astro,mdx,js,ts}",
+			"src/components/**/*.{astro,mdx,js,ts}",
 			"src/content/**/*.mdx",
 			"src/styles/**/*.css.ts",
 		],
