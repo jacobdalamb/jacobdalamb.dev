@@ -2,7 +2,7 @@
 import Layout from "../layouts/BaseLayout.astro";
 import Link from "../components/Link.astro";
 import { dataTable, dataCard, dataCardContent } from "../styles/data.css";
-import { authorUrl, repoURL } from "../utils/meta";
+import { authorUrl, repoURL, description } from "../utils/meta";
 import humanizeUrl from "humanize-url";
 
 const props = {
@@ -15,6 +15,7 @@ const age = new Date().getFullYear() - 2002;
 const projects = [
   {
     title: `${humanizeUrl(authorUrl)}`,
+    description: `${description}`,
     site: `${authorUrl}`,
     repo: `${repoURL}`,
   },
@@ -28,22 +29,14 @@ const projects = [
     description: "All-in-one bookmark manager",
   },
 ];
+
+const rawHTMLString = `I'm a ${age} y/o, self-taught developer. I'm currently studying Web Design and Development at <a href='https://www.palomar.edu/' rel='external'>Palomar College</a>. I like <a href='https://literal.club/jacobthelamb' rel='external'>reading</a> and playing games.`;
 ---
 
 <Layout {...props}>
   <main>
     <h1>Hey, I'm Jacob Lamb.</h1>
-    <p>
-      I'm {age} y/o and I'm a self-taught developer. I'm currently studying Web
-      Design and Development at <Link
-        set:text="Palomar College"
-        href="https://www.palomar.edu/"
-      />. I like <Link
-        set:text="reading"
-        href="https://literal.club/jacobthelamb"
-      />
-       and playing games.
-    </p>
+    <p set:html={rawHTMLString} />
     <span>
       <Link href="https://read.cv/jacobdalamb" set:text="view my resume" />
     </span>
@@ -55,7 +48,11 @@ const projects = [
             <div class:list={dataCard}>
               <div>
                 <p>
-                  <Link href={item.site} set:text={item.title} />
+                  {item.site ? (
+                    <Link href={item.site} set:text={item.title} />
+                  ) : (
+                    <span>{item.title}</span>
+                  )}
                 </p>
               </div>
               {item.description && (
