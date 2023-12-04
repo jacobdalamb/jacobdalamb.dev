@@ -64,6 +64,11 @@ globalStyle("header div", {
 });
 
 globalStyle("nav", {
-	display: "flex",
+	display: "none",
 	gap: "var(--size-3)",
+	"@media": {
+		"screen and (min-width: 360px)": {
+			display: "flex",
+		},
+	},
 });

@@ -145,3 +145,50 @@ globalStyle(`${dataBookmarkNav} ul`, {
 globalStyle(`${dataBookmarkNav} ul li`, {
 	whiteSpace: "nowrap",
 });
+
+export const menuNav = style({
+	width: "250px",
+	height: "100%",
+	border: "none",
+	padding: "0",
+	margin: "0",
+	left: "auto",
+});
+
+export const menuBtn = style({
+	position: "fixed",
+	top: "0",
+	right: "0",
+	backgroundColor: "var(--surface-1)",
+	border: "none",
+	filter: "drop-shadow(2px 2px 0 #ff6dee)",
+});
+
+globalStyle(`${menuBtn}`, {
+	display: "flex",
+	gap: "var(--size-3)",
+	"@media": {
+		"screen and (min-width: 360px)": {
+			display: "none",
+		},
+	},
+});
+
+export const closeBtn = style({
+	position: "absolute",
+	top: "1rem",
+	right: "1em",
+	backgroundColor: "var(--surface-1)",
+	border: "none",
+	filter: "grayscale(1) drop-shadow(2px 2px 0 #ff6dee)",
+});
+
+globalStyle(`${menuNav} ul`, {
+	display: "flex",
+	flexDirection: "column",
+	gap: "var(--size-3)",
+});
+
+globalStyle(`${menuNav} ul li`, {
+	listStyle: "none",
+});

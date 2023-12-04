@@ -35,7 +35,7 @@ const rawHTMLString = `I'm a ${age} y/o, self-taught developer. I'm currently st
 
 <Layout {...props}>
   <main>
-    <h1>Hey, I'm Jacob Lamb.</h1>
+    <h1 set:text="Hey, I'm Jacob Lamb." />
     <p set:html={rawHTMLString} />
     <span>
       <Link href="https://read.cv/jacobdalamb" set:text="view my resume" />

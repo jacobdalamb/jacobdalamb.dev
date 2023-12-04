@@ -1,7 +1,7 @@
 {
   "name": "jacobdalamb.dev",
   "type": "module",
-  "version": "0.0.1",
+  "version": "2023.12.04",
   "private": true,
   "description": "My personal website.",
   "license": "MIT",
@@ -46,7 +46,7 @@
   "devDependencies": {
     "@biomejs/biome": "^1.4.1",
     "@vanilla-extract/vite-plugin": "^3.9.2",
-    "knip": "^3.3.4",
+    "knip": "^3.4.0",
     "prettier": "^3.1.0",
     "prettier-plugin-astro": "^0.12.2"
   }
