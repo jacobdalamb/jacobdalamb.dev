@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const props = {
+  title: "Blog - twigs and thoughts",
+  publishedAt: new Date(),
+  description:
+    "Articles on tech, software development, design and case studies.",
+  keywords: ["blog", "posts"],
+};
+
+const posts = await getCollection("blog");
+---
+
+<BaseLayout frontmatter={props}>
+  <main>
+    <h1>Blog posts</h1>
+    {
+      posts.map((post) => (
+        <div>
+          <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+          <p>{post.data.description}</p>
+          <a href={`/blog/${post.slug}`}>Read more</a>
+        </div>
+      ))
+    }
+  </main>
+</BaseLayout>

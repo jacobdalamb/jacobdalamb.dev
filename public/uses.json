@@ -1,0 +1,92 @@
+{
+	"hardware": [
+		{
+			"name": "iPhone 13 Mini"
+		},
+		{
+			"name": "MacBook Air M2"
+		},
+		{
+			"name": "AirPods Pro (2nd Gen)"
+		},
+		{
+			"name": "Apple Watch SE"
+		}
+	],
+	"software": [
+		{
+			"name": "Arc",
+			"link": "https://arc.net",
+			"category": "browser"
+		},
+		{
+			"name": "Apple Notes",
+			"category": "notes"
+		},
+		{
+			"name": "Apple Reminders",
+			"category": "reminders"
+		},
+		{
+			"name": "Apple Calendar",
+			"category": "calendar"
+		},
+		{
+			"name": "HEY",
+			"link": "https://hey.com",
+			"category": "mail client"
+		},
+		{
+			"name": "Raindrop.io",
+			"link": "https://raindrop.io",
+			"category": "bookmark manager"
+		},
+		{
+			"name": "Raycast",
+			"link": "https://raycast.com",
+			"category": "launcher"
+		},
+		{
+			"name": "Velja",
+			"link": "https://sindresorhus.com/velja",
+			"category": "browser picker"
+		},
+		{
+			"name": "Polypane",
+			"link": "https://polypane.app/",
+			"category": "dev toolkit"
+		},
+		{
+			"name": "PixelSnap 2",
+			"link": "https://getpixelsnap.com/",
+			"category": "measuring tool"
+		},
+		{
+			"name": "Toolcat",
+			"link": "https://toolcat.app",
+			"category": "dev toolkit"
+		},
+		{
+			"name": "Fig.io",
+			"link": "https://fig.io",
+			"category": "dev toolkit"
+		},
+		{
+			"name": "Warp",
+			"link": "https://warp.dev",
+			"category": "terminal"
+		},
+		{
+			"name": "Zed",
+			"link": "https://zed.dev",
+			"category": "code editor"
+		}
+	],
+	"services": [
+		{
+			"name": "Arc",
+			"link": "https://arc.net",
+			"category": "browser"
+		}
+	]
+}

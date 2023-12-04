@@ -1,0 +1,56 @@
+---
+import Layout from "../layouts/BaseLayout.astro";
+import Link from "../components/Link.astro";
+import { dataTable, dataCard, dataCardContent } from "../styles/data.css";
+import dayjs from "dayjs";
+import uses from "../../public/uses.json";
+const categories = Object.keys(uses);
+
+const props = {
+  title: "",
+  description: "My personal website",
+};
+
+const rawHTMLString = `A collection of things that I use on almost daily basis. Some include referral links with nice perks.`;
+const lastUpdated = new Date("Decemeber 04, 2023");
+---
+
+<Layout {...props}>
+  <main>
+    <p>
+      Last updated: <time datetime={`${lastUpdated}`}
+        >{dayjs(lastUpdated).format("YYYY-MM-DD")}</time
+      >
+    </p>
+    <h1 set:text="Use" />
+    <p set:html={rawHTMLString} />
+    <section>
+      <div class:list={dataTable}>
+        {
+          categories.map((category) => (
+            <div>
+              <ul>
+                <li
+                  set:text={
+                    category.charAt(0).toUpperCase() + category.slice(1)
+                  }
+                />
+                <ul>
+                  {uses[category].map((item) => (
+                    <li>
+                      {item.link ? (
+                        <Link href={item.link} set:text={item.name} />
+                      ) : (
+                        item.name
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</Layout>
