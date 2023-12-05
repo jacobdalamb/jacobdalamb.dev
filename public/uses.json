@@ -62,6 +62,11 @@
 			"category": "measuring tool"
 		},
 		{
+			"name": "CleanShot X",
+			"link": "https://cleanshot.com/",
+			"category": "capture tool"
+		},
+		{
 			"name": "Toolcat",
 			"link": "https://toolcat.app",
 			"category": "dev toolkit"
@@ -80,13 +85,6 @@
 			"name": "Zed",
 			"link": "https://zed.dev",
 			"category": "code editor"
-		}
-	],
-	"services": [
-		{
-			"name": "Arc",
-			"link": "https://arc.net",
-			"category": "browser"
 		}
 	]
 }

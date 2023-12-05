@@ -36,9 +36,9 @@ const lastUpdated = new Date("Decemeber 04, 2023");
                   }
                 />
                 <ul>
-                  {uses[category].map((item) => (
+                  {uses[category as keyof typeof uses].map((item) => (
                     <li>
-                      {item.link ? (
+                      {"link" in item ? (
                         <Link href={item.link} set:text={item.name} />
                       ) : (
                         item.name
