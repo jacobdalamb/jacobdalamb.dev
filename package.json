@@ -1,7 +1,7 @@
 {
   "name": "jacobdalamb.dev",
   "type": "module",
-  "version": "2023.12.04",
+  "version": "2023.12.05",
   "private": true,
   "description": "My personal website.",
   "license": "MIT",
@@ -22,7 +22,7 @@
     "astro": "astro",
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && ./updateVersion.zsh",
     "preview": "astro preview",
     "format": "prettier -w . --plugin=prettier-plugin-astro && biome format --write .",
     "lint": "astro check && biome lint .",
@@ -33,9 +33,9 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",
-    "@astrojs/vercel": "^5.2.0",
+    "@astrojs/vercel": "^6.0.0",
     "@vanilla-extract/css": "^1.14.0",
-    "astro": "3.6.4",
+    "astro": "4.0.1",
     "dayjs": "^1.11.10",
     "humanize-url": "^3.0.0",
     "octokit": "^3.1.2",
@@ -46,7 +46,7 @@
   "devDependencies": {
     "@biomejs/biome": "^1.4.1",
     "@vanilla-extract/vite-plugin": "^3.9.2",
-    "knip": "^3.4.0",
+    "knip": "^3.5.1",
     "prettier": "^3.1.0",
     "prettier-plugin-astro": "^0.12.2"
   }
