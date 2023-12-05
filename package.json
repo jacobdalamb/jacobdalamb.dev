@@ -15,9 +15,9 @@
     "url": "https://github.com/jacobthesheep/jacobdalamb.dev.git"
   },
   "engines": {
-    "node": "18.14.x"
+    "node": "18.18.0"
   },
-  "pkgx": "node@18.14.0",
+  "pkgx": "node@18.18.0",
   "scripts": {
     "astro": "astro",
     "dev": "astro dev",
