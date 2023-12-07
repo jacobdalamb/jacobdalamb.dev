@@ -10,7 +10,10 @@
 			"name": "AirPods Pro (2nd Gen)"
 		},
 		{
-			"name": "Apple Watch SE"
+			"name": "Apple Watch SE (1st Gen)"
+		},
+		{
+			"name": "Apple TV 4K (2nd Gen)"
 		}
 	],
 	"software": [
@@ -85,6 +88,30 @@
 			"name": "Zed",
 			"link": "https://zed.dev",
 			"category": "code editor"
+		}
+	],
+	"services": [
+		{
+			"name": "Copilot",
+			"link": "https://copilot.github.com",
+			"category": "AI dev tool"
+		},
+		{
+			"name": "ChatGPT",
+			"link": "https://chat.openai.com/",
+			"category": "AI chatbot"
+		}
+	],
+	"other": [
+		{
+			"name": "MonoLisa",
+			"link": "https://monolisa.dev",
+			"category": "dev font"
+		},
+		{
+			"name": "Geist",
+			"link": "https://vercel.com/font",
+			"category": "web font"
 		}
 	]
 }
