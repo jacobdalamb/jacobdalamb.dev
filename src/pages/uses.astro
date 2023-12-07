@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Default.astro";
 import Link from "../components/Link.astro";
-import { dataTable } from "../styles/data.css";
 import dayjs from "dayjs";
 import uses from "../../public/files/uses.json";
 const categories = Object.keys(uses);
@@ -24,38 +23,36 @@ const lastUpdated = new Date("Decemeber 04, 2023");
     </p>
     <h1 set:text="Uses" />
     <p set:html={rawHTMLString} />
-    <section>
-      <div class:list={dataTable}>
+    <section id="uses">
+      <ul>
         {
           categories.map((category) => (
-            <div>
+            <>
+              <li>
+                <h3
+                  set:text={
+                    category.charAt(0).toUpperCase() + category.slice(1)
+                  }
+                />
+              </li>
               <ul>
-                <li>
-                  <h3
-                    set:text={
-                      category.charAt(0).toUpperCase() + category.slice(1)
-                    }
-                  />
-                </li>
-                <ul>
-                  {uses[category as keyof typeof uses].map((item) => (
-                    <li>
-                      {"link" in item ? (
-                        <Link href={item.link} set:text={item.name} />
-                      ) : (
-                        item.name
-                      )}{" "}
-                      {"category" in item ? (
-                        <Fragment set:text={`- ${item.category}`} />
-                      ) : null}
-                    </li>
-                  ))}
-                </ul>
+                {uses[category as keyof typeof uses].map((item) => (
+                  <li>
+                    {"link" in item ? (
+                      <Link href={item.link} set:text={item.name} />
+                    ) : (
+                      item.name
+                    )}{" "}
+                    {"category" in item ? (
+                      <Fragment set:text={`- ${item.category}`} />
+                    ) : null}
+                  </li>
+                ))}
               </ul>
-            </div>
+            </>
           ))
         }
-      </div>
+      </ul>
     </section>
   </main>
 </Layout>

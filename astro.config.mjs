@@ -1,5 +1,4 @@
 import vercel from "@astrojs/vercel/serverless";
-import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import { defineConfig } from "astro/config";
 import { authorUrlString } from "./src/utils/meta";
 
@@ -15,7 +14,4 @@ export default defineConfig({
 			enabled: true,
 		},
 	}),
-	vite: {
-		plugins: [vanillaExtractPlugin()],
-	},
 });

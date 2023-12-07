@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Default.astro";
 import Link from "../components/Link.astro";
-import { dataTable, dataCard, dataCardContent } from "../styles/data.css";
 import { authorUrl, repoURL, description } from "../utils/meta";
 import humanizeUrl from "humanize-url";
 
@@ -30,22 +29,19 @@ const projects = [
   },
 ];
 
-const rawHTMLString = `I'm a ${age} y/o, self-taught developer. I'm currently studying Web Design and Development at <a href='https://www.palomar.edu/' rel='external'>Palomar College</a>. I like <a href='https://literal.club/jacobthelamb' rel='external'>reading</a> and playing games.`;
+const shortIntro = `I'm a ${age} y/o, self-taught developer who enjoys <a href='https://literal.club/jacobthelamb' rel='external'>reading</a> and playing games.`;
 ---
 
 <Layout {...props}>
   <main>
     <h1 set:text="Hey, I'm Jacob Lamb." />
-    <p set:html={rawHTMLString} />
-    <span>
-      <Link href="https://read.cv/jacobdalamb" set:text="view my resume" />
-    </span>
-    <section>
+    <p set:html={shortIntro} />
+    <section id="projects">
       <h2>Projects</h2>
-      <div class:list={dataTable}>
+      <div>
         {
           projects.map((item) => (
-            <div class:list={dataCard}>
+            <div>
               <div>
                 <p>
                   {item.site ? (
@@ -56,7 +52,7 @@ const rawHTMLString = `I'm a ${age} y/o, self-taught developer. I'm currently st
                 </p>
               </div>
               {item.description && (
-                <div class:list={dataCardContent}>
+                <div>
                   <p>{item.description}</p>
                 </div>
               )}
