@@ -19,7 +19,6 @@
   },
   "pkgx": "node@18.18.0",
   "scripts": {
-    "prepare": "panda codegen",
     "astro": "astro",
     "dev": "astro dev",
     "start": "astro dev",
