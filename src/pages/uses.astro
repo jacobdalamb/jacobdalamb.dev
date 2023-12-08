@@ -63,17 +63,7 @@ if (
                       <Link href={item.link} set:text={item.name} />
                     ) : (
                       item.name
-                    )}{" "}
-                    {"category" in item ? (
-                      <Fragment set:text={`- ${item.category}`} />
-                    ) : null}
-                    {item.more?.map((more) => (
-                      <ul>
-                        <li>
-                          <Link href={more.extensions} set:text="extensions" />
-                        </li>
-                      </ul>
-                    ))}
+                    )}
                   </li>
                 ))}
               </ul>
