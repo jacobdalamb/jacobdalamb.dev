@@ -3,6 +3,7 @@ import Layout from "../layouts/Default.astro";
 import Link from "../components/Link.astro";
 import dayjs from "dayjs";
 import uses from "../../public/files/uses.json";
+import { getGistData } from "@/utils/getGist";
 const categories = Object.keys(uses);
 
 const props = {
@@ -12,6 +13,26 @@ const props = {
 
 const rawHTMLString = `Things that I use on an almost daily basis.`;
 const lastUpdated = new Date("Decemeber 04, 2023");
+
+interface UseItem {
+  name: string;
+  link?: string;
+  category?: string;
+  more?: Array<{ [key: string]: string }>;
+}
+
+const gistData = await getGistData();
+let installedApps: any[] = [];
+const fileName = "installed-apps.txt";
+if (
+  gistData?.files &&
+  gistData.files[fileName] &&
+  typeof gistData.files[fileName].content === "string"
+) {
+  installedApps = gistData.files[fileName].content.split("\n");
+} else {
+  console.error(`Could not find ${fileName} in gist data`);
+}
 ---
 
 <Layout {...props}>
@@ -36,7 +57,7 @@ const lastUpdated = new Date("Decemeber 04, 2023");
                 />
               </li>
               <ul>
-                {uses[category as keyof typeof uses].map((item) => (
+                {uses[category as keyof typeof uses].map((item: UseItem) => (
                   <li>
                     {"link" in item ? (
                       <Link href={item.link} set:text={item.name} />
@@ -46,12 +67,25 @@ const lastUpdated = new Date("Decemeber 04, 2023");
                     {"category" in item ? (
                       <Fragment set:text={`- ${item.category}`} />
                     ) : null}
+                    {item.more?.map((more) => (
+                      <ul>
+                        <li>
+                          <Link href={more.extensions} set:text="extensions" />
+                        </li>
+                      </ul>
+                    ))}
                   </li>
                 ))}
               </ul>
             </>
           ))
         }
+        <li>
+          <h3 set:text="Apps" />
+          <ul>
+            {installedApps.map((app) => <li>{app}</li>)}
+          </ul>
+        </li>
       </ul>
     </section>
   </main>

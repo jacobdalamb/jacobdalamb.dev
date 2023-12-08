@@ -61,11 +61,11 @@ header {
   align-items: center;
   padding: var(--size-5);
 
-  div {
+  & div {
     display: flex;
     align-items: center;
 
-    svg {
+    & svg {
       width: var(--size-7);
       height: fit-content;
       fill: var(--text-1);
@@ -87,7 +87,7 @@ nav {
   grid-template-columns: auto;
   gap: var(--size-3);
 
-  > div {
+  & > div {
     background-color: var(--surface-2);
     box-shadow: var(--shadow-1);
     color: var(--text-1);
@@ -97,7 +97,7 @@ nav {
 }
 
 #uses {
-  > ul {
+  & > ul {
     display: flex;
     flex-direction: column;
     gap: var(--size-3);
