@@ -126,5 +126,10 @@ for (const page of pages) {
       </Link>
       <Link href={`${repoURL}`} set:text="source code on GitHub" />
     </footer>
+    <script>
+      import { injectSpeedInsights } from "@vercel/speed-insights";
+
+      injectSpeedInsights();
+    </script>
   </body>
 </html>
