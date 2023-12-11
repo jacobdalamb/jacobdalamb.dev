@@ -32,10 +32,10 @@
     "precommit": "bun run check-format && bun run lint && knip && ./updateVersion.zsh"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.1",
-    "@astrojs/vercel": "^6.0.1",
+    "@astrojs/check": "^0.3.2",
+    "@astrojs/vercel": "^6.0.2",
     "@vercel/speed-insights": "^1.0.1",
-    "astro": "4.0.3",
+    "astro": "4.0.4",
     "dayjs": "^1.11.10",
     "humanize-url": "^3.0.0",
     "octokit": "^3.1.2",
@@ -46,7 +46,6 @@
   "devDependencies": {
     "@biomejs/biome": "^1.4.1",
     "knip": "^3.7.0",
-    "lightningcss": "^1.22.1",
     "prettier": "^3.1.1",
     "prettier-plugin-astro": "^0.12.2"
   }
