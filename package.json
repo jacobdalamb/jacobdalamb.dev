@@ -9,10 +9,10 @@
     "personal-website"
   ],
   "author": "Jacob Lamb <jacobtlamb@hey.com> (https://www.jacobdalamb.dev/)",
-  "homepage": "https://github.com/jacobthesheep/jacobdalamb.dev#readme",
+  "homepage": "https://github.com/jacobdalamb/jacobdalamb.dev#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jacobthesheep/jacobdalamb.dev.git"
+    "url": "https://github.com/jacobdalamb/jacobdalamb.dev.git"
   },
   "engines": {
     "node": "18.18.x"
