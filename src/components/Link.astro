@@ -20,25 +20,15 @@ function isInternalLink(url: string): boolean {
   return URL.canParse(url, site?.toString());
 }
 
-function isSpecialLink(url: string): boolean {
-  return (
-    url.startsWith("mailto:") ||
-    url.startsWith("tel:") ||
-    url.startsWith("sms:") ||
-    url.startsWith("#")
-  );
-}
-
 const isExternal = isExternalLink(href);
 const isInternal = isInternalLink(href);
-const isSpecial = isSpecialLink(href);
 const isActive = isActiveLink(href);
 
 let relAttribute: object = {};
 
-if (isExternal && !isSpecial) {
+if (isExternal) {
   relAttribute = { rel: "external noopener noreferrer" };
-} else if (isInternal && !isSpecial && !isActive) {
+} else if (isInternal && !isActive) {
   relAttribute = { rel: "prefetch" };
 } else {
   relAttribute = {};
