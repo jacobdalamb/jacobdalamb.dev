@@ -15,9 +15,10 @@
     "url": "https://github.com/jacobdalamb/jacobdalamb.dev.git"
   },
   "engines": {
-    "node": "18.18.x"
+    "node": "18.19.x",
+    "pnpm": ">=8"
   },
-  "pkgx": "node@18.18.0",
+  "pkgx": "node@18.19.0 bun pnpm",
   "scripts": {
     "astro": "astro",
     "dev": "astro dev",
@@ -32,10 +33,10 @@
     "precommit": "bun run check-format && bun run lint && knip && ./updateVersion.zsh"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.2",
-    "@astrojs/vercel": "^6.0.2",
-    "@vercel/speed-insights": "^1.0.1",
-    "astro": "4.0.4",
+    "@astrojs/check": "0.3.3",
+    "@astrojs/vercel": "6.1.0",
+    "@vercel/speed-insights": "^1.0.2",
+    "astro": "4.0.5",
     "dayjs": "^1.11.10",
     "humanize-url": "^3.0.0",
     "octokit": "^3.1.2",
@@ -45,7 +46,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.4.1",
-    "knip": "^3.7.0",
+    "knip": "^3.8.1",
     "prettier": "^3.1.1",
     "prettier-plugin-astro": "^0.12.2"
   }
