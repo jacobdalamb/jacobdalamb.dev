@@ -12,7 +12,6 @@ const props = {
 };
 
 const rawHTMLString = `Things that I use on an almost daily basis.`;
-const lastUpdated = new Date("Decemeber 04, 2023");
 
 interface UseItem {
   name: string;
@@ -32,6 +31,14 @@ if (
   installedApps = gistData.files[fileName].content.split("\n");
 } else {
   console.error(`Could not find ${fileName} in gist data`);
+}
+
+let lastUpdated = "";
+
+if (gistData?.updated_at) {
+  lastUpdated = gistData.updated_at;
+} else {
+  console.error(`Could not find updated_at in gist data`);
 }
 ---
 
