@@ -39,7 +39,7 @@ for (const page of pages) {
     />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.webp" /> -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.webp" />
     <meta name="generator" content={Astro.generator} />
     <title>{completeTitle}</title>
     <meta name="author" content={authorName} />
@@ -63,6 +63,7 @@ for (const page of pages) {
         <Link href="/">
           <!--?xml version="1.0" standalone="no"?-->
           <svg
+            id="logo"
             version="1.0"
             xmlns="http://www.w3.org/2000/svg"
             width="180.000000pt"
@@ -125,7 +126,8 @@ for (const page of pages) {
           height="20"
         />
       </Link>
-      <Link href={`${repoURL}`} set:text="source code on GitHub" />
+      <span id="bull">&bull;</span>
+      <Link href={`${repoURL}`} set:text="source code" />
     </footer>
     <script>
       import { injectSpeedInsights } from "@vercel/speed-insights";
