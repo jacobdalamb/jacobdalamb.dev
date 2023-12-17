@@ -4,14 +4,13 @@ import Link from "../components/Link.astro";
 import dayjs from "dayjs";
 import uses from "../../public/files/uses.json";
 import { getGistData } from "@/utils/getGist";
+import { description } from "@/utils/meta";
 const categories = Object.keys(uses);
 
 const props = {
-  title: "",
-  description: "My personal website",
+  title: "Uses",
+  description: "Things that I use on an almost daily basis.",
 };
-
-const rawHTMLString = `Things that I use on an almost daily basis.`;
 
 interface UseItem {
   name: string;
@@ -50,7 +49,7 @@ if (gistData?.updated_at) {
       >
     </p>
     <h1 set:text="Uses" />
-    <p set:html={rawHTMLString} />
+    <p set:html={description} />
     <section id="uses">
       <ul>
         {
