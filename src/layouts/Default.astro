@@ -17,6 +17,9 @@ const pagesArray: PagesArray[] = [];
 
 for (const page of pages) {
   if (page.url) {
+    if (page.url.includes("/404")) {
+      continue;
+    }
     let pageTitle = page.url?.replace("/", "").replace("-", " ") || "";
     let pageURL = page.url;
     if (pageTitle) {
