@@ -5,9 +5,20 @@ import { ViewTransitions } from "astro:transitions";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 
-const { title, description, image } = Astro.props as PageMeta;
-const completeTitle = `${title}${title ? " - " : ""}${authorName}`;
-const socialImageURL = new URL(`/og_${image}.png`, Astro.url);
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: URL;
+}
+
+const { title, description } = Astro.props;
+
+let ogImage = Astro.props.ogImage;
+
+const completeTitle = `${title}${title ? " • " : ""}${authorName}`;
+if (!ogImage) {
+  ogImage = new URL("/v1/generate/og/default.png", Astro.url);
+}
 interface PagesArray {
   title: string;
   url: string;
@@ -50,11 +61,11 @@ for (const page of pages) {
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
-    <meta property="og:image" content={socialImageURL} />
+    <meta property="og:image" content={ogImage} />
     <meta name="twitter:title" content={completeTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content={socialImageURL} />
+    <meta name="twitter:image" content={ogImage} />
     <ViewTransitions />
   </head>
   <body>

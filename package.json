@@ -33,21 +33,25 @@
     "precommit": "bun run check-format && bun run lint && knip && ./updateVersion.zsh"
   },
   "dependencies": {
-    "@astrojs/check": "0.3.3",
-    "@astrojs/vercel": "6.1.0",
+    "@astrojs/check": "0.3.4",
+    "@astrojs/vercel": "6.1.1",
     "@vercel/speed-insights": "^1.0.2",
-    "astro": "4.0.6",
+    "astro": "4.0.8",
     "dayjs": "^1.11.10",
     "humanize-url": "^3.0.0",
     "octokit": "^3.1.2",
     "open-props": "^1.6.16",
+    "satori": "^0.10.11",
+    "satori-html": "^0.3.2",
     "somebody": "^3.0.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vercel": "latest"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.4.1",
-    "knip": "^3.8.1",
+    "@resvg/resvg-js": "^2.6.0",
+    "knip": "^3.9.0",
     "prettier": "^3.1.1",
-    "prettier-plugin-astro": "^0.12.2"
+    "prettier-plugin-astro": "^0.12.3"
   }
 }
