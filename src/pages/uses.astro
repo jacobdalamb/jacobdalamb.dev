@@ -1,11 +1,35 @@
 ---
 import Layout from "../layouts/Default.astro";
 import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
 import dayjs from "dayjs";
 import uses from "../../public/files/uses.json";
 import { getGistData } from "@/utils/getGist";
 import { description } from "@/utils/meta";
+const response = await fetch("https://svgl.app/api/svgs");
+const svgs = await response.json();
+const arcSvg = svgs.find((svg: svg) => svg.title === "Arc");
+
+if (arcSvg) {
+  console.log(arcSvg);
+} else {
+  console.log("Title 'arc' not found in svgs.");
+}
+
 const categories = Object.keys(uses);
+
+interface svg {
+  id: number;
+  title: string;
+  category: string;
+  route:
+    | string
+    | {
+        dark: string;
+        light: string;
+      };
+  url: string;
+}
 
 const props = {
   title: "Uses",
@@ -28,6 +52,7 @@ if (
   typeof gistData.files[fileName].content === "string"
 ) {
   installedApps = gistData.files[fileName].content.split("\n");
+  installedApps = installedApps.map((app) => app.slice(0, -4));
 } else {
   console.error(`Could not find ${fileName} in gist data`);
 }
@@ -61,12 +86,12 @@ if (gistData?.updated_at) {
                     category.charAt(0).toUpperCase() + category.slice(1)
                   }
                 />
+                <ul>
+                  {uses[category as keyof typeof uses].map((item: UseItem) => (
+                    <li set:text={item.name} />
+                  ))}
+                </ul>
               </li>
-              <ul>
-                {uses[category as keyof typeof uses].map((item: UseItem) => (
-                  <li set:text={item.name} />
-                ))}
-              </ul>
             </>
           ))
         }
@@ -74,15 +99,44 @@ if (gistData?.updated_at) {
           <h3 set:text="Apps" />
           <ul>
             {
-              installedApps.map((app) => (
-                <li>
-                  <Link
-                    set:text={app}
-                    target="_blank"
-                    href={`https://www.google.com/search?q=${app}`}
-                  />
-                </li>
-              ))
+              installedApps.map((app) => {
+                const svgUrl = `https://svgl.app/library/`;
+                const svgMatch = svgs.find((svg: svg) => {
+                  if (app === "Arc") {
+                    return (
+                      svg.title === app &&
+                      svg.route === `${svgUrl}arc_browser.svg`
+                    );
+                  } else if (app === "Raycast") {
+                    return (
+                      svg.title === app && svg.route === `${svgUrl}raycast.svg`
+                    );
+                  } else {
+                    return svg.title === app;
+                  }
+                });
+
+                let route = "";
+
+                if (svgMatch?.route) {
+                  if (typeof svgMatch.route === "string") {
+                    route = svgMatch.route;
+                  } else if (typeof svgMatch.route === "object") {
+                    route = svgMatch.route.light;
+                  }
+                }
+
+                return (
+                  <li>
+                    {svgMatch && <img src={route} width="20" alt={app} />}
+                    <Link
+                      set:text={app}
+                      target="_blank"
+                      href={`https://www.google.com/search?q=${app}`}
+                    />
+                  </li>
+                );
+              })
             }
           </ul>
         </li>

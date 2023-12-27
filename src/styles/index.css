@@ -96,10 +96,33 @@ nav {
   }
 }
 
+#uses ul,
+#uses li {
+  list-style: none;
+  padding-inline: 0;
+  margin-block: 0;
+}
+
 #uses > ul {
   display: flex;
   flex-direction: column;
-  gap: var(--size-3);
+  gap: var(--size-5);
+
+  li > ul {
+    margin-top: var(--size-3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-3);
+
+    li {
+      border-radius: var(--radius-2);
+      border: 2px solid var(--surface-4);
+      color: var(--text-1);
+      padding: var(--size-2);
+      display: flex;
+      gap: var(--size-2);
+    }
+  }
 }
 
 /* Animation */
