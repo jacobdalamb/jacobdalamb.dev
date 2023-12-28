@@ -8,13 +8,6 @@ import { getGistData } from "@/utils/getGist";
 import { description } from "@/utils/meta";
 const response = await fetch("https://svgl.app/api/svgs");
 const svgs = await response.json();
-const arcSvg = svgs.find((svg: svg) => svg.title === "Arc");
-
-if (arcSvg) {
-  console.log(arcSvg);
-} else {
-  console.log("Title 'arc' not found in svgs.");
-}
 
 const categories = Object.keys(uses);
 
@@ -128,11 +121,18 @@ if (gistData?.updated_at) {
 
                 return (
                   <li>
-                    {svgMatch && <img src={route} width="20" alt={app} />}
-                    <Link
+                    {svgMatch && (
+                      <Image src={route} width="20" height="50" alt={app} />
+                    )}
+                    <a
                       set:text={app}
                       target="_blank"
-                      href={`https://www.google.com/search?q=${app}`}
+                      rel="external"
+                      href={
+                        svgMatch
+                          ? svgMatch.url
+                          : `https://www.google.com/search?q=${app}`
+                      }
                     />
                   </li>
                 );
