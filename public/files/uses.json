@@ -1,42 +1,37 @@
 {
 	"hardware": [
 		{
-			"name": "iPhone 13 Mini"
+			"title": "iPhone 13 Mini"
 		},
 		{
-			"name": "MacBook Air M2"
+			"title": "MacBook Air M2"
 		},
 		{
-			"name": "AirPods Pro (2nd Gen)"
+			"title": "AirPods Pro (2nd Gen)"
 		},
 		{
-			"name": "Apple Watch SE (1st Gen)"
+			"title": "Apple Watch SE (1st Gen)"
 		},
 		{
-			"name": "Apple TV 4K (2nd Gen)"
+			"title": "Apple TV 4K (2nd Gen)"
 		}
 	],
 	"services": [
 		{
-			"name": "Copilot",
-			"link": "https://copilot.github.com",
-			"category": "AI dev tool"
-		},
-		{
-			"name": "ChatGPT",
-			"link": "https://chat.openai.com/",
-			"category": "AI chatbot"
+			"title": "Vercel",
+			"url": "https://vercel.com",
+			"category": "hosting"
 		}
 	],
 	"other": [
 		{
-			"name": "MonoLisa",
-			"link": "https://monolisa.dev",
+			"title": "MonoLisa",
+			"url": "https://monolisa.dev",
 			"category": "dev font"
 		},
 		{
-			"name": "Geist",
-			"link": "https://vercel.com/font",
+			"title": "Geist",
+			"url": "https://vercel.com/font",
 			"category": "web font"
 		}
 	]

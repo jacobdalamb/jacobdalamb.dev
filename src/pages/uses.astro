@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Default.astro";
-import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import dayjs from "dayjs";
 import uses from "../../public/files/uses.json";
@@ -30,8 +29,8 @@ const props = {
 };
 
 interface UseItem {
-  name: string;
-  link?: string;
+  title: string;
+  url?: string;
   category?: string;
   more?: Array<{ [key: string]: string }>;
 }
@@ -73,22 +72,33 @@ if (gistData?.updated_at) {
         {
           categories.map((category) => (
             <>
-              <li>
+              <li id={category}>
                 <h3
                   set:text={
                     category.charAt(0).toUpperCase() + category.slice(1)
                   }
                 />
                 <ul>
-                  {uses[category as keyof typeof uses].map((item: UseItem) => (
-                    <li set:text={item.name} />
-                  ))}
+                  {uses[category as keyof typeof uses].map((item: UseItem) =>
+                    item.url ? (
+                      <li>
+                        <a
+                          set:text={item.title}
+                          target="_blank"
+                          rel="external"
+                          href={item.url}
+                        />
+                      </li>
+                    ) : (
+                      <li set:text={item.title} />
+                    ),
+                  )}
                 </ul>
               </li>
             </>
           ))
         }
-        <li>
+        <li id="apps">
           <h3 set:text="Apps" />
           <ul>
             {
