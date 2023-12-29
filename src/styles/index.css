@@ -120,6 +120,8 @@ nav {
       color: var(--text-1);
       padding: var(--size-2);
       display: flex;
+      align-items: center;
+      justify-content: center;
       gap: var(--size-2);
     }
   }
