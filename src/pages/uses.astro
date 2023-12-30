@@ -80,7 +80,6 @@ if (gistData?.updated_at) {
                 />
                 <ul>
                   {uses[category as keyof typeof uses].map((item: UseItem) => {
-                    // Find matching SVG and store it in a variable
                     const svgMatch = svgs.find(
                       (svg: svg) => svg.title === item.title,
                     );
@@ -188,23 +187,18 @@ if (gistData?.updated_at) {
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    // Select all img elements inside id "apps"
     let imgElems = document.querySelectorAll(
       "#apps img",
     ) as NodeListOf<HTMLImageElement>;
 
-    // For each img element, modify the source based on the color scheme
     imgElems.forEach((imgElem) => {
-      // Check if the img has data-svgMatch=true
       if (imgElem.getAttribute("data-svgMatch") === "true") {
-        // Check if dark mode is enabled. Set image src accordingly.
         if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
           imgElem.src = imgElem.src.replace("-light.svg", "-dark.svg");
         } else {
           imgElem.src = imgElem.src.replace("-dark.svg", "-light.svg");
         }
 
-        // Event listener for changes in color scheme
         window
           .matchMedia("(prefers-color-scheme: dark)")
           .addEventListener("change", (e) => {
