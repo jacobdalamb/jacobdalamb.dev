@@ -5,35 +5,19 @@ import dayjs from "dayjs";
 import uses from "../../public/files/uses.json";
 import { getGistData } from "@/utils/getGist";
 import { description } from "@/utils/meta";
-const response = await fetch("https://svgl.app/api/svgs");
-const svgs = await response.json();
-
+import { getSvgMatch, svgs } from "@/utils/getSvgMatch";
 const categories = Object.keys(uses);
-
-interface svg {
-  id: number;
-  title: string;
-  category: string;
-  route:
-    | string
-    | {
-        dark: string;
-        light: string;
-      };
-  url: string;
-}
-
-const props = {
-  title: "Uses",
-  description: "Things that I use on an almost daily basis.",
-};
-
 interface UseItem {
   title: string;
   url?: string;
   category?: string;
   more?: Array<{ [key: string]: string }>;
 }
+
+const props = {
+  title: "Uses",
+  description: "Things that I use on an almost daily basis.",
+};
 
 const gistData = await getGistData();
 let installedApps: any[] = [];
@@ -80,19 +64,7 @@ if (gistData?.updated_at) {
                 />
                 <ul>
                   {uses[category as keyof typeof uses].map((item: UseItem) => {
-                    const svgMatch = svgs.find(
-                      (svg: svg) => svg.title === item.title,
-                    );
-
-                    let route = "";
-
-                    if (svgMatch?.route) {
-                      if (typeof svgMatch.route === "string") {
-                        route = svgMatch.route;
-                      } else if (typeof svgMatch.route === "object") {
-                        route = svgMatch.route.light;
-                      }
-                    }
+                    const { svgMatch, route } = getSvgMatch(item.title, svgs);
 
                     return item.url ? (
                       <li>
@@ -125,31 +97,7 @@ if (gistData?.updated_at) {
           <ul>
             {
               installedApps.map((app) => {
-                const svgUrl = `https://svgl.app/library/`;
-                const svgMatch = svgs.find((svg: svg) => {
-                  if (app === "Arc") {
-                    return (
-                      svg.title === app &&
-                      svg.route === `${svgUrl}arc_browser.svg`
-                    );
-                  } else if (app === "Raycast") {
-                    return (
-                      svg.title === app && svg.route === `${svgUrl}raycast.svg`
-                    );
-                  } else {
-                    return svg.title === app;
-                  }
-                });
-
-                let route = "";
-
-                if (svgMatch?.route) {
-                  if (typeof svgMatch.route === "string") {
-                    route = svgMatch.route;
-                  } else if (typeof svgMatch.route === "object") {
-                    route = svgMatch.route.light;
-                  }
-                }
+                const { svgMatch, route } = getSvgMatch(app, svgs);
 
                 return (
                   <li>
@@ -184,29 +132,3 @@ if (gistData?.updated_at) {
     </section>
   </main>
 </Layout>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let imgElems = document.querySelectorAll(
-      "#apps img",
-    ) as NodeListOf<HTMLImageElement>;
-
-    imgElems.forEach((imgElem) => {
-      if (imgElem.getAttribute("data-svgMatch") === "true") {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-          imgElem.src = imgElem.src.replace("-light.svg", "-dark.svg");
-        } else {
-          imgElem.src = imgElem.src.replace("-dark.svg", "-light.svg");
-        }
-
-        window
-          .matchMedia("(prefers-color-scheme: dark)")
-          .addEventListener("change", (e) => {
-            imgElem.src = e.matches
-              ? imgElem.src.replace("-light.svg", "-dark.svg")
-              : imgElem.src.replace("-dark.svg", "-light.svg");
-          });
-      }
-    });
-  });
-</script>
