@@ -140,5 +140,30 @@ for (const page of pages) {
       <span id="bull">&bull;</span>
       <Link href={`${repoURL}`} set:text="source code" />
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let imgElems = document.querySelectorAll(
+          "#apps img",
+        ) as NodeListOf<HTMLImageElement>;
+
+        imgElems.forEach((imgElem) => {
+          if (imgElem.getAttribute("data-svgMatch") === "true") {
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+              imgElem.src = imgElem.src.replace("-light.svg", "-dark.svg");
+            } else {
+              imgElem.src = imgElem.src.replace("-dark.svg", "-light.svg");
+            }
+
+            window
+              .matchMedia("(prefers-color-scheme: dark)")
+              .addEventListener("change", (e) => {
+                imgElem.src = e.matches
+                  ? imgElem.src.replace("-light.svg", "-dark.svg")
+                  : imgElem.src.replace("-dark.svg", "-light.svg");
+              });
+          }
+        });
+      });
+    </script>
   </body>
 </html>

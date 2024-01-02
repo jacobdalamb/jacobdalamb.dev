@@ -97,10 +97,31 @@ nav {
 }
 
 #uses ul,
-#uses li {
+#uses li,
+#contact ul,
+#contact li {
   list-style: none;
   padding-inline: 0;
-  margin-block: 0;
+}
+
+#contact ul {
+  display: flex;
+  gap: var(--size-3);
+
+  li {
+    border-radius: var(--radius-2);
+    border: 2px solid var(--surface-4);
+    color: var(--text-1);
+    padding: var(--size-2);
+    width: fit-content;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--size-2);
+    }
+  }
 }
 
 #uses > ul {

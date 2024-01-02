@@ -3,6 +3,8 @@ import Layout from "../layouts/Default.astro";
 import Link from "../components/Link.astro";
 import { authorUrl, repoURL, description } from "../utils/meta";
 import humanizeUrl from "humanize-url";
+import { getSvgMatch, svgs } from "@/utils/getSvgMatch";
+import { Image } from "astro:assets";
 
 const props = {
   title: "",
@@ -17,6 +19,17 @@ const projects = [
     description: `${description}`,
     site: `${authorUrl}`,
     repo: `${repoURL}`,
+  },
+];
+
+const contacts = [
+  {
+    title: "Bluesky",
+    url: "https://bsky.app/profile/jacobdalamb.dev",
+  },
+  {
+    title: "Threads",
+    url: "https://www.threads.net/@jacobdalamb",
   },
 ];
 
@@ -51,6 +64,38 @@ const shortIntro = `I'm a ${age} y/o, self-taught developer who enjoys <a href='
           ))
         }
       </div>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <ul>
+        {
+          contacts.map((item) => {
+            const { svgMatch, route } = getSvgMatch(item.title, svgs);
+
+            return item.title ? (
+              <li>
+                <a
+                  set:text={item.title}
+                  target="_blank"
+                  rel="external"
+                  href={item.url}
+                >
+                  {svgMatch && (
+                    <Image
+                      src={route}
+                      width="20"
+                      height="50"
+                      alt={item.title}
+                    />
+                  )}
+                </a>
+              </li>
+            ) : (
+              <li set:text={item.title} />
+            );
+          })
+        }
+      </ul>
     </section>
   </main>
 </Layout>
