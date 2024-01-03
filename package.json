@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
-    "@astrojs/vercel": "6.1.2",
+    "@astrojs/vercel": "^6.1.2",
     "@vercel/speed-insights": "^1.0.2",
     "astro": "4.0.9",
     "dayjs": "^1.11.10",
