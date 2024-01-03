@@ -16,9 +16,10 @@
   },
   "engines": {
     "node": "18.19.x",
-    "pnpm": ">=8"
+    "pnpm": ">=8",
+    "bun": ">=1.0.16"
   },
-  "pkgx": "node@18.19.0 bun pnpm",
+  "pkgx": "node@18.19.0 bun@1.0.16 pnpm@8.0.0",
   "scripts": {
     "astro": "astro",
     "dev": "astro dev",
