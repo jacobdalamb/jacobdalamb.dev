@@ -1,7 +1,7 @@
 {
   "name": "jacobdalamb.dev",
   "type": "module",
-  "version": "2023.12.05",
+  "version": "2024.01.02",
   "private": true,
   "description": "My personal website.",
   "license": "MIT",
@@ -30,13 +30,13 @@
     "lint:fix": "biome lint --apply .",
     "check-format": "prettier --check . && biome check .",
     "check-format:fix": "biome --apply .",
-    "precommit": "bun run check-format && bun run lint && knip && ./updateVersion.zsh"
+    "precommit": "bun run check-format && ./updateVersion.zsh && bun run lint && knip"
   },
   "dependencies": {
-    "@astrojs/check": "0.3.4",
-    "@astrojs/vercel": "6.1.1",
+    "@astrojs/check": "^0.3.4",
+    "@astrojs/vercel": "6.1.2",
     "@vercel/speed-insights": "^1.0.2",
-    "astro": "4.0.8",
+    "astro": "4.0.9",
     "dayjs": "^1.11.10",
     "humanize-url": "^3.0.0",
     "octokit": "^3.1.2",
@@ -45,12 +45,12 @@
     "satori-html": "^0.3.2",
     "somebody": "^3.0.0",
     "typescript": "^5.3.3",
-    "vercel": "latest"
+    "vercel": "^33.0.1"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.4.1",
     "@resvg/resvg-js": "^2.6.0",
-    "knip": "^3.9.0",
+    "knip": "^3.10.0",
     "prettier": "^3.1.1",
     "prettier-plugin-astro": "^0.12.3"
   }
