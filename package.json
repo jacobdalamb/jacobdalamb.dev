@@ -30,7 +30,7 @@
     "lint": "biome lint . && astro check",
     "lint:fix": "biome lint --apply .",
     "check-format": "prettier --check . && biome check .",
-    "check-format:fix": "biome --apply .",
+    "check-format:fix": "biome check --apply .",
     "precommit": "bun run check-format && ./updateVersion.zsh && bun run lint && knip"
   },
   "dependencies": {
