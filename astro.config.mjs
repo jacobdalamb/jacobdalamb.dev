@@ -15,13 +15,5 @@ export default defineConfig({
 		webAnalytics: {
 			enabled: true,
 		},
-		speedInsights: {
-			enabled: true,
-		},
 	}),
-	vite: {
-		optimizeDeps: {
-			exclude: ["@resvg/resvg-js"],
-		},
-	},
 });
