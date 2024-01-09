@@ -16,6 +16,18 @@
 			"title": "Apple TV 4K (2nd Gen)"
 		}
 	],
+    "other gear": [
+        {
+            "title": "Aranet4",
+            "url": "https://aranet.com/products/aranet4/",
+            "category": "CO2 monitor"
+        },
+        {
+            "title": "Anker 3-in-1 Cube with MagSafe",
+            "url": "https://www.anker.com/products/y1811?variant=42206465327254",
+            "category": "wireless charger"
+        }
+    ],
 	"services": [
 		{
 			"title": "Vercel",
@@ -23,7 +35,7 @@
 			"category": "hosting"
 		}
 	],
-	"other": [
+	"fonts": [
 		{
 			"title": "MonoLisa",
 			"url": "https://monolisa.dev",
@@ -34,5 +46,27 @@
 			"url": "https://vercel.com/font",
 			"category": "web font"
 		}
-	]
+	],
+    "VSCode Setup": [
+        {
+            "title": "extensions",
+            "url": "https://gist.github.com/jacobdalamb/8f9100ca1aedabc8308dc94f5268dc28"
+        },
+        {
+            "title": "settings",
+            "url": "https://gist.github.com/jacobdalamb/40586ecc5127d210e22b8e936f9366cf"
+        },
+        {
+            "title": "keybindings",
+            "url": "https://gist.github.com/jacobdalamb/db6d4416f806fe0ad53a3232be7bf4de"
+        },
+        {
+            "title": "file icon theme",
+            "url": "https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols"
+        },
+        {
+            "title": "product icon theme",
+            "url": "https://marketplace.visualstudio.com/items?itemName=miguelsolorio.fluent-icons"
+        }
+    ]
 }
