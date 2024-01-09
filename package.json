@@ -15,10 +15,10 @@
     "url": "https://github.com/jacobdalamb/jacobdalamb.dev.git"
   },
   "engines": {
-    "node": "18.17.x",
+    "node": "18.18.x",
     "bun": ">=1.0.21"
   },
-  "pkgx": "node@18.17.0 bun@1.0.21",
+  "pkgx": "node@18.18.2 bun@1.0.21",
   "scripts": {
     "astro": "astro",
     "dev": "astro dev",
