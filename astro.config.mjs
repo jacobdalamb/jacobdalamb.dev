@@ -4,12 +4,7 @@ import { authorUrlString } from "./src/utils/meta";
 
 // https://astro.build/config
 export default defineConfig({
-	site:
-		process.env.VERCEL_ENV === "production"
-			? `${authorUrlString}`
-			: process.env.VERCEL_URL
-			  ? `https://${process.env.VERCEL_URL}/`
-			  : "https://localhost:4321/",
+	site: `${authorUrlString}`,
 	output: "server",
 	adapter: vercel({
 		webAnalytics: {
