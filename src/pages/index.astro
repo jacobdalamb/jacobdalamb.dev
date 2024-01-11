@@ -1,10 +1,5 @@
 ---
 import Layout from "../layouts/Default.astro";
-import Link from "../components/Link.astro";
-import { authorUrl, repoURL, description } from "../utils/meta";
-import humanizeUrl from "humanize-url";
-import { getSvgMatch, svgs } from "@/utils/getSvgMatch";
-import { Image } from "astro:assets";
 
 const props = {
   title: "",
@@ -13,89 +8,12 @@ const props = {
 
 const age = new Date().getFullYear() - 2002;
 
-const projects = [
-  {
-    title: `${humanizeUrl(authorUrl)}`,
-    description: `${description}`,
-    site: `${authorUrl}`,
-    repo: `${repoURL}`,
-  },
-];
-
-const contacts = [
-  {
-    title: "Bluesky",
-    url: "https://bsky.app/profile/jacobdalamb.dev",
-  },
-  {
-    title: "Threads",
-    url: "https://www.threads.net/@jacobdalamb",
-  },
-];
-
-const shortIntro = `I'm a ${age} y/o, self-taught developer who enjoys <a href='https://literal.club/jacobthelamb' rel='external'>reading</a> and playing games.`;
+const shortIntro = `I'm a ${age} y/o, self-taught developer who enjoys reading and playing games.`;
 ---
 
 <Layout {...props}>
   <main>
-    <h1 set:text="Hey, I'm Jacob Lamb." />
+    <h2 set:text="Hey, I'm Jacob Lamb." />
     <p set:html={shortIntro} />
-    <section id="projects">
-      <h2>Projects</h2>
-      <div>
-        {
-          projects.map((item) => (
-            <div>
-              <div>
-                <p>
-                  {item.site ? (
-                    <Link href={item.site} set:text={item.title} />
-                  ) : (
-                    <span>{item.title}</span>
-                  )}
-                </p>
-              </div>
-              {item.description && (
-                <div>
-                  <p>{item.description}</p>
-                </div>
-              )}
-            </div>
-          ))
-        }
-      </div>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <ul>
-        {
-          contacts.map((item) => {
-            const { svgMatch, route } = getSvgMatch(item.title, svgs);
-
-            return item.title ? (
-              <li>
-                <a
-                  set:text={item.title}
-                  target="_blank"
-                  rel="external"
-                  href={item.url}
-                >
-                  {svgMatch && (
-                    <Image
-                      src={route}
-                      width="20"
-                      height="50"
-                      alt={item.title}
-                    />
-                  )}
-                </a>
-              </li>
-            ) : (
-              <li set:text={item.title} />
-            );
-          })
-        }
-      </ul>
-    </section>
   </main>
 </Layout>

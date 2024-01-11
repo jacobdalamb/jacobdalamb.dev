@@ -4,6 +4,7 @@ import "../styles/index.css";
 import { ViewTransitions } from "astro:transitions";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
+import { getSvgMatch, svgs } from "@/utils/getSvgMatch";
 
 interface Props {
   title: string;
@@ -38,6 +39,17 @@ for (const page of pages) {
     }
   }
 }
+
+const contacts = [
+  {
+    title: "Bluesky",
+    url: "https://bsky.app/profile/jacobdalamb.dev",
+  },
+  {
+    title: "Threads",
+    url: "https://www.threads.net/@jacobdalamb",
+  },
+];
 ---
 
 <!doctype html>
@@ -97,48 +109,67 @@ for (const page of pages) {
           </svg>
         </Link>
       </div>
-      <nav>
-        {
-          pagesArray.map((page) => (
-            <Link href={page.url} set:text={page.title} />
-          ))
-        }
-      </nav>
-      <button class="menu-btn" popovertarget="menu">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg"
-          alt=""
-        />
-      </button>
-      <div popover role="menu" id="menu">
-        <button
-          class="close-btn"
-          popovertarget="menu"
-          popovertargetaction="hide"
-        >
-          <span>❌</span>
-        </button>
-        <ul>
-          {
-            pagesArray.map((page) => (
-              <Link href={page.url} set:text={page.title} />
-            ))
-          }
-        </ul>
-      </div>
     </header>
     <slot />
     <footer>
-      <Link href="https://astro.build">
-        <Image
-          src="https://astro.badg.es/v2/built-with-astro/tiny.svg"
-          alt="Built with Astro"
-          width="120"
-          height="20"
-        />
-      </Link>
-      <span id="bull">&bull;</span>
-      <Link href={`${repoURL}`} set:text="source code" />
+      <div>
+        {
+          pagesArray.map((page) => (
+            <>
+              <Link href={page.url} set:text={page.title} />
+              <span id="bull">&bull;</span>
+            </>
+          ))
+        }
+      </div>
+      <div>
+        {
+          contacts.map((item) => {
+            const { svgMatch, route } = getSvgMatch(item.title, svgs);
+
+            return item.title ? (
+              <>
+                <a
+                  style="display: flex; gap: var(--size-1);"
+                  set:text={item.title}
+                  target="_blank"
+                  rel="external"
+                  href={item.url}
+                >
+                  {svgMatch && (
+                    <Image
+                      src={route}
+                      width="20"
+                      height="50"
+                      alt={item.title}
+                    />
+                  )}
+                </a>
+                <span id="bull">&bull;</span>
+              </>
+            ) : (
+              <span set:text={item.title} />
+            );
+          })
+        }
+      </div>
+      <div>
+        <small>
+          <span set:text=`© ${new Date().getFullYear()} ${authorName}` />
+        </small>
+        <small>
+          <Link href={`${repoURL}`} set:text="source code" />
+        </small>
+
+        <Link href="https://astro.build">
+          <Image
+            src="https://astro.badg.es/v2/built-with-astro/tiny.svg"
+            alt="Built with Astro"
+            width="120"
+            height="20"
+          />
+        </Link>
+      </div>
     </footer>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
