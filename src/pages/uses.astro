@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Default.astro";
-import { Image } from "astro:assets";
 import dayjs from "dayjs";
 import uses from "../../public/files/uses.json";
 import { getGistData } from "@/utils/getGist";
@@ -63,18 +62,8 @@ if (gistData?.updated_at) {
                 />
                 <ul>
                   {uses[category as keyof typeof uses].map((item: UseItem) => {
-                    const { svgMatch, route } = getSvgMatch(item.title, svgs);
-
                     return item.url ? (
                       <li>
-                        {svgMatch && (
-                          <Image
-                            src={route}
-                            width="20"
-                            height="50"
-                            alt={item.title}
-                          />
-                        )}
                         <a
                           set:text={item.title}
                           target="_blank"
@@ -96,21 +85,10 @@ if (gistData?.updated_at) {
           <ul>
             {
               installedApps.map((app) => {
-                const { svgMatch, route } = getSvgMatch(app, svgs);
+                const { svgMatch } = getSvgMatch(app, svgs);
 
                 return (
                   <li>
-                    {svgMatch && (
-                      <Image
-                        src={route}
-                        width="20"
-                        height="50"
-                        alt={app}
-                        data-svgMatch={
-                          typeof svgMatch.route === "object" ? "true" : "false"
-                        }
-                      />
-                    )}
                     <a
                       set:text={app}
                       target="_blank"
