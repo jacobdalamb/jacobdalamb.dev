@@ -22,16 +22,8 @@ pnpm-debug.log*
 .DS_Store
 
 # files
-pnpm-lock.yaml
-bun.lockb
 **/*.js
 **/*.ts
 **/*.mjs
 **/*.cjs
-# Ignore all JSON files
 **/*.json
-
-# Except for these specific ones
-!package.json
-!tsconfig.json
-!jsconfig.json
