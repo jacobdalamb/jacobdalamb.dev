@@ -30,7 +30,7 @@
     "lint:fix": "biome lint --apply .",
     "check-format": "prettier --check . && biome check .",
     "check-format:fix": "biome check --apply .",
-    "precommit": "bun run check-format && ./updateVersion.zsh && bun run lint && knip"
+    "precommit": "nr check-format && zx ./updateVersion.mjs && nr lint && knip"
   },
   "dependencies": {
     "@astrojs/check": "0.4.1",
