@@ -7,8 +7,6 @@ const config: KnipConfig = {
 			"src/content/config.ts",
 			"src/pages/**/*.{astro,mdx,js,ts}",
 			"src/components/**/*.{astro,mdx,js,ts}",
-			"src/content/**/*.mdx",
-			"src/styles/**/*.css.ts",
 		],
 	},
 	project: ["src/**/*.ts", "src/**/*.css.ts"],
