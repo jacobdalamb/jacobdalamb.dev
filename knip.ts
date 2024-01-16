@@ -9,7 +9,7 @@ const config: KnipConfig = {
 			"src/components/**/*.{astro,mdx,js,ts}",
 		],
 	},
-	project: ["src/**/*.ts", "src/**/*.css.ts"],
+	project: ["src/**/*.ts"],
 	ignore: ".astro/types.d.ts",
 	compilers: {
 		astro: (text: string) => [...text.matchAll(/import[^;]+/g)].join("\n"),
