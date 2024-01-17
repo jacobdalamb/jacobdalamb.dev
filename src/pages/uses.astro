@@ -9,7 +9,7 @@ interface UseItem {
   title: string;
   url?: string;
   category?: string;
-  more?: Array<{ [key: string]: string }>;
+  note?: string;
 }
 
 const props = {
@@ -70,6 +70,17 @@ if (gistData?.updated_at) {
                           rel="external"
                           href={item.url}
                         />
+                        {item.category ? (
+                          <Fragment>
+                            <span>&bull;</span>
+                            <span set:text={`${item.category}`} />
+                          </Fragment>
+                        ) : item.note ? (
+                          <Fragment>
+                            <span>&bull;</span>
+                            <span set:text={`${item.note}`} />
+                          </Fragment>
+                        ) : null}
                       </li>
                     ) : (
                       <li set:text={item.title} />
