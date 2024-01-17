@@ -49,6 +49,10 @@ const contacts = [
     title: "Threads",
     url: "https://www.threads.net/@jacobdalamb",
   },
+  {
+    title: "Read.cv",
+    url: "https://read.cv/jacobdalamb",
+  },
 ];
 ---
 
@@ -125,8 +129,6 @@ const contacts = [
       <div>
         {
           contacts.map((item) => {
-            const { svgMatch, route } = getSvgMatch(item.title, svgs);
-
             return item.title ? (
               <>
                 <a
@@ -135,16 +137,7 @@ const contacts = [
                   target="_blank"
                   rel="external"
                   href={item.url}
-                >
-                  {svgMatch && (
-                    <Image
-                      src={route}
-                      width="20"
-                      height="50"
-                      alt={item.title}
-                    />
-                  )}
-                </a>
+                />
                 <span id="bull">&bull;</span>
               </>
             ) : (
