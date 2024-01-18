@@ -72,12 +72,12 @@ if (gistData?.updated_at) {
                         />
                         {item.category ? (
                           <Fragment>
-                            <span>&bull;</span>
+                            <span>&nbsp;&bull;&nbsp;</span>
                             <span set:text={`${item.category}`} />
                           </Fragment>
                         ) : item.note ? (
                           <Fragment>
-                            <span>&bull;</span>
+                            <span>&nbsp;&bull;&nbsp;</span>
                             <span set:text={`${item.note}`} />
                           </Fragment>
                         ) : null}
