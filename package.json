@@ -23,7 +23,7 @@
     "astro": "astro",
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && vercel deploy",
     "preview": "astro preview",
     "format": "prettier -w . --plugin=prettier-plugin-astro && biome format --write .",
     "lint": "biome lint . && astro check",

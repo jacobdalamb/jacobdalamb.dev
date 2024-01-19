@@ -6,7 +6,7 @@ const octokit = new Octokit({
 	auth: gistToken,
 });
 
-export async function getGistData() {
+async function getGistData() {
 	try {
 		if (installedAppsGistId) {
 			const gist_id = installedAppsGistId;
@@ -24,3 +24,26 @@ export async function getGistData() {
 		return null;
 	}
 }
+
+const gistData = await getGistData();
+let installedApps: string[] = [];
+const fileName = "installed-apps.txt";
+if (
+	gistData?.files?.[fileName] &&
+	typeof gistData.files[fileName].content === "string"
+) {
+	installedApps = gistData.files[fileName].content.split("\n");
+	installedApps = installedApps.map((app) => app.slice(0, -4));
+} else {
+	console.error(`Could not find ${fileName} in gist data`);
+}
+
+let lastUpdated = "";
+
+if (gistData?.updated_at) {
+	lastUpdated = gistData.updated_at;
+} else {
+	console.error(`Could not find ${lastUpdated} in gist data`);
+}
+
+export { installedApps, lastUpdated };

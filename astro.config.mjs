@@ -1,7 +1,6 @@
 import vercel from "@astrojs/vercel/serverless";
 import { defineConfig } from "astro/config";
 import { authorUrlString } from "./src/utils/meta";
-
 import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
