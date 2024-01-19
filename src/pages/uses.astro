@@ -1,16 +1,9 @@
 ---
 import Layout from "../layouts/Default.astro";
 import dayjs from "dayjs";
-import uses from "../../public/files/uses.json";
 import { getGistData } from "@/utils/getGist";
-import { getSvgMatch, svgs } from "@/utils/getSvgMatch";
-const categories = Object.keys(uses);
-interface UseItem {
-  title: string;
-  url?: string;
-  category?: string;
-  note?: string;
-}
+import { loadSvgs, getSvgUrl } from "@/utils/getSvgMatch";
+const svgs = await loadSvgs();
 
 const props = {
   title: "Uses",
@@ -51,52 +44,182 @@ if (gistData?.updated_at) {
     <p set:html={props.description} />
     <section id="uses">
       <ul>
-        {
-          categories.map((category) => (
-            <>
-              <li id={category}>
-                <h3
-                  set:text={
-                    category.charAt(0).toUpperCase() + category.slice(1)
-                  }
-                />
-                <ul>
-                  {uses[category as keyof typeof uses].map((item: UseItem) => {
-                    return item.url ? (
-                      <li>
-                        <a
-                          set:text={item.title}
-                          target="_blank"
-                          rel="external"
-                          href={item.url}
-                        />
-                        {item.category ? (
-                          <Fragment>
-                            <span>&nbsp;&bull;&nbsp;</span>
-                            <span set:text={`${item.category}`} />
-                          </Fragment>
-                        ) : item.note ? (
-                          <Fragment>
-                            <span>&nbsp;&bull;&nbsp;</span>
-                            <span set:text={`${item.note}`} />
-                          </Fragment>
-                        ) : null}
-                      </li>
-                    ) : (
-                      <li set:text={item.title} />
-                    );
-                  })}
-                </ul>
-              </li>
-            </>
-          ))
-        }
-        <li id="apps">
-          <h3 set:text="Apps" />
+        <li x-data="{ id: 'hardware' }">
+          <h3 x-text="id"></h3>
+          <ul>
+            <li set:text="iPhone 13 Mini" /><li set:text="MacBook Air M2" /><li
+              set:text="AirPods Pro (2nd Gen)"
+            /><li set:text="Apple Watch SE (1st Gen)" /><li
+              set:html=" Apple TV 4K (2nd Gen)"
+            />
+          </ul>
+        </li>
+        <li x-data="{ id: 'other gear' }">
+          <h3 x-text="id"></h3><ul>
+            <li>
+              <a
+                target="_blank"
+                rel="external"
+                href="https://aranet.com/products/aranet4/"
+                set:text="Aranet4"
+              /><span>&nbsp;•&nbsp;</span><span set:text="CO2 monitor" />
+            </li><li>
+              <a
+                target="_blank"
+                rel="external"
+                href="https://www.anker.com/products/y1811?variant=42206465327254"
+                set:text="Anker 3-in-1 Cube with MagSafe"
+              /><span>&nbsp;•&nbsp;</span><span set:text="wireless charger" />
+            </li>
+          </ul>
+        </li>
+        <li x-data="{ id: 'services' }">
+          <h3 x-text="id"></h3><ul>
+            <li>
+              <a
+                target="_blank"
+                rel="external"
+                href="https://vercel.com"
+                set:text="Vercel"
+              /><span>&nbsp;•&nbsp;</span><span set:text="hosting" />
+            </li>
+          </ul>
+        </li>
+        <li x-data="{ id: 'fonts' }">
+          <h3 x-text="id"></h3><ul>
+            <li>
+              <a
+                target="_blank"
+                rel="external"
+                href="https://monolisa.dev"
+                set:text="MonoLisa"
+              /><span>&nbsp;•&nbsp;</span><span set:text="dev font" />
+            </li><li>
+              <a
+                target="_blank"
+                rel="external"
+                href="https://vercel.com/font"
+                set:text="Geist"
+              /><span>&nbsp;•&nbsp;</span><span set:text="web font" />
+            </li>
+          </ul>
+        </li>
+        <li x-data="{ id: 'shell setup' }">
+          <h3 x-text="id"></h3><ul>
+            <li>
+              <a
+                href="https://www.zsh.org/"
+                target="_blank"
+                rel="external"
+                set:text="zsh"
+              />
+              <ul>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="external"
+                    href="https://gist.github.com/jacobdalamb/fb86121db4c731e0e4868483a68a6eee"
+                    set:text="zshrc"
+                  />
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="external"
+                    href="https://gist.github.com/jacobdalamb/6ed50d53225eabf75778b64b8d1fd8e3"
+                    set:text="zprofile"
+                  />
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                rel="external"
+                href="https://www.nushell.sh/"
+                set:text="nushell"
+              /><span>&nbsp;•&nbsp;</span><span
+                set:text="new preferred shell"
+              />
+              <ul>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="external"
+                    href="https://gist.github.com/jacobdalamb/7bd6be2c3e55bcece688c13cae486c85"
+                    set:text="config"
+                  />
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="external"
+                    href="https://gist.github.com/jacobdalamb/ccac1a73342f8b057efa9281e881370c"
+                    set:text="env"
+                  />
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li x-data="{ id: 'zed setup' }">
+          <h3 x-text="id"></h3><ul>
+            <li>
+              <a
+                target="_blank"
+                rel="external"
+                href="https://gist.github.com/jacobdalamb/24f8b9de66c5b3e8dba17381e2b78739"
+                set:text="settings"
+              />
+            </li>
+          </ul>
+        </li>
+        <li x-data="{ id: 'vscode setup' }">
+          <h3 x-text="id"></h3><ul>
+            <li>
+              <a
+                target="_blank"
+                rel="external"
+                href="https://gist.github.com/jacobdalamb/8f9100ca1aedabc8308dc94f5268dc28"
+                set:text="extensions"
+              />
+            </li><li>
+              <a
+                target="_blank"
+                rel="external"
+                href="https://gist.github.com/jacobdalamb/40586ecc5127d210e22b8e936f9366cf"
+                set:text="settings"
+              />
+            </li><li>
+              <a
+                target="_blank"
+                rel="external"
+                href="https://gist.github.com/jacobdalamb/db6d4416f806fe0ad53a3232be7bf4de"
+                set:text="keybindings"
+              />
+            </li><li>
+              <a
+                target="_blank"
+                rel="external"
+                href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols"
+                set:text="file icon theme"
+              />
+            </li><li>
+              <a
+                target="_blank"
+                rel="external"
+                href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.fluent-icons"
+                set:text="product icon theme"
+              />
+            </li>
+          </ul>
+        </li>
+        <li x-data="{ id: 'apps' }">
+          <h3 x-text="id"></h3>
           <ul>
             {
               installedApps.map((app) => {
-                const { svgMatch } = getSvgMatch(app, svgs);
+                const svgUrl = getSvgUrl(app, svgs);
 
                 return (
                   <li>
@@ -105,8 +228,8 @@ if (gistData?.updated_at) {
                       target="_blank"
                       rel="external"
                       href={
-                        svgMatch
-                          ? svgMatch.url
+                        svgUrl
+                          ? svgUrl
                           : `https://www.google.com/search?q=${app}`
                       }
                     />
