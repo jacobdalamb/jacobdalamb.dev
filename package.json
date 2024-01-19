@@ -23,14 +23,15 @@
     "astro": "astro",
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && vercel deploy",
+    "build": "astro build",
     "preview": "astro preview",
     "format": "prettier -w . --plugin=prettier-plugin-astro && biome format --write .",
     "lint": "biome lint . && astro check",
     "lint:fix": "biome lint --apply .",
     "check-format": "prettier --check . && biome check .",
     "check-format:fix": "biome check --apply .",
-    "precommit": "nr check-format && zx ./updateVersion.mjs && nr lint && knip"
+    "precommit": "nr check-format && zx ./updateVersion.mjs && nr lint && knip",
+    "predeploy": "astro build && vercel deploy"
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.3.2",
