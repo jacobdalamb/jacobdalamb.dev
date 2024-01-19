@@ -4,7 +4,6 @@ import "../styles/index.css";
 import { ViewTransitions } from "astro:transitions";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import { getSvgMatch, svgs } from "@/utils/getSvgMatch";
 
 interface Props {
   title: string;
@@ -164,30 +163,5 @@ const contacts = [
         </Link>
       </div>
     </footer>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        let imgElems = document.querySelectorAll(
-          "#apps img",
-        ) as NodeListOf<HTMLImageElement>;
-
-        imgElems.forEach((imgElem) => {
-          if (imgElem.getAttribute("data-svgMatch") === "true") {
-            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-              imgElem.src = imgElem.src.replace("-light.svg", "-dark.svg");
-            } else {
-              imgElem.src = imgElem.src.replace("-dark.svg", "-light.svg");
-            }
-
-            window
-              .matchMedia("(prefers-color-scheme: dark)")
-              .addEventListener("change", (e) => {
-                imgElem.src = e.matches
-                  ? imgElem.src.replace("-light.svg", "-dark.svg")
-                  : imgElem.src.replace("-dark.svg", "-light.svg");
-              });
-          }
-        });
-      });
-    </script>
   </body>
 </html>

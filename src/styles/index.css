@@ -94,5 +94,6 @@ header {
 
   h3 {
     margin-block-start: var(--size-5);
+    text-transform: capitalize;
   }
 }
