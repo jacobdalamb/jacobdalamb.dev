@@ -28,15 +28,12 @@ body {
   gap: var(--size-10);
 }
 
-:is(h1, h2, h3) ~ *,
+:is(h1, h2, h3) + *,
 :is(*) ~ :is(h1, h2, h3) {
   margin-block-start: var(--size-5);
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  gap: var(--size-5);
   margin: 0 auto;
   padding: var(--size-fluid-3);
   max-width: 50rem;

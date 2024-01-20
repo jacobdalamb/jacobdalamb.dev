@@ -5,15 +5,13 @@ const props = {
   title: "",
   description: "My personal website",
 };
-
-const age = new Date().getFullYear() - 2002;
-
-const shortIntro = `I'm a ${age} y/o, self-taught developer who enjoys reading and playing games.`;
 ---
 
 <Layout {...props}>
   <main>
     <h2 set:text="Hey, I'm Jacob Lamb." />
-    <p set:html={shortIntro} />
+    <p
+      set:html={`I'm a ${new Date().getFullYear() - 2002} y/o, self-taught developer who enjoys reading and playing games.`}
+    />
   </main>
 </Layout>

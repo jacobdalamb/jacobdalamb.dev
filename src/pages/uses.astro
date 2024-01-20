@@ -20,6 +20,7 @@ const props = {
     </p>
     <h1 set:text="Uses" />
     <p set:html={props.description} />
+    <p>Inspired by <a href="https://uses.tech/">uses.tech</a></p>
     <section id="uses">
       <ul>
         <li x-data="{ id: 'hardware' }">
@@ -188,34 +189,39 @@ const props = {
                 set:text="product icon theme"
               />
             </li>
-          </ul>
-        </li>
-        <li x-data="{ id: 'apps' }">
-          <h3 x-text="id"></h3>
-          <ul>
-            {
-              installedApps.map((app) => {
-                const svgUrl = getSvgUrl(app, svgs);
-
-                return (
-                  <li>
-                    <a
-                      set:text={app}
-                      target="_blank"
-                      rel="external"
-                      href={
-                        svgUrl
-                          ? svgUrl
-                          : `https://www.google.com/search?q=${app}`
-                      }
-                    />
-                  </li>
-                );
-              })
-            }
-          </ul>
+          </ul><li>
+            <a
+              target="_blank"
+              rel="external"
+              href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.min-theme"
+              set:text="color theme"
+            />
+          </li>
         </li>
       </ul>
+      <li x-data="{ id: 'apps' }">
+        <h3 x-text="id"></h3>
+        <ul>
+          {
+            installedApps.map((app) => {
+              const svgUrl = getSvgUrl(app, svgs);
+
+              return (
+                <li>
+                  <a
+                    set:text={app}
+                    target="_blank"
+                    rel="external"
+                    href={
+                      svgUrl ? svgUrl : `https://www.google.com/search?q=${app}`
+                    }
+                  />
+                </li>
+              );
+            })
+          }
+        </ul>
+      </li>
     </section>
   </main>
 </Layout>
