@@ -22,6 +22,21 @@ const props = {
     <p set:html={props.description} />
     <p>Inspired by <a href="https://uses.tech/">uses.tech</a></p>
     <section id="uses">
+      <style>
+        @scope (#uses) {
+          > ul {
+            list-style: none;
+            padding-inline: 0;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+              margin-block-start: var(--size-5);
+              text-transform: capitalize;
+            }
+          }
+        }
+      </style>
       <ul>
         <li x-data="{ id: 'hardware' }">
           <h3 x-text="id"></h3>
