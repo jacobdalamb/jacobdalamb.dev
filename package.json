@@ -1,7 +1,7 @@
 {
   "name": "jacobdalamb.dev",
   "type": "module",
-  "version": "2024.01.20",
+  "version": "2024.01.21",
   "private": true,
   "description": "My personal website.",
   "license": "MIT",
@@ -30,7 +30,7 @@
     "lint:fix": "biome lint --apply .",
     "check-format": "prettier --check . && biome check .",
     "check-format:fix": "biome check --apply .",
-    "precommit": "nr check-format && zx ./updateVersion.mjs && nr lint && knip",
+    "precommit": "nr check-format && bun ./updateVersion.ts && nr lint && knip",
     "predeploy": "astro build && vercel deploy"
   },
   "dependencies": {
@@ -50,7 +50,8 @@
   "devDependencies": {
     "@biomejs/biome": "^1.5.2",
     "@types/node": "^20.11.5",
-    "knip": "^4.0.4",
+    "fs-extra": "^11.2.0",
+    "knip": "^4.1.0",
     "prettier": "^3.2.4",
     "prettier-plugin-astro": "^0.13.0"
   }
