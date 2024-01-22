@@ -194,49 +194,52 @@ const props = {
                 target="_blank"
                 rel="external"
                 href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols"
-                set:text="file icon theme"
+                set:text="file icons"
               />
             </li><li>
               <a
                 target="_blank"
                 rel="external"
                 href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.fluent-icons"
-                set:text="product icon theme"
+                set:text="product icons"
               />
             </li>
-          </ul><li>
-            <a
-              target="_blank"
-              rel="external"
-              href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.min-theme"
-              set:text="color theme"
-            />
-          </li>
+            <li>
+              <a
+                target="_blank"
+                rel="external"
+                href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.min-theme"
+                set:text="color theme"
+              />
+            </li>
+          </ul>
+        </li>
+        <li x-data="{ id: 'apps' }">
+          <h3 x-text="id"></h3>
+          <ul>
+            {
+              installedApps.map((app) => {
+                const svgUrl = getSvgUrl(app, svgs);
+
+                return (
+                  <li>
+                    <a
+                      set:text={app}
+                      target="_blank"
+                      rel="external"
+                      href={
+                        svgUrl
+                          ? svgUrl
+                          : `https://www.google.com/search?q=${app}`
+                      }
+                    />
+                  </li>
+                );
+              })
+            }
+          </ul>
         </li>
       </ul>
-      <li x-data="{ id: 'apps' }">
-        <h3 x-text="id"></h3>
-        <ul>
-          {
-            installedApps.map((app) => {
-              const svgUrl = getSvgUrl(app, svgs);
-
-              return (
-                <li>
-                  <a
-                    set:text={app}
-                    target="_blank"
-                    rel="external"
-                    href={
-                      svgUrl ? svgUrl : `https://www.google.com/search?q=${app}`
-                    }
-                  />
-                </li>
-              );
-            })
-          }
-        </ul>
-      </li>
     </section>
   </main>
 </Layout>
