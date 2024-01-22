@@ -21,6 +21,14 @@ export const getSvgUrl = (
 	itemTitle: string,
 	svgs: svg[],
 ): string | undefined => {
+	const arcSvg = svgs.find(
+		(svg) => svg.category === "Browser" && svg.title === "Arc",
+	);
 	const svgMatch = svgs.find((svg) => svg.title === itemTitle);
+
+	if (itemTitle === "Arc" && arcSvg) {
+		return arcSvg.url;
+	}
+
 	return svgMatch?.url;
 };
