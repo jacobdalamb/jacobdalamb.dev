@@ -33,7 +33,7 @@ if (
 	typeof gistData.files[fileName].content === "string"
 ) {
 	installedApps = gistData.files[fileName].content.split("\n");
-	installedApps = installedApps.map((app) => app.slice(0, -4));
+	installedApps = installedApps.map((app) => app.slice(0, -4).trim());
 } else {
 	console.error(`Could not find ${fileName} in gist data`);
 }
