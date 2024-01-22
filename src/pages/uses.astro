@@ -13,11 +13,6 @@ const props = {
 
 <Layout {...props}>
   <main>
-    <p>
-      Last updated: <time datetime={`${lastUpdated}`}
-        >{dayjs(lastUpdated).format("YYYY-MM-DD")}</time
-      >
-    </p>
     <h1 set:text="Uses" />
     <p set:html={props.description} />
     <p>Inspired by <a href="https://uses.tech/">uses.tech</a></p>
@@ -268,7 +263,11 @@ const props = {
           </ul>
         </li>
         <li x-data="{ id: 'apps' }">
-          <h3 x-text="id"></h3>
+          <a
+            href="https://gist.github.com/jacobdalamb/57a442c95e868894e657202d2feb2a8f"
+          >
+            <h3 x-text="id"></h3>
+          </a>
           <ul>
             {
               installedApps.map((app) => {
