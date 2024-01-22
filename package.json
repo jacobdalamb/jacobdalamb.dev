@@ -38,7 +38,7 @@
     "@astrojs/check": "latest",
     "@astrojs/vercel": "7.0.0",
     "@types/alpinejs": "^3.13.6",
-    "alpinejs": "^3.13.3",
+    "alpinejs": "^3.13.4",
     "astro": "4.2.1",
     "dayjs": "^1.11.10",
     "humanize-url": "^3.0.0",
@@ -48,10 +48,10 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.5.2",
+    "@biomejs/biome": "^1.5.3",
     "@types/node": "^20.11.5",
     "fs-extra": "^11.2.0",
-    "knip": "^4.1.0",
+    "knip": "^4.2.1",
     "prettier": "^3.2.4",
     "prettier-plugin-astro": "^0.13.0"
   }
