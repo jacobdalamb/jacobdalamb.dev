@@ -3,7 +3,7 @@ import { authorName, authorUrl, repoURL } from "../utils/meta";
 import { ViewTransitions } from "astro:transitions";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-
+import { AstroFont } from "astro-font";
 interface Props {
   title: string;
   description: string;
@@ -84,26 +84,8 @@ const contacts = [
     <style is:global>
       @import "open-props/style";
       @import "open-props/normalize";
-
-      @font-face {
-        font-family: "Geist Variable";
-        src: url("/fonts/GeistVariableVF.woff2") format("woff2");
-        font-weight: 100 900;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Geist Mono Variable";
-        src: url("/fonts/GeistMonoVariableVF.woff2") format("woff2");
-        font-weight: 100 900;
-        font-style: normal;
-        font-display: swap;
-      }
-
       :root {
-        --font-sans: "Geist Variable", sans-serif;
-        --font-mono: "MonoLisa", "Geist Mono Variable", monospace;
+        --font-mono: "MonoLisa", "var(--font-mono-variable)";
       }
 
       :is(h1, h2, h3) + *,
@@ -168,6 +150,38 @@ const contacts = [
         }
       }
     </style>
+    <AstroFont
+      config={[
+        {
+          src: [
+            {
+              style: 'normal',
+              weight: '100 900',
+              path: 'https://www.jacobdalamb.dev/fonts/GeistVariableVF.woff2'
+            },
+          ],
+          preload: false,
+          display: "swap",
+          fallback: "sans-serif",
+          name: "Geist Variable",
+          cssVariable: "font-mono",
+        },
+        {
+          src: [
+            {
+              style: 'normal',
+              weight: '100 900',
+              path: 'https://www.jacobdalamb.dev/fonts/GeistMonoVariableVF.woff2'
+            },
+          ],
+          preload: false,
+          display: "swap",
+          fallback: "sans-serif",
+          name: "Geist Mono Variable",
+          cssVariable: "font-mono-variable",
+        }
+      ]}
+    />
   </head>
   <body>
     <header>
