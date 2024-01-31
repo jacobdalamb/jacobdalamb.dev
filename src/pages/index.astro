@@ -10,8 +10,12 @@ const props = {
 <Layout {...props}>
   <main>
     <h2 set:text="Hey, I'm Jacob Lamb." />
-    <p
-      set:html={`I'm a ${new Date().getFullYear() - 2002} y/o, self-taught developer who enjoys reading and playing games.`}
-    />
+    <p>
+      I'm {new Date().getFullYear() - 2002} y/o, self-taught developer who enjoys
+      reading and <a
+        href="https://www.puzzmo.com/user/zf/jacobdalamb"
+        set:text="playing games"
+      />.
+    </p>
   </main>
 </Layout>
