@@ -1,7 +1,7 @@
 {
   "name": "jacobdalamb.dev",
   "type": "module",
-  "version": "2024.02.15",
+  "version": "2024.02.16",
   "private": true,
   "description": "My personal website.",
   "license": "MIT",
@@ -16,9 +16,9 @@
   },
   "engines": {
     "node": "18.18.x",
-    "bun": ">=1.0.25"
+    "bun": ">=1.0.26"
   },
-  "pkgx": "node@18.18.2 bun@1.0.25",
+  "pkgx": "node@18.18.2 bun@1.0.26",
   "scripts": {
     "astro": "astro",
     "dev": "astro dev",
@@ -30,7 +30,7 @@
     "lint:fix": "biome lint --apply .",
     "check-format": "prettier --check . && biome check .",
     "check-format:fix": "biome check --apply .",
-    "precommit": "nr check-format && bun ./updateVersion.ts && nr lint && knip",
+    "precommit": "nr check-format && bun ./updateVersion.ts && nr lint",
     "predeploy": "astro build && vercel deploy"
   },
   "dependencies": {
@@ -50,8 +50,7 @@
   "devDependencies": {
     "@biomejs/biome": "^1.5.3",
     "@types/node": "^20.11.18",
-    "fs-extra": "^11.2.0",
-    "knip": "^5.0.1",
+    "fsx-node": "^0.6.1",
     "oxlint": "^0.2.8",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0"

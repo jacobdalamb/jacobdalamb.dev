@@ -38,12 +38,4 @@ if (
 	console.error(`Could not find ${fileName} in gist data`);
 }
 
-let lastUpdated = "";
-
-if (gistData?.updated_at) {
-	lastUpdated = gistData.updated_at;
-} else {
-	console.error(`Could not find ${lastUpdated} in gist data`);
-}
-
-export { installedApps, lastUpdated };
+export { installedApps };
