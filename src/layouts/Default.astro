@@ -6,8 +6,9 @@ import { Image } from "astro:assets";
 
 interface Props {
   title: string;
-  description: string;
+  description?: string;
   ogImage?: URL;
+  pubDate?: Date;
 }
 
 const { title, description } = Astro.props;
@@ -37,6 +38,8 @@ for (const page of pages) {
     }
   }
 }
+
+pagesArray.push({ title: "poems", url: "/poems" });
 
 const contacts = [
   {

@@ -1,3 +1,4 @@
+import { $ } from "bun";
 import { fsx } from "fsx-node";
 async function updateVersion() {
 	const path = "./package.json";
@@ -13,3 +14,4 @@ async function updateVersion() {
 }
 
 updateVersion();
+await $`nlx prettier -w package.json`;

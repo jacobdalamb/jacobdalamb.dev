@@ -1,0 +1,24 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Layout from "../../layouts/Default.astro";
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const poems = await getCollection("poems");
+  return poems.map((poem) => ({
+    params: { slug: poem.slug },
+    props: poem,
+  }));
+}
+type Props = CollectionEntry<"poems">;
+
+const poem = Astro.props;
+const { Content } = await poem.render();
+---
+
+<Layout {...poem.data}>
+  <main>
+    <h1>{poem.data.title}</h1>
+    <Content />
+  </main>
+</Layout>
