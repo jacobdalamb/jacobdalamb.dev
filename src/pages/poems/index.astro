@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Default.astro";
 import { getCollection } from "astro:content";
 const poems = await getCollection("poems");
+import dayjs from "dayjs";
 
 const props = {
   title: "Poems",
@@ -15,6 +16,10 @@ const props = {
       poems.map((poem) => (
         <li>
           <a href={`/poems/${poem.slug}/`} set:text={poem.data.title} />
+          <span>&bull;</span>
+          <time datetime={dayjs(poem.data.pubDate).format("MMMM D, YYYY")}>
+            {dayjs(poem.data.pubDate).format("MMMM D, YYYY")}
+          </time>
         </li>
       ))
     }
