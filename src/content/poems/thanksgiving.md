@@ -1,5 +1,6 @@
 ---
 title: A Day Of Thanksgiving
+pubDate: 2020-11-26
 ---
 
 > A day chosen in giving thanks to our
