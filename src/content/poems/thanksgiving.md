@@ -8,7 +8,7 @@ title: A Day Of Thanksgiving
 >
 > Asking nothing in return. Mayflower
 >
-Is what started this holiday with fuss.
+> Is what started this holiday with fuss.
 >
 > ---
 >
