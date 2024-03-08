@@ -1,12 +1,12 @@
 ---
-import Layout from "../layouts/Default.astro";
 import { installedApps } from "@/utils/getGist";
-import { loadSvgs, getSvgUrl } from "@/utils/getSvgMatch";
+import { getSvgUrl, loadSvgs } from "@/utils/getSvgMatch";
+import Layout from "../layouts/Default.astro";
 const svgs = await loadSvgs();
 
 const props = {
-  title: "Uses",
-  description: "Things that I use on an almost daily basis.",
+	title: "Uses",
+	description: "Things that I use on an almost daily basis.",
 };
 ---
 

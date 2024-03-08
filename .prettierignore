@@ -27,5 +27,3 @@ pnpm-debug.log*
 **/*.mjs
 **/*.cjs
 **/*.json
-!package.json
-!tsconfig.json

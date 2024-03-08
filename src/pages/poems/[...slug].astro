@@ -4,11 +4,11 @@ import Layout from "../../layouts/Default.astro";
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const poems = await getCollection("poems");
-  return poems.map((poem) => ({
-    params: { slug: poem.slug },
-    props: poem,
-  }));
+	const poems = await getCollection("poems");
+	return poems.map((poem) => ({
+		params: { slug: poem.slug },
+		props: poem,
+	}));
 }
 type Props = CollectionEntry<"poems">;
 

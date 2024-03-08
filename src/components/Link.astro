@@ -9,15 +9,15 @@ const site = Astro.site;
 const { pathname } = Astro.url;
 
 function isActiveLink(url: string): boolean {
-  return url === pathname || url === "." || url === "./";
+	return url === pathname || url === "." || url === "./";
 }
 
 function isExternalLink(url: string): boolean {
-  return URL.canParse(url);
+	return URL.canParse(url);
 }
 
 function isInternalLink(url: string): boolean {
-  return URL.canParse(url, site?.toString());
+	return URL.canParse(url, site?.toString());
 }
 
 const isExternal = isExternalLink(href);
@@ -27,11 +27,11 @@ const isActive = isActiveLink(href);
 let relAttribute: object = {};
 
 if (isExternal) {
-  relAttribute = { rel: "external noopener noreferrer" };
+	relAttribute = { rel: "external noopener noreferrer" };
 } else if (isInternal && !isActive) {
-  relAttribute = { rel: "prefetch" };
+	relAttribute = { rel: "prefetch" };
 } else {
-  relAttribute = {};
+	relAttribute = {};
 }
 ---
 

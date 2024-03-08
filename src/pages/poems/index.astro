@@ -1,12 +1,12 @@
 ---
-import Layout from "../../layouts/Default.astro";
 import { getCollection } from "astro:content";
+import Layout from "../../layouts/Default.astro";
 const poems = await getCollection("poems");
 import dayjs from "dayjs";
 
 const props = {
-  title: "Poems",
-  description: "A collection of poems.",
+	title: "Poems",
+	description: "A collection of poems.",
 };
 ---
 
