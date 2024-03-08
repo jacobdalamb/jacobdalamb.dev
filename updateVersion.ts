@@ -1,5 +1,4 @@
 import { hfs } from "@humanfs/node";
-import { $ } from "bun";
 async function updateVersion() {
 	const path = "./package.json";
 	const content = await hfs.json(path);
@@ -14,4 +13,3 @@ async function updateVersion() {
 }
 
 updateVersion();
-await $`nlx prettier -w package.json`;
