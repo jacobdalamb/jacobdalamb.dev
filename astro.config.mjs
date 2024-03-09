@@ -1,4 +1,3 @@
-import alpinejs from "@astrojs/alpinejs";
 import vercel from "@astrojs/vercel/serverless";
 import { defineConfig } from "astro/config";
 import { authorUrlString } from "./src/utils/meta";
@@ -12,5 +11,4 @@ export default defineConfig({
 			enabled: true,
 		},
 	}),
-	integrations: [alpinejs()],
 });
