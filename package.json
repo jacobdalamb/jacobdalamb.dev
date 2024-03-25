@@ -1,7 +1,7 @@
 {
 	"name": "jacobdalamb.dev",
 	"type": "module",
-	"version": "2024.03.12",
+	"version": "2024.03.25",
 	"private": true,
 	"description": "My personal website.",
 	"license": "MIT",
@@ -14,9 +14,9 @@
 	},
 	"engines": {
 		"node": "18.18.x",
-		"bun": ">=1.0.30"
+		"bun": ">=1.0.32"
 	},
-	"pkgx": "node@18.18.2 bun@1.0.30",
+	"pkgx": "node@18.18.2 bun@1.0.32",
 	"scripts": {
 		"astro": "astro",
 		"dev": "astro dev",
@@ -33,19 +33,19 @@
 	},
 	"dependencies": {
 		"@astrojs/check": "latest",
-		"@astrojs/vercel": "7.3.5",
-		"astro": "4.4.15",
+		"@astrojs/vercel": "7.4.0",
+		"astro": "4.5.9",
 		"dayjs": "^1.11.10",
 		"humanize-url": "^3.0.0",
 		"octokit": "^3.1.2",
 		"open-props": "^1.6.21",
 		"somebody": "^3.0.0",
-		"typescript": "^5.4.2"
+		"typescript": "^5.4.3"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.6.0",
-		"@humanfs/node": "^0.14.1",
-		"@types/node": "^20.11.25",
+		"@biomejs/biome": "^1.6.3",
+		"@humanfs/node": "^0.16.0",
+		"@types/node": "^20.11.30",
 		"prettier": "^3.2.5"
 	}
 }
